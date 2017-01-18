@@ -1,0 +1,20 @@
+.sass-cache
+.DS_Store
+.start.pid
+node_modules
+govuk_modules
+lib/govuk_template.html
+# Ignore generated snippets
+app/views/snippets/encoded/*.html
+# Ignore compiled stylesheets
+public/stylesheets/
+sass-orig
+
+# Ignore test files
+dist/
+README_OLD.md
+package_old.json
+
+# Wraith
+shots
+shots_history

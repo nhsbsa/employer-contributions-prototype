@@ -1,0 +1,26 @@
+before_script:
+  - unset http_proxy && unset https_proxy
+  - unset HTTP_PROXY && unset HTTPS_PROXY
+
+stages:
+  - install
+  - deploy
+
+install_job:
+  stage: install
+  script:
+    - git submodule update --init
+    - nvm install
+    - npm install
+    - npm outdated
+
+deploy_job:
+  stage: deploy
+  only:
+    - master
+  script:
+    - git submodule update --init
+    - nvm install
+    - npm install
+    - npm outdated
+    - npm run deploy
