@@ -4,8 +4,8 @@ PACKAGE_VERSION=$(cat package.json \
   | awk -F: '{ print $2 }' \
   | sed 's/[",]//g' \
   | tr -d '[[:space:]]')
-
-git clone ssh://git@localhost:10022/home-styles/nhs-template.git .deploy
+git clone git@gitlab00.node.consul:bsa-design/nhs-template.git .deploy
+# git clone ssh://git@localhost:10022/home-styles/nhs-template.git .deploy
 # git clone git@gitlab.domain.net:group-name/project-name.git .deploy
 rm -rf .deploy/images .deploy/javascripts .deploy/stylesheets
 cp -R dist/* .deploy
