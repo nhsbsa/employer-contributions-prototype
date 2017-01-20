@@ -24,3 +24,4 @@ deploy_job:
   script:
     - npm install
     - npm run deploy
+    - mvn -B -DrepoUrl=$REPO_URL -DaltDeploymentRepository=bsa-rc::default::$REPO_URL/bsa-rc clean install deploy:deploy
