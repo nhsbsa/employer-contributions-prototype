@@ -9,6 +9,7 @@ before_script:
   - node --version
 
 stages:
+  - build
   - install
   - deploy
 
@@ -24,4 +25,29 @@ deploy_job:
   script:
     - npm install
     - npm run deploy
+    - bsa-ci/create_release_candidate.rb --verbose
+  tags:
+    - build
+
+# Create:RC:
+#   stage: build
+#   only:
+#     - master
+#   script:
+#     - bsa-ci/create_release_candidate.rb --verbose
+#   tags:
+#     - build
+
+# release job
+# for every release* branch:
+# perform maven install and deploy:deploy
+Binary:Push:
+  stage: build
+  only:
+    - /^rc.*$/
+  script:
+    # mvn install to compile, test and qa changes
+    # then deploy:deploy to push artifacts up to binary repo
     - mvn -B -DrepoUrl=$REPO_URL -DaltDeploymentRepository=bsa-rc::default::$REPO_URL/bsa-rc clean install deploy:deploy
+  tags:
+    - build
