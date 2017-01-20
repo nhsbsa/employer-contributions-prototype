@@ -1,0 +1,20 @@
+before_script:
+  - unset http_proxy && unset https_proxy
+  - unset HTTP_PROXY && unset HTTPS_PROXY
+
+stages:
+  - install
+  - deploy
+
+install_job:
+  stage: install
+  script:
+    - npm install
+
+deploy_job:
+  stage: deploy
+  only:
+    - master
+  script:
+    - npm install
+    - npm run deploy
