@@ -11,7 +11,6 @@ before_script:
   - ruby -v
   - git clone git@${CI_GIT_HOST}:devops/bsa-ci.git
   - (cd bsa-ci && bundle install)
-  - cd ../
   - eval $(ssh-agent -s)
   - ssh-add /root/.ssh/*id_rsa
   - sudo yum -y install epel-release
