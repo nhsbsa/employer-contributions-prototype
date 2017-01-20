@@ -10,7 +10,7 @@ git clone git@gitlab00.node.consul:bsa-design/nhs-template.git .deploy
 rm -rf .deploy/images .deploy/javascripts .deploy/stylesheets
 cp -R dist/* .deploy
 cd .deploy
-sed -i "" "s/\"version\": \".*\",/\"version\": \"$PACKAGE_VERSION\",/" package.json
+# sed -i "" "s/\"version\": \".*\",/\"version\": \"$PACKAGE_VERSION\",/" package.json
 git add -A
 git commit -m "Deploying and releasing version $PACKAGE_VERSION"
 git tag $PACKAGE_VERSION
