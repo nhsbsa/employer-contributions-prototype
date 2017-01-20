@@ -1,4 +1,6 @@
 before_script:
+  - eval $(ssh-agent -s)
+  - ssh-add /root/.ssh/*id_rsa
   - sudo yum -y install epel-release
   - sudo yum -y install nodejs
   - npm --version
