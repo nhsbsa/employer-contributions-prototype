@@ -1,6 +1,17 @@
 image: nhsbsa/docker-centos-iac:latest
 
 before_script:
+  - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+  - export JRE_HOME=$(dirname $(dirname $(readlink -f $(which javac))))/jre
+  - export GITLAB_API_ENDPOINT=https://gitlab00.node.consul/api/v3
+  - export GITLAB_API_PRIVATE_TOKEN=e_ehRp9rc6EZADVBu6Pz
+  - printenv | sort
+  - java -version
+  - eval "$(rbenv init -)"
+  - ruby -v
+  - git clone git@${CI_GIT_HOST}:devops/bsa-ci.git
+  - (cd bsa-ci && bundle install)
+  - cd ../
   - eval $(ssh-agent -s)
   - ssh-add /root/.ssh/*id_rsa
   - sudo yum -y install epel-release
