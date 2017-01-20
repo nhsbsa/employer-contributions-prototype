@@ -1,4 +1,6 @@
 before_script:
+  - curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+  - export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
   - unset http_proxy && unset https_proxy
   - unset HTTP_PROXY && unset HTTPS_PROXY
 
@@ -9,6 +11,7 @@ stages:
 install_job:
   stage: install
   script:
+    - nvm install
     - npm install
 
 deploy_job:
@@ -16,5 +19,6 @@ deploy_job:
   only:
     - master
   script:
+    - nvm install
     - npm install
     - npm run deploy
