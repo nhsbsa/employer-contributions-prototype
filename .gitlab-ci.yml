@@ -1,9 +1,7 @@
 before_script:
   - curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
-  - ls /root/.nvm
-  - export NVM_DIR="/root/.nvm"
-  - echo $VNM_DI
-  - /[ -s "$NVM_DIR/nvm.sh" /] && \. "$NVM_DIR/nvm.sh"
+  - source ~/.bash_profile
+  - nvm install v7.1.0
   - nvm --version
   - nvm install 7.1.0
 
