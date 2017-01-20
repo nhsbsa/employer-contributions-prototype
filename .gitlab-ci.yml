@@ -1,8 +1,9 @@
 before_script:
   - curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
-  - cd /root/.nvm/
-  - ./nvm.sh install v7.1.0
-  - nvm --version
+  - yum install epel-release
+  - yum install nodejs
+  - npm --version
+  - node --version
 
 stages:
   - install
