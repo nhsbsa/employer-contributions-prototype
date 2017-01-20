@@ -9,6 +9,7 @@ app/views/snippets/encoded/*.html
 # Ignore compiled stylesheets
 public/stylesheets/
 sass-orig
+target
 
 # Ignore test files
 dist/
