@@ -5,7 +5,7 @@
     <packaging>jar</packaging>
     <groupId>uk.nhs.nhsbsa.design</groupId>
     <artifactId>nhs-template</artifactId>
-    <version>0.0.2-rc</version>
+    <version>1.0-SNAPSHOT</version>
     <name>nhs-template</name>
 
     <properties>
