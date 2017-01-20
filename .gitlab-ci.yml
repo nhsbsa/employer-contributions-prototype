@@ -1,6 +1,6 @@
 before_script:
-  - sudo yum install epel-release
-  - sudo yum install nodejs
+  - sudo yum -y install epel-release
+  - sudo yum -y install nodejs
   - npm --version
   - node --version
 
