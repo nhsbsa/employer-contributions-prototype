@@ -1,7 +1,6 @@
 before_script:
-  - curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
-  - yum install epel-release
-  - yum install nodejs
+  - sudo yum install epel-release
+  - sudo yum install nodejs
   - npm --version
   - node --version
 
