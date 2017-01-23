@@ -35,18 +35,17 @@ deploy_job:
   script:
     - npm install
     - npm run deploy
-    - bsa-ci/create_release_candidate.rb --verbose
   tags:
     - build
 
-# Create:RC:
-#   stage: build
-#   only:
-#     - master
-#   script:
-#     - bsa-ci/create_release_candidate.rb --verbose
-#   tags:
-#     - build
+Create:RC:
+  stage: build
+  only:
+    - master
+  script:
+    - bsa-ci/create_release_candidate.rb --verbose
+  tags:
+    - build
 
 # release job
 # for every release* branch:
