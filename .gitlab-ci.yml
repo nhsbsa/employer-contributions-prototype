@@ -34,7 +34,7 @@ deploy_job:
   script:
     - bsa-ci/create_release_candidate.rb --verbose
   tags:
-    - build
+    - deploy
 
 # Create:RC:
 #   stage: build
@@ -59,4 +59,4 @@ Binary:Push:
     - npm run deploy
     - mvn -B -DrepoUrl=$REPO_URL -DaltDeploymentRepository=bsa-rc::default::$REPO_URL/bsa-rc clean install deploy:deploy
   tags:
-    - build
+    - deploy
