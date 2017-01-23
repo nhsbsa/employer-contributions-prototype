@@ -32,8 +32,6 @@ deploy_job:
   only:
     - master
   script:
-    - npm install
-    - npm run deploy
     - bsa-ci/create_release_candidate.rb --verbose
   tags:
     - build
@@ -57,6 +55,8 @@ Binary:Push:
   script:
     # mvn install to compile, test and qa changes
     # then deploy:deploy to push artifacts up to binary repo
+    - npm install
+    - npm run deploy
     - mvn -B -DrepoUrl=$REPO_URL -DaltDeploymentRepository=bsa-rc::default::$REPO_URL/bsa-rc clean install deploy:deploy
   tags:
     - build
