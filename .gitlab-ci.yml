@@ -19,7 +19,6 @@ before_script:
   - node --version
 
 stages:
-  - build
   - install
   - deploy
 
@@ -52,7 +51,7 @@ deploy_job:
 # for every release* branch:
 # perform maven install and deploy:deploy
 Binary:Push:
-  stage: build
+  stage: deploy
   only:
     - /^rc.*$/
   script:
