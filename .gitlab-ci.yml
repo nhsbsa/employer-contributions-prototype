@@ -32,6 +32,9 @@ deploy_job:
   only:
     - master
   script:
+    - npm install
+    - npm run build
+    - npm run dist
     - bsa-ci/create_release_candidate.rb --verbose
   tags:
     - deploy
