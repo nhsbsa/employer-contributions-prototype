@@ -1,0 +1,13 @@
+@import "../../govuk_frontend_toolkit-sass/colours/palette";
+// GOV.UK template colours
+
+$proposition-border: #2e3133;
+// Based on GOV.UK brand blue but slightly lighter so it hits contrast on the
+// black header bar when used as copy colour.
+$proposition-active-nav: #1d8feb;
+
+$footer-background: $white;
+$footer-border-top: #a1acb2;
+$footer-link: $white;
+$footer-link-hover: $white;
+$footer-text: $footer-link;
