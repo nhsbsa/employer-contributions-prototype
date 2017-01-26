@@ -33,7 +33,7 @@
 
   </head>
 
-  <body class="{% block body_classes %}{% endblock %} nhs-public">
+  <body class="{% block body_classes %}{% endblock %} nhs-bsa">
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
     {% block body_start %}{% endblock %}
@@ -57,7 +57,7 @@
           <div class="header-logo">
             <a href="{{ homepage_url|default('https://www.gov.uk') }}"
                 title="{{ logo_link_title|default('Go to the GOV.UK homepage') }}" id="logo" class="content">
-                <img src="{{ asset_path }}images/logo-blue.jpg" alt="NHS Logo">
+                <img src="{{ asset_path }}images/bsa_logo.svg" alt="NHS Logo">
               <!-- {{ global_header_text|default('NHS') }} -->
             </a>
           </div>
