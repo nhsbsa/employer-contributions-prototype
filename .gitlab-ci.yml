@@ -22,12 +22,12 @@ stages:
   - install
   - deploy
 
-install_job:
+install:
   stage: install
   script:
     - npm install
 
-deploy_job:
+deploy:
   stage: deploy
   only:
     - master
