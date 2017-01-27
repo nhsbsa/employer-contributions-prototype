@@ -14,6 +14,6 @@ cd .deploy
 git add -A
 git commit -m "Deploying and releasing version $PACKAGE_VERSION"
 git tag $PACKAGE_VERSION
-git push && git push --tags
+git push origin master && git push --tags
 cd ..
 rm -rf .deploy
