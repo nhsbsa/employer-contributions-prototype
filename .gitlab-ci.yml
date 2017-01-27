@@ -1,5 +1,4 @@
 image: nhsbsa/docker-centos-iac:latest
-
 before_script:
   - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
   - export JRE_HOME=$(dirname $(dirname $(readlink -f $(which javac))))/jre
@@ -17,17 +16,14 @@ before_script:
   - sudo yum -y install nodejs
   - npm --version
   - node --version
-
 stages:
   - install
   - deploy
-
-install:
+install_job:
   stage: install
   script:
     - npm install
-
-deploy:
+deploy_job:
   stage: deploy
   only:
     - master
@@ -38,16 +34,14 @@ deploy:
     - bsa-ci/create_release_candidate.rb --verbose
   tags:
     - deploy
-
-Create:RC:
-  stage: build
-  only:
-    - master
-  script:
-    - bsa-ci/create_release_candidate.rb --verbose
-  tags:
-    - build
-
+# Create:RC:
+#   stage: build
+#   only:
+#     - master
+#   script:
+#     - bsa-ci/create_release_candidate.rb --verbose
+#   tags:
+#     - build
 # release job
 # for every release* branch:
 # perform maven install and deploy:deploy
