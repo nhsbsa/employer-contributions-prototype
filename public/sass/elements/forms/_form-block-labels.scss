@@ -16,9 +16,15 @@
   background-color: $grey-3;
   border: 8px solid $grey-3;
 
+  // &:focus. &:active, input:hover+label, input:active+label {
+  //     background-color: $grey-2;
+  // }
+
   // &:hover{
   //     border: 8px solid $grey-2;
   // }
+
+
 
    // remove 300ms pause on mobile
   -ms-touch-action: manipulation;
@@ -47,8 +53,9 @@
         @include opacity(0);
       }
     }
-
   }
+
+
 
   .js-enabled & {
     &.selection-button-radio::before {
@@ -109,9 +116,24 @@
     // Focused state
     &.selection-button-radio,
     &.selection-button-checkbox {
-      &.focused::before {
-        @include box-shadow(0 0 0 5px $focus-colour);
+        // commented in nhs style
+        //   &.focused::before {
+        //     // disable in nhs style
+        //     @include box-shadow(0 0 0 5px $focus-colour);
+        //   }
+
+      // Added in nhs style
+      &.focused {
+        @include box-shadow(0 0 0 2px $focus-colour);
       }
+
+      &.selected {
+        @include box-shadow(0 0 0 2px $focus-colour);
+      }
+
+    //   &:hover{
+    //       @include box-shadow(0 0 0 1px $grey-2);
+    //   }
       // IE8 focus outline should stay as a border around the entire label
       // Lack of padding doesn’t matter as IE8 won’t resize the inputs.
       @include ie-lte(8) {
