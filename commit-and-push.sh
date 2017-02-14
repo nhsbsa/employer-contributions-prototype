@@ -13,6 +13,7 @@ then
     exit 1
 fi
 
+
 echo "CURRENT VERSION:"
 cat package.json |grep version
 echo "SET VERSION:"
