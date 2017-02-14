@@ -10,13 +10,13 @@ DESCRIPTION=$(cat package.json | grep description | sed 's/\"description\"//gmi'
 GIT_CURRENT_EMAIL=$(git config --global --get user.email)
 GIT_CURRENT_USERNAME=$(git config --global --get user.name)
 
-if [ -v $GIT_CURRENT_EMAIL ]
+if [ "$GIT_CURRENT_EMAIL" != ""  ]
     then
         echo "GIT USER EMAIL SET AS: $GIT_CURRENT_EMAIL"
         echo "GIT USER NAME SET AS: $GIT_CURRENT_USERNAME"
         git config --global user.email "$GIT_CURRENT_EMAIL"
         git config --global user.name "$GIT_CURRENT_USERNAME"
-elif [ -v $GITLABRUNNER_EMAIL ]
+elif [ "$GITLABRUNNER_EMAIL" != "" ]
     then
         echo "GIT USER EMAIL SET AS: $GITLABRUNNER_EMAIL"
         echo "GIT USER NAME SET AS: $GITLABRUNNER_NAME"
