@@ -4,6 +4,8 @@ before_script:
   - export JRE_HOME=$(dirname $(dirname $(readlink -f $(which javac))))/jre
   - export GITLAB_API_ENDPOINT=https://gitlab00.node.consul/api/v3
   - export GITLAB_API_PRIVATE_TOKEN=e_ehRp9rc6EZADVBu6Pz
+  - export GITLABRUNNER_EMAIL=$(git config --get --global user.email)
+  - export GITLABRUNNER_NAME=$(git config --get --global user.name)
   - printenv | sort
   - java -version
   - eval "$(rbenv init -)"

@@ -16,6 +16,8 @@ npm-debug.log
 dist/
 README_OLD.md
 package_old.json
+package_copy.json
+
 
 # Wraith
 shots
