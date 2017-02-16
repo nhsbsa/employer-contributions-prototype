@@ -1,7 +1,7 @@
 {
   "name": "nhs-template-creator",
-  "version": "0.0.5",
-  "description": "Added the commit-and-push.sh utility script and amended style for checkboxes and radio buttons",
+  "version": "0.0.6",
+  "description": "Added some comments to nhs-sass files",
   "repository": {
     "type": "git",
     "url": "git@gitlab00.node.consul:bsa-design/nhs-template-creator.git"
