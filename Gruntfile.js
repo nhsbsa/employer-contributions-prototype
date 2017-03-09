@@ -14,7 +14,7 @@ module.exports = function (grunt) {
           'public/stylesheets/elements-page-ie7.css': 'public/sass/elements-page-ie7.scss',
           'public/stylesheets/elements-page-ie8.css': 'public/sass/elements-page-ie8.scss',
           'public/stylesheets/vendor/prism.css': 'public/sass/vendor/prism.scss',
-          'public/stylesheets/nhs.css': 'public/nhs-sass/nhs.scss',
+          // 'public/stylesheets/nhs.css': 'public/nhs-sass/nhs.scss',
         },
         options: {
           includePaths: [

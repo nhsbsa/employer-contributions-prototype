@@ -6,6 +6,11 @@
   //background-color: $white;
   width: 100%;
   background-image: url("/public/images/header-bsa.svg");
+
+  @include ie-lte(8) {
+    background-image: url("/public/images/header-bsa.png");
+  }
+
   background-repeat: no-repeat;
   background-position: center 3.65em;
   -webkit-background-size: cover;
@@ -50,6 +55,18 @@
 
         .content {
           margin: 0 15px;
+
+          img {
+            @include ie-lte(8) {
+              background: white url(/public/images/bsa_logo.png) no-repeat;
+              width:299px;
+              height: 65px;
+              display: block;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;
+            }
+          }
+
         }
       }
       .header-logo {
