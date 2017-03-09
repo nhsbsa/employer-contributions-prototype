@@ -1,7 +1,7 @@
 {
   "name": "nhs-template-creator",
-  "version": "0.0.6",
-  "description": "Added some comments to nhs-sass files",
+  "version": "0.0.7",
+  "description": "Fixed NHS-BSA style to IE8 so header and logo are correctly displayed\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C reuirements\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b requirements so logo and header are correctly displayed",
   "repository": {
     "type": "git",
     "url": "git@gitlab00.node.consul:bsa-design/nhs-template-creator.git"
