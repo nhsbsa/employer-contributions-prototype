@@ -1,7 +1,7 @@
 {
   "name": "nhs-template-creator",
-  "version": "0.0.8",
-  "description": "Amended application.js file so errors messages are automatically focuses",
+  "version": "\u001b[A\u001b[B0.0.9",
+  "description": "Amended README.md file",
   "repository": {
     "type": "git",
     "url": "git@gitlab00.node.consul:bsa-design/nhs-template-creator.git"

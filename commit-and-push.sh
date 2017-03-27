@@ -13,7 +13,6 @@ then
     exit 1
 fi
 
-
 echo "CURRENT VERSION:"
 cat package.json |grep version
 echo -e "\n\nSET VERSION:"
@@ -37,7 +36,7 @@ EOF
 
 mv -v $PACKAGE_TEMP_FILE $PACKAGE_FILE
 
-echo "PLEASE ENTER A COMMIT MESSAGE: ";
+echo -e "\n\nPLEASE ENTER A COMMIT MESSAGE: ";
 read COMMIT_MESSAGE
 git add .
 git commit -a -m "$COMMIT_MESSAGE"

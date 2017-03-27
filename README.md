@@ -5,7 +5,7 @@
 1. nvm (node version mananger to install npm)
 2. npm (install via nvm)
 3. git
-4. git-flow
+4. git-bash (on Windows) or a Linux/Mac shell terminal
 
 ## What is it?
 
@@ -62,26 +62,68 @@ To have a better insight please check out the following files:
 1. public/sass/elements/_tabs.scss
 2. public/sass/_govuk-elements.scss
 
-### Deploy
+### Contributing to the template
 
-Assuming you have created a feature git branch to develop the new elements, once the development is over it is time to merge it into the development branch and then merge it into the master branch. A number of steps to be taken for this can be summarised as following:
-
-```
-git flow release start tabs-release
+It would be a good practice to create a new git branch for the new feature you would like to add to the template. First of all, by using Git-Bash on windows or terminal on a Linux/Mac environment cd into the directory of nhs-template-creator on your local machine:
 
 ```
-
-once the development is over finish up the release by running:
-
-```
-git flow release finish tabs-release
-```
-
-finally the repo can be pushed:
+cd path-to-nhs-template-creator-directory-on-your-machine
 
 ```
-git push --tags
+
+Switch to the master branch if you are not already using it:
+
 ```
+git checkout master
+```
+
+Pull & merge the latest version:
+
+```
+git pull origin master
+```
+
+Create a new feature branch for the additions or amends you are going to contribute with. Suppose you are going to name the feature branch to 'features/new-stuff':
+
+```
+git checkout -b features/new-stuff
+```
+
+At this point the new branch will be created and you will be automatically switched into it.
+
+You can make at this point all the sass amends you need to make. When you are finished commit all changes providing a message describing your contributions:
+
+```
+git commit -a -m "Some chages here and there"
+```
+
+If you want to make this new feature branch available to other users/developers push it to the repo:
+
+```
+git push -u origin features/new-stuff
+```
+
+At this point you can switch back to the master branch:
+
+```
+git checkout master
+```
+
+And merge the master branch with the features/new-stuff branch you have created:
+
+```
+git merge features/new-stuff
+```
+
+## Deployment and Creation of Newly versioned/tagged repository and Web Jar on Artifactory
+
+You can achieve this by running the 'commit-and-push.sh' script:
+
+```
+./commit-and-push.sh
+```
+
+You will be asked to provide a new version number (which will be the 'nhs-template' repository tag), a description (which will go in the version log file of the 'nhs-template' repository) and a git commit message.
 
 ## Tasks
 
@@ -106,13 +148,6 @@ Upgrade GOV.UK* package versions in package.json file and re-install dependencie
 ```
 npm run upgrade
 ```
-
-### Deploy
-This task should never be used by the developer, rather it should be invoked by GITLAB CI whenever the master branch is merged with develop branch and pushed to the repo. If additions/amends are applied to the sass files or assets then the package.json file version number and description should be amended accordingly. The deploy task will run the scripts/deploy.sh file which in turn will work out the package.json version/description and will create a new tagged version on the nhs-template based on the package.json 'version' property.
-```
-npm run deploy
-```
-
 
 ### Copy GOV.UK sass resources for diff comparison
 
