@@ -16,12 +16,12 @@ fi
 
 echo "CURRENT VERSION:"
 cat package.json |grep version
-echo "SET VERSION:"
+echo -e "\n\nSET VERSION:"
 read VERSION
-echo "CURRENT DESCRIPTION"
+echo -e "\n\nCURRENT DESCRIPTION"
 cat package.json |grep description
+echo -e "\n\nSET DESCRIPTION:"
 read DESCRIPTION
-echo "SET DESCRIPTION"
 
 node > $PACKAGE_TEMP_FILE <<EOF
 //Read data

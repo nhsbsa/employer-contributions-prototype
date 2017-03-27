@@ -26,10 +26,16 @@ $(document).ready(function () {
 
 $(window).load(function () {
   // Only set focus for the error example pages
-  if ($('.js-error-example').length) {
+  // if ($('.js-error-example').length) {
     // If there is an error summary, set focus to the summary
     if ($('.error-summary').length) {
       $('.error-summary').focus()
+
+      var id = $('.error-summary:first').attr('id');
+      if(id){
+        location.hash = "#" + id;
+      }
+
       $('.error-summary a').click(function (e) {
         e.preventDefault()
         var href = $(this).attr('href')
@@ -39,5 +45,5 @@ $(window).load(function () {
       // Otherwise, set focus to the field with the error
       $('.error input:first').focus()
     }
-  }
+  // }
 })
