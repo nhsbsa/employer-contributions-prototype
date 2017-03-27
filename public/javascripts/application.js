@@ -36,11 +36,11 @@ $(window).load(function () {
         location.hash = "#" + id;
       }
 
-      $('.error-summary a').click(function (e) {
-        e.preventDefault()
-        var href = $(this).attr('href')
-        $(href).focus()
-      })
+      // $('.error-summary a').click(function (e) {
+      //   e.preventDefault()
+      //   var href = $(this).attr('href')
+      //   $(href).focus()
+      // })
     } else {
       // Otherwise, set focus to the field with the error
       $('.error input:first').focus()
