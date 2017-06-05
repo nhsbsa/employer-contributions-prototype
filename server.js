@@ -12,12 +12,17 @@ app.set('view engine', 'html')
 // app.set('views', [path.join(__dirname, '/app/views'), path.join(__dirname, '/lib/')])
 app.set('views', [path.join(__dirname, '/app/views')])
 
+const njk = nunjucks(app, {
+	autoescape: true,
+	watch: true,
+	noCache: true
+});
 
-nunjucks.setup({
-  autoescape: true,
-  watch: true,
-  noCache: true
-}, app)
+//nunjucks.config({
+//  autoescape: true,
+//  watch: true,
+//  noCache: true
+//}, app)
 
 // Middleware to serve static assets
 app.use('/public', express.static(path.join(__dirname, '/public')))
