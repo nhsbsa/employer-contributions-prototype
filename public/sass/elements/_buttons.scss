@@ -40,7 +40,7 @@
 // NHS SPECIFIC
 button:hover {
     background-color: $button-hover-background-colour;
-    border-bottom: $button-hover-border-bottom-colour;
+    border-bottom: 1px solid $button-hover-border-bottom-colour;
 }
 
 button:active {
