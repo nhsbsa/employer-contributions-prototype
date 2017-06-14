@@ -3,11 +3,11 @@
 @import '_measurements';
 
 #nhs-global-header {
-  background-color: $govuk-blue;
+  background-color: $nhsuk-blue;
   width: 100%;
 
   .header-wrapper {
-    background-color: $govuk-blue;
+    background-color: $nhsuk-blue;
     max-width: 990px;
     margin: 0 auto;
     padding-top: 8px;
@@ -226,7 +226,7 @@
 #global-header-bar {
   @extend %site-width-container;
   height: 10px;
-  background-color: $govuk-blue;
+  background-color: $nhsuk-blue;
   @include ie-lte(8) {
     font-size: 0;
   }

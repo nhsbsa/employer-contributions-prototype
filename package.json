@@ -21,7 +21,7 @@
     "express": "4.15.3",
     "express-nunjucks": "^2.2.3",
     "express-writer": "0.0.4",
-    "govuk_template_jinja": "^0.19.2",
+    "govuk_template_jinja": "^0.22.1",
     "grunt": "^1.0.1",
     "grunt-cli": "1.2.0",
     "grunt-concurrent": "^2.3.1",
@@ -33,7 +33,7 @@
     "grunt-sass": "^2.0.0",
     "grunt-shell": "^2.1.0",
     "node-sass": "^4.5.3",
-    "npm-check-updates": "^2.8.9",
+    "npm-check-updates": "^2.11.3",
     "readdir": "0.0.13",
     "standard": "^10.0.2"
   },

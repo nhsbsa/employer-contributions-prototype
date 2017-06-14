@@ -267,7 +267,7 @@
 #global-header-bar {
   @extend %site-width-container;
   height: 10px;
-  background-color: $govuk-blue;
+  background-color: $nhsuk-blue;
   @include ie-lte(8) {
     font-size: 0;
   }
