@@ -25,7 +25,6 @@
   // }
 
 
-
    // remove 300ms pause on mobile
   -ms-touch-action: manipulation;
   touch-action: manipulation;
@@ -55,6 +54,12 @@
     }
   }
 
+  //radio button padding fix
+  .js-enabled & {
+    &.selection-button-radio {
+    padding-left:45px;
+    }
+  }
 
 
   .js-enabled & {
