@@ -200,6 +200,7 @@ $palette: (
   ("turquoise", $turquoise),
   ("light-blue", $light-blue),
   ("govuk-blue", $govuk-blue)
+  ("nhsuk-blue", $nhsuk-blue)
 );
 
 @mixin color-swatches {
@@ -214,6 +215,10 @@ $palette: (
 
 // Generate swatch classes for each colour in palette list
 @include color-swatches;
+
+.swatch-nhsuk-blue {
+  background-color: $nhsuk-blue;
+}
 
 .swatch-alpha {
   background-color: $alpha-colour;
@@ -241,6 +246,10 @@ $palette: (
 
 .swatch-button-colour {
   background-color: $button-colour;
+}
+
+.swatch-button-hover-background-colour {
+  background-color: $button-hover-background-colour;
 }
 
 .swatch-black {

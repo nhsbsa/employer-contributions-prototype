@@ -1,4 +1,5 @@
 // Brand colours
+$nhsuk-blue: #2360AC;
 $govuk-blue: #005eb8;
 $mainstream-brand: $govuk-blue;
 
@@ -47,7 +48,7 @@ $light-blue-50: #96c6e2;
 $light-blue-25: #d5e8f3;
 
 // Standard palette, greys
-$black: #231f20;
+$black: #333333;
 $grey-1: #6f777b;
 $grey-2: #bfc1c3;
 $grey-3: #dee0e2;
@@ -55,13 +56,13 @@ $grey-4: #f8f8f8;
 $white: #fff;
 
 // Semantic colour names
-$link-colour: $govuk-blue;
+$link-colour: $nhsuk-blue;
 $link-active-colour: $light-blue;
-$link-hover-colour: #4276b8; // old colour: $light-blue;
+$link-hover-colour: #4276b8; // old colour: #4276b8;
 $link-visited-colour: #2e3191; // old colour: #4c2c92;
-$button-colour: #006647; // old colour: #00823b;
+$button-colour: #007f45; // old colour: #00823b;
 $button-border-colour: #003323; // added for NHS
-$button-hover-background-colour: #005239;
+$button-hover-background-colour: #12623A;
 $button-hover-border-bottom-colour: #003323;
 $focus-colour: $yellow;
 $text-colour: $black;             // Standard text colour

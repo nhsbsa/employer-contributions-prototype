@@ -7,8 +7,8 @@
   vertical-align: top;
 
   // NHS SPECIFIC ----->
+  padding: 0.426315em .789473em .363157em;
   border-bottom: 1px solid $button-hover-border-bottom-colour;
-  height: 4rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   // NHS SPECIFIC <----
@@ -41,7 +41,7 @@
 // NHS SPECIFIC
 button:hover {
     background-color: $button-hover-background-colour;
-    border-bottom: $button-hover-border-bottom-colour;
+    border-bottom: 1px solid $button-hover-border-bottom-colour;
 }
 
 button:active {

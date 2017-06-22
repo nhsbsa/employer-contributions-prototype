@@ -52,10 +52,10 @@
       <div class="header-wrapper">
         <div class="header-global">
           <div class="header-logo">
-            <a href="{{ homepage_url|default('https://www.gov.uk') }}"
-                title="{{ logo_link_title|default('Go to the GOV.UK homepage') }}" id="logo" class="content">
-                <!--[if gt IE 8]><!--><img src="{{ asset_path }}images/bsa_logo.svg" alt="NHS Logo"><!--<![endif]-->
-                <!--[if IE 8]><img src="{{ asset_path }}images/bsa_logo.png" style="width:256px" alt="NHS Logo"><![endif]-->
+            <a href="{{ homepage_url|default('http://www.nhsbsa.nhs.uk') }}"
+                title="{{ logo_link_title|default('Go to the NHS BSA homepage') }}" id="logo" class="content">
+                <!--[if gt IE 8]><!--><img src="{{ asset_path }}images/bsa_logo.svg" alt="NHS BSA Logo"><!--<![endif]-->
+                <!--[if IE 8]><img src="{{ asset_path }}images/bsa_logo.png" style="width:256px" alt="NHS BSA Logo"><![endif]-->
 
               <!-- {{ global_header_text|default('NHS') }} -->
             </a>
@@ -82,17 +82,24 @@
           <div class="footer-meta-inner">
             {% block footer_support_links %}{% endblock %}
 
-            <!-- <div class="open-government-licence">
-              <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
+            <div class="bsa-footer-links">
 
-                {% block licence_message %}<p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>{% endblock %}
-
-            </div> -->
+                <p>
+                  <ul>
+                    <li><a href="#">Privacy policy and cookies</a></li>
+                    <li><a href="#">Terms and conditions</a></li>
+                  </ul>
+                </p>
+                <p>
+                  Find more information about <a href="http://www.nhsbsa.nhs.uk">NHS Business Services Authority</a>
+                </p>
+                <div class="copy">
+                  <p>
+                  &copy; NHS Business Services Authority 2017.
+                  </p>
+                </div>
+            </div>
           </div>
-
-          <!-- <div class="copyright">
-            <a href="http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">{{ crown_copyright_message|default('&copy; Crown copyright')|safe }}</a>
-          </div> -->
         </div>
       </div>
     </footer>
