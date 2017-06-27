@@ -38,12 +38,7 @@ module.exports = function (grunt) {
     // Copies templates and assets from external modules and dirs
     copy: {
       makedist: {
-        files: [{
-            expand: true,
-            cwd: 'public/',
-            src: ['images/**/*', 'javascripts/**/*', 'stylesheets/**/*'],
-            dest: 'dist/'
-        },
+        files: [
         {
             expand: true,
             cwd: 'govuk_modules/govuk_frontend_toolkit/',
@@ -61,6 +56,12 @@ module.exports = function (grunt) {
                 'javascripts/**/*',
                 'stylesheets/**/*'
             ],
+            dest: 'dist/'
+        },
+        {
+            expand: true,
+            cwd: 'public/',
+            src: ['images/**/*', 'javascripts/**/*', 'stylesheets/**/*'],
             dest: 'dist/'
         }]
       },

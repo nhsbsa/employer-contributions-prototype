@@ -5,10 +5,10 @@
 #nhs-global-header {
   //background-color: $white;
   width: 100%;
-  background-image: url("/public/images/header-bsa.svg");
+  background-image: file-url("header-bsa.svg");
 
   @include ie-lte(8) {
-    background-image: url("/public/images/header-bsa.png");
+    background-image: file-url("header-bsa.png");
   }
 
   background-repeat: no-repeat;
@@ -59,7 +59,7 @@
           a {
               img {
                 @include ie-lte(8) {
-                  background: white url(/public/images/bsa_logo.png) no-repeat;
+                  background: white file-url("bsa_logo.png") no-repeat;
                   width:299px;
                   height: 65px;
                   display: block;
