@@ -1,7 +1,7 @@
 {
   "name": "nhs-template-creator",
-  "version": "0.0.12",
-  "description": "bug fixes with images. GITLAB re-run.",
+  "version": "0.0.13",
+  "description": "Changes to gitlab-cy.yml file to fix gitlab update triggering bug",
   "repository": {
     "type": "git",
     "url": "git@gitlab00.node.consul:bsa-design/nhs-template-creator.git"
