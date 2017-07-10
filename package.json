@@ -1,6 +1,6 @@
 {
   "name": "nhs-template-creator",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Changes to gitlab-cy.yml file to fix gitlab update triggering bug",
   "repository": {
     "type": "git",
