@@ -149,7 +149,8 @@
 
 .example-grid p {
   width: 100%;
-  background: file-url("examples/grid.png") 0 0 repeat;
+  // background: file-url("examples/grid.png") 0 0 repeat;
+  background: url("../images/examples/grid.png") 0 0 repeat;
   margin-bottom: 0;
   height: 30px;
   @include media(tablet) {
