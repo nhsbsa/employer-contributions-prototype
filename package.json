@@ -1,6 +1,6 @@
 {
   "name": "nhs-template-creator",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "Fixed background issue for ie8",
   "repository": {
     "type": "git",

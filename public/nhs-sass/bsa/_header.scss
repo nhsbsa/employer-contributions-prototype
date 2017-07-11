@@ -10,7 +10,7 @@ $path: "/public/images/";
 
   @include ie-lte(8) {
     // background-image: file-url("header-bsa.png");
-      background-image: url("../images/header-bsa.svg");
+      background-image: url("../images/header-bsa.png");
   }
 
   background-repeat: no-repeat;
@@ -62,7 +62,7 @@ $path: "/public/images/";
               img {
                 @include ie-lte(8) {
                   // background: white file-url("bsa_logo.png") no-repeat;
-                  background: white url("../images/header-bsa.png") no-repeat;
+                  background: white url("../images/bsa_logo.png") no-repeat;
                   width:299px;
                   height: 65px;
                   display: block;
