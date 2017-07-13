@@ -92,6 +92,12 @@ module.exports = {
       res.render('guide_buttons', { 'page_name': pageName })
     })
 
+    // Buttons
+    app.get('/empty', function (req, res) {
+      var pageName = 'Empty'
+      res.render('guide_empty', { 'page_name': pageName })
+    })
+
     // Forms
     app.get('/form-elements', function (req, res) {
       var pageName = 'Form elements'

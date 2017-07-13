@@ -33,6 +33,7 @@ deploy_job:
     - npm install
     - npm run build
     - npm run dist
+    - rm node_modules/snyk-mvn-plugin/test/fixtures/pom.xml
     - bsa-ci/create_release_candidate.rb --verbose
   tags:
     - deploy
