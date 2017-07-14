@@ -1,14 +1,16 @@
 @import '_shims';
 @import '_conditionals';
 @import '_measurements';
-
+$path: "/public/images/";
 #nhs-global-header {
   //background-color: $white;
   width: 100%;
-  background-image: file-url("header-bsa.svg");
+  // background-image: file-url("header-bsa.svg");
+  background-image: url("../images/header-bsa.svg");
 
   @include ie-lte(8) {
-    background-image: file-url("header-bsa.png");
+    // background-image: file-url("header-bsa.png");
+      background-image: url("../images/header-bsa.png");
   }
 
   background-repeat: no-repeat;
@@ -76,7 +78,8 @@
           a {
               img {
                 @include ie-lte(8) {
-                  background: white file-url("bsa_logo.png") no-repeat;
+                  // background: white file-url("bsa_logo.png") no-repeat;
+                  background: white url("../images/bsa_logo.png") no-repeat;
                   width:299px;
                   height: 65px;
                   display: block;

@@ -1,7 +1,7 @@
 {
   "name": "nhs-template-creator",
-  "version": "0.0.11",
-  "description": "bug fixes with images",
+  "version": "0.0.17",
+  "description": "Fixed background issue for ie8",
   "repository": {
     "type": "git",
     "url": "git@gitlab00.node.consul:bsa-design/nhs-template-creator.git"

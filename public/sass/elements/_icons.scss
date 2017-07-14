@@ -8,18 +8,22 @@
   height: #{$icon-height}px;
 
   @if $icon-sub-folder {
-    background-image: file-url("#{$icon-sub-folder}/#{$icon-name}.png");
+    // background-image: file-url("#{$icon-sub-folder}/#{$icon-name}.png");
+    background-image: url("../images/#{$icon-sub-folder}/#{$icon-name}.png");
 
     @include device-pixel-ratio() {
-      background-image: file-url("#{$icon-sub-folder}/#{$icon-name}-2x.png");
+      // background-image: file-url("#{$icon-sub-folder}/#{$icon-name}-2x.png");
+      background-image: url("../images/#{$icon-sub-folder}/#{$icon-name}-2x.png");
       background-size: 100%;
     }
 
   } @else {
-    background-image: file-url("#{$icon-name}.png");
+    // background-image: file-url("#{$icon-name}.png");
+    background-image: url("../images/#{$icon-name}.png");
 
     @include device-pixel-ratio() {
-      background-image: file-url("#{$icon-name}-2x.png");
+      // background-image: file-url("#{$icon-name}-2x.png");
+      background-image: url("../images/#{$icon-name}-2x.png");
       background-size: 100%;
     }
   }

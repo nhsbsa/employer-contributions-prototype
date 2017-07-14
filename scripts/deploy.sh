@@ -27,14 +27,10 @@ elif [ "$GITLABRUNNER_EMAIL" != "" ]
         git config --global user.name gitlabrunner
 fi
 
-
 git clone git@gitlab00.node.consul:bsa-design/nhs-template.git .deploy
-# git clone ssh://git@localhost:10022/home-styles/nhs-template.git .deploy
-# git clone git@gitlab.domain.net:group-name/project-name.git .deploy
 rm -rf .deploy/images .deploy/javascripts .deploy/stylesheets
 cp -R dist/* .deploy
 cd .deploy
-# sed -i "" "s/\"version\": \".*\",/\"version\": \"$PACKAGE_VERSION\",/" package.json
 echo -e "$(date) - VERSION $PACKAGE_VERSION\n $DESCRIPTION\n\n" >> version-log.txt
 git add -A
 git commit -m "Deploying and releasing version $PACKAGE_VERSION"
