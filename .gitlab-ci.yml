@@ -5,6 +5,7 @@ before_script:
   - nhsbsa-ci/ci_before_script.sh
   - sudo yum -y install epel-release
   - sudo yum -y install nodejs
+  - npm config set proxy http://internal-outbound-nat-1350400483.eu-west-2.elb.amazonaws.com:3128
   - npm --version
   - node --version
 
