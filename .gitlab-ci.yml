@@ -1,30 +1,22 @@
-image: nhsbsa/docker-centos-iac:latest
 before_script:
-  - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
-  - export JRE_HOME=$(dirname $(dirname $(readlink -f $(which javac))))/jre
-  - export GITLAB_API_ENDPOINT=https://gitlab00.node.consul/api/v3
-  - export GITLAB_API_PRIVATE_TOKEN=e_ehRp9rc6EZADVBu6Pz
-  - export GITLABRUNNER_EMAIL=$(git config --get --global user.email)
-  - export GITLABRUNNER_NAME=$(git config --get --global user.name)
-  - printenv | sort
-  - java -version
-  - eval "$(rbenv init -)"
-  - ruby -v
-  - git clone git@${CI_GIT_HOST}:devops/bsa-ci.git
-  - (cd bsa-ci && bundle install)
   - eval $(ssh-agent -s)
-  - ssh-add /root/.ssh/*id_rsa
+  - ssh-add /root/.ssh/*.pem
+  - git clone git@${GIT_URL}:platform-services/nhsbsa-ci.git
+  - nhsbsa-ci/ci_before_script.sh
   - sudo yum -y install epel-release
   - sudo yum -y install nodejs
   - npm --version
   - node --version
+
 stages:
   - install
   - deploy
+
 install_job:
   stage: install
   script:
     - npm install
+
 deploy_job:
   stage: deploy
   only:
@@ -34,7 +26,7 @@ deploy_job:
     - npm run build
     - npm run dist
     - rm node_modules/snyk-mvn-plugin/test/fixtures/pom.xml
-    - bsa-ci/create_release_candidate.rb --verbose
+    - nhsbsa-ci/create_rc_branch.sh
   tags:
     - deploy
 # Create:RC:
@@ -57,6 +49,7 @@ Binary:Push:
     # then deploy:deploy to push artifacts up to binary repo
     - npm install
     - npm run deploy
-    - mvn -B -DrepoUrl=$REPO_URL -DaltDeploymentRepository=bsa-rc::default::$REPO_URL/bsa-rc clean install deploy:deploy
+    # Push binary to Nexus nhsbsa-rc repo.
+    - nhsbsa-ci/push_binary.sh nhsbsa-libs
   tags:
     - deploy
