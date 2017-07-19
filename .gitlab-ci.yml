@@ -16,6 +16,8 @@ install_job:
   stage: install
   script:
     - npm install
+  tags:
+    - build
 
 deploy_job:
   stage: deploy
@@ -28,28 +30,16 @@ deploy_job:
     - rm node_modules/snyk-mvn-plugin/test/fixtures/pom.xml
     - nhsbsa-ci/create_rc_branch.sh
   tags:
-    - deploy
-# Create:RC:
-#   stage: build
-#   only:
-#     - master
-#   script:
-#     - bsa-ci/create_release_candidate.rb --verbose
-#   tags:
-#     - build
-# release job
-# for every release* branch:
-# perform maven install and deploy:deploy
+    - build
+
 Binary:Push:
   stage: deploy
   only:
     - /^rc.*$/
   script:
-    # mvn install to compile, test and qa changes
-    # then deploy:deploy to push artifacts up to binary repo
     - npm install
     - npm run deploy
     # Push binary to Nexus nhsbsa-rc repo.
     - nhsbsa-ci/push_binary.sh nhsbsa-libs
   tags:
-    - deploy
+    - build
