@@ -4,7 +4,6 @@ before_script:
   - git clone git@${GIT_URL}:platform-services/nhsbsa-ci.git
   - nhsbsa-ci/ci_before_script.sh
   - curl --silent --location https://rpm.nodesource.com/setup_7.x | sudo bash -
-  # - sudo yum -y install epel-release
   - sudo yum -y install nodejs
   - npm --version
   - node --version
@@ -15,11 +14,12 @@ stages:
 
 install_job:
   stage: install
+  only:
+    - /^feature.*$/
   script:
-    # - npm config set proxy http://internal-outbound-nat-1350400483.eu-west-2.elb.amazonaws.com:3128
-    # - npm config set https-proxy http://internal-outbound-nat-1350400483.eu-west-2.elb.amazonaws.com:3128
-    - npm config list
-    - npm install --verbose
+    - npm install
+    - npm run build
+    - npm run dist
   tags:
     - build
 
@@ -31,7 +31,6 @@ deploy_job:
     - npm install
     - npm run build
     - npm run dist
-    # - rm node_modules/snyk-mvn-plugin/test/fixtures/pom.xml
     - nhsbsa-ci/create_rc_branch.sh
   tags:
     - build
