@@ -18,6 +18,7 @@ install_job:
   script:
     - npm config set proxy http://internal-outbound-nat-1350400483.eu-west-2.elb.amazonaws.com:3128
     - npm config set https-proxy http://internal-outbound-nat-1350400483.eu-west-2.elb.amazonaws.com:3128
+    - npm config list
     - npm install --verbose
   tags:
     - build
