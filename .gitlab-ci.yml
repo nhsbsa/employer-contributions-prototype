@@ -18,7 +18,7 @@ stages:
 install_job:
   stage: install
   script:
-    - npm install
+    - npm install --verbose
   tags:
     - build
 
