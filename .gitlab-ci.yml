@@ -31,7 +31,7 @@ deploy_job:
     - npm install
     - npm run build
     - npm run dist
-    - rm node_modules/snyk-mvn-plugin/test/fixtures/pom.xml
+    # - rm node_modules/snyk-mvn-plugin/test/fixtures/pom.xml
     - nhsbsa-ci/create_rc_branch.sh
   tags:
     - build
