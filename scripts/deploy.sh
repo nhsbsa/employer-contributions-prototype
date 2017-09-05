@@ -27,7 +27,8 @@ elif [ "$GITLABRUNNER_EMAIL" != "" ]
         git config --global user.name gitlabrunner
 fi
 
-git clone git@gitlab00.node.consul:bsa-design/nhs-template.git .deploy
+# git clone git@gitlab00.node.consul:bsa-design/nhs-template.git .deploy
+git clone git@dps-gitlab.service.nhsbsa:nhsbsa-frameworks/BSA-Design/nhs-template.git .deploy
 rm -rf .deploy/images .deploy/javascripts .deploy/stylesheets
 cp -R dist/* .deploy
 cd .deploy
