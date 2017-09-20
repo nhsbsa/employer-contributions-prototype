@@ -1,0 +1,69 @@
+{% extends 'templates/nhs_transaction_layout.html' %}
+
+{% block pageTitle %} Employer's account information {% endblock %}
+
+{% block afterHeader %}
+{% include "nhsbsa/includes/financial-information-collection.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div id="content" role="main" class="demo-only add-log-out">
+
+	<div class="back-nav" role="navigation">
+		<a class="top-back-button back-to-previous" href="#">Back</a>
+	</div>
+
+	<h1 class="heading-xlarge">Employer's account information</h1>
+
+	<div class="text">
+		<div class="validation-summary display-none">
+			<p>Some questions have not been answered correctly.<br />Please see the errors below.</p>
+		</div>
+	</div>
+
+	<form action="summary" method="get" class="form form-to-validate" id="employer-account-info-form" novalidate="novalidate">
+		<div class="form-item-wrapper error-layer">
+			<fieldset>
+				<legend class="visuallyhidden">Employer's account details</legend>
+				<div class="form-group">
+					<label class="form-label-bold" for="ea-code">EA code</label>
+					<p class="validation-message display-none">Please fill in a valid EA code</p>
+					<input type="text" id="ea-code" name="ea-code" value="" class="form-control form-control-15-chars validate-text-input">
+				</div>
+				<div class="form-group">
+					<label class="form-label-bold" for="account-number">Account number</label>
+					<p class="validation-message display-none">Please fill in a valid account number</p>
+					<input type="text" id="account-number" name="account-number" value="" class="form-control form-control-15-chars validate-text-input">
+				</div>
+				<div class="form-group">
+					<label class="form-label-bold" for="account-name">Account name</label>
+					<p class="validation-message display-none">Please fill in a valid account name</p>
+					<input type="text" id="account-name" name="account-name" value="" class="form-control validate-text-input">
+				</div>
+			</fieldset>
+		</div>
+
+		<div class="form-item-wrapper">
+			<div class="form-group">
+				<button class="button">Next step</button>
+			</div>
+		</div>
+
+	</form>
+
+
+	<div class="pagination-simple">
+		<div class="back-link">
+			<a href="#" class="link">
+				<span class="prefix">Back:</span>
+				<span class="title">Employer sign in</span>
+			</a>
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}
+
+

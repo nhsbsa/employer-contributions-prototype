@@ -1,0 +1,61 @@
+{% extends 'templates/nhs_transaction_layout.html' %}
+
+{% block pageTitle %} Employer sign in {% endblock %}
+
+{% block afterHeader %}
+{% include "nhsbsa/includes/financial-information-collection.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div id="content" role="main">
+
+    <div class="back-nav" role="navigation">
+        <a class="top-back-button back-to-previous" href="#">Back</a>
+    </div>
+
+    <h1 class="heading-xlarge">Employer sign in</h1>
+
+    <div class="text">
+        <div class="validation-summary display-none">
+            <p>That email address and password combination is invalid</p>
+        </div>
+    </div>
+
+    <form action="previous-payments" method="get" class="form form-to-validate" id="login-form" novalidate="novalidate" autocomplete="off">
+        <div class="form-item-wrapper error-layer">
+            <fieldset>
+                <legend class="visuallyhidden">Login details</legend>
+                <div class="form-group">
+                    <label class="form-label-bold" for="email">Email address</label>
+                    <input type="email" id="email" value="" class="form-control validate-text-input">
+                </div>
+                <div class="form-group">
+                    <label class="form-label-bold" for="password">Password</label>
+                    <input type="password" id="password" value="" name="password" class="form-control validate-text-input">
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="form-item-wrapper">
+            <div class="form-group">
+                <button class="button">Sign in</button>
+            </div>
+            <a href="coming-soon">Forgotten your password?</a>
+        </div>
+
+    </form>
+
+    <div class="pagination-simple">
+        <div class="back-link">
+            <a href="start" class="link">
+                <span class="prefix">Start again:</span>
+                <span class="title">NHS Pension Scheme Financial Information Collection</span>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+

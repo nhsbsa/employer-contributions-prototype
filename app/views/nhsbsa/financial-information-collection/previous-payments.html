@@ -1,0 +1,127 @@
+{% extends 'templates/nhs_transaction_layout.html' %}
+
+{% block pageTitle %} Submit a new payment {% endblock %}
+
+{% block afterHeader %}
+{% include "nhsbsa/includes/financial-information-collection.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div id="content" role="main" class="demo-only add-log-out">
+
+    <div class="back-nav" role="navigation">
+        <a class="top-back-button back-to-previous" href="#">Back</a>
+    </div>
+
+    <h1 class="heading-xlarge">Submit a new contribution</h1>
+
+    <div class="multiple-ea display-none">
+        <h2 class="heading-large">Employing Authority (EA) code: <span class="get-cookie" data-cookie-name="eaCode">&nbsp;</span></h2>
+        <h2 class="heading-large">Marie Curie Cancer Care</h2>
+    </div>
+
+    <h2 class="heading-medium">The February 2017 submission needs to reach us by 16 March 2017.</h2>
+    <div class="stand-alone-button">
+        <a class="button set-cookie" href="make-payment" data-cookie-value="February" data-cookie-name="payingMonth">Submit contribution</a>
+    </div>
+
+    <hr />
+
+    <h2 class="heading-large">Previous contributions</h2>
+    <table id="previous-contributions-table" width="100%" border="0" cellspacing="0" cellpadding="0" class="data-table stack-table wide-table hoverable-table stripped-table">
+        <tbody>
+        <tr>
+            <th scope="col">Month</th>
+            <th scope="col">Submitted by</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Adjustment</th>
+            <th scope="col">Status</th>
+        </tr>
+        <tr class="hoverable">
+            <td><a href="already-paid" class="set-cookie" data-cookie-value="January" data-cookie-name="payingMonth">January 2017</a></td>
+            <td>Alison Moore</td>
+            <td>&pound;30,262.56</td>
+            <td>-</td>
+            <td>Submitted -&nbsp;15&nbsp;February&nbsp;2016</td>
+        </tr>
+        <tr class="hoverable">
+            <td><a href="already-paid" class="set-cookie" data-cookie-value="December" data-cookie-name="payingMonth">December 2016</a></td>
+            <td>Mathew Brown</td>
+            <td>&pound;62,188.41</td>
+            <td>&pound;682.29</td>
+            <td>Paid late -&nbsp;21&nbsp;January&nbsp;2016</td>
+        </tr>
+        <tr class="hoverable">
+            <td><a href="already-paid" class="set-cookie" data-cookie-value="November" data-cookie-name="payingMonth">November 2016</a></td>
+            <td>Alison Moore</td>
+            <td>&pound;48,882.60</td>
+            <td>&pound;521.36</td>
+            <td>Paid late -&nbsp;17&nbsp;December&nbsp;2016</td>
+        </tr>
+        <tr class="hoverable">
+            <td><a href="already-paid" class="set-cookie" data-cookie-value="October" data-cookie-name="payingMonth">October 2016</a></td>
+            <td>Alison Moore</td>
+            <td>&pound;53,201.01</td>
+            <td>&pound;112.05</td>
+            <td>Paid -&nbsp;14&nbsp;November&nbsp;2016</td>
+        </tr>
+        <tr class="hoverable">
+            <td><a href="already-paid" class="set-cookie" data-cookie-value="September" data-cookie-name="payingMonth">September 2016</a></td>
+            <td>Alison Moore</td>
+            <td>&pound;64,011.56</td>
+            <td>&pound;443.21</td>
+            <td>Paid late -&nbsp;17&nbsp;October&nbsp;2016</td>
+        </tr>
+        <tr class="hoverable">
+            <td><a href="already-paid" class="set-cookie" data-cookie-value="August" data-cookie-name="payingMonth">August 2016</a></td>
+            <td>Alison Moore</td>
+            <td>&pound;94,011.07</td>
+            <td>&pound;301.09</td>
+            <td>Paid -&nbsp;16&nbsp;September&nbsp;2016</td>
+        </tr>
+        <tr class="hoverable">
+            <td><a href="already-paid" class="set-cookie" data-cookie-value="July" data-cookie-name="payingMonth">July 2016</a></td>
+            <td>Alison Moore</td>
+            <td>&pound;94,011.07</td>
+            <td>-</td>
+            <td>Paid -&nbsp;16&nbsp;August&nbsp;2016</td>
+        </tr>
+        <tr class="hoverable">
+            <td><a href="already-paid" class="set-cookie" data-cookie-value="June" data-cookie-name="payingMonth">June 2016</a></td>
+            <td>Alison Moore</td>
+            <td>&pound;94,011.07</td>
+            <td>-</td>
+            <td>Paid -&nbsp;16&nbsp;July&nbsp;2016</td>
+        </tr>
+        <tr class="hoverable">
+            <td><a href="already-paid" class="set-cookie" data-cookie-value="May" data-cookie-name="payingMonth">May 2016</a></td>
+            <td>Alison Moore</td>
+            <td>&pound;48,882.60</td>
+            <td>&pound;361.36</td>
+            <td>Paid -&nbsp;16&nbsp;June&nbsp;2016</td>
+        </tr>
+        <tr class="hoverable">
+            <td><a href="already-paid" class="set-cookie" data-cookie-value="April" data-cookie-name="payingMonth">April 2016</a></td>
+            <td>Alison Moore</td>
+            <td>&pound;7,201.31</td>
+            <td>&pound;492.12</td>
+            <td>Paid -&nbsp;11&nbsp;May&nbsp;2016</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <div class="pagination-simple">
+        <div class="back-link">
+            <a href="login">
+                <span class="prefix">Back:</span>
+                <span class="title">Previous page</span>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+

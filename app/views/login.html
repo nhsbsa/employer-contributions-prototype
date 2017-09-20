@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block breadcrumb %}
+    {{ super() }}
+    <li>Login</li>
+{% endblock %}
+
+{% block back %}
+    {{ super() }}
+    <a class="top-back-button back-to-previous" href="#">Back</a>
+{% endblock %}
+
+{% block title%}
+     Employer sign in
+{% endblock %}
+
+{% block subtitle%}
+{% endblock %}
+
+{% block content%}
+
+    <div class="text">
+        <div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+
+            <h1 class="error-summary-heading" id="error-summary-heading-example-1">
+                That email address and password combination is invalid
+            </h1>
+        </div>
+    </div>
+
+    <form action="previous-payments" method="get" class="form form-to-validate" id="login-form" novalidate="novalidate" autocomplete="off">
+
+        <fieldset>
+            <legend class="visuallyhidden">Login details</legend>
+            <div class="form-group">
+                <label class="form-label-bold" for="email">Email address</label>
+                <input type="email" id="email" value="" class="form-control validate-text-input">
+            </div>
+            <div class="form-group">
+                <label class="form-label-bold" for="password">Password</label>
+                <input type="password" id="password" value="" name="password" class="form-control validate-text-input">
+            </div>
+        </fieldset>
+
+        <div class="form-group">
+            <button class="button">Sign in</button>
+            <p>
+                <a href="#">Forgotten your password?</a>
+            </p>
+        </div>
+
+    </form>
+
+{% endblock %}

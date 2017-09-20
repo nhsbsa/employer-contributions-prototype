@@ -1,0 +1,137 @@
+{% extends 'templates/nhs_transaction_layout.html' %}
+
+{% block pageTitle %} Already paid {% endblock %}
+
+{% block afterHeader %}
+{% include "nhsbsa/includes/financial-information-collection.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div id="content" role="main" class="demo-only add-log-out">
+
+    <div class="back-nav" role="navigation">
+        <a class="top-back-button back-to-previous" href="#">Back</a>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <h1 class="heading-xlarge"><span class="get-cookie" data-cookie-name="payingMonth">&nbsp;</span> contribution taken</h1>
+            <h2 class="heading-medium">Payment for this month was completed on 18th&nbsp;<span class="get-cookie" data-cookie-name="payingMonth">&nbsp;</span>&nbsp;2017.</h2>
+
+            <h2 class="heading-medium">Payment details</h2>
+            <table class="content-table stack-table">
+                <tbody>
+                <tr>
+                    <th scope="row" class="cell-first">Total pensionable pay</th>
+                    <td class="cell-last white-space-no-wrap">&pound;250,000.00</td>
+                </tr>
+                <tr class="highlighted">
+                    <th scope="row" class="cell-first">Employee contributions</th>
+                    <td class="cell-last white-space-no-wrap">&pound;23,750.00</td>
+                </tr>
+                <tr class="highlighted">
+                    <th scope="row" class="cell-first">Employer contributions</th>
+                    <td class="cell-last white-space-no-wrap">&pound;35,750.00</td>
+                </tr>
+                <!--<tr>-->
+                    <!--<th scope="row" class="cell-first">Employee added years</th>-->
+                    <!--<td class="cell-last white-space-no-wrap">&pound;1,780.00</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<th scope="row" class="cell-first">Additional pension amount</th>-->
+                    <!--<td class="cell-last white-space-no-wrap">&pound;750.00</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<th scope="row" class="cell-first">Early Retirement Reduction Buy Out (ERRBO)</th>-->
+                    <!--<td class="cell-last white-space-no-wrap">&nbsp;-&nbsp;</td>-->
+                <!--</tr>-->
+                <tr class="total">
+                    <th scope="row" class="cell-first">Total amount to be debited</th>
+                    <td class="cell-last lede white-space-no-wrap">&pound;59,500.00</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h2 class="heading-medium">Make payment</h2>
+            <table class="content-table stack-table">
+                <tbody>
+                <tr>
+                    <th scope="row" class="cell-first">What month is this payment for?</th>
+                    <td class="cell-last white-space-no-wrap"><span class="get-cookie" data-cookie-name="payingMonth"></span> 2017</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="cell-first">When do you want to pay?</th>
+                    <td class="cell-last white-space-no-wrap">18 <span class="get-cookie" data-cookie-name="payingMonth">&nbsp;</span> 2017</td>
+                </tr>
+                <tr class="staffgps">
+                    <th scope="row" class="cell-first">Contribution payment</th>
+                    <td class="cell-last white-space-no-wrap">Staff</td>
+                </tr>
+                </tbody>
+            </table>
+
+
+            <h2 class="heading-medium">Bank account information</h2>
+            <table class="content-table stack-table">
+                <tbody>
+                <tr>
+                    <th scope="row" class="cell-first">Employing Authority (EA) code</th>
+                    <td class="cell-last white-space-no-wrap"><span class="get-cookie" data-cookie-name="eaCode">&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <th scope="row" class="cell-first">Account number</th>
+                    <td class="cell-last white-space-no-wrap">8754212</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="cell-first">Account name</th>
+                    <td class="cell-last">Marie Curie Cancer Care</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h2 class="heading-medium">Your contact details</h2>
+            <table class="content-table stack-table">
+                <tbody>
+                <tr>
+                    <th scope="row" class="cell-first">Full name</th>
+                    <td class="cell-last white-space-no-wrap">Alison Moore</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="cell-first">Contact number</th>
+                    <td class="cell-last white-space-no-wrap">01237 611 978</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="cell-first">Email address</th>
+                    <td class="cell-last white-space-no-wrap">alison.moore@nhs.net</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <!--<div class="stand-alone-button">-->
+                <!--<a class="button" href="make-payment">Make payment</a>-->
+            <!--</div>-->
+
+        </div>
+
+        <div class="column-third">
+            <div class="right-aligned">
+                <a href="#" class="button button-secondary print-button">Print this page</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="pagination-simple">
+        <div>
+            <a href="previous-payments" class="link">
+                <span class="prefix">Back:</span>
+                <span class="title">Previous payments</span>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
