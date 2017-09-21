@@ -91,13 +91,11 @@ NHS elements
         <div class="grid-row">
             <div class="column-two-thirds">
 
-                <!-- do I need this?
-                <div class="back-nav" role="navigation">
+                <!-- <div class="back-nav" role="navigation">
                     {% block back%}
                     
                     {% endblock %}
-                </div>
-                -->
+                </div> -->
 
                 <h1 class="heading-xlarge">
                     {% block title %}
@@ -117,14 +115,15 @@ NHS elements
 
         {% block content %}
             <div class="grid-row">
-
-                <div class="column-one-half">
-                    <p>This is default content</p>
+                
+                <div class="column-two-thirds">
+                    <p>Content</p>
                 </div>
-
-                <div class="column-one-half">
-                    <p>This is default content</p>
+                
+                <div class="column-one-third">
+                    <p>Content</p>
                 </div>
+                
             </div>
         {% endblock %}
     </main>

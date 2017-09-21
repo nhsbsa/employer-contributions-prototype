@@ -37,4 +37,20 @@ router.get('/login', (req, res) => {
     res.render('login.html');
 });
 
+router.get('/previous-payments', (req, res) => {
+    res.render('previous-payments.html');
+});
+
+router.get('/make-payment', (req, res) => {
+    res.render('make-payment.html');
+});
+
+router.get('/contributions-and-payment', (req, res) => {
+    res.render('contributions-and-payment.html');
+});
+
+router.get('/summary', (req, res) => {
+    res.render('summary.html');
+});
+
 module.exports = router;

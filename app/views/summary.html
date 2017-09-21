@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block breadcrumb %}
+    {{ super() }}
+    <li>Summary</li>
+{% endblock %}
+
+{% block back %}
+    {{ super() }}
+    <a class="top-back-button back-to-previous" href="#">Back</a>
+{% endblock %}
+
+{% block title%}
+    Check your February 2017 contributions before submitting
+{% endblock %}
+
+{% block subtitle%}
+{% endblock %}
+
+{% block content%}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <div class="form-group">
+                <h2 class="heading-medium">Contribution details</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="bold">Number of scheme members</td>
+                            <td class="numeric">8</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Total pensionable pay</td>
+                            <td class="numeric">£250,000.00</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Employee contributions</td>
+                            <td class="numeric">£23,750.00</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Employer contributions</td>
+                            <td class="numeric">£35,750.00</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Employee added years</td>
+                            <td class="numeric">£1,780.00</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Additional pension amount</td>
+                            <td class="numeric">£750.00</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Early Retirement Reduction Buy Out (ERRBO)</td>
+                            <td class="numeric">-</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Total amount to be debited</td>
+                            <td class="numeric">£59,500.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="form-group">
+                    <p><a href="contributions-and-payment">change</a><p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <h2 class="heading-medium">Make contribution</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="bold">What month is this contribution for?</td>
+                            <td class="numeric">February 2017</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">When do you want to pay?</td>
+                            <td class="numeric">18 February 2017</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Contribution payment</td>
+                            <td class="numeric">Staff</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="form-group">
+                    <p><a href="contributions-and-payment">change</a><p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <h2 class="heading-medium">Bank account information</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="bold">Employing Authority (EA) code</td>
+                            <td class="numeric">EA9143</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Account number</td>
+                            <td class="numeric">8754212</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Account name</td>
+                            <td class="numeric">Marie Curie Cancer Care</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="form-group">
+                <h2 class="heading-medium">Your contact details</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="bold">Full name</td>
+                            <td class="numeric">Alison Moore</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Contact number</td>
+                            <td class="numeric">01237 611 978</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Email address</td>
+                            <td class="numeric">alison.moore@nhs.net</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="form-group">
+                <a class="button" href="thank-you" role="button">Submit your contribution</a>
+            </div>
+        </div>
+
+        <!-- <div class="column-one-third">
+            <p>Content</p>
+        </div> -->
+
+    </div>
+
+{% endblock %}

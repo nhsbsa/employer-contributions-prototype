@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block breadcrumb %}
+    {{ super() }}
+    <li>Contributions and Payment</li>
+{% endblock %}
+
+{% block title%}
+    February 2017 contribution details
+{% endblock %}
+
+{% block subtitle%}
+    
+{% endblock %}
+
+{% block content%} 
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <div class="form-group">
+                <label class="form-label" for="scheme-members">Number of scheme members</label>
+                <input class="form-control" id="scheme-members" name="scheme-members" type="text" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="full-name-f1">Total pensionable pay</label>
+                <input class="form-control" id="full-name-f1" type="text">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="full-name-f2">Employee contributions</label>
+                <input class="form-control" id="full-name-f2" type="text">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="full-name-f3">Employer contributions</label>
+                <input class="form-control" id="full-name-f3" type="text">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="full-name-f4">Employee added years</label>
+                <input class="form-control" id="full-name-f4" type="text">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="full-name-f5">Additional pension</label>
+                <input class="form-control" id="full-name-f5" type="text">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="full-name-f6">Early Retirement Reduction Buy Out (ERRBO)</label>
+                <input class="form-control" id="full-name-f6" type="text">
+            </div>
+
+            <div class="form-group">
+                <h3 class="heading-medium">
+                    Do you need to make an adjustment?
+                </h3>
+                
+                <form>
+                    <div class="form-group">
+                        <fieldset>
+                            <legend class="visually-hidden"></legend>
+                            <label class="block-label selection-button-radio" data-target="adjustment-for" for="example-adjustment-yes">
+                                <input id="example-adjustment-yes" type="radio" name="radio-contact-group" value="Yes">
+                                yes
+                            </label>
+                            <div class="panel panel-border-narrow js-hidden" id="adjustment-for">
+                                <div class="form-group">
+                                    <h3 class="heading-medium">When is this adjustment for?
+                                    <span class="form-hint">For example September 2016</span></h3>
+                                    <!-- Use .form-group to create spacing when wrapping label and input pairs -->
+                                    <div class="form-group">
+                                        <label class="form-label" for="month">Month</label>
+                                        <input class="form-control" id="month" name="month" type="text" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="year">Year</label>
+                                        <input class="form-control" id="year" name="year" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="adjustment-1">Employee contributions</label>
+                                    <input class="form-control" name="adjustment-1" type="text" id="adjustment-1">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="adjustment-2">Employer contributions</label>
+                                    <input class="form-control" name="adjustment-2" type="text" id="adjustment-2">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="adjustment-3">Employee added years</label>
+                                    <input class="form-control" name="adjustment-3" type="text" id="adjustment-3">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="adjustment-4">Additional pension</label>
+                                    <input class="form-control" name="adjustment-4" type="text" id="adjustment-4">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="adjustment-5">Early Retirement Reduction Buy Out (ERRBO)</label>
+                                    <input class="form-control" name="adjustment-5" type="text" id="adjustment-5">
+                                </div>
+                            </div>
+                        
+                            <label class="block-label selection-button-radio" for="example-adjustment-no">
+                                <input id="example-adjustment-no" type="radio" name="radio-contact-group" value="No" />
+                                no
+                            </label>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="full-name-f7">Total amount to be debited</label>
+                <input class="form-control" id="full-name-f7" type="text">
+            </div>
+
+            <div class="form-group">
+                <a class="button" href="summary" role="button">Next step</a>
+            </div>
+        </div>
+
+        <!-- <div class="column-one-third">
+            <p>Content</p>
+        </div> -->
+
+    </div>
+{% endblock %}
