@@ -10,11 +10,16 @@
     <a class="top-back-button back-to-previous" href="#">Back</a>
 {% endblock %}
 
-{% block title%}
-    Check your February 2017 contributions before submitting
+{% block subtitle%}
 {% endblock %}
 
-{% block subtitle%}
+
+{% block mainheader %}
+<h1 class="heading-xlarge">
+    {% block title %}
+    Check your February 2017 contributions before submitting
+    {% endblock %}
+</h1>
 {% endblock %}
 
 {% block content%}
