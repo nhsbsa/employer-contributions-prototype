@@ -77,4 +77,12 @@ router.get('/thank-you', (req, res) => {
     res.render('thank-you.html');
 });
 
+router.get('/select-ea', (req, res) => {
+    res.render('select-ea.html');
+});
+
+router.get('/already-paid', (req, res) => {
+    res.render('already-paid.html');
+});
+
 module.exports = router;

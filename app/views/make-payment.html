@@ -3,7 +3,6 @@
 {% block breadcrumb %}
     {{ super() }}
     <li>Make Payment</li>
-    <!-- <li>Employing Authority Contributions</li> -->
 {% endblock %}
 
 {% block mainheader %}
@@ -20,7 +19,15 @@
 
 {% block content%} 
     <div class="grid-row">
-        <div class="column-two-thirds">
+        <!-- EA 
+        <div class="column-full">
+            <div class="form-group">
+                <h2 class="heading-large">Employing Authority (EA) code: EA5955</h2>
+                <h2 class="heading-large">Marie Curie Cancer Care</h2>
+            </div>
+        </div> -->
+
+        <div class="column-two-thirds">            
             <div class="form-group">
                 <h3 class="heading-medium">What month is this contribution for?
                 <span class="form-hint">For example February 2017</span></h3>
@@ -80,6 +87,7 @@
                 </form>
             </div>
 
+            <!-- GP 
             <div class="form-group">
                 <h3 class="heading-medium">
                     Contribution payment
@@ -101,107 +109,21 @@
                         </fieldset>
                     </div>
                 </form>
-            </div>
-        </div>
+            </div> -->
 
-        <!-- <div class="form-group">
-            <h3 class="heading-medium">
-                Use this to upload your pension contributions file
-            </h3>
+            <!-- CSV 
             <div class="form-group">
-                <label class="form-label" for="file-input">
-                    Accepts .csv, .xls, .xlsx and .ods file formats
-                </label>
-                <input type="file" id="file-input">
-            </div>
-        </div> -->
-
-        <!-- ea -->
-        <!-- <div class="form-group">
-            <label class="form-label" for="full-name-f1">Search for an Employing Authority (EA) code</label>
-            <form>
-                <input class="form-control" id="full-name-f1" type="text" />
-                <button type="submit"><span class="visuallyhidden">Search</span></button>
-            </form>
+                <h3 class="heading-medium">
+                    Use this to upload your pension contributions file
+                </h3>
+                <div class="form-group">
+                    <label class="form-label" for="file-input">
+                        Accepts .csv, .xls, .xlsx and .ods file formats
+                    </label>
+                    <input type="file" id="file-input">
+                </div>
+            </div> -->
         </div>
-
-        <div class="form-group">
-            <div class="column-full">                        
-                <table>
-                    <thead>
-                        <tr>
-                            <th scope="col">History</th>
-                            <th scope="col">Organisation</th>
-                            <th scope="col">Status</th>
-                            <th scope="col">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><a href="previous-payments">EA5955</a></td>
-                            <td>Hesketh House, Fleetwood</td>
-                            <td><span>outstanding</span></td>
-                            <td><a href="make-payments">Submit</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="previous-payments">EA2331</a></td>
-                            <td>Stella House, Newcastle</td>
-                            <td><span>submitted</span></td>
-                            <td><a href="make-payments">Edit</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="previous-payments">EA4411</a></td>
-                            <td>Random House Name, Liverpool</td>
-                            <td><span>submitted</span></td>
-                            <td><a href="make-payments">Edit</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="previous-payments">EA2911</a></td>
-                            <td>Random Trust Name, London</td>
-                            <td><span>completed</span></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>EA3008</td>
-                            <td>NHS Cheetham Health Centre, Manchester</td>
-                            <td><span>outstanding</span></td>
-                            <td><a href="make-payments">Submit</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="previous-payments">EA5000</a></td>
-                            <td>Random Hospital, Rochdale</td>
-                            <td><span>outstanding</span></td>
-                            <td><a href="make-payments">Submit</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="previous-payments">EA8280</a></td>
-                            <td>Another Random Trust Name, Liverpool</td>
-                            <td><span>completed</span></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><a href="previous-payments">EA9143</a></td>
-                            <td>Marie Curie Cancer Care</td>
-                            <td><span>outstanding</span></td>
-                            <td><a href="make-payments">Submit</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="previous-payments">EA1195</a></td>
-                            <td>Another Trust in Fleetwood</td>
-                            <td><span>outstanding</span></td>
-                            <td><a href="make-payments">Submit</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="previous-payments">EA3000</a></td>
-                            <td>Made Up Name Trust, Manchester</td>
-                            <td><span>submitted</span></td>
-                            <td><a href="make-payments">Edit</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div> -->
-        <!-- end of ea -->
 
         <div class="form-group">
             <a class="button" href="contributions-and-payment" role="button">Next step</a>
