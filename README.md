@@ -36,6 +36,12 @@ npm start
 
 The app will run and be available from port 3001, so you can point your browser to [localhost](http://localhost:3001)
 
+### Watch HTML/JS & SASS tasks running in parallell
+When changing any html or JS files the app will restart automatically. See the next section for SASS files and sass:watch task.
+
+### Custom SASS (.scss) FILES
+If you want to add your own sass (.scss) files, please use the ./sass/main.scss file. Once you start the application, a sass:watch task will also run so once you edit the main.scss file css will be written into ./public/css/manin.css (this will be available in the app from '/public/custom-css/main.css' - see base.html for details)
+
 ## Documentation
 
 Prototype Application Components

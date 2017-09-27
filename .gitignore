@@ -1,2 +1,5 @@
+.DS_Store
+**/.DS_Store
 public/nhs-template/
+public/css/main.css
 node_modules/

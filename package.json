@@ -5,8 +5,11 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon -e js,html server.js",
-    "get-template": "cd public && rm -rf nhs-template && git clone git@dps-gitlab.service.nhsbsa:nhsbsa-frameworks/BSA-Design/nhs-template.git"
+    "start": "npm-run-all --parallel start-server sass:watch",
+    "start-server": "nodemon -e js,html server.js",
+    "get-template": "cd public && rm -rf nhs-template && git clone git@dps-gitlab.service.nhsbsa:nhsbsa-frameworks/BSA-Design/nhs-template.git",
+    "sass": "node-sass sass/main.scss --output public/css",
+    "sass:watch": "nodemon -e scss -x \"npm run sass\""
   },
   "author": "",
   "license": "ISC",
@@ -18,8 +21,10 @@
     "nodemon": "^1.11.0"
   },
   "devDependencies": {
+    "express-nunjucks": "2.2.3",
     "gulp": "3.9.1",
-    "nunjucks": "3.0.0",
-    "express-nunjucks": "2.2.3"
+    "node-sass": "4.5.3",
+    "npm-run-all": "4.1.1",
+    "nunjucks": "3.0.0"
   }
 }
