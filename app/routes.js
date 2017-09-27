@@ -53,4 +53,8 @@ router.get('/summary', (req, res) => {
     res.render('summary.html');
 });
 
+router.get('/thank-you', (req, res) => {
+    res.render('thank-you.html');
+});
+
 module.exports = router;

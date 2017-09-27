@@ -2,7 +2,7 @@
 
 {% block breadcrumb %}
     {{ super() }}
-    <li>Summary</li>
+    <li>Thank You</li>
 {% endblock %}
 
 {% block back %}
@@ -15,16 +15,24 @@
 
 
 {% block mainheader %}
-<h1 class="heading-xlarge">
+<!-- <h1 class="heading-xlarge">
     {% block title %}
-    Check your February 2017 contributions before submitting
+
     {% endblock %}
-</h1>
+</h1> -->
 {% endblock %}
 
 {% block content%}
 
     <div class="grid-row">
+        <div class="form-group done-panel">
+            <div class="column-full">
+                <h1 id="completed" class="heading-large">You have successfully submitted your February 2017 contributions</h1>
+                <h2 id="submitted" class="heading-medium">
+                    <span>Next contribution is due on 17 March 2017</span>
+                </h2>
+            </div>
+        </div>
         <div class="column-two-thirds">
             <div class="form-group">
                 <h2 class="heading-medium">Contribution details</h2>
@@ -97,10 +105,6 @@
                         </tr>
                     </tbody>
                 </table> -->
-
-                <div class="form-group">
-                    <p><a href="contributions-and-payment">change</a><p>
-                </div>
             </div>
 
             <div class="form-group">
@@ -134,10 +138,6 @@
                         </tr>
                     </tbody>
                 </table> -->
-
-                <div class="form-group">
-                    <p><a href="contributions-and-payment">change</a><p>
-                </div>
             </div>
 
             <div class="form-group">
@@ -180,20 +180,16 @@
                 </table>
             </div>
 
-            <!-- <div class="form-group">
-                <h3 class="heading-medium">I understand that:</h3>
-                <p>The amount shown is correct and that deductions have been made from member salaries as per the NHS Pension Scheme Regulations.</p>
-            </div> -->
-
             <div class="form-group">
-                <a class="button" href="thank-you" role="button">Submit your contribution</a>
+                <a class="button" href="#" role="button">Finish</a>
             </div>
         </div>
 
-        <!-- <div class="column-one-third">
-            <p>Content</p>
-        </div> -->
-
+        <div class="column-one-third">
+            <div class="form-group">
+                <input type="button" onclick="window.print(); return false;" value="Print this page" style="float: right; margin-top: 45px;" />
+            </div>
+        </div>
     </div>
 
 {% endblock %}
