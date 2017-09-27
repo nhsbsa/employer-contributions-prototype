@@ -25,6 +25,26 @@ router.get('/form-example-success', (req, res) => {
     res.render('form-example-success.html');
 });
 
+router.get('/coming-soon', (req, res) => {
+    res.render('coming-soon.html');
+});
+
+router.get('/not-found', (req, res) => {
+    res.render('not-found.html');
+});
+
+router.get('/updated', (req, res) => {
+    res.render('updated.html');
+});
+
+router.get('/unavailable', (req, res) => {
+    res.render('unavailable.html');
+});
+
+router.get('/session-ended', (req, res) => {
+    res.render('session-ended.html');
+});
+
 // router.get('/nhsbsa/financial-information-collection/login', (req, res) => {
 //     res.render('nhsbsa/financial-information-collection/login.html');
 // });
