@@ -53,6 +53,10 @@ router.get('/password-saved', (req, res) => {
     res.render('password-saved.html');
 });
 
+router.get('/searched-ea', (req, res) => {
+    res.render('searched-ea.html');
+});
+
 // router.get('/nhsbsa/financial-information-collection/login', (req, res) => {
 //     res.render('nhsbsa/financial-information-collection/login.html');
 // });
