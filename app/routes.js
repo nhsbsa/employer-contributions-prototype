@@ -45,6 +45,14 @@ router.get('/session-ended', (req, res) => {
     res.render('session-ended.html');
 });
 
+router.get('/new-password', (req, res) => {
+    res.render('new-password.html');
+});
+
+router.get('/password-saved', (req, res) => {
+    res.render('password-saved.html');
+});
+
 // router.get('/nhsbsa/financial-information-collection/login', (req, res) => {
 //     res.render('nhsbsa/financial-information-collection/login.html');
 // });
