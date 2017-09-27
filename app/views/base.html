@@ -62,7 +62,7 @@ NHS elements
         <div class="header-wrapper">
             <div class="header-global">
                 <div class="header-logo">
-                    <a href="https://www.gov.uk" title="Go to the GOV.UK homepage" id="logo" class="content">
+                    <a href="/" title="Go to the GOV.UK homepage" id="logo" class="content">
                         <!--[if gt IE 8]><!--><img src="/public/images/bsa_logo.svg" alt="NHS Logo"><!--<![endif]-->
                         <!--[if IE 8]><img src="/public/images/bsa_logo.png" style="width:256px" alt="NHS Logo"><![endif]-->
                     </a>
@@ -85,7 +85,7 @@ NHS elements
         <div class="breadcrumbs">
             <ol>
                 {% block breadcrumb %}
-                <li><a href="/">Home</a></li>
+                <li><a href="/start">Start</a></li>
                 {% endblock %}
             </ol>
         </div>
@@ -155,7 +155,6 @@ NHS elements
     {% endblock %}
 
     {% block scripts %}
-        <div id="global-app-error" class="app-error hidden"></div>
         <div id="global-app-error" class="app-error hidden"></div>
 
         <script src="/public/javascripts/govuk-template.js"></script>
