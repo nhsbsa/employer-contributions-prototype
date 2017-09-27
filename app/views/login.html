@@ -19,18 +19,16 @@
 
 {% block content%}
 
-    <!--
-    <div class="text">
-        <div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+    <!-- <div class="grid-row">
+        <div id="error-summary" class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
             <h1 class="error-summary-heading" id="error-summary-heading-example-1">
                 That email address and password combination is invalid
             </h1>
         </div>
-    </div>
-    -->
+    </div> -->
 
     <form action="previous-payments" method="get" class="form form-to-validate" id="login-form" novalidate="novalidate" autocomplete="off">
-
+    <!-- <form id="login-form"> -->
         <fieldset>
             <legend class="visuallyhidden">Login details</legend>
             <div class="form-group">
@@ -44,12 +42,9 @@
         </fieldset>
 
         <div class="form-group">
-            <button class="button">Sign in</button>
-            <p>
-                <a href="#">Forgotten your password?</a>
-            </p>
+            <input class="button" type="submit" value="Sign in" />
+            <p><a href="#">Forgotten your password?</a></p>
         </div>
-
     </form>
 
 {% endblock %}
