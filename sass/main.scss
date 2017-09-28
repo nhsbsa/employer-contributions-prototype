@@ -2,17 +2,9 @@
 $nhs-pensions-green: #009639;
 $nhs-pensions-green-light: #5EC384;
 
+@import "component/button";
+
 .nhs-bsa #nhs-global-header {
 	background-image: url("/public/images/header-pension-services.svg");
 }
 
-.button {
-	background-color: $nhs-pensions-green;
-	&:hover,
-	&:focus {
-		background-color: darken($nhs-pensions-green, 10%);
-	}
-	&:visited {
-		background-color: darken($nhs-pensions-green, 5%);
-	}
-}
