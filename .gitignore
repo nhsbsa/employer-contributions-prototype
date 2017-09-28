@@ -2,4 +2,5 @@
 **/.DS_Store
 public/nhs-template/
 public/css/main.css
+public/images
 node_modules/
