@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block breadcrumb %}
+    {{ super() }}
+    <li>Select EA</li>
+{% endblock %}
+
+{% block mainheader %}
+<h1 class="heading-xlarge">
+    {% block title %}
+    Employing Authority Contributions
+    {% endblock %}
+</h1>
+{% endblock %}
+
+{% block subtitle%}
+    
+{% endblock %}
+
+{% block content%} 
+    <div class="form-group">
+        <label class="form-label" for="full-name-f1">Search for an Employing Authority (EA) code</label>
+        <form>
+            <input class="form-control" id="full-name-f1" type="text" />
+            <!-- <button type="submit"><span class="visuallyhidden">Search</span></button> -->
+        </form>
+    </div>
+
+    <div class="form-group">
+        <div class="column-full">                        
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">History</th>
+                        <th scope="col">Organisation</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="previous-payments">EA5955</a></td>
+                        <td>Hesketh House, Fleetwood</td>
+                        <td><span>outstanding</span></td>
+                        <td><a href="make-payments">Submit</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="previous-payments">EA2331</a></td>
+                        <td>Stella House, Newcastle</td>
+                        <td><span>submitted</span></td>
+                        <td><a href="make-payments">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="previous-payments">EA4411</a></td>
+                        <td>Random House Name, Liverpool</td>
+                        <td><span>submitted</span></td>
+                        <td><a href="make-payments">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="previous-payments">EA2911</a></td>
+                        <td>Random Trust Name, London</td>
+                        <td><span>completed</span></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EA3008</td>
+                        <td>NHS Cheetham Health Centre, Manchester</td>
+                        <td><span>outstanding</span></td>
+                        <td><a href="make-payments">Submit</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="previous-payments">EA5000</a></td>
+                        <td>Random Hospital, Rochdale</td>
+                        <td><span>outstanding</span></td>
+                        <td><a href="make-payments">Submit</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="previous-payments">EA8280</a></td>
+                        <td>Another Random Trust Name, Liverpool</td>
+                        <td><span>completed</span></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="previous-payments">EA9143</a></td>
+                        <td>Marie Curie Cancer Care</td>
+                        <td><span>outstanding</span></td>
+                        <td><a href="make-payments">Submit</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="previous-payments">EA1195</a></td>
+                        <td>Another Trust in Fleetwood</td>
+                        <td><span>outstanding</span></td>
+                        <td><a href="make-payments">Submit</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="previous-payments">EA3000</a></td>
+                        <td>Made Up Name Trust, Manchester</td>
+                        <td><span>submitted</span></td>
+                        <td><a href="make-payments">Edit</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- <div class="pagination">
+                <div class="pagination-details">
+                    <p>Showing 1 - 10 of 44 records</p>
+        
+                </div>
+                <ul class="pagination-pages">
+                    <li class="active">1</li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                </ul>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- <div class="column-one-third">
+        <p>Content</p>
+    </div> -->
+
+    </div>
+{% endblock %}

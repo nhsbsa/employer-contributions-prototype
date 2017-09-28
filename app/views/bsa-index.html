@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title%}
+     BSA-DESIGN Prototype
+{% endblock %}
+
+{% block subtitle%}
+     Create a project prototype based on the BSA's NHS-TEMPLATE-CREATOR project
+{% endblock %}
+
+{% block content%}
+    <div class="grid-row">
+
+        <div class="column-one-half">
+            <h2 class="heading-large">Based on the Nunjucks template engine</h2>
+            <ul class="list list-bullet">
+              <li>See the <a href="https://mozilla.github.io/nunjucks/templating.html" target="_blank">Nunjucks Templating Documentation (open in a new window)</a></li>
+              <li>Node.js &amp; Express-based app {{data.ok}}</li>
+              <li>Automatically pulls BSA's <a href="https://dps-gitlab.service.nhsbsa/nhsbsa-frameworks/BSA-Design/nhs-template" target="_blank">NHS-TEMPLATE</a> latest version</li>
+              <li>Focus on your product's prototype rather than on configuration.</li>
+            </ul>
+        </div>
+
+        <div class="column-one-half">
+            <h2 class="heading-large">4 blocks only</h2>
+            <p>
+                Create a page only defining the following Nunjucks' blocks:
+            </p>
+            <ul class="list list-bullet">
+              <li>Breadcrumb</li>
+              <li>Title</li>
+              <li>Subtitle</li>
+              <li>Content</li>
+            </ul>
+            <p>
+                Read more on how to <a href="/docs">create a new prototype page</a> on the documentation page
+            </p>
+
+
+
+        </div>
+    </div>
+    <div class="grid-row">
+        <div class="column-full">
+            <h2 class="heading-large">POST/GET variables automatically made available to templates!</h2>
+            <p>
+                Once you send POST data via a form or GET data through the URL this will be automatically stored into a session and be made available to templates through the global template variable <i>data</i>. For example:
+            </p>
+            <pre class="prettyprint lang-html">
+                <code>
+                    &#123;&#123; data.firstName &#125;&#125;
+                </code>
+            </pre>
+            <p>
+                Have a look at the <a href="/form-example">example form</a> page. This will set the POST <i>firstName</i> and <i>lastName</i> variables. These will be available in the template through the <i>data</i> global variable. I.e.
+            </p>
+            <pre class="prettyprint lang-html">
+                <code>
+                    &#123;&#123; data.firstName &#125;&#125;
+                </code>
+            </pre>
+            <pre class="prettyprint lang-html">
+                <code>
+                    &#123;&#123; data.lastName &#125;&#125;
+                </code>
+            </pre>
+            <p>
+                To create an array of elements just post more items with the same variable name and you will be able to retrieve it as a list in the template. I.e.
+            </p>
+            <pre class="prettyprint lang-html">
+                <code>
+                    &#123;% for hobby in data.hobby %&#125;
+                      <p>&#123;&#123; hobby &#125;&#125;</p>
+                    &#123;% else %&#125;
+                      <p>You have no hobbies</p>
+                    &#123;% endfor %&#125;
+                </code>
+            </pre>
+            <p>
+                Go to <a href="/reset-session">/reset-session</a> to reset all the data saved in session.
+            </p>
+        </div>
+    </div>
+{% endblock %}

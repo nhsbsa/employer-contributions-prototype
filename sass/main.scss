@@ -1,0 +1,10 @@
+
+$nhs-pensions-green: #009639;
+$nhs-pensions-green-light: #5EC384;
+
+@import "component/button";
+
+.nhs-bsa #nhs-global-header {
+	background-image: url("/public/images/header-pension-services.svg");
+}
+
