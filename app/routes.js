@@ -53,6 +53,14 @@ router.get('/password-saved', (req, res) => {
     res.render('password-saved.html');
 });
 
+router.get('/forgot-password', (req, res) => {
+    res.render('forgot-password.html');
+});
+
+router.get('/forgot-password-reset', (req, res) => {
+    res.render('forgot-password-reset.html');
+});
+
 router.get('/searched-ea', (req, res) => {
     res.render('searched-ea.html');
 });
