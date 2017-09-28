@@ -27,106 +27,109 @@
             </div>
         </div> -->
 
-        <div class="column-two-thirds">            
-            <div class="form-group">
-                <h3 class="heading-medium">What month is this contribution for?
-                <span class="form-hint">For example February 2017</span></h3>
-                <!-- Use .form-group to create spacing when wrapping label and input pairs -->
+        <div class="column-two-thirds">
+            <form id="make-payment" class="form">
                 <div class="form-group">
-                    <label class="form-label" for="month">Month</label>
-                    <input class="form-control" id="month" name="month" type="text" />
-                </div>
-                <div class="form-group">
-                    <label class="form-label" for="year">Year</label>
-                    <input class="form-control" id="year" name="year" type="text" />
-                </div>
-            </div>
-
-            <div class="form-group">
-                <h3 class="heading-medium">What date do you want to submit your contributions?
-                <span class="form-hint">For example 16 March 2017</span></h3>
-                <!-- Use .form-group to create spacing when wrapping label and input pairs -->
-                <div class="form-group">
-                    <label class="form-label" for="day-2">Day</label>
-                    <input class="form-control" id="day-2" name="day-2" type="text" />
-                </div>
-                <div class="form-group">
-                    <label class="form-label" for="month-2">Month</label>
-                    <input class="form-control" id="month-2" name="month-2" type="text" />
-                </div>
-                <div class="form-group">
-                    <label class="form-label" for="year-2">Year</label>
-                    <input class="form-control" id="year-2" name="year-2" type="text" />
-                </div>
-            </div>
-
-            <div class="form-group">
-                <p>Payment will be taken by direct debit within 2 working days.</p>
-
-                <div class="notice">
-                    <i class="icon icon-important">
-                        <span class="visually-hidden">Warning</span>
-                    </i>
-                    <strong class="bold-small">
-                        16 of March 2017 is the latest you can submit so you do not miss the deadline.
-                    </strong>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <p>If you submit this payment after the 16 March you will receive an administration fee of £75 pounds as well as interest for each day the payment is late.</p>
-
-                <form>
-                  <fieldset>
-                    <legend class="visually-hidden"></legend>
-                    <label class="block-label selection-button-checkbox" for="understand-1">
-                        <input id="understand-1" name="understand" type="checkbox" value="understand" />
-                        I understand
-                    </label>
-                  </fieldset>
-                </form>
-            </div>
-
-            <!-- GP 
-            <div class="form-group">
-                <h3 class="heading-medium">
-                    Contribution payment
-                </h3>
-                
-                <form>
+                    <h3 class="heading-medium">What month is this contribution for?
+                    <span class="form-hint">For example February 2017</span></h3>
+                    <!-- Use .form-group to create spacing when wrapping label and input pairs -->
                     <div class="form-group">
-                        <fieldset>
-                            <legend class="visually-hidden"></legend>
-                            <label class="block-label selection-button-radio" for="example-cont-payment-staff">
-                                <input id="example-cont-payment-staff" type="radio" name="radio-contact-group" value="Yes" />
-                                Staff
-                            </label>
-                        
-                            <label class="block-label selection-button-radio" for="example-cont-payment-gp">
-                                <input id="example-cont-payment-gp" type="radio" name="radio-contact-group" value="No" />
-                                GP
-                            </label>
-                        </fieldset>
+                        <label class="form-label" for="month">Month</label>
+                        <input class="form-control" id="month" name="month" type="text" />
                     </div>
-                </form>
-            </div> -->
-
-            <!-- CSV 
-            <div class="form-group">
-                <h3 class="heading-medium">
-                    Use this to upload your pension contributions file
-                </h3>
-                <div class="form-group">
-                    <label class="form-label" for="file-input">
-                        Accepts .csv, .xls, .xlsx and .ods file formats
-                    </label>
-                    <input type="file" id="file-input">
+                    <div class="form-group">
+                        <label class="form-label" for="year">Year</label>
+                        <input class="form-control" id="year" name="year" type="text" />
+                    </div>
                 </div>
-            </div> -->
 
-            <div class="form-group">
-                <a class="button" href="contributions-and-payment" role="button">Next step</a>
+                <div class="form-group">
+                    <h3 class="heading-medium">What date do you want to submit your contributions?
+                    <span class="form-hint">For example 16 March 2017</span></h3>
+                    <!-- Use .form-group to create spacing when wrapping label and input pairs -->
+                    <div class="form-group">
+                        <label class="form-label" for="day-2">Day</label>
+                        <input class="form-control" id="day-2" name="day-2" type="text" />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="month-2">Month</label>
+                        <input class="form-control" id="month-2" name="month-2" type="text" />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="year-2">Year</label>
+                        <input class="form-control" id="year-2" name="year-2" type="text" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <p>Payment will be taken by direct debit within 2 working days.</p>
+
+                    <div class="notice">
+                        <i class="icon icon-important">
+                            <span class="visually-hidden">Warning</span>
+                        </i>
+                        <strong class="bold-small">
+                            16 of March 2017 is the latest you can submit so you do not miss the deadline.
+                        </strong>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <p>If you submit this payment after the 16 March you will receive an administration fee of £75 pounds as well as interest for each day the payment is late.</p>
+
+                    <fieldset>
+                        <legend class="visually-hidden"></legend>
+                        <label class="block-label selection-button-checkbox" for="understand-1">
+                            <input id="understand-1" name="understand" type="checkbox" value="understand" />
+                            I understand
+                        </label>
+                    </fieldset>
+                </div>
+
+                <!-- GP 
+                <div class="form-group">
+                    <h3 class="heading-medium">
+                        Contribution payment
+                    </h3>
+                    
+                    <form>
+                        <div class="form-group">
+                            <fieldset>
+                                <legend class="visually-hidden"></legend>
+                                <label class="block-label selection-button-radio" for="example-cont-payment-staff">
+                                    <input id="example-cont-payment-staff" type="radio" name="radio-contact-group" value="Yes" />
+                                    Staff
+                                </label>
+                            
+                                <label class="block-label selection-button-radio" for="example-cont-payment-gp">
+                                    <input id="example-cont-payment-gp" type="radio" name="radio-contact-group" value="No" />
+                                    GP
+                                </label>
+                            </fieldset>
+                        </div>
+                    </form>
+                </div> -->
+
+                <!-- CSV 
+                <div class="form-group">
+                    <h3 class="heading-medium">
+                        Use this to upload your pension contributions file
+                    </h3>
+                    <div class="form-group">
+                        <label class="form-label" for="file-input">
+                            Accepts .csv, .xls, .xlsx and .ods file formats
+                        </label>
+                        <input type="file" id="file-input">
+                    </div>
+                </div> -->
+            </form>
+
+            <div class="form-item-wrapper">
+                <div class="form-group">
+                    <input id="next-button" class="button" type="submit" value="Next step" />
+                </div>
             </div>
+            <!-- <a class="button" href="contributions-and-payment" role="button">Next step</a> -->
         </div>
 
         <!-- <div class="column-one-third">
@@ -134,4 +137,11 @@
         </div> -->
 
     </div>
+
+    <script type="text/javascript" language="javascript">
+		/*<![CDATA[*/            
+        $("#make-payment").validate();
+        /*]]>*/
+    </script>
+
 {% endblock %}
