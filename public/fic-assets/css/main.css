@@ -4,6 +4,12 @@
     background-color: #006326; }
   .button:visited {
     background-color: #007d2f; }
+  .button:link:focus {
+    color: white; }
+
+.button-print {
+  float: right;
+  margin-top: 45px; }
 
 .nhs-bsa #nhs-global-header {
   background-image: url("/public/fic-assets/img/header-pension-services.svg"); }

@@ -3,8 +3,17 @@
 	&:hover,
 	&:focus {
 		background-color: darken($nhs-pensions-green, 10%);
+		
 	}
 	&:visited {
 		background-color: darken($nhs-pensions-green, 5%);
 	}
+	&:link:focus {
+		color: white;
+	}
+}
+
+.button-print {
+	float: right;
+	margin-top: 45px;
 }

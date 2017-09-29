@@ -39,7 +39,8 @@ NHS elements
 <!--[if gt IE 8]><!--><script src="/public/javascripts/vendor/prism.js"></script><!--<![endif]-->
 
 <!-- Custom CSS -->
-<link href="/public/fic-assets/css/main.css" media="screen" rel="stylesheet" />
+<!--[if gt IE 7]><!--><link href="/public/fic-assets/css/main.css" media="screen" rel="stylesheet" /><!--<![endif]-->
+<!--[if IE 7]><link href="/public/fic-assets/css/main-ie7.css" media="screen" rel="stylesheet" /><![endif]-->
 
 {% block scripts %}
 <div id="global-app-error" class="app-error hidden"></div>
@@ -88,6 +89,7 @@ NHS elements
                     <a href="/" title="Go to the GOV.UK homepage" id="logo" class="content">
                         <!--[if gt IE 8]><!--><img src="/public/images/bsa_logo.svg" alt="NHS Logo"><!--<![endif]-->
                         <!--[if IE 8]><img src="/public/images/bsa_logo.png" style="width:256px" alt="NHS Logo"><![endif]-->
+                        <!--[if IE 7]><img src="/public/fic-assets/img/bsa_logo.gif" style="width:256px" width="256" height="56" alt="NHS Logo"><![endif]-->
                     </a>
                 </div>
         </div>
