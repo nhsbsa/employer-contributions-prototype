@@ -8,7 +8,7 @@
     "start": "npm-run-all --parallel start-server sass:watch",
     "start-server": "nodemon -e js,html server.js",
     "get-template": "cd public && rm -rf nhs-template && git clone git@dps-gitlab.service.nhsbsa:nhsbsa-frameworks/BSA-Design/nhs-template.git",
-    "sass": "node-sass sass/main.scss --output public/css",
+    "sass": "node-sass sass/main.scss --output public/fic-assets/css",
     "sass:watch": "nodemon -e scss -x \"npm run sass\""
   },
   "author": "",

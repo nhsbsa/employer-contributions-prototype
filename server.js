@@ -35,8 +35,7 @@ const njk = nunjucks(app, {
 
 // Middleware to serve static assets
 app.use('/public', express.static(path.join(__dirname, '/public/nhs-template')));
-app.use('/public/css', express.static(path.join(__dirname, '/public/css')));
-app.use('/public/images', express.static(path.join(__dirname, '/public/images')));
+app.use('/public/fic-assets', express.static(path.join(__dirname, '/public/fic-assets')));
 
 // Support for parsing data in POSTs
 app.use(bodyParser.json());

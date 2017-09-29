@@ -1,0 +1,9 @@
+.button {
+  background-color: #009639; }
+  .button:hover, .button:focus {
+    background-color: #006326; }
+  .button:visited {
+    background-color: #007d2f; }
+
+.nhs-bsa #nhs-global-header {
+  background-image: url("/public/fic-assets/img/header-pension-services.svg"); }
