@@ -65,6 +65,14 @@ router.get('/searched-ea', (req, res) => {
     res.render('searched-ea.html');
 });
 
+router.get('/adjusted-summary', (req, res) => {
+    res.render('adjusted-summary.html');
+});
+
+router.get('/adjusted-thank-you', (req, res) => {
+    res.render('adjusted-thank-you.html');
+});
+
 // router.get('/nhsbsa/financial-information-collection/login', (req, res) => {
 //     res.render('nhsbsa/financial-information-collection/login.html');
 // });
