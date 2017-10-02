@@ -26,6 +26,9 @@
 .form-control-4-chars {
   width: 10rem; }
 
+.form-control-2-chars {
+  width: 5rem; }
+
 table {
   margin-bottom: 2em; }
   table .cell-first {

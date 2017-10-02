@@ -31,46 +31,50 @@
             <form id="make-payment" class="form" method="" action="" novalidate="novalidate">
                 <div id="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1"></div>
 
-                <div class="form-group">
-                    <h3 class="heading-medium">What month is this contribution for?
-                    <span class="form-hint">For example February 2017</span></h3>
-                    <!-- Use .form-group to create spacing when wrapping label and input pairs -->
-                    <div class="form-group">
-                        <label class="form-label" for="month">Month
-                            <span class="error-message"></span>
-                        </label>
-                        <input class="form-control" id="month" name="month" type="text" required="" aria-required="true" />
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="year">Year
-                            <span class="error-message"></span>
-                        </label>
-                        <input class="form-control" id="year" name="year" type="text" required="" aria-required="true" />
-                    </div>
+                <div class="inline-form-groups">
+                    <fieldset>
+                        <legend class="heading-medium">What month is this contribution for?</legend>
+                        <span class="form-hint">For example February 2017</span>
+                        <!-- Use .form-group to create spacing when wrapping label and input pairs -->
+                        <div class="form-group">
+                            <label class="form-label" for="month">Month
+                                <span class="error-message"></span>
+                            </label>
+                            <input class="form-control form-control-11-chars" id="month" name="month" type="text" required="" aria-required="true" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="year">Year
+                                <span class="error-message"></span>
+                            </label>
+                            <input class="form-control form-control-4-chars" id="year" name="year" type="text" required="" aria-required="true" />
+                        </div>
+                    </fieldset>
                 </div>
 
-                <div class="form-group">
-                    <h3 class="heading-medium">What date do you want to submit your contributions?
-                    <span class="form-hint">For example 16 March 2017</span></h3>
-                    <!-- Use .form-group to create spacing when wrapping label and input pairs -->
-                    <div class="form-group">
-                        <label class="form-label" for="day2">Day
-                            <span class="error-message"></span>
-                        </label>
-                        <input class="form-control" id="day2" name="day2" type="text" required="" aria-required="true" />
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="month2">Month
-                            <span class="error-message"></span>
-                        </label>
-                        <input class="form-control" id="month2" name="month2" type="text" required="" aria-required="true" />
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="year2">Year
-                            <span class="error-message"></span>
-                        </label>
-                        <input class="form-control" id="year2" name="year2" type="text" required="" aria-required="true" />
-                    </div>
+                <div class="inline-form-groups">
+                    <fieldset>
+                    <legend class="heading-medium">What date do you want to submit your contributions?</legend>
+                        <span class="form-hint">For example 16 March 2017</span>
+                        <!-- Use .form-group to create spacing when wrapping label and input pairs -->
+                        <div class="form-group">
+                            <label class="form-label" for="day2">Day
+                                <span class="error-message"></span>
+                            </label>
+                            <input class="form-control form-control-2-chars" id="day2" name="day2" type="text" required="" aria-required="true" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="month2">Month
+                                <span class="error-message"></span>
+                            </label>
+                            <input class="form-control form-control-11-chars" id="month2" name="month2" type="text" required="" aria-required="true" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="year2">Year
+                                <span class="error-message"></span>
+                            </label>
+                            <input class="form-control form-control-4-chars" id="year2" name="year2" type="text" required="" aria-required="true" />
+                        </div>
+                    </fieldset>
                 </div>
 
                 <div class="form-group">
