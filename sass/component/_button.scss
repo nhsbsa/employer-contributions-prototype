@@ -6,7 +6,7 @@
 		
 	}
 	&:visited {
-		background-color: darken($nhs-pensions-green, 12%);
+		background-color: $nhs-pensions-green;
 	}
 	&:link:focus {
 		color: white;
