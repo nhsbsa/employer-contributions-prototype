@@ -11,6 +11,9 @@
   float: right;
   margin-top: 45px; }
 
+.page-break {
+  display: none; }
+
 @media (min-width: 641px) {
   .nhs-bsa #nhs-global-header {
     background-image: url("/public/fic-assets/img/header-pension-services.svg"); } }

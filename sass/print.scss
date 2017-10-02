@@ -10,6 +10,8 @@
   display: none;
 }
 
+.page-break { display: block; page-break-before: always; }
+
 body {
   padding: 20px;
   margin: 0;
@@ -29,7 +31,7 @@ body {
 }
 
 td, th {
-  padding: 10px !important;
+  padding: 5px !important;
   text-align: left !important;
   border-bottom: 1px solid #000000;
   border-right: 1px solid #000000;
@@ -48,8 +50,8 @@ tr {
 }
 
 table {
-  margin-bottom: 40px;
-  width: 100%;
+  margin-bottom: 30px;
+  width: 98%;
   border: 1px solid #000000;
 
   &.two-column {
@@ -64,10 +66,10 @@ table {
   }
 }
 
-#global-header {
+#nhs-global-header {
   .header-logo {
     img {
-      width: 90px;
+      width: 200px !important;
     }
   }
 }
@@ -81,3 +83,8 @@ fieldset {
   margin-bottom: 20px;
 }
 
+.nhsuk-box-highlight {
+  background: transparent !important;
+  color: #000000 !important;
+  margin: 0 !important;
+}

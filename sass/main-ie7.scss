@@ -1,2 +1,22 @@
 .nhs-bsa #nhs-global-header {
-  background-image: url("/public/fic-assets/img/header-pension-services.gif"); }
+  background-image: url("/public/fic-assets/img/header-pension-services.gif");
+}
+
+
+
+.inline-form-groups .form-group {
+	width: auto !important;
+    margin-right: 10px;
+}
+
+.form-control-11-chars {
+    width: 200px;
+}
+
+.form-control-4-chars {
+    width: 100px;
+}
+
+.form-control-2-chars {
+    width: 50px;
+}
