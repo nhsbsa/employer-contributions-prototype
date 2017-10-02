@@ -281,3 +281,19 @@ table {
 		}
 	}
 }
+
+
+
+
+.tt-hint {
+  color: $nhs-grey-2;
+}
+
+.tt-menu {
+  color: $nhs-white;
+  background: $nhs-blue;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  cursor: pointer;
+}

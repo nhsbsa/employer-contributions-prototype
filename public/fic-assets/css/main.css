@@ -154,3 +154,14 @@ table {
     .pagination .pagination-pages li {
       float: left;
       padding-left: 10px; }
+
+.tt-hint {
+  color: #b9d2dc; }
+
+.tt-menu {
+  color: #ffffff;
+  background: #0072C6;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  cursor: pointer; }
