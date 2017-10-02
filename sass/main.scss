@@ -9,3 +9,16 @@ $nhs-pensions-green-light: #5EC384;
 		background-image: url("/public/fic-assets/img/header-pension-services.svg");
 	}
 }
+
+.inline-form-groups .form-group {
+    width: auto;
+    margin-right: 1rem;
+    clear: none;
+}
+
+.form-control-11-chars {
+    width: 11em;
+}
+.form-control-4-chars {
+    width: 10rem;
+}

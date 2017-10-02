@@ -61,25 +61,32 @@
                 
                 <form>
                     <div class="form-group">
-                        <fieldset>
+                        <fieldset class="inline">
                             <legend class="visually-hidden"></legend>
                             <label class="block-label selection-button-radio" data-target="adjustment-for" for="example-adjustment-yes">
                                 <input id="example-adjustment-yes" type="radio" name="radio-contact-group" value="Yes">
                                 yes
                             </label>
+                            <label class="block-label selection-button-radio" for="example-adjustment-no">
+                                <input id="example-adjustment-no" type="radio" name="radio-contact-group" value="No" />
+                                no
+                            </label>
+                        </fieldset>
                             <div class="panel panel-border-narrow js-hidden" id="adjustment-for">
-                                <div class="form-group">
-                                    <h3 class="heading-medium">When is this adjustment for?
-                                    <span class="form-hint">For example September 2016</span></h3>
-                                    <!-- Use .form-group to create spacing when wrapping label and input pairs -->
-                                    <div class="form-group">
-                                        <label class="form-label" for="month">Month</label>
-                                        <input class="form-control" id="month" name="month" type="text" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="form-label" for="year">Year</label>
-                                        <input class="form-control" id="year" name="year" type="text" />
-                                    </div>
+                                <div class="inline-form-groups">
+                                    <fieldset>
+                                        <h3 class="heading-medium">When is this adjustment for?
+                                        <span class="form-hint">For example September 2016</span></h3>
+                                        <!-- Use .form-group to create spacing when wrapping label and input pairs -->
+                                        <div class="form-group">
+                                            <label class="form-label" for="month">Month</label>
+                                            <input class="form-control form-control-11-chars" id="month" name="month" type="text" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="year">Year</label>
+                                            <input class="form-control form-control-4-chars" id="year" name="year" type="text" />
+                                        </div>
+                                    </fieldset>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label" for="adjustment-1">Employee contributions</label>
@@ -103,11 +110,8 @@
                                 </div>
                             </div>
                         
-                            <label class="block-label selection-button-radio" for="example-adjustment-no">
-                                <input id="example-adjustment-no" type="radio" name="radio-contact-group" value="No" />
-                                no
-                            </label>
-                        </fieldset>
+                            
+                        
                     </div>
                 </form>
             </div>
