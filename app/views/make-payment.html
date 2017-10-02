@@ -28,7 +28,7 @@
         </div> -->
 
         <div class="column-two-thirds">
-            <form id="make-payment" class="form" method="get" action="" novalidate="novalidate">
+            <form id="make-payment" class="form" method="" action="" novalidate="novalidate">
                 <div id="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1"></div>
 
                 <div class="form-group">
@@ -54,22 +54,22 @@
                     <span class="form-hint">For example 16 March 2017</span></h3>
                     <!-- Use .form-group to create spacing when wrapping label and input pairs -->
                     <div class="form-group">
-                        <label class="form-label" for="day-2">Day
+                        <label class="form-label" for="day2">Day
                             <span class="error-message"></span>
                         </label>
-                        <input class="form-control" id="day-2" name="day-2" type="text" required="" aria-required="true" />
+                        <input class="form-control" id="day2" name="day2" type="text" required="" aria-required="true" />
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="month-2">Month
+                        <label class="form-label" for="month2">Month
                             <span class="error-message"></span>
                         </label>
-                        <input class="form-control" id="month-2" name="month-2" type="text" required="" aria-required="true" />
+                        <input class="form-control" id="month2" name="month2" type="text" required="" aria-required="true" />
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="year-2">Year
+                        <label class="form-label" for="year2">Year
                             <span class="error-message"></span>
                         </label>
-                        <input class="form-control" id="year-2" name="year-2" type="text" required="" aria-required="true" />
+                        <input class="form-control" id="year2" name="year2" type="text" required="" aria-required="true" />
                     </div>
                 </div>
 
@@ -141,7 +141,6 @@
                         <input id="next-button" class="button" type="submit" value="Next step" />
                     </div>
                 </div>
-                <!-- <a class="button" href="contributions-and-payment" role="button">Next step</a> -->
             </form>
         </div>
 
@@ -155,6 +154,31 @@
 		/*<![CDATA[*/            
         $("#make-payment").validate({
             rules: {
+                month: {
+                    required: true,
+                    maxlength: 2,
+                    digits: true
+                },
+                year: {
+                    required: true,
+                    maxlength: 4,
+                    digits: true
+                },
+                day2: {
+                    required: true,
+                    maxlength: 2,
+                    digits: true
+                },
+                month2: {
+                    required: true,
+                    maxlength: 2,
+                    digits: true
+                },
+                year2: {
+                    required: true,
+                    maxlength: 4,
+                    digits: true
+                },
                 understand: {
                     required: true
                 }
@@ -226,7 +250,8 @@
                         previousElementSibling.innerHTML = ""; // removes front-end error-message
                     }
                 });
-            }
+            },
+            submitHandler: function() { document.location.href = "/contributions-and-payment" }
         });
         /*]]>*/
     </script>
