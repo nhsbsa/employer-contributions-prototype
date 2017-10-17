@@ -19,7 +19,11 @@
 
         <div class="column-two-thirds">
             <form id="make-payment" class="form" method="" action="contributions-and-payment" novalidate="novalidate">
-                <div id="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1"></div>
+                <div id="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1">
+                    <h1 class="heading-medium error-summary-heading" id="error-summary-heading">
+                        Message to alert the user to a problem goes here
+                    </h1>
+                </div>
 
                 <div class="form-group">
                     <fieldset>
@@ -93,9 +97,8 @@
 
                 <div class="form-group">
                     <fieldset>
+                        <legend class="visually-hidden">Payment Notice</legend>
                         <p>If you submit this payment after the 16 March you will receive an administration fee of £75 pounds as well as interest for each day the payment is late.</p>
-
-                        <span class="error-message"></span>
                         <label class="block-label selection-button-checkbox" for="understand">
                             <input class="form-control" id="understand" name="understand" type="checkbox" required="" aria-required="true" />
                             I understand
