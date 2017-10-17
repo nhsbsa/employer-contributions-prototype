@@ -1,0 +1,39 @@
+
+.service-status {
+  display: block;
+  padding: 3px 6px;
+  white-space: nowrap;
+  background: #ffffff;
+  text-align: center;
+  border: 2px solid #b9d2dc;
+  border-radius: 5px;
+
+  &.started,
+  &.submitted {
+    border-color: #0072C6;
+    background: rgba(0, 114, 198, 0.1);
+  }
+
+  &.pending,
+  &.outstanding {
+    border-color: #FFED00;
+    background: rgba(255, 237, 0, 0.1);
+  }
+
+  &.completed {
+    border-color: #00953A;
+    background: rgba(0, 149, 58, 0.1);
+  }
+}
+
+
+@media (max-width: 48em) {
+  .service-status {
+    display: inline-block;
+    padding: 4px 8px;
+  }
+}
+
+.verified-status {
+  color: #00953A;
+}

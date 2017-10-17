@@ -6,6 +6,10 @@
   {% include "includes/snippets_scripts.html" %}
 {% endblock %}
 
+{% block body_classes %}
+nhs-bsa-pensions
+{% endblock %}
+
 {% block body_start %}
   {% include "includes/elements_tracking.html" %}
 {% endblock %}
@@ -20,6 +24,10 @@
 
 {% block header_class %}
   with-proposition
+{% endblock %}
+
+{% block after_header %}
+	{% include "includes/phase_banner.html" %}
 {% endblock %}
 
 {% block body_end %}

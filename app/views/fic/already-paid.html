@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block breadcrumb %}
+    {{ super() }}
+    <li>Already Paid</li>
+{% endblock %}
+
+{% block back %}
+    {{ super() }}
+    <a class="top-back-button back-to-previous" href="#">Back</a>
+{% endblock %}
+
+{% block content%}
+<main id="content" role="main" tabindex="-1">
+    <div class="grid-row">
+        <!-- <div class="form-group done-panel">
+            <div class="column-full">
+                <h1 id="completed" class="heading-large">You have successfully submitted your February 2017 contributions</h1>
+                <h2 id="submitted" class="heading-medium">
+                    <span>Next contribution is due on 17 March 2017</span>
+                </h2>
+            </div>
+        </div> -->
+        <div class="column-two-thirds">
+            <div class="form-group">
+                <h1 class="heading-large">February contribution taken</h1>
+                <h2 class="heading-medium">Payment for this month was completed on 18th February 2017.</h2>
+                <h2 class="heading-medium">Payment details</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="bold">Total pensionable pay</td>
+                            <td class="numeric">£250,000.00</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Employee contributions</td>
+                            <td class="numeric">£23,750.00</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Employer contributions</td>
+                            <td class="numeric">£35,750.00</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Total amount to be debited</td>
+                            <td class="numeric">£59,500.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="form-group">
+                <h2 class="heading-medium">Make payment</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="bold">What month is this contribution for?</td>
+                            <td>February 2017</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">When do you want to pay?</td>
+                            <td>18 February 2017</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="form-group">
+                <h2 class="heading-medium">Your contact details</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="bold">Employing Authority (EA) code</td>
+                            <td>EA9143</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Account name</td>
+                            <td>Marie Curie Cancer Care</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Full name</td>
+                            <td>Alison Moore</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Contact number</td>
+                            <td>01237 611 978</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Email address</td>
+                            <td>alison.moore@nhs.net</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="column-one-third">
+            <div class="form-group">
+                <a href="#" onclick="window.print(); return false;" title="Print this page" role="button" class="button button-print" style="margin-top: 45px;">Print this page</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="pagination-simple">
+        <div>
+            <a href="previous-payments" class="link">
+                <span class="prefix">Back:</span>
+                <span class="title">Previous payments</span>
+            </a>
+        </div>
+    </div>
+    
+</main>
+{% endblock %}

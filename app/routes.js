@@ -1,7 +1,7 @@
 module.exports = {
   bind: function (app, assetPath) {
     app.get('/', function (req, res) {
-      res.render('index', { 'asset_path': assetPath })
+      res.render('fic/index', { 'asset_path': assetPath })
     })
 
     // Redirect snippets page to the index page
@@ -221,5 +221,117 @@ module.exports = {
       var pageName = 'Tabs'
       res.render('guide_tabs', { 'page_name': pageName })
     })
+
+    // FIC
+    app.get('/fic', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/index', { 'page_name': pageName })
+    })
+
+    app.get('/fic/start', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/start', { 'page_name': pageName })
+    })
+
+    app.get('/fic/adjusted-summary', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/adjusted-summary', { 'page_name': pageName })
+    })
+
+    app.get('/fic/adjusted-thank-you', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/adjusted-thank-you', { 'page_name': pageName })
+    })
+
+    app.get('/fic/already-paid', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/already-paid', { 'page_name': pageName })
+    })
+
+    app.get('/fic/coming-soon', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/coming-soon', { 'page_name': pageName })
+    })
+
+    app.get('/fic/contributions-and-payment', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/contributions-and-payment', { 'page_name': pageName })
+    })
+
+    app.get('/fic/forgot-password-reset', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/forgot-password-reset', { 'page_name': pageName })
+    })
+
+    app.get('/fic/forgot-password', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/forgot-password', { 'page_name': pageName })
+    })
+
+    app.get('/fic/login', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/login', { 'page_name': pageName })
+    })
+
+    app.get('/fic/make-payment', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/make-payment', { 'page_name': pageName })
+    })
+
+    app.get('/fic/new-password', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/new-password', { 'page_name': pageName })
+    })
+
+    app.get('/fic/not-found', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/not-found', { 'page_name': pageName })
+    })
+
+    app.get('/fic/password-saved', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/password-saved', { 'page_name': pageName })
+    })
+
+    app.get('/fic/previous-payments', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/previous-payments', { 'page_name': pageName })
+    })
+
+    app.get('/fic/searched-ea', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/searched-ea', { 'page_name': pageName })
+    })
+
+    app.get('/fic/select-ea', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/select-ea', { 'page_name': pageName })
+    })
+
+    app.get('/fic/session-ended', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/session-ended', { 'page_name': pageName })
+    })
+
+    app.get('/fic/summary', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/summary', { 'page_name': pageName })
+    })
+
+    app.get('/fic/thank-you', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/thank-you', { 'page_name': pageName })
+    })
+
+    app.get('/fic/unavailable', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/unavailable', { 'page_name': pageName })
+    })
+
+    app.get('/fic/updated', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/updated', { 'page_name': pageName })
+    })
+
   }
 }

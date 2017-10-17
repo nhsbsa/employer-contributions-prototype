@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block breadcrumb %}
+    {{ super() }}
+    <li>Session ended</li>
+{% endblock %}
+
+{% block content%}
+<main id="content" role="main" tabindex="-1">
+    <h1 class="heading-xlarge">Sorry, you'll have to start again</h1>
+	<div class="text">
+	    <p>Your session automatically ends if you don't use the service for 30 minutes.</p>
+	    <p>We do this for your security. We haven't saved any personal information you entered.</p>
+	</div>
+
+    <a class="button button-get-started" href="/start">Start again</a>
+</main>
+{% endblock %}

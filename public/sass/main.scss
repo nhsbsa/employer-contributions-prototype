@@ -3,3 +3,16 @@
 $path: "/public/images/";
 
 @import "govuk-elements";
+
+// Pensions Header
+@include media(tablet) {
+	.nhs-bsa-pensions #nhs-global-header {
+		background-image: url('#{$path}header-pension-services.svg');
+	}
+}
+
+// Phase Banner
+.phase-banner {
+	@extend %site-width-container;
+	@extend %contain-floats;
+}

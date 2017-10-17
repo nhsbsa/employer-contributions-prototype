@@ -1,0 +1,181 @@
+{% extends "layout.html" %}
+
+{% block breadcrumb %}
+    {{ super() }}
+    <li>Thank You</li>
+{% endblock %}
+
+{% block back %}
+    {{ super() }}
+    <a class="top-back-button back-to-previous" href="#">Back</a>
+{% endblock %}
+
+{% block content%}
+<main id="content" role="main" tabindex="-1">
+    <div class="grid-row">
+        
+        <div class="nhsuk-box-highlight">
+          <h1 class="bold-large">
+            You have successfully submitted your February 2017 contributions
+          </h1>
+          <p>
+            Next contribution is due on 17 March 2017
+          </p>
+        </div>
+
+        <div class="column-two-thirds">
+
+            <h2 class="heading-medium">Contribution details</h2>
+            <table class="content-table stack-table two-column">
+                <tbody>
+                    <tr>
+                        <td class="bold">Number of scheme members</td>
+                        <td class="numeric">8</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Total pensionable pay</td>
+                        <td class="numeric">£250,000.00</td>
+                    </tr>
+                    <tr class="highlighted">
+                        <td class="bold">Employee contributions</td>
+                        <td class="numeric">£23,750.00</td>
+                    </tr>
+                    <tr class="highlighted">
+                        <td class="bold">Employer contributions</td>
+                        <td class="numeric">£35,750.00</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Employee added years</td>
+                        <td class="numeric">£1,780.00</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Additional pension amount</td>
+                        <td class="numeric">£750.00</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Early Retirement Reduction Buy Out (ERRBO)</td>
+                        <td class="numeric">-</td>
+                    </tr>
+
+                    <tr>
+                        <th colspan="2">Adjustments for <span class="get-cookie" data-cookie-name="adjustmentMonth">&nbsp;</span> <span class="get-cookie" data-cookie-name="adjustmentYear">&nbsp;</span></th>
+                    </tr>
+                    <tr class="highlighted">
+                        <td>Employee contributions</td>
+                        <td class="numeric">£10.00</td>
+                    </tr>
+                    <tr class="highlighted">
+                        <td>Employer contributions</td>
+                        <td class="numeric">£20.00</td>
+                    </tr>
+                        
+                    <tr class="total">
+                        <td class="bold">Total amount to be debited</td>
+                        <td class="numeric"><strong>£59,500.00</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- <table>
+                <tbody>
+                    <tr>
+                        <td class="bold">Total pensionable pay</td>
+                        <td class="numeric">£250,000.00</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Employee contributions</td>
+                        <td class="numeric">£23,750.00</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Employer contributions</td>
+                        <td class="numeric">£35,750.00</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Employee added years</td>
+                        <td class="numeric">£1,780.00</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Additional pension amount</td>
+                        <td class="numeric">£750.00</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Early Retirement Reduction Buy Out (ERRBO)</td>
+                        <td class="numeric">-</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Total amount to be debited</td>
+                        <td class="numeric">£59,500.00</td>
+                    </tr>
+                </tbody>
+            </table> -->
+
+            <h2 class="heading-medium">Make contribution</h2>
+            <table class="content-table stack-table two-column">
+                <tbody>
+                    <tr>
+                        <td class="bold">What month is this contribution for?</td>
+                        <td>February 2017</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">When do you want to pay?</td>
+                        <td>18 February 2017</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Contribution payment</td>
+                        <td>Staff</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- <table>
+                <tbody>
+                    <tr>
+                        <td class="bold">What month is this contribution for?</td>
+                        <td class="numeric">February 2017</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">When do you want to pay?</td>
+                        <td class="numeric">18 February 2017</td>
+                    </tr>
+                </tbody>
+            </table> -->
+
+            <h2 class="heading-medium">Your contact details</h2>
+            <table class="content-table stack-table two-column">
+                <tbody>
+                    <tr>
+                        <td class="bold">Employing Authority (EA) code</td>
+                        <td>EA9143</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Account name</td>
+                        <td>Marie Curie Cancer Care</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Full name</td>
+                        <td>Alison Moore</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Contact number</td>
+                        <td>01237 611 978</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Email address</td>
+                        <td>alison.moore@nhs.net</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+            <a class="button" href="#" role="button">Finish</a>
+        </div>
+
+        <div class="column-one-third">
+            <div class="form-group">
+                <a href="#" onclick="window.print(); return false;" title="Print this page" role="button" class="button button-print">Print this page</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

@@ -55,5 +55,9 @@
 @import "elements/components";                    // GOV.UK prefixed styles - blue highlighted box
 @import "elements/shame";                         // Hacks and workarounds that will go away eventually
 @import "elements/tabs";
+@import "elements/pagination";
+@import "elements/pagination-simple";
+@import "elements/currency-input";
+@import "elements/service-status";
 
 @import "../nhs-sass/nhs"                         // NHS Specific styles components

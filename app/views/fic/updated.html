@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block breadcrumb %}
+    {{ super() }}
+    <li>Password updated</li>
+{% endblock %}
+
+{% block content%}
+<main id="content" role="main" tabindex="-1">
+    <h1 class="heading-xlarge">Your password has been successfully updated</h1>
+    <a class="button" href="/login" role="button">Continue</a>
+</main>
+{% endblock %}

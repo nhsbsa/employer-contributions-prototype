@@ -1,0 +1,178 @@
+{% extends "layout.html" %}
+
+{% block breadcrumb %}
+    {{ super() }}
+    <li>Contributions and Payment</li>
+{% endblock %}
+
+{% block content%}
+<main id="content" role="main" tabindex="-1">
+    <h1 class="heading-xlarge">February 2017 contribution details</h1>
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <div class="form-group currency-input">
+                <label class="form-label" for="scheme-members">Number of scheme members</label>
+                <div class="currency-input__inner">
+                    <span class="currency-input__inner__unit">£</span>
+                    <input class="form-control" id="scheme-members" name="scheme-members" type="text" aria-label="Enter number of scheme members" />
+                </div>
+            </div>
+
+            <div class="form-group currency-input">
+                <label class="form-label" for="full-name-f1">Total pensionable pay</label>
+                <div class="currency-input__inner">
+                    <span class="currency-input__inner__unit">£</span>
+                    <input class="form-control" id="full-name-f1" type="text" aria-label="Enter amount in pounds">
+                </div>
+            </div>
+
+            <div class="form-group currency-input">
+                <label class="form-label" for="full-name-f2">Employee contributions</label>
+                <div class="currency-input__inner">
+                    <span class="currency-input__inner__unit">£</span>
+                    <input class="form-control" id="full-name-f2" type="text" aria-label="Enter amount in pounds">
+                </div>
+            </div>
+
+            <div class="form-group currency-input">
+                <label class="form-label" for="full-name-f3">Employer contributions</label>
+                <div class="currency-input__inner">
+                    <span class="currency-input__inner__unit">£</span>
+                    <input class="form-control" id="full-name-f3" type="text" aria-label="Enter amount in pounds">
+                </div>
+            </div>
+
+            <div class="form-group currency-input">
+                <label class="form-label" for="full-name-f4">Employee added years</label>
+                <div class="currency-input__inner">
+                    <span class="currency-input__inner__unit">£</span>
+                    <input class="form-control" id="full-name-f4" type="text" aria-label="Enter amount in pounds">
+                </div>
+            </div>
+
+            <div class="form-group currency-input">
+                <label class="form-label" for="full-name-f5">Additional pension</label>
+                <div class="currency-input__inner">
+                    <span class="currency-input__inner__unit">£</span>
+                    <input class="form-control" id="full-name-f5" type="text" aria-label="Enter amount in pounds">
+                </div>
+            </div>
+
+            <div class="form-group currency-input">
+                <label class="form-label" for="full-name-f6">Early Retirement Reduction Buy Out (ERRBO)</label>
+                <div class="currency-input__inner">
+                    <span class="currency-input__inner__unit">£</span>
+                    <input class="form-control" id="full-name-f6" type="text" aria-label="Enter amount in pounds">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <h3 class="heading-medium">
+                    Do you need to make an adjustment?
+                </h3>
+                
+                <form>
+                    <div class="form-group">
+                        <fieldset class="inline">
+                            <legend class="visually-hidden"></legend>
+                            <label class="block-label selection-button-radio" data-target="adjustment-for" for="example-adjustment-yes">
+                                <input id="example-adjustment-yes" type="radio" name="radio-contact-group" value="Yes">
+                                yes
+                            </label>
+                            <label class="block-label selection-button-radio" for="example-adjustment-no">
+                                <input id="example-adjustment-no" type="radio" name="radio-contact-group" value="No" />
+                                no
+                            </label>
+                        </fieldset>
+                            <div class="panel panel-border-narrow js-hidden" id="adjustment-for">
+                                <div class="form-group">
+                                    <fieldset>
+                                        <legend>
+                                            <span class="form-label-bold">When is this adjustment for?</span>
+                                            <span class="form-hint">For example September 2016</span>
+                                        </legend>
+                                        <div class="form-date">
+                                            <!-- Use .form-group to create spacing when wrapping label and input pairs -->
+                                            <div class="form-group form-group-month">
+                                                <label class="form-label" for="month">Month</label>
+                                                <input class="form-control form-control-11-chars" id="adjusted-month" name="month" type="text" maxlength="12" aria-label="Enter Month" />
+                                            </div>
+                                            <div class="form-group form-group-year">
+                                                <label class="form-label" for="year">Year</label>
+                                                <input class="form-control form-control-4-chars" id="year" name="year" type="text" aria-label="Enter Year" />
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="form-group currency-input">
+                                    <label class="form-label" for="adjustment-1">Employee contributions</label>
+                                    <div class="currency-input__inner">
+                                        <span class="currency-input__inner__unit">£</span>
+                                        <input class="form-control" name="adjustment-1" type="text" id="adjustment-1" aria-label="Enter amount in pounds">
+                                    </div>
+                                </div>
+                                <div class="form-group currency-input">
+                                    <label class="form-label" for="adjustment-2">Employer contributions</label>
+                                    <div class="currency-input__inner">
+                                        <span class="currency-input__inner__unit">£</span>
+                                        <input class="form-control" name="adjustment-2" type="text" id="adjustment-2" aria-label="Enter amount in pounds">
+                                    </div>
+                                </div>
+                                <div class="form-group currency-input">
+                                    <label class="form-label" for="adjustment-3">Employee added years</label>
+                                    <div class="currency-input__inner">
+                                        <span class="currency-input__inner__unit">£</span>
+                                        <input class="form-control" name="adjustment-3" type="text" id="adjustment-3" aria-label="Enter amount in pounds">
+                                    </div>
+                                </div>
+                                <div class="form-group currency-input">
+                                    <label class="form-label" for="adjustment-4">Additional pension</label>
+                                    <div class="currency-input__inner">
+                                        <span class="currency-input__inner__unit">£</span>
+                                        <input class="form-control" name="adjustment-4" type="text" id="adjustment-4" aria-label="Enter amount in pounds">
+                                    </div>
+                                </div>
+                                <div class="form-group currency-input">
+                                    <label class="form-label" for="adjustment-5">Early Retirement Reduction Buy Out (ERRBO)</label>
+                                    <div class="currency-input__inner">
+                                        <span class="currency-input__inner__unit">£</span>
+                                        <input class="form-control" name="adjustment-5" type="text" id="adjustment-5" aria-label="Enter amount in pounds">
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            
+                        
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-group currency-input">
+                <label class="form-label" for="full-name-f7">Total amount to be debited</label>
+                <div class="currency-input__inner">
+                    <span class="currency-input__inner__unit">£</span>
+                    <input class="form-control" id="full-name-f7" type="text" aria-label="Enter amount in pounds">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <a class="button" href="summary" role="button">Next step</a>
+            </div>
+        </div>
+
+        <!-- <div class="column-one-third">
+            <p>Content</p>
+        </div> -->
+
+    </div>
+
+    <div class="pagination-simple">
+        <div>
+            <a href="make-payment" class="link">
+                <span class="prefix">Back:</span>
+                <span class="title">Schedule your contribution</span>
+            </a>
+        </div>
+    </div>
+</main>
+{% endblock %}
