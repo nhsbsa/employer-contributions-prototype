@@ -1,0 +1,48 @@
+before_script:
+  - eval $(ssh-agent -s)
+  - ssh-add /root/.ssh/*.pem
+  - git clone git@${GIT_URL}:platform-services/nhsbsa-ci.git
+  - nhsbsa-ci/ci_before_script.sh
+  - curl --silent --location https://rpm.nodesource.com/setup_7.x | sudo bash -
+  - sudo yum -y install nodejs
+  - npm --version
+  - node --version
+
+stages:
+  - install
+  - deploy
+
+install_job:
+  stage: install
+  only:
+    - /^feature.*$/
+  script:
+    - npm install
+    - npm run build
+    - npm run dist
+  tags:
+    - build
+
+deploy_job:
+  stage: deploy
+  only:
+    - master
+  script:
+    - npm install
+    - npm run build
+    - npm run dist
+    - nhsbsa-ci/create_rc_branch.sh
+  tags:
+    - build
+
+Binary:Push:
+  stage: deploy
+  only:
+    - /^rc.*$/
+  script:
+    - npm install
+    - npm run deploy
+    # Push binary to Nexus nhsbsa-rc repo.
+    - nhsbsa-ci/push_binary.sh nhsbsa-libs
+  tags:
+    - build

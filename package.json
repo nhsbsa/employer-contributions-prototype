@@ -1,0 +1,61 @@
+{
+  "name": "nhs-template-creator",
+  "version": "0.0.20",
+  "description": "Test AWS",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab00.node.consul:bsa-design/nhs-template-creator.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=4.4.7"
+  },
+  "dependencies": {
+    "govuk-elements-sass": "^3.1.0",
+    "govuk_frontend_toolkit": "^6.0.4",
+    "nunjucks": "^3.0.1"
+  },
+  "devDependencies": {
+    "body-parser": "^1.14.1",
+    "consolidate": "^0.14.5",
+    "express": "4.15.3",
+    "express-nunjucks": "^2.2.3",
+    "express-writer": "0.0.4",
+    "govuk_template_jinja": "^0.22.2",
+    "grunt": "^1.0.1",
+    "grunt-cli": "1.2.0",
+    "grunt-concurrent": "^2.3.1",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-htmlentities": "^0.1.1",
+    "grunt-nodemon": "^0.4.2",
+    "grunt-sass": "^2.0.0",
+    "grunt-shell": "^2.1.0",
+    "node-sass": "^4.5.3",
+    "npm-check-updates": "^2.11.3",
+    "readdir": "0.0.13",
+    "standard": "^10.0.2"
+  },
+  "scripts": {
+    "test": "standard && grunt test && npm run lint --silent",
+    "lint": "bundle && bundle exec govuk-lint-sass public/sass/elements/",
+    "copy-uk-gov": "rm -rf node_modules && npm install && grunt copy-uk-gov",
+    "build": "grunt build",
+    "dist": "rm -rf ./dist && grunt dist",
+    "start": "grunt",
+    "deploy": "grunt build && grunt dist && grunt deploy",
+    "check-updates": "ncu --filter govuk-elements-sass,govuk_frontend_toolkit,govuk_template_jinja",
+    "upgrade": "npm install govuk-elements-sass govuk_frontend_toolkit --save && npm install govuk_template_jinja --save-dev && npm install"
+  },
+  "standard": {
+    "ignore": [
+      "lib",
+      "public/javascripts/vendor/",
+      "tests"
+    ]
+  },
+  "bugs": {
+    "url": "https://gitlab00.node.consul/bsa-design/nhs-template-creator/issues"
+  }
+}

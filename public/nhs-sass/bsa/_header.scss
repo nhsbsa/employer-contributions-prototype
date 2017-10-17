@@ -1,0 +1,308 @@
+@import '_shims';
+@import '_conditionals';
+@import '_measurements';
+$path: "/public/images/";
+#nhs-global-header {
+  //background-color: $white;
+  width: 100%;
+  // background-image: file-url("header-bsa.svg");
+  background-image: url("../images/header-bsa.svg");
+
+  @include ie-lte(8) {
+    // background-image: file-url("header-bsa.png");
+      background-image: url("../images/header-bsa.png");
+  }
+
+  background-repeat: no-repeat;
+  background-position: center 3.65em;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 170px;
+  padding-top: 20px;
+
+  @include media(mobile){
+    //background-position: 42% 4em;
+    background-image: none;
+    height: 110px;
+  };
+
+  .header-wrapper {
+    // background-color: $white;
+    max-width: 990px;
+    margin: 0 auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    @extend %contain-floats;
+    @include media(tablet){
+      padding-left: $gutter-half;
+      padding-right: $gutter-half;
+    }
+    @include media(mobile){
+      margin: 0 auto;
+      padding: 0 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    @include ie-lte(8) {
+      width: 990px;
+    }
+
+    .header-global {
+      .header-logo {
+        margin-bottom: 2px;
+      }
+      @extend %contain-floats;
+      .header-logo {
+        @extend %contain-floats;
+        float: right;
+
+        @include media(desktop){
+          width: 33.33%;
+        }
+        @include media(mobile){
+        //@media screen and (max-width: 379px) {
+          //width: auto;
+          float: none;
+          width: 100%;
+          padding: 15px 0;
+          text-align: center;
+        }
+
+        .content {
+          margin: 0 15px;
+          @include media(mobile){
+            margin:0;
+          }
+
+          a {
+              img {
+                @include ie-lte(8) {
+                  // background: white file-url("bsa_logo.png") no-repeat;
+                  background: white url("../images/bsa_logo.png") no-repeat;
+                  width:299px;
+                  height: 65px;
+                  display: block;
+                  -moz-box-sizing: border-box;
+                  box-sizing: border-box;
+                }
+              }
+          }
+        }
+      }
+    }
+  }
+  &.with-proposition {
+    .header-wrapper {
+      .header-global {
+        @include media(desktop){
+          float: right;
+          width: 33.33%;
+
+          .header-logo,
+          .site-search {
+            width: 100%;
+          }
+        }
+      }
+      .header-proposition {
+        @include media(desktop){
+          width: 66.66%;
+          float: left;
+        }
+        .content {
+          margin: 0 15px;
+        }
+      }
+    }
+  }
+
+  #logo {
+    float: left;
+    overflow: visible;
+
+    color: $white;
+    // font-weight: bold;
+    // font-size: 30px;
+    line-height: 1;
+    // text-decoration: none;
+    border-bottom: 1px solid transparent;
+    text-rendering: optimizeLegibility;
+    @include media(mobile){
+        float:none;
+      }
+
+    @include ie-lte(8) {
+        width: 299px;
+        height: 65px;
+    }
+
+    img {
+      margin: 2px 1px 0 0;
+      vertical-align: bottom;
+      width: 300px;
+      max-width: 100%;
+      float: right;
+      @include media(mobile){
+        max-width: 350px;
+        width: 100%;
+        float:none;
+        margin: 0;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      border-bottom-color: $white;
+    }
+  }
+  .header-proposition {
+    padding-top: 10px;
+    @include media(desktop){
+      padding-top: 0;
+    }
+    #proposition-name {
+      @include core-24;
+      font-weight: bold;
+      color: $white;
+      text-decoration: none;
+    }
+    a#proposition-name:hover {
+      text-decoration: underline;
+    }
+    a.menu {
+      @include core-16;
+      color: $white;
+      display: block;
+      float: right;
+      text-decoration: none;
+      padding-top: 6px;
+      @include media(desktop){
+        display: none;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+      &:after {
+        display: inline-block;
+        font-size: 8px;
+        height: 8px;
+        padding-left: 5px;
+        vertical-align: middle;
+        content: " \25BC";
+      }
+      &.js-hidden:after {
+        content: " \25B2";
+      }
+    }
+    #proposition-menu {
+      margin-top: 5px;
+
+      // Some headers (Whitehall) don't have a propsition name, offset as if they did.
+      &.no-proposition-name {
+        @include media(desktop){
+          margin-top: 37px;
+          // 37px is the amount of margin required to line up the nav list with the top of the search box
+        }
+      }
+    }
+    #proposition-link,
+    #proposition-links {
+      clear: both;
+      @extend %contain-floats;
+      margin: 2px 0 0 0;
+      padding: 0;
+
+      .js-enabled & {
+        display: none;
+        @include media(desktop){
+          display: block;
+        }
+        &.js-visible {
+          display: block;
+        }
+      }
+
+      li {
+        float: left;
+        width: 50%;
+        padding: 3px 0;
+        border-bottom: 1px solid $proposition-border;
+
+        @include media(desktop){
+          display: block;
+          width: auto;
+          padding: 0 15px 0 0;
+          border-bottom: 0;
+
+          &.clear-child {
+            clear: left;
+          }
+        }
+      }
+
+      a {
+        color: $white;
+        text-decoration: none;
+        @include bold-14;
+
+        @include media(desktop) {
+          @include bold-16;
+          line-height: 23px;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+        &.active {
+          color: $proposition-active-nav;
+        }
+        &:focus {
+          color: $black;
+        }
+      }
+    }
+
+    #proposition-link {
+      float: right;
+      line-height: 22px;
+      .js-enabled & {
+        display:block;
+      }
+      @include media(desktop) {
+        float:none;
+      }
+    }
+  }
+}
+
+/* Global header bar */
+
+#global-header-bar {
+  @extend %site-width-container;
+  height: 10px;
+  background-color: $nhsuk-blue;
+  @include ie-lte(8) {
+    font-size: 0;
+  }
+}
+
+/* Global cookie message */
+
+.js-enabled #global-cookie-message {
+  display: none; /* shown with JS, always on for non-JS */
+}
+
+#global-cookie-message {
+  width: 100%;
+  background-color: $light-blue-25;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  p {
+    @extend %site-width-container;
+    @include core-16;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
