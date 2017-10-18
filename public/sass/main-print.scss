@@ -1,0 +1,18 @@
+// Path to assets for use with the file-url function
+// in the govuk frontend toolkit's url-helpers partial
+$path: "/public/images/";
+
+.phase-banner,
+.button,
+.not-for-print {
+	display: none !important;
+}
+
+.header-logo {
+	width: 200px !important;
+	float: right !important;
+}
+
+td,th {
+	padding: 5px !important;
+}

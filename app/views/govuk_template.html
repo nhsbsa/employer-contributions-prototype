@@ -8,10 +8,17 @@
 
     <!--[if gt IE 8]><!--><link href="{{ asset_path }}stylesheets/govuk-template.css" media="screen" rel="stylesheet" /><!--<![endif]-->
     <!--[if IE 6]><link href="{{ asset_path }}stylesheets/govuk-template-ie6.css" media="screen" rel="stylesheet" /><![endif]-->
-    <!--[if IE 7]><link href="{{ asset_path }}stylesheets/govuk-template-ie7.css" media="screen" rel="stylesheet" /><![endif]-->
-    <!--[if IE 8]><link href="{{ asset_path }}stylesheets/govuk-template-ie8.css" media="screen" rel="stylesheet" /><![endif]-->
+    <!--[if IE 7]>
+      <link href="{{ asset_path }}stylesheets/govuk-template-ie7.css" media="screen" rel="stylesheet" />
+      <link href="{{ asset_path }}stylesheets/main-ie7.css" media="screen" rel="stylesheet" />
+    <![endif]-->
+    <!--[if IE 8]>
+      <link href="{{ asset_path }}stylesheets/govuk-template-ie8.css" media="screen" rel="stylesheet" />
+      <link href="{{ asset_path }}stylesheets/main-ie8.css" media="screen" rel="stylesheet" />
+    <![endif]-->
     <link href="{{ asset_path }}stylesheets/govuk-template-print.css" media="print" rel="stylesheet" />
-
+    <link href="{{ asset_path }}stylesheets/main-print.css" media="print" rel="stylesheet" />
+    
     <!--[if IE 8]><link href="{{ asset_path }}stylesheets/fonts-ie8.css" media="all" rel="stylesheet" /><![endif]-->
     <!--[if gte IE 9]><!--><link href="{{ asset_path }}stylesheets/fonts.css" media="all" rel="stylesheet" /><!--<![endif]-->
     <!--[if lt IE 9]><script src="{{ asset_path }}javascripts/ie.js"></script><![endif]-->
@@ -54,8 +61,8 @@
           <div class="header-logo">
             <a href="{{ homepage_url|default('http://www.nhsbsa.nhs.uk') }}"
                 title="{{ logo_link_title|default('Go to the NHS BSA homepage') }}" id="logo" class="content">
-                <!--[if gt IE 8]><!--><img src="{{ asset_path }}images/bsa_logo.svg" alt="NHS BSA Logo"><!--<![endif]-->
-                <!--[if IE 8]><img src="{{ asset_path }}images/bsa_logo.png" style="width:256px" alt="NHS BSA Logo"><![endif]-->
+                <!--[if gte IE 9]><!--><img src="{{ asset_path }}images/bsa_logo.svg" alt="NHS BSA Logo"><!--<![endif]-->
+                <!--[if lt IE 9]><img src="{{ asset_path }}images/bsa_logo.png" style="width:256px" alt="NHS BSA Logo"><![endif]-->
 
               <!-- {{ global_header_text|default('NHS') }} -->
             </a>

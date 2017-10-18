@@ -5,6 +5,7 @@ module.exports = function (grunt) {
     sass: {
       dev: {
         files: {
+          'public/stylesheets/main-print.css': 'public/sass/main-print.scss',
           'public/stylesheets/main.css': 'public/sass/main.scss',
           'public/stylesheets/main-ie6.css': 'public/sass/main-ie6.scss',
           'public/stylesheets/main-ie7.css': 'public/sass/main-ie7.scss',
