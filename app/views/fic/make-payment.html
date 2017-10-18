@@ -7,7 +7,13 @@
 
 {% block content%}
 <main id="content" role="main" tabindex="-1" class="add-log-out">
-    <h1 class="heading-xlarge">Submit contribution</h1>
+    <div class="back-nav" role="navigation">
+        <a class="top-back-button back-to-previous" href="#">Back</a>
+    </div>
+    <div class="heading-group">
+        <p>{{serviceName}}</p>
+        <h1 class="heading-large">Submit contribution</h1>
+    </div>
     <div class="grid-row">
         <!-- EA 
         <div class="column-full">
@@ -29,7 +35,7 @@
                     <fieldset>
                         <legend>
                             <span class="form-label-bold">What month is this contribution for?</span>
-                            <span class="form-hint">For example February 2017</span>
+                            <span class="form-hint">For example 09 2017</span>
                         </legend>
                         
                         <!-- Use .form-group to create spacing when wrapping label and input pairs -->
@@ -55,7 +61,7 @@
                     <fieldset>
                         <legend>
                             <span class="form-label-bold">What date do you want to submit your contributions?</span>
-                            <span class="form-hint">For example 16 March 2017</span>
+                            <span class="form-hint">For example 16 09 2017</span>
                         </legend>
                         
                         <!-- Use .form-group to create spacing when wrapping label and input pairs -->

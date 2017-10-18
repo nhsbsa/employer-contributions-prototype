@@ -7,7 +7,10 @@
 
 {% block content%}
 <main id="content" role="main" tabindex="-1">
-    <h1 class="heading-xlarge">Your password has been successfully updated</h1>
+    <div class="heading-group">
+        <p>{{serviceName}}</p>
+        <h1 class="heading-large">Your password has been successfully updated</h1>
+    </div>
     <a class="button" href="/login" role="button">Continue</a>
 </main>
 {% endblock %}
