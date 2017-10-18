@@ -14,7 +14,7 @@
                 <label class="form-label" for="scheme-members">Number of scheme members</label>
                 <div class="currency-input__inner">
                     <span class="currency-input__inner__unit">£</span>
-                    <input class="form-control" id="scheme-members" name="scheme-members" type="text" aria-label="Enter number of scheme members" />
+                    <input class="form-control form-control-1-3" id="scheme-members" name="scheme-members" type="text" aria-label="Enter number of scheme members" />
                 </div>
             </div>
 
@@ -22,7 +22,7 @@
                 <label class="form-label" for="full-name-f1">Total pensionable pay</label>
                 <div class="currency-input__inner">
                     <span class="currency-input__inner__unit">£</span>
-                    <input class="form-control" id="full-name-f1" type="text" aria-label="Enter amount in pounds">
+                    <input class="form-control form-control-1-3" id="full-name-f1" type="text" aria-label="Enter amount in pounds">
                 </div>
             </div>
 
@@ -30,7 +30,7 @@
                 <label class="form-label" for="full-name-f2">Employee contributions</label>
                 <div class="currency-input__inner">
                     <span class="currency-input__inner__unit">£</span>
-                    <input class="form-control" id="full-name-f2" type="text" aria-label="Enter amount in pounds">
+                    <input class="form-control form-control-1-3" id="full-name-f2" type="text" aria-label="Enter amount in pounds">
                 </div>
             </div>
 
@@ -38,7 +38,7 @@
                 <label class="form-label" for="full-name-f3">Employer contributions</label>
                 <div class="currency-input__inner">
                     <span class="currency-input__inner__unit">£</span>
-                    <input class="form-control" id="full-name-f3" type="text" aria-label="Enter amount in pounds">
+                    <input class="form-control form-control-1-3" id="full-name-f3" type="text" aria-label="Enter amount in pounds">
                 </div>
             </div>
 
@@ -46,7 +46,7 @@
                 <label class="form-label" for="full-name-f4">Employee added years</label>
                 <div class="currency-input__inner">
                     <span class="currency-input__inner__unit">£</span>
-                    <input class="form-control" id="full-name-f4" type="text" aria-label="Enter amount in pounds">
+                    <input class="form-control form-control-1-3" id="full-name-f4" type="text" aria-label="Enter amount in pounds">
                 </div>
             </div>
 
@@ -54,7 +54,7 @@
                 <label class="form-label" for="full-name-f5">Additional pension</label>
                 <div class="currency-input__inner">
                     <span class="currency-input__inner__unit">£</span>
-                    <input class="form-control" id="full-name-f5" type="text" aria-label="Enter amount in pounds">
+                    <input class="form-control form-control-1-3" id="full-name-f5" type="text" aria-label="Enter amount in pounds">
                 </div>
             </div>
 
@@ -62,7 +62,7 @@
                 <label class="form-label" for="full-name-f6">Early Retirement Reduction Buy Out (ERRBO)</label>
                 <div class="currency-input__inner">
                     <span class="currency-input__inner__unit">£</span>
-                    <input class="form-control" id="full-name-f6" type="text" aria-label="Enter amount in pounds">
+                    <input class="form-control form-control-1-3" id="full-name-f6" type="text" aria-label="Enter amount in pounds">
                 </div>
             </div>
 
@@ -84,62 +84,62 @@
                                 no
                             </label>
                         </fieldset>
-                            <div class="panel panel-border-narrow js-hidden" id="adjustment-for">
-                                <div class="form-group">
-                                    <fieldset>
-                                        <legend>
-                                            <span class="form-label-bold">When is this adjustment for?</span>
-                                            <span class="form-hint">For example 09 2016</span>
-                                        </legend>
-                                        <div class="form-date">
-                                            <!-- Use .form-group to create spacing when wrapping label and input pairs -->
-                                            <div class="form-group form-group-month">
-                                                <label class="form-label" for="adjusted-month">Month</label>
-                                                <input class="form-control form-control-11-chars" id="adjusted-month" name="month" type="text" maxlength="12" aria-label="Enter Month" />
-                                            </div>
-                                            <div class="form-group form-group-year">
-                                                <label class="form-label" for="adjusted-year">Year</label>
-                                                <input class="form-control form-control-4-chars" id="adjusted-year" name="year" type="text" aria-label="Enter Year" />
-                                            </div>
+                        <div class="panel panel-border-narrow js-hidden" id="adjustment-for">
+                            <div class="form-group">
+                                <fieldset>
+                                    <legend>
+                                        <span class="form-label-bold">When is this adjustment for?</span>
+                                        <span class="form-hint">For example 09 2016</span>
+                                    </legend>
+                                    <div class="form-date">
+                                        <!-- Use .form-group to create spacing when wrapping label and input pairs -->
+                                        <div class="form-group form-group-month">
+                                            <label class="form-label" for="adjusted-month">Month</label>
+                                            <input class="form-control" id="adjusted-month" name="month" type="text" maxlength="12" aria-label="Enter Month" />
                                         </div>
-                                    </fieldset>
-                                </div>
-                                <div class="form-group currency-input">
-                                    <label class="form-label" for="adjustment-1">Employee contributions</label>
-                                    <div class="currency-input__inner">
-                                        <span class="currency-input__inner__unit">£</span>
-                                        <input class="form-control" name="adjustment-1" type="text" id="adjustment-1" aria-label="Enter amount in pounds">
+                                        <div class="form-group form-group-year">
+                                            <label class="form-label" for="adjusted-year">Year</label>
+                                            <input class="form-control" id="adjusted-year" name="year" type="text" aria-label="Enter Year" />
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group currency-input">
-                                    <label class="form-label" for="adjustment-2">Employer contributions</label>
-                                    <div class="currency-input__inner">
-                                        <span class="currency-input__inner__unit">£</span>
-                                        <input class="form-control" name="adjustment-2" type="text" id="adjustment-2" aria-label="Enter amount in pounds">
-                                    </div>
-                                </div>
-                                <div class="form-group currency-input">
-                                    <label class="form-label" for="adjustment-3">Employee added years</label>
-                                    <div class="currency-input__inner">
-                                        <span class="currency-input__inner__unit">£</span>
-                                        <input class="form-control" name="adjustment-3" type="text" id="adjustment-3" aria-label="Enter amount in pounds">
-                                    </div>
-                                </div>
-                                <div class="form-group currency-input">
-                                    <label class="form-label" for="adjustment-4">Additional pension</label>
-                                    <div class="currency-input__inner">
-                                        <span class="currency-input__inner__unit">£</span>
-                                        <input class="form-control" name="adjustment-4" type="text" id="adjustment-4" aria-label="Enter amount in pounds">
-                                    </div>
-                                </div>
-                                <div class="form-group currency-input">
-                                    <label class="form-label" for="adjustment-5">Early Retirement Reduction Buy Out (ERRBO)</label>
-                                    <div class="currency-input__inner">
-                                        <span class="currency-input__inner__unit">£</span>
-                                        <input class="form-control" name="adjustment-5" type="text" id="adjustment-5" aria-label="Enter amount in pounds">
-                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="form-group currency-input">
+                                <label class="form-label" for="adjustment-1">Employee contributions</label>
+                                <div class="currency-input__inner">
+                                    <span class="currency-input__inner__unit">£</span>
+                                    <input class="form-control form-control-1-3" name="adjustment-1" type="text" id="adjustment-1" aria-label="Enter amount in pounds">
                                 </div>
                             </div>
+                            <div class="form-group currency-input">
+                                <label class="form-label" for="adjustment-2">Employer contributions</label>
+                                <div class="currency-input__inner">
+                                    <span class="currency-input__inner__unit">£</span>
+                                    <input class="form-control form-control-1-3" name="adjustment-2" type="text" id="adjustment-2" aria-label="Enter amount in pounds">
+                                </div>
+                            </div>
+                            <div class="form-group currency-input">
+                                <label class="form-label" for="adjustment-3">Employee added years</label>
+                                <div class="currency-input__inner">
+                                    <span class="currency-input__inner__unit">£</span>
+                                    <input class="form-control form-control-1-3" name="adjustment-3" type="text" id="adjustment-3" aria-label="Enter amount in pounds">
+                                </div>
+                            </div>
+                            <div class="form-group currency-input">
+                                <label class="form-label" for="adjustment-4">Additional pension</label>
+                                <div class="currency-input__inner">
+                                    <span class="currency-input__inner__unit">£</span>
+                                    <input class="form-control form-control-1-3" name="adjustment-4" type="text" id="adjustment-4" aria-label="Enter amount in pounds">
+                                </div>
+                            </div>
+                            <div class="form-group currency-input">
+                                <label class="form-label" for="adjustment-5">Early Retirement Reduction Buy Out (ERRBO)</label>
+                                <div class="currency-input__inner">
+                                    <span class="currency-input__inner__unit">£</span>
+                                    <input class="form-control form-control-1-3" name="adjustment-5" type="text" id="adjustment-5" aria-label="Enter amount in pounds">
+                                </div>
+                            </div>
+                        </div>
                         
                             
                         
@@ -151,7 +151,7 @@
                 <label class="form-label" for="full-name-f7">Total amount to be debited</label>
                 <div class="currency-input__inner">
                     <span class="currency-input__inner__unit">£</span>
-                    <input class="form-control" id="full-name-f7" type="text" aria-label="Enter amount in pounds">
+                    <input class="form-control form-control-1-3" id="full-name-f7" type="text" aria-label="Enter amount in pounds">
                 </div>
             </div>
 

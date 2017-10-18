@@ -19,7 +19,7 @@
 
         <div class="column-two-thirds">
             <form id="make-payment" class="form" method="" action="contributions-and-payment" novalidate="novalidate">
-                <div id="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1">
+                <div id="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1" aria-hidden="true" class="js-hidden">
                     <h1 class="heading-medium error-summary-heading" id="error-summary-heading">
                         Message to alert the user to a problem goes here
                     </h1>
@@ -39,13 +39,13 @@
                                 <label class="form-label" for="month">Month
                                     <span class="error-message"></span>
                                 </label>
-                                <input class="form-control form-control-11-chars" id="month" name="month" type="text" required="" aria-required="true" maxlength="12" />
+                                <input class="form-control" id="month" name="month" type="text" required="" aria-required="true" maxlength="12" />
                             </div>
                             <div class="form-group form-group-year">
                                 <label class="form-label" for="year">Year
                                     <span class="error-message"></span>
                                 </label>
-                                <input class="form-control form-control-4-chars" id="year" name="year" type="text" required="" aria-required="true" />
+                                <input class="form-control" id="year" name="year" type="text" required="" aria-required="true" />
                             </div>
                         </div>
                     </fieldset>
@@ -70,13 +70,13 @@
                                 <label class="form-label" for="month2">Month
                                     <span class="error-message"></span>
                                 </label>
-                                <input class="form-control form-control-11-chars" id="month2" name="month2" type="text" required="" aria-required="true" maxlength="12" />
+                                <input class="form-control" id="month2" name="month2" type="text" required="" aria-required="true" maxlength="12" />
                             </div>
                             <div class="form-group form-group-year">
                                 <label class="form-label" for="year2">Year
                                     <span class="error-message"></span>
                                 </label>
-                                <input class="form-control form-control-4-chars" id="year2" name="year2" type="text" required="" aria-required="true" />
+                                <input class="form-control" id="year2" name="year2" type="text" required="" aria-required="true" />
                             </div>
                         </div>
                     </fieldset>
