@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
 
+{% block page_title %}Sorry, you'll have to start again - {{ super() }}{% endblock %}
+
 {% block breadcrumb %}
     {{ super() }}
     <li>Session ended</li>

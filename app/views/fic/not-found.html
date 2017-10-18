@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
 
+{% block page_title %}This page cannot be found - {{ super() }}{% endblock %}
+
 {% block breadcrumb %}
     {{ super() }}
     <li>Page not found</li>
