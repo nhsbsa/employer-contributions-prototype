@@ -52,7 +52,8 @@
       <div class="header-wrapper">
         <div class="header-global">
           <div class="header-logo">
-            <a href="{{ homepage_url|default('http://www.nhsbsa.nhs.uk') }}"
+            <!-- <a href="{{ homepage_url|default('http://www.nhsbsa.nhs.uk') }}" -->
+            <a href="{{ ('/fic/')|default('http://www.nhsbsa.nhs.uk') }}"
                 title="{{ logo_link_title|default('Go to the NHS BSA homepage') }}" id="logo" class="content">
                 <!--[if gt IE 8]><!--><img src="{{ asset_path }}images/bsa_logo.svg" alt="NHS BSA Logo"><!--<![endif]-->
                 <!--[if IE 8]><img src="{{ asset_path }}images/bsa_logo.png" style="width:256px" alt="NHS BSA Logo"><![endif]-->

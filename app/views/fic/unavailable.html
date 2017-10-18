@@ -7,12 +7,16 @@
 
 {% block content%}
 <main id="content" role="main" tabindex="-1">
-    <h1 class="heading-xlarge">Service unavailable</h1>
-	<div class="text">
-	    <p>To keep this service secure, any information you've entered hasn't been saved.</p>
-	    <p>You will need to start again.</p>
-	</div>
-	
-    <a class="button button-get-started" href="/start">Start again</a>
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h1 class="heading-xlarge">Service unavailable</h1>
+            <div class="text">
+                <p>To keep this service secure, any information you've entered hasn't been saved.</p>
+                <p>You will need to start again.</p>
+            </div>
+            
+            <a class="button button-get-started" href="/start">Start again</a>
+        </div>
+    </div>
 </main>
 {% endblock %}
