@@ -6,115 +6,125 @@
 {% endblock %}
 
 {% block content%} 
-<main id="content" role="main" tabindex="-1" class="add-log-out">
+<main id="content" role="main" tabindex="-1">
+
     <div class="back-nav" role="navigation">
         <a class="top-back-button back-to-previous" href="#">Back</a>
     </div>
-    <div class="heading-group">
-        <p>{{serviceName}}</p>
-        <h1 class="heading-large">Submit a new contribution</h1>
-    </div>
-    <p class="lede">
-        The February 2017 submission needs to reach us by 16 March 2017.
-    </p>
-    <div class="form-group">
-        <a class="button" href="make-payment" role="button">Submit contribution</a>
-    </div>
-    <div class="form-group">
-        <h2 class="heading-medium">Previous contributions</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Month</th>
-                    <th>Submitted by</th>
-                    <th>Amount</th>
-                    <th>Adjustment</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><a href="already-paid">January 2017</a></td>
-                    <td>Alison Moore</td>
-                    <td>£30,262.56</td>
-                    <td>-</td>
-                    <td>Submitted - 15 February 2016</td>
-                </tr>
-                <tr>
-                    <td><a href="already-paid">December 2016</a></td>
-                    <td>Mathew Brown</td>
-                    <td>£62,188.41</td>
-                    <td>£682.29</td>
-                    <td>Paid late - 21 January 2016</td>
-                </tr>
-                <tr>
-                    <td><a href="already-paid">November 2016</a></td>
-                    <td>Alison Moore</td>
-                    <td>£48,882.60</td>
-                    <td>£521.36</td>
-                    <td>Paid late - 17 December 2016</td>
-                </tr>
-                <tr>
-                    <td><a href="already-paid">October 2016</a></td>
-                    <td>Alison Moore</td>
-                    <td>£53,201.01</td>
-                    <td>£112.05</td>
-                    <td>Paid - 14 November 2016</td>
-                </tr>
-                <tr>
-                    <td><a href="already-paid">September 2016</a></td>
-                    <td>Alison Moore</td>
-                    <td>£64,011.56</td>
-                    <td>£443.21</td>
-                    <td>Paid late - 17 October 2016</td>
-                </tr>
-                <tr>
-                    <td><a href="already-paid">August 2016</a></td>
-                    <td>Alison Moore</td>
-                    <td>£94,011.07</td>
-                    <td>£301.09</td>
-                    <td>Paid - 16 September 2016</td>
-                </tr>
-                <tr>
-                    <td><a href="already-paid">July 2016</a></td>
-                    <td>Alison Moore</td>
-                    <td>£94,011.07</td>
-                    <td>-</td>
-                    <td>Paid - 16 August 2016</td>
-                </tr>
-                <tr>
-                    <td><a href="already-paid">June 2016</a></td>
-                    <td>Alison Moore</td>
-                    <td>£94,011.07</td>
-                    <td>-</td>
-                    <td>Paid - 16 July 2016</td>
-                </tr>
-                <tr>
-                    <td><a href="already-paid">May 2016</a></td>
-                    <td>Alison Moore</td>
-                    <td>£48,882.60</td>
-                    <td>£361.36</td>
-                    <td>Paid - 16 June 2016</td>
-                </tr>
-                <tr>
-                    <td><a href="already-paid">April 2016</a></td>
-                    <td>Alison Moore</td>
-                    <td>£7,201.31</td>
-                    <td>£492.12</td>
-                    <td>Paid - 11 May 2016</td>
-                </tr>
-            </tbody>
-        </table>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <div class="heading-group">
+                <p>{{serviceName}}</p>
+                <h1 class="heading-large">Check your February 2017 contributions before submitting</h1>
+            </div>
+            <p class="lede">
+                The February 2017 submission needs to reach us by 16 March 2017.
+            </p>
+            <div class="form-group">
+                <a class="button" href="make-payment" role="button">Submit contribution</a>
+            </div>
+        </div>
+        <div class="column-full">
+            <h2 class="heading-medium">Previous contributions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Submitted by</th>
+                        <th>Amount</th>
+                        <th>Adjustment</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="already-paid">January 2017</a></td>
+                        <td>Alison Moore</td>
+                        <td>£30,262.56</td>
+                        <td>-</td>
+                        <td>Submitted - 15 February 2016</td>
+                    </tr>
+                    <tr>
+                        <td><a href="already-paid">December 2016</a></td>
+                        <td>Mathew Brown</td>
+                        <td>£62,188.41</td>
+                        <td>£682.29</td>
+                        <td>Paid late - 21 January 2016</td>
+                    </tr>
+                    <tr>
+                        <td><a href="already-paid">November 2016</a></td>
+                        <td>Alison Moore</td>
+                        <td>£48,882.60</td>
+                        <td>£521.36</td>
+                        <td>Paid late - 17 December 2016</td>
+                    </tr>
+                    <tr>
+                        <td><a href="already-paid">October 2016</a></td>
+                        <td>Alison Moore</td>
+                        <td>£53,201.01</td>
+                        <td>£112.05</td>
+                        <td>Paid - 14 November 2016</td>
+                    </tr>
+                    <tr>
+                        <td><a href="already-paid">September 2016</a></td>
+                        <td>Alison Moore</td>
+                        <td>£64,011.56</td>
+                        <td>£443.21</td>
+                        <td>Paid late - 17 October 2016</td>
+                    </tr>
+                    <tr>
+                        <td><a href="already-paid">August 2016</a></td>
+                        <td>Alison Moore</td>
+                        <td>£94,011.07</td>
+                        <td>£301.09</td>
+                        <td>Paid - 16 September 2016</td>
+                    </tr>
+                    <tr>
+                        <td><a href="already-paid">July 2016</a></td>
+                        <td>Alison Moore</td>
+                        <td>£94,011.07</td>
+                        <td>-</td>
+                        <td>Paid - 16 August 2016</td>
+                    </tr>
+                    <tr>
+                        <td><a href="already-paid">June 2016</a></td>
+                        <td>Alison Moore</td>
+                        <td>£94,011.07</td>
+                        <td>-</td>
+                        <td>Paid - 16 July 2016</td>
+                    </tr>
+                    <tr>
+                        <td><a href="already-paid">May 2016</a></td>
+                        <td>Alison Moore</td>
+                        <td>£48,882.60</td>
+                        <td>£361.36</td>
+                        <td>Paid - 16 June 2016</td>
+                    </tr>
+                    <tr>
+                        <td><a href="already-paid">April 2016</a></td>
+                        <td>Alison Moore</td>
+                        <td>£7,201.31</td>
+                        <td>£492.12</td>
+                        <td>Paid - 11 May 2016</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
-    <div class="pagination-simple">
+
+
+
+<!--     <div class="pagination-simple">
         <div class="back-link">
             <a href="login">
                 <span class="prefix">Back:</span>
                 <span class="title">Previous page</span>
             </a>
         </div>
-    </div>
+    </div> -->
     
 </main>
 {% endblock %}

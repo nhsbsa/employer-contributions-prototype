@@ -7,23 +7,26 @@
 
 {% block content%}
 <main id="content" role="main" tabindex="-1" class="add-log-out">
+    
     <div class="back-nav" role="navigation">
         <a class="top-back-button back-to-previous" href="#">Back</a>
     </div>
-    <div class="heading-group">
-        <p>{{serviceName}}</p>
-        <h1 class="heading-large">Submit contribution</h1>
-    </div>
-    <div class="grid-row">
-        <!-- EA 
-        <div class="column-full">
-            <div class="form-group">
-                <h2 class="heading-large">Employing Authority (EA) code: EA5955</h2>
-                <h2 class="heading-large">Marie Curie Cancer Care</h2>
-            </div>
-        </div> -->
 
+    <div class="grid-row">
         <div class="column-two-thirds">
+            <div class="heading-group">
+                <p>{{serviceName}}</p>
+                <h1 class="heading-large">Submit contribution</h1>
+            </div>
+
+            <!-- EA 
+            <div class="column-full">
+                <div class="form-group">
+                    <h2 class="heading-large">Employing Authority (EA) code: EA5955</h2>
+                    <h2 class="heading-large">Marie Curie Cancer Care</h2>
+                </div>
+            </div> -->
+
             <form id="make-payment" class="form" method="" action="contributions-and-payment" novalidate="novalidate">
                 <div id="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1" aria-hidden="true" class="js-hidden">
                     <h1 class="heading-medium error-summary-heading" id="error-summary-heading">
@@ -35,7 +38,7 @@
                     <fieldset>
                         <legend>
                             <span class="form-label-bold">What month is this contribution for?</span>
-                            <span class="form-hint">For example 09 2017</span>
+                            <span class="form-hint">For example February 2017</span>
                         </legend>
                         
                         <!-- Use .form-group to create spacing when wrapping label and input pairs -->
@@ -61,7 +64,7 @@
                     <fieldset>
                         <legend>
                             <span class="form-label-bold">What date do you want to submit your contributions?</span>
-                            <span class="form-hint">For example 16 09 2017</span>
+                            <span class="form-hint">For example 16 March 2017</span>
                         </legend>
                         
                         <!-- Use .form-group to create spacing when wrapping label and input pairs -->
@@ -146,26 +149,28 @@
 
                 <div class="form-item-wrapper">
                     <div class="form-group">
-                        <input id="next-button" class="button" type="submit" value="Next step" />
+                        <input id="next-button" class="button" type="submit" value="Next" />
                     </div>
                 </div>
             </form>
+
+
+            <!-- <div class="column-one-third">
+                <p>Content</p>
+            </div> -->
+
+
         </div>
-
-        <!-- <div class="column-one-third">
-            <p>Content</p>
-        </div> -->
-
     </div>
 
-    <div class="pagination-simple">
+    <!-- <div class="pagination-simple">
         <div class="back-link">
             <a href="#" class="link">
                 <span class="prefix">Back:</span>
                 <span class="title">Previous page</span>
             </a>
         </div>
-    </div>
+    </div> -->
     
 </main>
 {% endblock %}

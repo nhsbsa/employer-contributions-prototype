@@ -6,24 +6,30 @@
 {% endblock %}
 
 {% block content%}
-<main id="content" role="main" tabindex="-1" class="add-log-out">
+<main id="content" role="main" tabindex="-1">
+
     <div class="back-nav" role="navigation">
         <a class="top-back-button back-to-previous" href="#">Back</a>
     </div>
-    <div class="heading-group">
-        <p>{{serviceName}}</p>
-        <h1 class="heading-large">Employing Authority Contributions</h1>
-    </div>
-    <div class="form-group">
-        <label class="form-label" for="full-name-f1">Search for an Employing Authority (EA) code</label>
-        <form>
-            <input class="form-control" id="full-name-f1" type="text" />
-            <button class="button" type="submit">Search</button>
-        </form>
-    </div>
 
-    <div class="form-group">
-        <div class="column-full">                        
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            
+            <div class="heading-group">
+                <p>{{serviceName}}</p>
+                <h1 class="heading-large">Employing Authority Contributions</h1>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="full-name-f1">Search for an Employing Authority (EA) code</label>
+                <form>
+                    <input class="form-control" id="full-name-f1" type="text" />
+                    <button class="button" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="column-full">
+
             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="data-table stack-table wide-table hoverable-table">
                 <tbody>
                 <tr>
@@ -125,21 +131,23 @@
 
             </div>
 
-
         </div>
     </div>
+
+    
+
 
     <!-- <div class="column-one-third">
         <p>Content</p>
     </div> -->
 
-    <div class="pagination-simple">
+<!--     <div class="pagination-simple">
         <div>
             <a href="login" class="link">
                 <span class="prefix">Back:</span>
                 <span class="title">Employer sign in</span>
             </a>
         </div>
-    </div>
+    </div> -->
 </main>
 {% endblock %}
