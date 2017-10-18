@@ -15,9 +15,6 @@ $path: "/public/images/";
 .phase-banner {
 	@extend %site-width-container;
 	@extend %contain-floats;
-}
-
-.phase-banner {
 	position: relative;
 	> p {
 		padding-right: 60px;
@@ -32,3 +29,18 @@ $path: "/public/images/";
     	font-size: 14px;
 	}
 }
+
+// Back Navigation
+.back-nav {
+	margin-top: 10px;
+}
+
+.back-to-previous::before {
+	content: '';
+    position: relative;
+    left: -6px;
+    display: inline-block;
+    border: 6px solid transparent;
+    border-right-color: #0b0c0c;
+}
+
