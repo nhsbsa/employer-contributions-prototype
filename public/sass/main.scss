@@ -16,3 +16,19 @@ $path: "/public/images/";
 	@extend %site-width-container;
 	@extend %contain-floats;
 }
+
+.phase-banner {
+	position: relative;
+	> p {
+		padding-right: 60px;
+	}
+	.phase-tag {
+		padding: 2px 5px;
+	}
+	.log-out-link {
+    	position: absolute;
+    	right: 0;
+    	top: 10px;
+    	font-size: 14px;
+	}
+}

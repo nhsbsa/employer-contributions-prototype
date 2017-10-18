@@ -3,9 +3,6 @@
 
 .phase-banner {
   @include phase-banner();
-	.phase-tag {
-		padding: 2px 5px;
-	}
 }
 
 // These classnames are deprecated,
