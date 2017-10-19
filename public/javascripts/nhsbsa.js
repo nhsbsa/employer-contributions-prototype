@@ -102,7 +102,9 @@ $(document).ready(function(){
 
     // general and used for multiple forms
     var $formToValidated = $('.form-to-validate');
+
     if($formToValidated.length > 0){
+
         $formToValidated.on('submit', function (evt) {
             evt.preventDefault();
 

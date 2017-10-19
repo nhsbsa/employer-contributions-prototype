@@ -12,6 +12,7 @@ $path: "/public/images/";
 }
 
 // Hide
+[hidden],
 .display-none {
 	display: none;
 }
@@ -32,13 +33,19 @@ a:link:focus:not(.button) {
 	}
 }
 
-
+// When we have errors
 .error {
 	.form-group {
 		min-width: 90px;
 	}
+	.currency-input__inner .form-control,
 	.block-label {
 		border: 4px solid $error-colour;
+	}
+
+	.currency-input__inner__unit {
+		left: 12px;
+		bottom: 8px;
 	}
 }
 
