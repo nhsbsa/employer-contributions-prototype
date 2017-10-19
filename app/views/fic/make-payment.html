@@ -16,6 +16,16 @@
 
     <div class="grid-row">
         <div class="column-two-thirds">
+
+            <div id="error-summary" class="error-summary display-none" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1" hidden>
+                <h1 class="error-summary-heading" id="error-summary-heading-example-1">
+                    There was a problem with your answer
+                </h1>
+                <ul class="error-summary-list">
+                    <li><a href="#email">Your email is not valid</a></li>
+                </ul>
+            </div>
+
             <div class="heading-group">
                 <p>{{serviceName}}</p>
                 <h1 class="heading-large">Submit contribution</h1>
@@ -29,12 +39,7 @@
                 </div>
             </div> -->
 
-            <form id="make-payment" class="form" method="" action="contributions-and-payment" novalidate="novalidate">
-                <div id="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1" aria-hidden="true" class="js-hidden">
-                    <h1 class="heading-medium error-summary-heading" id="error-summary-heading">
-                        Message to alert the user to a problem goes here
-                    </h1>
-                </div>
+            <form id="make-payment-form" class="form form-to-validate" method="get" action="contributions-and-payment" novalidate="novalidate">
 
                 <div class="form-group">
                     <fieldset>
@@ -47,16 +52,16 @@
                         <div class="form-date">
 
                             <div class="form-group form-group-month">
-                                <label class="form-label" for="month">Month
+                                <label class="form-label" for="contribution-month">Month
                                     <span class="error-message"></span>
                                 </label>
-                                <input class="form-control" id="month" name="month" type="text" required="" aria-required="true" maxlength="12" />
+                                <input class="form-control" id="contribution-month" name="contribution-month" type="text" required="" aria-required="true" maxlength="12" />
                             </div>
                             <div class="form-group form-group-year">
-                                <label class="form-label" for="year">Year
+                                <label class="form-label" for="contribution-year">Year
                                     <span class="error-message"></span>
                                 </label>
-                                <input class="form-control" id="year" name="year" type="text" required="" aria-required="true" />
+                                <input class="form-control" id="contribution-year" name="contribution-year" type="text" required="" aria-required="true" />
                             </div>
                         </div>
                     </fieldset>
@@ -72,22 +77,22 @@
                         <!-- Use .form-group to create spacing when wrapping label and input pairs -->
                         <div class="form-date">
                             <div class="form-group form-group-day">
-                                <label class="form-label" for="day2">Day
+                                <label class="form-label" for="collection-day">Day
                                     <span class="error-message"></span>
                                 </label>
-                                <input class="form-control form-control-2-chars" id="day2" name="day2" type="text" required="" aria-required="true" />
+                                <input class="form-control form-control-2-chars" id="collection-day" name="collection-day" type="text" required="" aria-required="true" />
                             </div>
                             <div class="form-group form-group-month">
-                                <label class="form-label" for="month2">Month
+                                <label class="form-label" for="collection-month">Month
                                     <span class="error-message"></span>
                                 </label>
-                                <input class="form-control" id="month2" name="month2" type="text" required="" aria-required="true" maxlength="12" />
+                                <input class="form-control" id="collection-month" name="collection-month" type="text" required="" aria-required="true" maxlength="12" />
                             </div>
                             <div class="form-group form-group-year">
-                                <label class="form-label" for="year2">Year
+                                <label class="form-label" for="collection-year">Year
                                     <span class="error-message"></span>
                                 </label>
-                                <input class="form-control" id="year2" name="year2" type="text" required="" aria-required="true" />
+                                <input class="form-control" id="collection-year" name="collection-year" type="text" required="" aria-required="true" />
                             </div>
                         </div>
                     </fieldset>

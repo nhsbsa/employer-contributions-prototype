@@ -28,7 +28,7 @@ $(document).ready(function(){
 
     function displayFieldErrorWithClass(errorMessageClass) {
         var $errorLayer = $(errorMessageClass).parents('.form-group');
-        var $checkboxError = $(errorMessageClass).parents('fieldset')[0].children[2].children[0]; // FIC amends for checkbox error-styles
+        var $checkboxError = $(errorMessageClass).parents('fieldset')[0]; // FIC amends for checkbox error-styles
         $errorLayer.addClass('error');
         if ($checkboxError) {
             $($checkboxError).addClass('inputError'); // FIC amends for checkbox error-styles
@@ -41,10 +41,11 @@ $(document).ready(function(){
         var $errorLayer = $inputField.parents('.form-group');
         var $radioField;
         $errorLayer.addClass('error');
-        if ($inputField[0].tagName == "INPUT") {
+        console.log($inputField.attr('type'));
+        if ($inputField.type == "INPUT") {
             $inputField.addClass('inputError'); // FIC amends for input error-styles
         } else {
-            $radioField = $($inputField[0].children[0].children[2].children[0].children); // [array]
+            $radioField = $($inputField); // [array]
             for (i = 0; i < $radioField.length; i++){
                 $radioField.addClass('inputError'); // FIC amends for radio error-styles
             };
@@ -207,8 +208,9 @@ $(document).ready(function(){
                     $formToValidated.attr('action', 'summary');
                 }
 
-                var enteredMonth = $.trim($('#contribution-month').val());
-                if(typeAheadList.indexOf(enteredMonth) == -1){
+
+
+                if ($.trim($('#contribution-month').val()) == "") {
                     displayFieldError($('#contribution-month'));
                     isValid = false;
                 }
@@ -225,8 +227,13 @@ $(document).ready(function(){
                     isValid = false;
                 }
 
-                var enteredMonth = $.trim($('#collection-month').val());
-                if(typeAheadList.indexOf(enteredMonth) == -1){
+                // var enteredMonth = $.trim($('#collection-month').val());
+                // if(typeAheadList.indexOf(enteredMonth) == -1){
+                //     displayFieldError($('#collection-month'));
+                //     isValid = false;
+                // }
+
+                if ($.trim($('#collection-month').val()) == "") {
                     displayFieldError($('#collection-month'));
                     isValid = false;
                 }

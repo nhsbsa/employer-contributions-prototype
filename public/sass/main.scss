@@ -16,6 +16,13 @@ $path: "/public/images/";
 	display: none;
 }
 
+// Link text fix for when
+// focussed links that are
+// buttons turn blue
+a:link:focus:not(.button) {
+	color: $white;
+}
+
 // Phase Banner
 .phase-banner {
 	@extend %site-width-container;
