@@ -23,6 +23,12 @@ a:link:focus:not(.button) {
 	color: $white;
 }
 
+.form-date-wide {
+	.form-group-month {
+		width: 160px;
+	}
+}
+
 // Phase Banner
 .phase-banner {
 	@extend %site-width-container;

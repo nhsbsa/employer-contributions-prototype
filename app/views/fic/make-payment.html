@@ -45,23 +45,23 @@
                     <fieldset>
                         <legend>
                             <span class="form-label-bold">What month is this contribution for?</span>
-                            <span class="form-hint">For example, 10 2017</span>
+                            <span class="form-hint">For example, February 2018</span>
                         </legend>
                         
                         <!-- Use .form-group to create spacing when wrapping label and input pairs -->
-                        <div class="form-date">
+                        <div class="form-date form-date-wide">
 
                             <div class="form-group form-group-month">
                                 <label class="form-label" for="contribution-month">Month
                                     <span class="error-message"></span>
                                 </label>
-                                <input class="form-control" id="contribution-month" name="contribution-month" type="text" required="" aria-required="true" maxlength="12" />
+                                <input class="form-control" id="contribution-month" name="contribution-month" type="text" required="" aria-required="true" maxlength="11" />
                             </div>
                             <div class="form-group form-group-year">
                                 <label class="form-label" for="contribution-year">Year
                                     <span class="error-message"></span>
                                 </label>
-                                <input class="form-control" id="contribution-year" name="contribution-year" type="text" required="" aria-required="true" />
+                                <input class="form-control" id="contribution-year" name="contribution-year" type="text" required="" aria-required="true" maxlength="4" />
                             </div>
                         </div>
                     </fieldset>
@@ -71,11 +71,11 @@
                     <fieldset>
                         <legend>
                             <span class="form-label-bold">What date do you want to submit your contributions?</span>
-                            <span class="form-hint">For example, 16 10 2017</span>
+                            <span class="form-hint">For example, 16 February 2018</span>
                         </legend>
                         
                         <!-- Use .form-group to create spacing when wrapping label and input pairs -->
-                        <div class="form-date">
+                        <div class="form-date form-date-wide">
                             <div class="form-group form-group-day">
                                 <label class="form-label" for="collection-day">Day
                                     <span class="error-message"></span>
@@ -86,13 +86,13 @@
                                 <label class="form-label" for="collection-month">Month
                                     <span class="error-message"></span>
                                 </label>
-                                <input class="form-control" id="collection-month" name="collection-month" type="text" required="" aria-required="true" maxlength="12" />
+                                <input class="form-control" id="collection-month" name="collection-month" type="text" required="" aria-required="true" maxlength="11" />
                             </div>
                             <div class="form-group form-group-year">
                                 <label class="form-label" for="collection-year">Year
                                     <span class="error-message"></span>
                                 </label>
-                                <input class="form-control" id="collection-year" name="collection-year" type="text" required="" aria-required="true" />
+                                <input class="form-control" id="collection-year" name="collection-year" type="text" required="" aria-required="true" maxlength="4" />
                             </div>
                         </div>
                     </fieldset>
