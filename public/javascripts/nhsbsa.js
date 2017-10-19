@@ -41,7 +41,6 @@ $(document).ready(function(){
         var $errorLayer = $inputField.parents('.form-group');
         var $radioField;
         $errorLayer.addClass('error');
-        console.log($inputField.attr('type'));
         if ($inputField.type == "INPUT") {
             $inputField.addClass('inputError'); // FIC amends for input error-styles
         } else {
@@ -243,9 +242,10 @@ $(document).ready(function(){
                     isValid = false;
                 }
 
-                var understood = $("input[name='understood']:checked").val();
+                var understood = $("input[name='understand']:checked").val();
+
                 if(understood != 'yes'){
-                    displayFieldErrorWithClass('.understood');
+                    displayFieldErrorWithClass('.form-control');
                     isValid = false;
                 }
 

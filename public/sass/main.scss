@@ -23,11 +23,25 @@ a:link:focus:not(.button) {
 	color: $white;
 }
 
-.form-date-wide {
-	.form-group-month {
-		width: 160px;
+// Form date
+.form-date {
+	&-wide {
+		.form-group-month {
+			width: 160px;
+		}
 	}
 }
+
+
+.error {
+	.form-group {
+		min-width: 90px;
+	}
+	.block-label {
+		border: 4px solid $error-colour;
+	}
+}
+
 
 // Phase Banner
 .phase-banner {
