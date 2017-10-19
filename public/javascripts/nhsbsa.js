@@ -5,21 +5,21 @@ $(document).ready(function(){
     // The following JavaScript code is just for demo purposes.
     // Not For Production, please remove when developing the real thing.
     if($('.add-search').length > 0){
-        $('.prototype-warning-container').append($('<a href="login" class="log-out-link">Search again</a>'));
+        $('.phase-banner').append($('<a href="login" class="log-out-link">Search again</a>'));
     }
 
     if($('.add-log-out').length > 0){
-        $('.prototype-warning-container').append($('<a href="login" class="log-out-link">Log out</a>'));
+        $('.phase-banner').append($('<a href="login" class="log-out-link">Log out</a>'));
     }
 
-    var $errorLayer = $('.error-layer'),
+    var $errorLayer = $('.form-group'),
         $errSummary = $('.error-summary'),
         $errMessage = $('.error-message');
 
     function displayPageErrors(errorMessageClass){
         $errSummary.removeClass('display-none');
         if(errorMessageClass){
-            $('.'+errorMessageClass).removeClass('display-none').parents('.error-layer').addClass('error');
+            $('.'+errorMessageClass).removeClass('display-none').parents('.form-group').addClass('error');
         } else {
             $errMessage.removeClass('display-none');
             $errorLayer.addClass('error');
@@ -27,7 +27,7 @@ $(document).ready(function(){
     }
 
     function displayFieldErrorWithClass(errorMessageClass) {
-        var $errorLayer = $(errorMessageClass).parents('.error-layer');
+        var $errorLayer = $(errorMessageClass).parents('.form-group');
         var $checkboxError = $(errorMessageClass).parents('fieldset')[0].children[2].children[0]; // FIC amends for checkbox error-styles
         $errorLayer.addClass('error');
         if ($checkboxError) {
@@ -38,7 +38,7 @@ $(document).ready(function(){
 
     function displayFieldError($inputField){
         var i;
-        var $errorLayer = $inputField.parents('.error-layer');
+        var $errorLayer = $inputField.parents('.form-group');
         var $radioField;
         $errorLayer.addClass('error');
         if ($inputField[0].tagName == "INPUT") {
@@ -53,7 +53,7 @@ $(document).ready(function(){
     }
 
     function clearFormErrors($form){
-        $('.error-layer', $form).removeClass('error');
+        $('.form-group', $form).removeClass('error');
         $('.inputError').removeClass('inputError'); // FIC amends for input error-styles
         $('.error-message', $form).addClass('display-none');
         $('.error-summary').addClass('display-none');
@@ -613,6 +613,7 @@ $(document).ready(function(){
             $(obj).text(cookieValue).val(cookieValue);
         })
     }
+
 
     // cosmetic js
     var $prefixedTextSpan = $('.prefix-text');

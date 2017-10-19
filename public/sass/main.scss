@@ -11,6 +11,11 @@ $path: "/public/images/";
 	}
 }
 
+// Hide
+.display-none {
+	display: none;
+}
+
 // Phase Banner
 .phase-banner {
 	@extend %site-width-container;
