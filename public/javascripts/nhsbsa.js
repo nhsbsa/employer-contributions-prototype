@@ -197,7 +197,6 @@ $(document).ready(function(){
                     $formToValidated.attr('action', 'new-password');
                 }
 
-                Cookies.set('eaCode', 'EA9143');
                 submitFormIfValid();
             }
 
@@ -378,8 +377,6 @@ $(document).ready(function(){
     if(ea === undefined){
         $('.demo-ea').remove();
     }
-
-    var ea = Cookies.get('ea');
     if(ea === 'show'){
         $('.multiple-ea').removeClass('display-none');
     } else {
@@ -637,8 +634,9 @@ $(document).ready(function(){
         Cookies.remove('ea');
         Cookies.remove('staffgps');
         Cookies.remove('csv');
-        Cookies.remove('eaCode');
         Cookies.remove('payingMonth');
+        Cookies.remove('adjustmentMonth');
+        Cookies.remove('adjustmentYear');
     }
 
 });
