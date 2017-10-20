@@ -5,6 +5,8 @@ $path: "/public/images/";
 @import "govuk-elements";
 
 // Pensions Header
+// Add a body class
+// .nhs-bsa-pensions
 @include media(tablet) {
 	.nhs-bsa-pensions #nhs-global-header {
 		background-image: url('#{$path}header-pension-services.svg');
@@ -52,20 +54,8 @@ a:link:focus:not(.button) {
 
 // Phase Banner
 .phase-banner {
-	@extend %site-width-container;
-	@extend %contain-floats;
-	position: relative;
-	> p {
-		padding-right: 60px;
-	}
 	.phase-tag {
 		padding: 2px 5px;
-	}
-	.log-out-link {
-    	position: absolute;
-    	right: 0;
-    	top: 10px;
-    	font-size: 14px;
 	}
 }
 
@@ -89,7 +79,7 @@ a:link:focus:not(.button) {
 }
 
 .print-icon {
-    background-image: url(../../public/images/bsa/print-2x.svg);
+    background-image: url('#{$path}bsa/print-2x.svg');
     padding-left: 40px;
 }
 

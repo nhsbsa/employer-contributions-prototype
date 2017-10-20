@@ -2,16 +2,12 @@
 
 {% block page_title %}February 2017 contribution details - {{ super() }}{% endblock %}
 
-{% block breadcrumb %}
-    {{ super() }}
-    <li>Contributions and Payment</li>
-{% endblock %}
-
 {% block content%}
 <main id="content" role="main" tabindex="-1" class="add-log-out">
-    <div class="back-nav" role="navigation">
-        <a class="link-back" href="#">Back</a>
-    </div>
+    
+    {% include "includes/phase_banner.html" %}
+    {% include "includes/back_nav.html" %}
+
     <div class="grid-row">
         <div class="column-two-thirds">
 

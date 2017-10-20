@@ -2,22 +2,11 @@
 
 {% block page_title %}Check your February 2017 contributions before submitting - {{ super() }}{% endblock %}
 
-{% block breadcrumb %}
-    {{ super() }}
-    <li>Summary</li>
-{% endblock %}
-
-{% block back %}
-    {{ super() }}
-    <a class="link-back" href="#">Back</a>
-{% endblock %}
-
 {% block content%}
 <main id="content" role="main" tabindex="-1" class="add-log-out">
 
-    <div class="back-nav" role="navigation">
-        <a class="link-back" href="#">Back</a>
-    </div>
+    {% include "includes/phase_banner.html" %}
+    {% include "includes/back_nav.html" %}
 
     <div class="grid-row">
         <div class="column-two-thirds">

@@ -2,21 +2,12 @@
 
 {% block page_title %}February contribution taken - {{ super() }}{% endblock %}
 
-{% block breadcrumb %}
-    {{ super() }}
-    <li>Already Paid</li>
-{% endblock %}
-
-{% block back %}
-    {{ super() }}
-    <a class="link-back" href="#">Back</a>
-{% endblock %}
-
 {% block content%}
 <main id="content" role="main" tabindex="-1" class="add-log-out">
-    <div class="back-nav" role="navigation">
-        <a class="link-back" href="#">Back</a>
-    </div>
+    
+    {% include "includes/phase_banner.html" %}
+    {% include "includes/back_nav.html" %}
+    
     <div class="grid-row">
         <!-- <div class="form-group done-panel">
             <div class="column-full">

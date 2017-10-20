@@ -2,16 +2,12 @@
 
 {% block page_title %}Coming soon - {{ super() }}{% endblock %}
 
-{% block breadcrumb %}
-    {{ super() }}
-    <li>Coming Soon</li>
-{% endblock %}
-
 {% block content%}
 <main id="content" role="main" tabindex="-1">
-    <div class="back-nav" role="navigation">
-        <a class="link-back" href="#">Back</a>
-    </div>
+    
+    {% include "includes/phase_banner.html" %}
+    {% include "includes/back_nav.html" %}
+
     <p class="lede">These are not the droids you are looking for</p>
 </main>
 {% endblock %}

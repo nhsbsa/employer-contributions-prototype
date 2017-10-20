@@ -2,13 +2,11 @@
 
 {% block page_title %}Your password has been successfully updated - {{ super() }}{% endblock %}
 
-{% block breadcrumb %}
-    {{ super() }}
-    <li>Password updated</li>
-{% endblock %}
-
 {% block content%}
 <main id="content" role="main" tabindex="-1">
+
+    {% include "includes/phase_banner.html" %}
+
     <div class="grid-row">
         <div class="column-two-thirds">
             <div class="heading-group">

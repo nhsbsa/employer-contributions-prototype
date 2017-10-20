@@ -2,13 +2,11 @@
 
 {% block page_title %}Sorry, you'll have to start again - {{ super() }}{% endblock %}
 
-{% block breadcrumb %}
-    {{ super() }}
-    <li>Session ended</li>
-{% endblock %}
-
 {% block content%}
 <main id="content" role="main" tabindex="-1">
+
+    {% include "includes/phase_banner.html" %}
+
     <div class="grid-row">
         <div class="column-two-thirds">
             <div class="heading-group">
