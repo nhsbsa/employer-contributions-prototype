@@ -9,7 +9,7 @@ $(document).ready(function(){
     }
 
     if($('.add-log-out').length > 0){
-        $('.phase-banner').append($('<a href="login" class="log-out-link">Log out</a>'));
+        $('.back-nav').append($('<a href="login" class="log-out-link">Logout</a>'));
     }
 
     var $errorLayer = $('.form-group'),

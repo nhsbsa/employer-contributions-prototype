@@ -107,3 +107,24 @@ caption.heading-small {
 table.content-table.stack-table.three-column {
 	margin-bottom: 50px;
 }
+
+// Logout
+.log-out-link {
+	display: block;
+    position: relative;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-decoration: none;
+	border-bottom: 1px solid;
+	float: right;
+}
+
+@media (min-width: 641px) {
+	.log-out-link {
+    	font-size: 16px;
+    	line-height: 1.25;
+	}
+}
