@@ -303,7 +303,7 @@ $(document).ready(function(){
 
                 // validates another part of the form
                 var hasOutstandingPayments = $("input[name='outstanding-payments']:checked").val();
-                if(hasOutstandingPayments == 'yes'){
+                if(hasOutstandingPayments == 'Yes'){
                     var $outstandingPaymentsPanel = $('#outstanding-payments-panel'),
                         atLeastOne = false;
                     $formToValidated.attr('action', 'adjusted-summary');
