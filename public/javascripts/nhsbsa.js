@@ -28,11 +28,11 @@ $(document).ready(function(){
 
     function displayFieldErrorWithClass(errorMessageClass) {
         var $errorLayer = $(errorMessageClass).parents('.form-group');
-        var $checkboxError = $(errorMessageClass).parents('fieldset')[0]; // FIC amends for checkbox error-styles
+        // var $checkboxError = $(errorMessageClass).parents('fieldset')[0]; // FIC amends for checkbox error-styles
         $errorLayer.addClass('error');
-        if ($checkboxError) {
-            $($checkboxError).addClass('inputError'); // FIC amends for checkbox error-styles
-        }
+        // if ($checkboxError) {
+        //     $($checkboxError).addClass('inputError'); // FIC amends for checkbox error-styles
+        // }
         $(errorMessageClass, $errorLayer).removeClass('display-none');
     }
 
@@ -41,20 +41,20 @@ $(document).ready(function(){
         var $errorLayer = $inputField.parents('.form-group');
         var $radioField;
         $errorLayer.addClass('error');
-        if ($inputField.type == "INPUT") {
-            $inputField.addClass('inputError'); // FIC amends for input error-styles
-        } else {
-            $radioField = $($inputField); // [array]
-            for (i = 0; i < $radioField.length; i++){
-                $radioField.addClass('inputError'); // FIC amends for radio error-styles
-            };
-        }
+        // if ($inputField.type == "INPUT") {
+        //     $inputField.addClass('inputError'); // FIC amends for input error-styles
+        // } else {
+        //     $radioField = $($inputField); // [array]
+        //     for (i = 0; i < $radioField.length; i++){
+        //         $radioField.addClass('inputError'); // FIC amends for radio error-styles
+        //     };
+        // }
         $('.error-message', $errorLayer).removeClass('display-none');
     }
 
     function clearFormErrors($form){
         $('.form-group', $form).removeClass('error');
-        $('.inputError').removeClass('inputError'); // FIC amends for input error-styles
+        // $('.inputError').removeClass('inputError'); // FIC amends for input error-styles
         $('.error-message', $form).addClass('display-none');
         $('.error-summary').addClass('display-none');
     }

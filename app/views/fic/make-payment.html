@@ -10,24 +10,22 @@
 
     <div class="grid-row">
         <div class="column-two-thirds">
-
-            <div id="error-summary" class="error-summary display-none" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1" hidden>
-                <h1 class="error-summary-heading" id="error-summary-heading-example-1">
-                    There was a problem with your answer
-                </h1>
-                <ul class="error-summary-list">
-                    <li><a href="#email">Your email is not valid</a></li>
-                </ul>
-            </div>
-
-            <div class="heading-group">
-                <p>{{serviceName}}</p>
-                <h1 class="heading-large">Submit contribution</h1>
-            </div>
-
-            {% include "includes/multiple-ea.html" %}
-
             <form id="make-payment-form" class="form form-to-validate" method="get" action="contributions-and-payment" novalidate="novalidate">
+                <div id="error-summary" class="error-summary display-none" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+                    <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+                        There was a problem with your answer:
+                    </h1>
+                    <ul class="error-summary-list">
+                        <li><a href="#email">Your email is not valid</a></li>
+                    </ul>
+                </div>
+
+                <div class="heading-group">
+                    <p>{{serviceName}}</p>
+                    <h1 class="heading-large">Submit contribution</h1>
+                </div>
+
+                {% include "includes/multiple-ea.html" %}
 
                 <div class="form-group">
                     <fieldset>
@@ -36,9 +34,8 @@
                             <span class="form-hint">For example, February 2018</span>
                         </legend>
                         
-                        <!-- Use .form-group to create spacing when wrapping label and input pairs -->
                         <div class="form-date form-date-wide">
-
+                            <!-- Use .form-group to create spacing when wrapping label and input pairs -->
                             <div class="form-group form-group-month">
                                 <label class="form-label" for="contribution-month">Month
                                     <span class="error-message"></span>
@@ -62,8 +59,8 @@
                             <span class="form-hint">For example, 16 February 2018</span>
                         </legend>
                         
-                        <!-- Use .form-group to create spacing when wrapping label and input pairs -->
                         <div class="form-date form-date-wide">
+                            <!-- Use .form-group to create spacing when wrapping label and input pairs -->
                             <div class="form-group form-group-day">
                                 <label class="form-label" for="collection-day">Day
                                     <span class="error-message"></span>
@@ -152,23 +149,11 @@
                 </div>
             </form>
 
-
             <!-- <div class="column-one-third">
                 <p>Content</p>
             </div> -->
 
-
         </div>
     </div>
-
-    <!-- <div class="pagination-simple">
-        <div class="back-link">
-            <a href="#" class="link">
-                <span class="prefix">Back:</span>
-                <span class="title">Previous page</span>
-            </a>
-        </div>
-    </div> -->
-    
 </main>
 {% endblock %}
