@@ -118,3 +118,24 @@ table.content-table.stack-table.three-column {
     	line-height: 1.25;
 	}
 }
+
+// Errors and Validation
+.form-group-day,
+.form-group-month,
+.form-group-year {
+	float: left;
+    width: 50px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    clear: none;
+}
+
+.form-date .form-group-day input,
+.form-date .form-group-month input,
+.form-date .form-group-year input {
+	width: 100%;
+}
+
+.inputError {
+	border: 4px solid #b10e1e;
+}

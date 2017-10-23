@@ -29,23 +29,19 @@
 
                 <div class="form-group">
                     <fieldset>
-                        <legend>
+                        <legend id="desc-legend">
                             <span class="form-label-bold">What month is this contribution for?</span>
                             <span class="form-hint">For example, February 2018</span>
                         </legend>
-                        
+                        <span class="error-message js-hidden">There is an error!</span>
                         <div class="form-date form-date-wide">
                             <!-- Use .form-group to create spacing when wrapping label and input pairs -->
-                            <div class="form-group form-group-month">
-                                <label class="form-label" for="contribution-month">Month
-                                    <span class="error-message"></span>
-                                </label>
+                            <div class="form-group-month">
+                                <label class="form-label" for="contribution-month">Month</label>
                                 <input class="form-control" id="contribution-month" name="contribution-month" type="text" required="" aria-required="true" maxlength="11" />
                             </div>
-                            <div class="form-group form-group-year">
-                                <label class="form-label" for="contribution-year">Year
-                                    <span class="error-message"></span>
-                                </label>
+                            <div class="form-group-year">
+                                <label class="form-label" for="contribution-year">Year</label>
                                 <input class="form-control" id="contribution-year" name="contribution-year" type="text" required="" aria-required="true" maxlength="4" />
                             </div>
                         </div>
@@ -58,23 +54,26 @@
                             <span class="form-label-bold">What date do you want to submit your contributions?</span>
                             <span class="form-hint">For example, 16 February 2018</span>
                         </legend>
-                        
+                        <span class="error-message js-hidden">There is an error!</span>
                         <div class="form-date form-date-wide">
                             <!-- Use .form-group to create spacing when wrapping label and input pairs -->
-                            <div class="form-group form-group-day">
-                                <label class="form-label" for="collection-day">Day
+                            <div class="form-group-day">
+                                <label class="form-label" for="collection-day">
+                                    Day
                                     <span class="error-message"></span>
                                 </label>
                                 <input class="form-control form-control-2-chars" id="collection-day" name="collection-day" type="text" required="" aria-required="true" />
                             </div>
-                            <div class="form-group form-group-month">
-                                <label class="form-label" for="collection-month">Month
+                            <div class="form-group-month">
+                                <label class="form-label" for="collection-month">
+                                    Month
                                     <span class="error-message"></span>
                                 </label>
                                 <input class="form-control" id="collection-month" name="collection-month" type="text" required="" aria-required="true" maxlength="11" />
                             </div>
-                            <div class="form-group form-group-year">
-                                <label class="form-label" for="collection-year">Year
+                            <div class="form-group-year">
+                                <label class="form-label" for="collection-year">
+                                    Year
                                     <span class="error-message"></span>
                                 </label>
                                 <input class="form-control" id="collection-year" name="collection-year" type="text" required="" aria-required="true" maxlength="4" />
@@ -126,7 +125,7 @@
                             <span class="visually-hidden">Warning</span>
                         </i>
                         <strong class="bold-small">
-                            16 March 2017 is the latest you can submit so you do not miss the deadline.
+                            16 Marc​h 2017 is the last date you can submit. After this date you will be charged a fee of £75 and interest for each day the payment is late
                         </strong>
                     </div>
                 </div>

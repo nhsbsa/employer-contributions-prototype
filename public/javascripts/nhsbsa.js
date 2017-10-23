@@ -44,17 +44,18 @@ $(document).ready(function(){
         // if ($inputField.type == "INPUT") {
         //     $inputField.addClass('inputError'); // FIC amends for input error-styles
         // } else {
-        //     $radioField = $($inputField); // [array]
-        //     for (i = 0; i < $radioField.length; i++){
-        //         $radioField.addClass('inputError'); // FIC amends for radio error-styles
-        //     };
-        // }
+        if ($radioField = $($inputField)) { // [array]
+            for (i = 0; i < $radioField.length; i++){
+                $radioField.addClass('inputError'); // FIC amends for radio error-styles
+            };
+        };
         $('.error-message', $errorLayer).removeClass('display-none');
+        $($inputField[0].parentElement.parentElement.previousElementSibling).removeClass('js-hidden');
     }
 
     function clearFormErrors($form){
         $('.form-group', $form).removeClass('error');
-        // $('.inputError').removeClass('inputError'); // FIC amends for input error-styles
+        $('.inputError').removeClass('inputError'); // FIC amends for input error-styles
         $('.error-message', $form).addClass('display-none');
         $('.error-summary').addClass('display-none');
     }
