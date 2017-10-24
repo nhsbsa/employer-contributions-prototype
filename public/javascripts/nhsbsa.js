@@ -380,10 +380,6 @@ $(document).ready(function(){
 
 
 
-
-
-
-
     // all back buttons
     var $topBackLinks = $('.back-nav');
     $topBackLinks.each(function (i, obj) {
@@ -404,97 +400,6 @@ $(document).ready(function(){
             })
         }
     });
-
-
-
-
-
-
-
-    // ==============================================================================
-    // ==============================================================================
-
-
-    // Code for Pensions Calculator
-    // Salary form
-    if($('#salary-form').length > 0){
-        var $salaryForm = $('#salary-form');
-        $salaryForm.on('submit', function (evt) {
-            evt.preventDefault();
-            var isValid = true,
-                option = Cookies.get('option'),
-                destination;
-
-            $('input', $salaryForm).each(function() {
-                if($(this).val() == ""){
-                    isValid = false;
-                }
-            });
-
-            if(!isValid){
-                displayPageErrors();
-            } else {
-                switch(option) {
-                    case 'age':
-                        destination = 'option-1';
-                        break;
-                    case 'lump':
-                        destination = 'lump-sum';
-                        break;
-                    case 'partner':
-                        destination = 'option-3';
-                        break;
-                    default:
-                        destination = 'pattern';
-                        break;
-                }
-                location.assign(destination);
-            }
-        });
-    }
-
-    // Pension Estimate form
-    if($('#options-form').length > 0){
-        var $optionsForm = $('#options-form');
-        $optionsForm.on('submit', function (evt) {
-            evt.preventDefault();
-            var retirementOption = $('input[name=option]:checked', $optionsForm).val();
-            if(retirementOption){
-                Cookies.set('option', retirementOption);
-                location.assign($optionsForm.attr('action'));
-            } else {
-                displayPageErrors();
-            }
-        });
-    }
-
-    // Working Patterns form
-    if($('#pattern-form').length > 0){
-        var $patternForm = $('#pattern-form');
-        $patternForm.on('submit', function (evt) {
-            evt.preventDefault();
-            var option = Cookies.get('option'),
-                destination;
-
-            if( $('input:checked').length < 1){
-                displayPageErrors();
-            } else {
-                switch(option) {
-                    case 'pay':
-                        destination = 'change-pay';
-                        break;
-                    case 'pattern':
-                        destination = 'change-pattern';
-                        break;
-                    case 'break':
-                        destination = 'take-break';
-                        break;
-                }
-                location.assign(destination);
-            }
-        })
-    }
-
 
 
     // ==============================================================================
@@ -559,47 +464,6 @@ $(document).ready(function(){
         //     }
         // });
 
-    }
-
-
-    // nhsbsa bespoke month autoComplete
-    var $monthInputFields =  $('.months-typeahead');
-    if($monthInputFields.length > 0){
-        var typedString = undefined;
-
-        var filterFunc = function (month) {
-            var arrayMonth = month.substring(0, typedString.length).toLowerCase(),
-                inputMonth = typedString.substring(0, typedString.length).toLowerCase();
-            if (arrayMonth == inputMonth) {
-                return month;
-            }
-        };
-
-        $monthInputFields.each(function (i, obj) {
-            $(obj).on('keyup', function (event) {
-                var key = event.keyCode || event.charCode;
-                if( key != 8 && key != 46 ) {
-                    typedString = $.trim($(obj).val());
-                    if(typedString.length > 0){
-                        var month = typeAheadList.filter(filterFunc);
-                        if(month.length == 1){
-                            $(obj).val(month);
-                        }
-                    }
-                }
-            })
-        })
-    }
-
-    // js table enhancement
-    var $hoverClickTable = $('.js-hover-click');
-    if($hoverClickTable.length > 0){
-        $('.set-cookie').on('click', function(evt) {
-            evt.preventDefault();
-            var previousMonth = $(this).text();
-            Cookies.set('previousMonth', previousMonth);
-            location.assign($(this).attr('href'));
-        });
     }
 
 
