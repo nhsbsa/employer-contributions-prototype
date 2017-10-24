@@ -5,6 +5,7 @@
 
     &__unit {
       position: absolute;
+      z-index: 0;
       bottom: 6px;
       left: 10px;
       font-weight: bold;
@@ -13,5 +14,7 @@
 
   .form-control {
     padding-left: 25px;
+    position: relative;
+    z-index: 1;
   }
 }

@@ -624,15 +624,6 @@ $(document).ready(function(){
         })
     }
 
-
-    // cosmetic js
-    var $prefixedTextSpan = $('.prefix-text');
-    if($prefixedTextSpan.length > 0){
-        $prefixedTextSpan.on('click', function () {
-            $(this).parent().find('input').trigger('focus');
-        })
-    }
-
     //clear cookies on login page
     if($('#login-form').length > 0 ) {
         Cookies.remove('ea');
