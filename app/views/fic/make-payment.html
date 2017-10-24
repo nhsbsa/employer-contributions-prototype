@@ -38,7 +38,7 @@
                             <!-- Use .form-group to create spacing when wrapping label and input pairs -->
                             <div class="form-group-month">
                                 <label class="form-label" for="contribution-month">Month</label>
-                                <input class="form-control" id="contribution-month" name="contribution-month" type="text" required="" aria-required="true" maxlength="11" />
+                                <input class="form-control typeahead" id="contribution-month" name="contribution-month" type="text" required="" aria-required="true" maxlength="11" />
                             </div>
                             <div class="form-group-year">
                                 <label class="form-label" for="contribution-year">Year</label>
@@ -69,7 +69,7 @@
                                     Month
                                     <span class="error-message"></span>
                                 </label>
-                                <input class="form-control" id="collection-month" name="collection-month" type="text" required="" aria-required="true" maxlength="11" />
+                                <input class="form-control typeahead" id="collection-month" name="collection-month" type="text" required="" aria-required="true" maxlength="11" />
                             </div>
                             <div class="form-group-year">
                                 <label class="form-label" for="collection-year">
@@ -130,7 +130,7 @@
                     </div>
                 </div>
 
-                <div class="form-group ">
+                <div class="form-group">
                     <fieldset>
                         <legend class="visually-hidden">Payment Notice</legend>
                         <p>If you submit this payment after the 16 March you will receive an administration fee of £75 pounds as well as interest for each day the payment is late.</p>
@@ -155,4 +155,9 @@
         </div>
     </div>
 </main>
+
+<script type="text/javascript">
+    
+</script>
+
 {% endblock %}

@@ -1,0 +1,38 @@
+// Typeahead
+// https://twitter.github.io/typeahead.js/examples/
+
+// Shadow in the input
+.tt-hint {
+	color: $grey-2;
+}
+
+// Allow for error border
+// thickness change
+.error .tt-hint {
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
+// Dropdown
+.tt-menu {
+	color: $black;
+	background: $white;
+	width: 100%;
+	box-sizing: border-box;
+	cursor: pointer;
+	border: 2px solid $black;
+	margin-top: -2px;
+}
+
+// Active item in dropdown
+// use arrows on keyboard
+.tt-suggestion:hover,
+.tt-cursor {
+	color: $white;
+	background: $nhsuk-blue;
+}
+
+// Dropdown item
+.tt-suggestion {
+	padding: 5px 10px;
+}
