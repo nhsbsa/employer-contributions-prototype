@@ -40,7 +40,7 @@
                     </label>
                     <div class="currency-input__inner">
                         <span class="currency-input__inner__unit">£</span>
-                        <input class="form-control form-control-1-3 validate-numeric" id="no-of-scheme-members" name="no-of-scheme-members" type="text" aria-label="Enter number of scheme members" />
+                        <input class="form-control form-control-1-3 validate-numeric" id="no-of-scheme-members" name="no-of-scheme-members" type="text" aria-label="Enter number of scheme members" required="" aria-required="true" />
                     </div>
                 </div>
 
@@ -51,7 +51,7 @@
                     </label>
                     <div class="currency-input__inner">
                         <span class="currency-input__inner__unit">£</span>
-                        <input class="form-control form-control-1-3 validate-numeric" id="total-pensionable-pay" name="total-pensionable-pay" type="text" aria-label="Enter amount in pounds">
+                        <input class="form-control form-control-1-3 validate-numeric" id="total-pensionable-pay" name="total-pensionable-pay" type="text" aria-label="Enter amount in pounds" required="" aria-required="true" />
                     </div>
                 </div>
 
@@ -62,7 +62,7 @@
                     </label>
                     <div class="currency-input__inner">
                         <span class="currency-input__inner__unit">£</span>
-                        <input class="form-control form-control-1-3 validate-numeric" id="employee-contributions" name="employee-contributions" type="text" aria-label="Enter amount in pounds">
+                        <input class="form-control form-control-1-3 validate-numeric" id="employee-contributions" name="employee-contributions" type="text" aria-label="Enter amount in pounds" required="" aria-required="true" />
                     </div>
                 </div>
 
@@ -73,12 +73,12 @@
                     </label>
                     <div class="currency-input__inner">
                         <span class="currency-input__inner__unit">£</span>
-                        <input class="form-control form-control-1-3 validate-numeric" id="employer-contributions" name="employer-contributions" type="text" aria-label="Enter amount in pounds">
+                        <input class="form-control form-control-1-3 validate-numeric" id="employer-contributions" name="employer-contributions" type="text" aria-label="Enter amount in pounds" required="" aria-required="true" />
                     </div>
                 </div>
 
                 <div class="form-group currency-input">
-                    <label class="form-label" for="employee-avcs">Employee added years</label>
+                    <label class="form-label" for="employee-avcs">Employee added years (optional)</label>
                     <div class="currency-input__inner">
                         <span class="currency-input__inner__unit">£</span>
                         <input class="form-control form-control-1-3" id="employee-avcs" name="employee-avcs" type="text" aria-label="Enter amount in pounds">
@@ -86,7 +86,7 @@
                 </div>
 
                 <div class="form-group currency-input">
-                    <label class="form-label" for="additional-pension">Additional pension</label>
+                    <label class="form-label" for="additional-pension">Additional pension (optional)</label>
                     <div class="currency-input__inner">
                         <span class="currency-input__inner__unit">£</span>
                         <input class="form-control form-control-1-3" id="additional-pension" name="additional-pension" type="text" aria-label="Enter amount in pounds">
@@ -94,7 +94,7 @@
                 </div>
 
                 <div class="form-group currency-input">
-                    <label class="form-label" for="errbo">Early Retirement Reduction Buy Out (ERRBO)</label>
+                    <label class="form-label" for="errbo">Early Retirement Reduction Buy Out (ERRBO) (optional)</label>
                     <div class="currency-input__inner">
                         <span class="currency-input__inner__unit">£</span>
                         <input class="form-control form-control-1-3" id="errbo" name="errbo" type="text" aria-label="Enter amount in pounds">
@@ -106,11 +106,11 @@
                     <legend>Do you need to make an adjustment?</legend>
                     <div class="form-group inline">
                         <label class="block-label selection-button-radio" data-target="outstanding-payments-panel" for="add-outstanding-payments">
-                            <input id="add-outstanding-payments" type="radio" name="outstanding-payments" value="Yes">
+                            <input id="add-outstanding-payments" type="radio" name="outstanding-payments" value="Yes" />
                             yes
                         </label>
                         <label class="block-label selection-button-radio" for="no-outstanding-payments">
-                            <input id="no-outstanding-payments" type="radio" name="outstanding-payments" value="No" checked="checked" />
+                            <input id="no-outstanding-payments" type="radio" name="outstanding-payments" value="No" checked="checked" required="" aria-required="true" />
                             no
                         </label>
                     </div>
@@ -123,12 +123,11 @@
                                     <span class="error-message display-none" id="error-message-adjusted">Please fill in all fields</span>
                                 </legend>
                                 <div class="form-date form-date-wide">
-                                    <!-- Use .form-group to create spacing when wrapping label and input pairs -->
-                                    <div class="form-group form-group-month">
+                                    <div class="form-group-month">
                                         <label class="form-label" for="adjustment-month">Month</label>
                                         <input class="form-control" id="adjustment-month" name="adjustment-month" type="text" maxlength="11" aria-label="Enter Month" />
                                     </div>
-                                    <div class="form-group form-group-year">
+                                    <div class="form-group-year">
                                         <label class="form-label" for="adjustment-year">Year</label>
                                         <input class="form-control validate-secondary-text-input" id="adjustment-year" name="adjustment-year" type="text" aria-label="Enter Year" maxlength="4" />
                                     </div>
@@ -180,7 +179,7 @@
                     </label>
                     <div class="currency-input__inner">
                         <span class="currency-input__inner__unit">£</span>
-                        <input class="form-control form-control-1-3 validate-numeric" id="total-amount-debited" name="total-amount-debited" value="" type="text" aria-label="Enter amount in pounds">
+                        <input class="form-control form-control-1-3 validate-numeric" id="total-amount-debited" name="total-amount-debited" value="" type="text" aria-label="Enter amount in pounds" required="" aria-required="true" />
                     </div>
                 </div>
 
