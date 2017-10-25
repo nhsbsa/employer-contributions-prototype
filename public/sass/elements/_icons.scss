@@ -69,6 +69,10 @@
   @include icon(icon-search, 30, 22);
 }
 
+.icon-print {
+  @include icon(icon-print, 35, 32, bsa);
+}
+
 
 // GOV.UK step icons
 @for $i from 1 through 14 {

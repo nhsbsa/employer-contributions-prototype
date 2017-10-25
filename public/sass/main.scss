@@ -77,15 +77,11 @@ a:link:focus:not(.button) {
     padding-top: 210px;
 }
 
-.print-icon {
-    background-image: url('#{$path}bsa/print-2x.svg');
-    padding-left: 40px;
-}
-
-.icon {
-    display: inline-block;
-    background-position: 0 0;
-    background-repeat: no-repeat;
+.print-link {
+	display: inline-block;
+	.icon {
+		vertical-align: middle;
+	}
 }
 
 // Summary
