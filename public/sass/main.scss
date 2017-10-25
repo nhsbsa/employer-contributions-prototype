@@ -63,15 +63,6 @@ a:link:focus:not(.button) {
 	margin-top: 10px;
 }
 
-.back-to-previous::before {
-	content: '';
-    position: relative;
-    left: -6px;
-    display: inline-block;
-    border: 6px solid transparent;
-    border-right-color: #0b0c0c;
-}
-
 // Print
 .nextoblue {
     padding-top: 210px;
