@@ -65,7 +65,11 @@ a:link:focus:not(.button) {
 
 // Print
 .nextoblue {
-    padding-top: 210px;
+    padding-top: 245px;
+}
+
+.notnextoblue {
+    padding-top: 45px;
 }
 
 .print-link {
@@ -86,17 +90,19 @@ table.content-table.stack-table.three-column {
 
 // Logout
 .log-out-link {
-	display: block;
-    position: relative;
-    font-family: Arial, sans-serif;
-    font-weight: 400;
-    text-transform: none;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    color: #333333;
-    text-decoration: none;
-	border-bottom: 1px solid;
+	// display: block;
+    // position: relative;
+    // font-family: Arial, sans-serif;
+    // font-weight: 400;
+    // text-transform: none;
+    // margin-top: 15px;
+    // margin-bottom: 15px;
+    // color: #333333;
+    // text-decoration: none;
+	// border-bottom: 1px solid;
 	float: right;
+	font-size: 80%;
+	margin-top: 15px;
 }
 
 @media (min-width: 641px) {
