@@ -1,15 +1,12 @@
 .currency-input {
+  position: relative;
 
-  &__inner {
-    position: relative;
-
-    &__unit {
-      position: absolute;
-      z-index: 1;
-      bottom: 6px;
-      left: 10px;
-      font-weight: bold;
-    }
+  &__unit {
+    position: absolute;
+    z-index: 1;
+    bottom: 6px;
+    left: 10px;
+    font-weight: bold;
   }
 
   .form-control {
