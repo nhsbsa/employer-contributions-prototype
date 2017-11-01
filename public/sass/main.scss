@@ -36,6 +36,10 @@ a:link:focus:not(.button) {
 }
 
 // When we have errors
+.inputError {
+	border: 4px solid #b10e1e;
+}
+
 .error {
 	.form-group {
 		min-width: 90px;
@@ -59,7 +63,10 @@ a:link:focus:not(.button) {
 
 // Print
 .nextoblue {
-    padding-top: 245px;
+	@include media(tablet) {
+		// space above for large screens
+    	padding-top: 245px;
+    }
 }
 
 .notnextoblue {
@@ -108,8 +115,4 @@ table.content-table.stack-table.three-column {
 .form-date .form-group-month input,
 .form-date .form-group-year input {
 	width: 100%;
-}
-
-.inputError {
-	border: 4px solid #b10e1e;
 }
