@@ -13,10 +13,12 @@
             <form id="make-payment-form" class="form form-to-validate" method="get" action="contributions-and-payment" novalidate="novalidate">
                 <div class="error-summary display-none" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
                     <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
-                        There was a problem with your answer:
+                        Some questions have not been answered correctly.
                     </h1>
+                    <p>Please see the errors below.</p>
                     <ul class="error-summary-list">
-                        <li><a href="#email">Your email is not valid</a></li>
+                        <li><a href="#contribution-month">Month and year is required</a></li>
+                        <li><a href="#collection-day">Day, Month and year is required</a></li>
                     </ul>
                 </div>
 
@@ -33,7 +35,7 @@
                             <span class="form-label-bold">What month is this contribution for?</span>
                             <span class="form-hint">For example, February 2018</span>
                         </legend>
-                        <span class="error-message js-hidden">There is an error!</span>
+                        <span class="error-message js-hidden">Month and year is required</span>
                         <div class="form-date form-date-wide">
                             <!-- Use .form-group to create spacing when wrapping label and input pairs -->
                             <div class="form-group-month">
@@ -42,7 +44,7 @@
                             </div>
                             <div class="form-group-year">
                                 <label class="form-label" for="contribution-year">Year</label>
-                                <input class="form-control" id="contribution-year" name="contribution-year" type="text" required="" aria-required="true" maxlength="4" />
+                                <input class="form-control" id="contribution-year" name="contribution-year" type="number" required="" aria-required="true" maxlength="4" />
                             </div>
                         </div>
                     </fieldset>
@@ -54,7 +56,7 @@
                             <span class="form-label-bold">What date do you want to submit your contributions?</span>
                             <span class="form-hint">For example, 16 February 2018</span>
                         </legend>
-                        <span class="error-message js-hidden">There is an error!</span>
+                        <span class="error-message js-hidden">Day, Month and year is required</span>
                         <div class="form-date form-date-wide">
                             <!-- Use .form-group to create spacing when wrapping label and input pairs -->
                             <div class="form-group-day">
@@ -62,7 +64,7 @@
                                     Day
                                     <span class="error-message"></span>
                                 </label>
-                                <input class="form-control form-control-2-chars" id="collection-day" name="collection-day" type="text" required="" aria-required="true" maxlength="2" />
+                                <input class="form-control form-control-2-chars" id="collection-day" name="collection-day" type="number" required="" aria-required="true" maxlength="2" />
                             </div>
                             <div class="form-group-month">
                                 <label class="form-label" for="collection-month">
@@ -76,7 +78,7 @@
                                     Year
                                     <span class="error-message"></span>
                                 </label>
-                                <input class="form-control" id="collection-year" name="collection-year" type="text" required="" aria-required="true" maxlength="4" />
+                                <input class="form-control" id="collection-year" name="collection-year" type="number" required="" aria-required="true" maxlength="4" />
                             </div>
                         </div>
                     </fieldset>
