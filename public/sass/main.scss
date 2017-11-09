@@ -35,9 +35,11 @@ a:link:focus:not(.button) {
 	}
 }
 
-// When we have errors
-.inputError {
-	border: 4px solid #b10e1e;
+// We need this but at the time it wasn't available
+// in our version of the BSA toolkit
+// Use .form-control-error to add a red border to .form-control
+.form-control-error {
+	border: 4px solid $error-colour;
 }
 
 .error {

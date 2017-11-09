@@ -31,7 +31,7 @@ $(document).ready(function(){
         // var $checkboxError = $(errorMessageClass).parents('fieldset')[0]; // FIC amends for checkbox error-styles
         $errorLayer.addClass('error');
         // if ($checkboxError) {
-        //     $($checkboxError).addClass('inputError'); // FIC amends for checkbox error-styles
+        //     $($checkboxError).addClass('form-control-error'); // FIC amends for checkbox error-styles
         // }
         $(errorMessageClass, $errorLayer).removeClass('display-none');
     }
@@ -42,11 +42,11 @@ $(document).ready(function(){
         var $radioField;
         $errorLayer.addClass('error');
         // if ($inputField.type == "INPUT") {
-        //     $inputField.addClass('inputError'); // FIC amends for input error-styles
+        //     $inputField.addClass('form-control-error'); // FIC amends for input error-styles
         // } else {
         if ($radioField = $($inputField)) { // [array]
             for (i = 0; i < $radioField.length; i++){
-                $radioField.addClass('inputError'); // FIC amends for radio error-styles
+                $radioField.addClass('form-control-error'); // FIC amends for radio error-styles
             };
         };
         $('.error-message', $errorLayer).removeClass('display-none');
@@ -55,7 +55,7 @@ $(document).ready(function(){
 
     function clearFormErrors($form){
         $('.form-group', $form).removeClass('error');
-        $('.inputError').removeClass('inputError'); // FIC amends for input error-styles
+        $('.form-control-error').removeClass('form-control-error'); // FIC amends for input error-styles
         $('.error-message', $form).addClass('display-none');
         $('.error-summary').addClass('display-none');
     }
