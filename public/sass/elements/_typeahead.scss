@@ -13,6 +13,11 @@
     margin-left: 2px;
 }
 
+// Reset for cloned input
+.error .form-control-error.tt-hint {
+	margin: 0;
+}
+
 // Dropdown
 .tt-menu {
 	color: $black;

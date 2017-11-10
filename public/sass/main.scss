@@ -50,9 +50,12 @@ a:link:focus:not(.button) {
 		border: 4px solid $error-colour;
 	}
 
-	.currency-input__inner__unit {
-		left: 12px;
+	.currency-input__unit {
+		left: 24px;
 		bottom: 8px;
+		@include media(tablet) {
+			left: 30px;
+		}
 	}
 }
 
@@ -96,6 +99,7 @@ table.content-table.stack-table.three-column {
 	float: right;
 	font-size: 80%;
 	margin-top: 15px;
+	margin-bottom: 15px;
 	@include media(tablet) {
 		font-size: 16px;
     	line-height: 1.25;
