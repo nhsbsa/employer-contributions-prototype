@@ -17,8 +17,9 @@
                     </h1>
                     <p>Please see the errors below.</p>
                     <ul class="error-summary-list">
-                        <li><a href="#contribution-month">Month and year is required</a></li>
-                        <li><a href="#collection-day">Day, Month and year is required</a></li>
+                        <li><a href="#contribution-month-legend">Month and year is required</a></li>
+                        <li><a href="#submit-contribution-date-legend">Day, Month and year is required</a></li>
+                        <li><a href="#payment-notice-legend">Confirm you understand</a></li>
                     </ul>
                 </div>
 
@@ -31,7 +32,7 @@
 
                 <div class="form-group">
                     <fieldset>
-                        <legend id="desc-legend">
+                        <legend id="contribution-month-legend">
                             <span class="form-label-bold">What month is this contribution for?</span>
                             <span class="form-hint">For example, February 2018</span>
                         </legend>
@@ -52,7 +53,7 @@
 
                 <div class="form-group">
                     <fieldset>
-                        <legend>
+                        <legend id="submit-contribution-date-legend">
                             <span class="form-label-bold">What date do you want to submit your contributions?</span>
                             <span class="form-hint">For example, 16 February 2018</span>
                         </legend>
@@ -134,7 +135,7 @@
 
                 <div class="form-group">
                     <fieldset>
-                        <legend class="visually-hidden">Payment Notice</legend>
+                        <legend class="visually-hidden" id="payment-notice-legend">Payment Notice</legend>
                         <!-- <p>If you submit this payment after the 16 March you will receive an administration fee of £75 pounds as well as interest for each day the payment is late.</p> -->
                         <label class="block-label selection-button-checkbox" for="understand">
                             <input class="form-control" id="understand" name="understand" type="checkbox" required="" aria-required="true" checked="" value="yes" />

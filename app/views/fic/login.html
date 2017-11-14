@@ -16,7 +16,8 @@
                 </h1>
                 <p>Please see the errors below.</p>
                 <ul class="error-summary-list">
-                    <li><a href="#email">The username and password combination are not valid</a></li>
+                    <li><a href="#email-label">The email is not valid</a></li>
+                    <li><a href="#password-label">The password is not valid</a></li>
                 </ul>
             </div>
 
@@ -29,16 +30,16 @@
                 <fieldset>
                     <legend class="visuallyhidden">Login details</legend>
                     <div class="form-group">
-                        <label class="form-label-bold" for="email">
+                        <label class="form-label-bold" for="email" id="email-label">
                             <span class="form-label-bold">Email address</span>
-                            <!-- <span class="error-message display-none" id="error-message-email">Provide email</span> -->
+                            <span class="error-message display-none" id="error-message-email">Provide email</span>
                         </label>
                         <input type="email" id="email" value="" class="form-control validate-text-input" required>
                     </div>
                     <div class="form-group">
-                        <label for="password">
+                        <label for="password" id="password-label">
                             <span class="form-label-bold">Password</span>
-                            <!-- <span class="error-message display-none" id="error-message-password">Provide password</span> -->
+                            <span class="error-message display-none" id="error-message-password">Provide password</span>
                         </label>
                         <input type="password" id="password" value="" name="password" class="form-control validate-text-input" required>
                     </div>
