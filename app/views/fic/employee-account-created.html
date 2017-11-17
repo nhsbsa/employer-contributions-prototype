@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Employer account successfully created - {{ super() }}{% endblock %}
+{% block page_title %}Employee account successfully created - {{ super() }}{% endblock %}
 
 {% block content%}
 <main id="content" role="main" tabindex="-1" class="add-log-out">
@@ -12,12 +12,12 @@
         <div class="column-two-thirds">
             <div class="heading-group">
                 <p>{{serviceName}}</p>
-                <h1 class="heading-large">Employer account created</h1>
+                <h1 class="heading-large">Employee account created</h1>
             </div>
             <div class="text">
-                <p>The employer account for <span class="get-cookie" data-cookie-name="bsaadmin">&nbsp;</span> was successfully created.</p>
+                <p>The employee account for <span class="get-cookie" data-cookie-name="employee">&nbsp;</span> was successfully created.</p>
             </div>
-            <a href="create-employer-account" class="button">Create Another</a>
+            <a href="create-employee-account" class="button">Create Another</a>
         </div>
     </div>
 </main>

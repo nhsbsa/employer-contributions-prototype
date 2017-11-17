@@ -194,11 +194,20 @@ $(document).ready(function(){
                     Cookies.remove('csv');
                 }
 
-                if(loginEmail == 'employer'){
-                    Cookies.set('employer', 'sam.jones@email.com');
+                // BSA Admins can create employers
+                if(loginEmail == 'bsaadmin'){
+                    Cookies.set('employer', 'employer@email.nhs.uk');
                     $formToValidated.attr('action', 'create-employer-account');
                 } else {
                     Cookies.remove('employer');
+                }
+
+                // Employers can create employees
+                if(loginEmail == 'employer'){
+                    Cookies.set('employee', 'employee@nhs.uk');
+                    $formToValidated.attr('action', 'create-employee-account');
+                } else {
+                    Cookies.remove('employee');
                 }
 
                 if(loginEmail == 'new'){
@@ -504,6 +513,7 @@ $(document).ready(function(){
         Cookies.remove('adjustmentMonth');
         Cookies.remove('adjustmentYear');
         Cookies.remove('employer');
+        Cookies.remove('employee');
     }
 
 });
