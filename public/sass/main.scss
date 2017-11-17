@@ -50,23 +50,13 @@ a:link:focus:not(.button) {
 		border: 4px solid $error-colour;
 	}
 
-	.currency-input__unit {
-		left: 24px;
-		bottom: 8px;
-		@include media(tablet) {
-			left: 30px;
-		}
-	}
-
-	.error {
-		.currency-input__unit {
-			left: 10px;
-			bottom: 6px;
-			@include media(tablet) {
-				left: 10px;
-			}
-		}
-	}
+	// .currency-input__unit {
+	// 	left: 24px;
+	// 	bottom: 8px;
+	// 	@include media(tablet) {
+	// 		left: 30px;
+	// 	}
+	// }
 }
 
 // Phase Banner
