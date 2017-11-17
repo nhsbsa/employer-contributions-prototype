@@ -194,6 +194,13 @@ $(document).ready(function(){
                     Cookies.remove('csv');
                 }
 
+                if(loginEmail == 'employer'){
+                    Cookies.set('employer', 'show');
+                    $formToValidated.attr('action', 'create-employer-account');
+                } else {
+                    Cookies.remove('employer');
+                }
+
                 if(loginEmail == 'new'){
                     $formToValidated.attr('action', 'new-password');
                 }
@@ -262,6 +269,17 @@ $(document).ready(function(){
                 submitFormIfValid();
 
             }
+
+            // else if ( $formToValidated.attr('id') == 'create-employer-form'){
+
+            //     if ($.trim($('#employer-ea-code').val()) == "") {
+            //         displayFieldError($('#employer-ea-code'));
+            //         isValid = false;
+            //     }
+
+            //     submitFormIfValid();
+
+            // }
 
             else if ($formToValidated.attr('id') == 'contributions-and-payment'){
 
@@ -496,6 +514,7 @@ $(document).ready(function(){
         Cookies.remove('payingMonth');
         Cookies.remove('adjustmentMonth');
         Cookies.remove('adjustmentYear');
+        Cookies.remove('employer');
     }
 
 });

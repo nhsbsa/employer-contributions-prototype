@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Create new Admin Employer user - {{ super() }}{% endblock %}
+
+{% block content%}
+<main id="content" role="main" tabindex="-1">
+
+    {% include "includes/phase_banner.html" %}
+    {% include "includes/back_nav.html" %}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <div class="error-summary display-none" role="group" aria-labelledby="error-summary-heading-create-employer-account" tabindex="-1">
+                <h1 class="heading-medium error-summary-heading" id="error-summary-heading-create-employer-account">
+                    Some questions have not been answered correctly.
+                </h1>
+                <p>Please see the errors below.</p>
+                <ul class="error-summary-list">
+                    <li><a href="#employer-ea-code-label">The ea code is not valid</a></li>
+                    <li><a href="#employer-account-name-label">The account name is not valid</a></li>
+                </ul>
+            </div>
+
+            <div class="heading-group">
+                <p>{{serviceName}}</p>
+                <h1 class="heading-large">Create Employer Account</h1>
+            </div>
+            <form action="" method="get" class="form form-to-validate" id="create-employer-form" novalidate="novalidate" autocomplete="off">
+            <!-- <form id="login-form"> -->
+                <fieldset>
+                    <legend class="visuallyhidden">Employer Details</legend>
+                    <div class="form-group">
+                        <label for="employer-ea-code" id="employer-ea-code-label">
+                            <span class="form-label-bold">EA Code</span>
+                            <span class="error-message display-none" id="error-message-employer-ea-code">Provide EA code</span>
+                        </label>
+                        <input type="text" id="employer-ea-code" value="" name="employer-ea-code" class="form-control validate-text-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="employer-account-name" id="employer-account-name-label">
+                            <span class="form-label-bold">Account Name</span>
+                            <span class="error-message display-none" id="error-message-employer-account-name">Provide account name</span>
+                        </label>
+                        <input type="text" id="employer-account-name" value="" name="employer-account-name" class="form-control validate-text-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="employer-full-name" id="employer-full-name-label">
+                            <span class="form-label-bold">Full Name</span>
+                            <span class="error-message display-none" id="error-message-employer-full-name">Provide full name</span>
+                        </label>
+                        <input type="text" id="employer-full-name" value="" name="employer-full-name" class="form-control validate-text-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="employer-email" id="employer-email-label">
+                            <span class="form-label-bold">Email address</span>
+                            <span class="error-message display-none" id="error-message-employer-email">Provide email</span>
+                        </label>
+                        <input type="email" id="employer-email" value="" name="employer-email" class="form-control validate-text-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="employer-telephone" id="employer-telephone-label">
+                            <span class="form-label-bold">Telephone</span>
+                            <span class="error-message display-none" id="error-message-employer-telephone">Provide telephone</span>
+                        </label>
+                        <input type="text" id="employer-telephone" value="" name="employer-telephone" class="form-control validate-text-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="employer-password" id="employer-password-label">
+                            <span class="form-label-bold">One Time Password</span>
+                            <span class="error-message display-none" id="error-message-password">Provide password</span>
+                        </label>
+                        <input type="password" id="employer-password" value="" name="employer-password" class="form-control validate-text-input" required>
+                    </div>
+                </fieldset>
+
+                <div class="form-group">
+                    <button class="button">Add User</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+{% endblock %}
