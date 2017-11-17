@@ -3,7 +3,7 @@
 {% block page_title %}Create new Admin Employer user - {{ super() }}{% endblock %}
 
 {% block content%}
-<main id="content" role="main" tabindex="-1">
+<main id="content" role="main" tabindex="-1" class="add-log-out">
 
     {% include "includes/phase_banner.html" %}
     {% include "includes/back_nav.html" %}
@@ -26,7 +26,7 @@
                 <p>{{serviceName}}</p>
                 <h1 class="heading-large">Create Employer Account</h1>
             </div>
-            <form action="" method="get" class="form form-to-validate" id="create-employer-form" novalidate="novalidate" autocomplete="off">
+            <form action="employer-account-created" method="get" class="form form-to-validate" id="create-employer-form" novalidate="novalidate" autocomplete="off">
             <!-- <form id="login-form"> -->
                 <fieldset>
                     <legend class="visuallyhidden">Employer Details</legend>

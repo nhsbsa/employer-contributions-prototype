@@ -195,7 +195,7 @@ $(document).ready(function(){
                 }
 
                 if(loginEmail == 'employer'){
-                    Cookies.set('employer', 'show');
+                    Cookies.set('employer', 'sam.jones@email.com');
                     $formToValidated.attr('action', 'create-employer-account');
                 } else {
                     Cookies.remove('employer');
@@ -269,17 +269,6 @@ $(document).ready(function(){
                 submitFormIfValid();
 
             }
-
-            // else if ( $formToValidated.attr('id') == 'create-employer-form'){
-
-            //     if ($.trim($('#employer-ea-code').val()) == "") {
-            //         displayFieldError($('#employer-ea-code'));
-            //         isValid = false;
-            //     }
-
-            //     submitFormIfValid();
-
-            // }
 
             else if ($formToValidated.attr('id') == 'contributions-and-payment'){
 
