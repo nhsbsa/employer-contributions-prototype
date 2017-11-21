@@ -205,7 +205,7 @@ $(document).ready(function(){
                 // Employers can create employees
                 if(loginEmail == 'employer'){
                     Cookies.set('employee', 'employee@nhs.uk');
-                    $formToValidated.attr('action', 'create-employee-account');
+                    $formToValidated.attr('action', 'saved-contributions');
                 } else {
                     Cookies.remove('employee');
                 }

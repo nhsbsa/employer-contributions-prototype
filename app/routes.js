@@ -353,5 +353,10 @@ module.exports = {
       res.render('fic/employee-account-created', { 'page_name': pageName })
     })
 
+    app.get('/fic/saved-contributions', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/saved-contributions', { 'page_name': pageName })
+    })
+
   }
 }
