@@ -343,14 +343,14 @@ module.exports = {
       res.render('fic/admin-employer-created', { 'page_name': pageName })
     })
 
-    app.get('/fic/employer-create', function (req, res) {
+    app.get('/fic/standard-employer-create', function (req, res) {
       var pageName = 'FIC'
-      res.render('fic/employer-create', { 'page_name': pageName })
+      res.render('fic/standard-employer-create', { 'page_name': pageName })
     })
 
-    app.get('/fic/employer-created', function (req, res) {
+    app.get('/fic/standard-employer-created', function (req, res) {
       var pageName = 'FIC'
-      res.render('fic/employer-created', { 'page_name': pageName })
+      res.render('fic/standard-employer-created', { 'page_name': pageName })
     })
 
     // app.get('/fic/saved-contributions', function (req, res) {
