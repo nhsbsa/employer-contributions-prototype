@@ -333,30 +333,30 @@ module.exports = {
       res.render('fic/updated', { 'page_name': pageName })
     })
 
-    app.get('/fic/create-employer-account', function (req, res) {
+    app.get('/fic/admin-employer-create', function (req, res) {
       var pageName = 'FIC'
-      res.render('fic/create-employer-account', { 'page_name': pageName })
+      res.render('fic/admin-employer-create', { 'page_name': pageName })
     })
 
-    app.get('/fic/employer-account-created', function (req, res) {
+    app.get('/fic/admin-employer-created', function (req, res) {
       var pageName = 'FIC'
-      res.render('fic/employer-account-created', { 'page_name': pageName })
+      res.render('fic/admin-employer-created', { 'page_name': pageName })
     })
 
-    app.get('/fic/create-employee-account', function (req, res) {
+    app.get('/fic/employer-create', function (req, res) {
       var pageName = 'FIC'
-      res.render('fic/create-employee-account', { 'page_name': pageName })
+      res.render('fic/employer-create', { 'page_name': pageName })
     })
 
-    app.get('/fic/employee-account-created', function (req, res) {
+    app.get('/fic/employer-created', function (req, res) {
       var pageName = 'FIC'
-      res.render('fic/employee-account-created', { 'page_name': pageName })
+      res.render('fic/employer-created', { 'page_name': pageName })
     })
 
-    app.get('/fic/saved-contributions', function (req, res) {
-      var pageName = 'FIC'
-      res.render('fic/saved-contributions', { 'page_name': pageName })
-    })
+    // app.get('/fic/saved-contributions', function (req, res) {
+    //   var pageName = 'FIC'
+    //   res.render('fic/saved-contributions', { 'page_name': pageName })
+    // })
 
   }
 }

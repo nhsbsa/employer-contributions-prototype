@@ -24,9 +24,9 @@
 
             <div class="heading-group">
                 <p>{{serviceName}}</p>
-                <h1 class="heading-large">Create Employer Account</h1>
+                <h1 class="heading-large">Create Admin Employer Account</h1>
             </div>
-            <form action="employer-account-created" method="get" class="form form-to-validate" id="create-employer-form" novalidate="novalidate" autocomplete="off">
+            <form action="admin-employer-created" method="get" class="form form-to-validate" id="create-employer-form" novalidate="novalidate" autocomplete="off">
             <!-- <form id="login-form"> -->
                 <fieldset>
                     <legend class="visuallyhidden">Employer Details</legend>
@@ -56,7 +56,7 @@
                             <span class="form-label-bold">Email address</span>
                             <span class="error-message display-none" id="error-message-employer-email">Please enter a valid email address</span>
                         </label>
-                        <input type="email" id="employer-email" value="" name="employer-email" class="form-control validate-text-input" required>
+                        <input type="email" id="employer-email" value="already-exists@nhs.net" name="employer-email" class="form-control validate-text-input" required>
                     </div>
                     <div class="form-group">
                         <label for="employer-telephone" id="employer-telephone-label">
@@ -68,7 +68,6 @@
                     <div class="form-group">
                         <label for="employer-password" id="employer-password-label">
                             <span class="form-label-bold">First Password</span>
-                            <span class="form-hint">The employee will use this password <br>once then be prompted to change it</span>
                             <span class="error-message display-none" id="error-message-password">Please choose a password containing minimum 12 characters, including numbers, upper and lower case letters</span>
                         </label>
                         <input type="password" id="employer-password" value="" name="employer-password" class="form-control validate-text-input" required>
