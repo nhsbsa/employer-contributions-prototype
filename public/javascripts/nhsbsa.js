@@ -104,6 +104,11 @@ $(document).ready(function(){
     // general and used for multiple forms
     var $formToValidated = $('.form-to-validate');
 
+    var messages = {
+        "exists" : "An account using this email address already exists.",
+        "unmatched" : "We could not match the information you provided."
+    };
+
     if($formToValidated.length > 0){
 
         $formToValidated.on('submit', function (evt) {
@@ -346,6 +351,15 @@ $(document).ready(function(){
                 } else {
 
                     submitFormIfValid();
+                }
+
+            }
+            else if ($formToValidated.attr('id') == 'create-employer-form') {
+                // condition for used email address
+                if($('#employer-email').val() == 'already-exists@nhs.net'){
+                    displayFieldError($('#employer-email'));
+                    $('#error-message-employer-email').text(messages.exists);
+                    isValid = false;
                 }
             }
 
