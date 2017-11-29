@@ -354,14 +354,14 @@ $(document).ready(function(){
                 }
 
             }
-            else if ($formToValidated.attr('id') == 'create-employer-form') {
-                // condition for used email address
-                if($('#employer-email').val() == 'already-exists@nhs.net'){
-                    displayFieldError($('#employer-email'));
-                    $('#error-message-employer-email').text(messages.exists);
-                    isValid = false;
-                }
-            }
+            // else if ($formToValidated.attr('id') == 'create-employer-form') {
+            //     // condition for used email address
+            //     if($('#employer-email').val() == 'already-exists@nhs.net'){
+            //         displayFieldError($('#employer-email'));
+            //         $('#error-message-employer-email').text(messages.exists);
+            //         isValid = false;
+            //     }
+            // }
 
             else {
 

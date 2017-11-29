@@ -56,7 +56,7 @@
                             <span class="form-label-bold">Email address</span>
                             <span class="error-message display-none" id="error-message-employer-email">Please enter a valid email address</span>
                         </label>
-                        <input type="email" id="employer-email" value="already-exists@nhs.net" name="employer-email" class="form-control validate-text-input" required>
+                        <input type="email" id="employer-email" value="" name="employer-email" class="form-control validate-text-input" required>
                     </div>
                     <div class="form-group">
                         <label for="employer-telephone" id="employer-telephone-label">
@@ -73,6 +73,28 @@
                         <input type="password" id="employer-password" value="" name="employer-password" class="form-control validate-text-input" required>
                     </div>
                 </fieldset>
+
+                <div class="form-group">
+                    <legend id="employer-type-label">
+                        <span class="form-label-bold">Employer Type</span>
+                        <span class="error-message display-none" id="error-message-employer-type">Please select an employer type</span>
+                    </legend>
+                    
+                    <div class="form-group">
+                        <fieldset class="inline">
+                            <legend class="visually-hidden">Employer Type</legend>
+                            <label class="block-label selection-button-radio" for="employer-type-staff" id="employer-type-staff-label">
+                                <input id="employer-type-staff" type="radio" name="radio-emplyer-type" value="Staff" />
+                                Staff
+                            </label>
+                            <label class="block-label selection-button-radio" for="employer-type-gp">
+                                <input id="employer-type-gp" type="radio" name="radio-emplyer-type" value="GP" required aria-required="true" class="validate-radio-input" />
+                                GP
+                            </label>
+                        </fieldset>
+                    </div>
+                </div>
+
 
                 <div class="form-group">
                     <button class="button">Add employer</button>
