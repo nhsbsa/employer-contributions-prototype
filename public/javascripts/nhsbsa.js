@@ -9,7 +9,7 @@ $(document).ready(function(){
     }
 
     if($('.add-log-out').length > 0){
-        $('.service-header').prepend($('<a href="login" class="log-out-link">Logout</a>'));
+        $('.service-header').prepend($('<a href="login" class="log-out-link" id="logout-link">Logout</a>'));
     }
 
     var $errorLayer = $('.form-group'),

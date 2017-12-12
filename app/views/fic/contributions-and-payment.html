@@ -11,23 +11,26 @@
     <div class="grid-row">
         <div class="column-two-thirds">
 
-            <div class="error-summary display-none" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+            <div class="error-summary display-none" id="contributions-error-message" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
                 <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
                     Some questions have not been answered correctly.
                 </h1>
-                <p>Please see the errors below.</p>
+                <p id="contributions-error-text">Please see the errors below:</p>
                 <ul class="error-summary-list">
                     <li class="staffgps"><a href="#no-of-scheme-members">Number of scheme members is required</a></li>
-                    <li><a href="#total-pensionable-pay-label">Total pensionable pay is required</a></li>
-                    <li><a href="#employee-contributions-label">Employee contributions is required</a></li>
-                    <li><a href="#employer-contributions-label">Employer contributions is required</a></li>
-                    <li><a href="#total-amount-debited-label">Total amount is required</a></li>
+                    <li><a href="#total-pensionable-pay-label" id="contributions-error-list1">Total pensionable pay is required</a></li>
+                    <li><a href="#employee-contributions-label" id="contributions-error-list2">Employee contributions is required</a></li>
+                    <li><a href="#employer-contributions-label" id="contributions-error-list3">Employer contributions is required</a></li>
+                    <li><a href="#adjustments-group" id="contributions-error-list8"><br>Adjustment period in format Month and Year is required</a></li>
+                    <li><a href="#adjustments-group" id="contributions-error-list9">At least one value is required if adding adjustments</a></li>
+                    <li><a id="contributions-error-list15" href="#total-amount-debited">Total amount is required</a></li>
                 </ul>
+
             </div>
 
             <div class="heading-group">
-                <p>{{serviceName}}</p>
-                <h1 class="heading-large"><span class="get-cookie" data-cookie-name="payingMonth"></span> 2017 contribution details</h1>
+                <p id="service-name-text">{{serviceName}}</p>
+                <h1 class="heading-large" id="main-heading"><span class="get-cookie" data-cookie-name="payingMonth"></span> 2017 contribution details</h1>
             </div>
 
             {% include "includes/multiple-ea.html" %}
@@ -86,7 +89,7 @@
 
                 <div class="form-group currency-input">
                     <label class="form-label" for="errbo">
-                        <span>Early Retirement Reduction Buy Out (ERRBO) (optional)</span>
+                        <span>ERRBO (Early Retirement Reduction Buy Out) (optional)</span>
                         <span class="currency-input__unit">£</span>
                     </label>
                     <input class="form-control form-control-1-3" id="errbo" name="errbo" type="number" aria-label="Enter amount in pounds">
@@ -94,7 +97,7 @@
 
                 <!-- Adjustments -->
                 <fieldset>
-                    <legend>Do you need to make an adjustment?</legend>
+                    <legend>Are adjustments required?</legend>
                     <div class="form-group inline">
                         <label class="block-label selection-button-radio" data-target="outstanding-payments-panel" for="add-outstanding-payments">
                             <input id="add-outstanding-payments" type="radio" name="outstanding-payments" value="Yes" />
@@ -105,13 +108,13 @@
                             No
                         </label>
                     </div>
-                    <div class="panel js-hidden" id="outstanding-payments-panel">
+                    <div class="js-hidden" id="outstanding-payments-panel">
                         <div class="form-group">
                             <fieldset>
                                 <legend>
-                                    <span class="form-label-bold">When is this adjustment for?</span>
+                                    <span class="form-label-bold">Adjustment period</span>
                                     <span class="form-hint">For example February 2018</span>
-                                    <span class="error-message display-none" id="error-message-adjusted">Adjustment is required.</span>
+                                    <span class="error-message display-none" id="adjustment-period-error">Adjustment period in format Month and Year is required</span>
                                 </legend>
                                 <div class="form-date form-date-wide">
                                     <div class="form-group-month">
@@ -125,45 +128,49 @@
                                 </div>
                             </fieldset>
                         </div>
-                        <div class="form-group currency-input">
-                            <label class="form-label" for="employee-contributions-adjustment">
-                                <span>Employee contributions</span>
-                                <span class="currency-input__unit">£</span>
-                                <span class="error-message display-none" id="error-message-adjusted-employee-contributions">Amount you have entered is incorrect</span>
-                            </label>
-                            <input class="form-control form-control-1-3 at-least-one" name="employee-contributions-adjustment" type="number" value="" id="employee-contributions-adjustment" aria-label="Enter amount in pounds">
-                        </div>
-                        <div class="form-group currency-input">
-                            <label class="form-label" for="employer-contributions-adjustment">
-                                <span>Employer contributions</span>
-                                <span class="currency-input__unit">£</span>
-                                <span class="error-message display-none" id="error-message-adjusted-employer-contributions">Amount you have entered is incorrect</span>
-                            </label>
-                            <input class="form-control form-control-1-3 at-least-one" name="employer-contributions-adjustment" type="number" value="" id="employer-contributions-adjustment" aria-label="Enter amount in pounds">
-                        </div>
-                        <div class="form-group currency-input">
-                            <label class="form-label" for="employee-avcs-adjustment">
-                                <span>Employee added years</span>
-                                <span class="currency-input__unit">£</span>
-                                <span class="error-message display-none" id="error-message-adjusted-employee-added-years">Amount you have entered is incorrect</span>
-                            </label>
-                            <input class="form-control form-control-1-3 at-least-one" name="employee-avcs-adjustment" type="number" value="" id="employee-avcs-adjustment" aria-label="Enter amount in pounds">
-                        </div>
-                        <div class="form-group currency-input">
-                            <label class="form-label" for="additional-pension-adjustment">
-                                <span>Additional pension</span>
-                                <span class="currency-input__unit">£</span>
-                                <span class="error-message display-none" id="error-message-adjusted-additional-pension">Amount you have entered is incorrect</span>
-                            </label>
-                            <input class="form-control form-control-1-3 at-least-one" name="additional-pension-adjustment" type="number" value="" id="additional-pension-adjustment" aria-label="Enter amount in pounds">
-                        </div>
-                        <div class="form-group currency-input">
-                            <label class="form-label" for="errbo-adjustment">
-                                <span>Early Retirement Reduction Buy Out (ERRBO)</span>
-                                <span class="currency-input__unit">£</span>
-                                <span class="error-message display-none" id="error-message-adjusted-errbo">Amount you have entered is incorrect</span>
-                            </label>
-                            <input class="form-control form-control-1-3 at-least-one" name="errbo-adjustment" type="number" value="" id="errbo-adjustment" aria-label="Enter amount in pounds">
+                        <div class="form-group">
+                            <fieldset>
+                                <legend class="form-label-bold" id="adjustment-form-label">
+                                    <span id="adjustment-label-text">Adjustment contribution details</span>
+                                    <span class="error-message display-none" id="adjustment-mandatory-error">At least one value is required if adding adjustments</span>
+                                </legend>
+                            
+                                <div class="form-group currency-input">
+                                    <label class="form-label" for="employee-contributions-adjustment">
+                                        <span>Employee contributions</span>
+                                        <span class="currency-input__unit">£</span>
+                                    </label>
+                                    <input class="form-control form-control-1-3 at-least-one" name="employee-contributions-adjustment" type="number" value="" id="employee-contributions-adjustment" aria-label="Enter amount in pounds">
+                                </div>
+                                <div class="form-group currency-input">
+                                    <label class="form-label" for="employer-contributions-adjustment">
+                                        <span>Employer contributions</span>
+                                        <span class="currency-input__unit">£</span>
+                                    </label>
+                                    <input class="form-control form-control-1-3 at-least-one" name="employer-contributions-adjustment" type="number" value="" id="employer-contributions-adjustment" aria-label="Enter amount in pounds">
+                                </div>
+                                <div class="form-group currency-input">
+                                    <label class="form-label" for="employee-avcs-adjustment">
+                                        <span>Employee added years</span>
+                                        <span class="currency-input__unit">£</span>
+                                    </label>
+                                    <input class="form-control form-control-1-3 at-least-one" name="employee-avcs-adjustment" type="number" value="" id="employee-avcs-adjustment" aria-label="Enter amount in pounds">
+                                </div>
+                                <div class="form-group currency-input">
+                                    <label class="form-label" for="additional-pension-adjustment">
+                                        <span>Additional pension</span>
+                                        <span class="currency-input__unit">£</span>
+                                    </label>
+                                    <input class="form-control form-control-1-3 at-least-one" name="additional-pension-adjustment" type="number" value="" id="additional-pension-adjustment" aria-label="Enter amount in pounds">
+                                </div>
+                                <div class="form-group currency-input">
+                                    <label class="form-label" for="errbo-adjustment">
+                                        <span>ERRBO (Early Retirement Reduction Buy Out)</span>
+                                        <span class="currency-input__unit">£</span>
+                                    </label>
+                                    <input class="form-control form-control-1-3 at-least-one" name="errbo-adjustment" type="number" value="" id="errbo-adjustment" aria-label="Enter amount in pounds">
+                                </div>
+                            </fieldset>
                         </div>
                     </div>  
                 </fieldset>
@@ -172,7 +179,7 @@
                     <label class="form-label" for="total-amount-debited" id="total-amount-debited-label">
                         <span>Total amount to be debited</span>
                         <span class="currency-input__unit">£</span>
-                        <span class="error-message display-none" id="error-message-total-amount-debited">Amount you have entered is incorrect</span>
+                        <span class="error-message display-none" id="error-message-total-amount-debited">Total amount is required</span>
                     </label>
                     <input class="form-control form-control-1-3 validate-numeric" id="total-amount-debited" name="total-amount-debited" value="" type="number" aria-label="Enter amount in pounds" required="" aria-required="true" />
                 </div>

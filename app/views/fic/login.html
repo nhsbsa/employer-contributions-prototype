@@ -9,56 +9,46 @@
 
     <div class="grid-row">
         <div class="column-two-thirds">
-            <div class="error-summary display-none" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
-                <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
-                    Some questions have not been answered correctly.
+            <div class="error-summary display-none" id="financeLoginErrorMessage" role="group" aria-labelledby="finance-login-message-heading" tabindex="-1">
+                <h1 class="heading-medium error-summary-heading" id="finance-login-message-heading">
+                    Some questions have not been answered correctly:
                 </h1>
-                <p>Please see the errors below.</p>
+                <p id="login-error-text">Please see the errors below.</p>
                 <ul class="error-summary-list">
-                    <li><a href="#email-label">The email is not valid</a></li>
-                    <li><a href="#password-label">The password is not valid</a></li>
+                    <li><a href="#username-label" id="login-error-list1">The username and password combination are not valid</a></li>
                 </ul>
             </div>
 
             <div class="heading-group">
-                <p>{{serviceName}}</p>
-                <h1 class="heading-large">Employer sign in</h1>
+                <p id="service-name-text">{{serviceName}}</p>
+                <h1 class="heading-large" id="main-heading">Finance login</h1>
             </div>
             <form action="previous-payments" method="get" class="form form-to-validate" id="login-form" novalidate="novalidate" autocomplete="off">
-            <!-- <form id="login-form"> -->
                 <fieldset>
-                    <legend class="visuallyhidden">Login details</legend>
-                    <div class="form-group">
-                        <label class="form-label-bold" for="email" id="email-label">
-                            <span class="form-label-bold">Email address</span>
-                            <span class="error-message display-none" id="error-message-email">Provide email</span>
+                    <legend class="visuallyhidden" id="login-details-label">Login details</legend>
+                    <div class="form-group" id="login-username-group">
+                        <label class="form-label-bold" for="username" id="login-username-label">
+                            <span class="form-label-bold">Username</span>
+                            <span class="error-message display-none" id="error-message-username">Enter your username</span>
                         </label>
-                        <input type="email" id="email" value="" class="form-control validate-text-input" required>
+                        <input type="text" id="username" value="" class="form-control validate-text-input" required>
                     </div>
-                    <div class="form-group">
-                        <label for="password" id="password-label">
+                    <div class="form-group" id="login-password-group">
+                        <label for="password" id="login-password-label">
                             <span class="form-label-bold">Password</span>
-                            <span class="error-message display-none" id="error-message-password">Provide password</span>
+                            <span class="error-message display-none" id="error-message-password">Enter your password</span>
                         </label>
                         <input type="password" id="password" value="" name="password" class="form-control validate-text-input" required>
                     </div>
                 </fieldset>
 
-                <div class="form-group">
-                    <input class="button" type="submit" value="Sign in" />
+                <div class="form-group" id="login-submit-button">
+                    <button class="button" id="login-button">Log in</button>
                 </div>
                 <p class="navigation">
-                    <a href="forgot-password">Forgotten your password?</a>
+                    <a id="forgotten-password-link" href="forgot-password">Forgotten your password?</a>
                 </p>
             </form>
-            <!-- <div class="pagination-simple">
-                <div>
-                    <a href="login" class="link">
-                        <span class="prefix">Start again:</span>
-                        <span class="title">NHS Pension Scheme Financial Information Collection</span>
-                    </a>
-                </div>
-            </div> -->
         </div>
     </div>
 </main>
