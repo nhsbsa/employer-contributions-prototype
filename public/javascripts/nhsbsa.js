@@ -210,7 +210,7 @@ $(document).ready(function(){
                 // Employers can create employees
                 if(loginEmail == 'employer_admin'){
                     Cookies.set('loggedInAs', 'employer_admin');
-                    Cookies.set('summaryButtonText', 'Submit your contributions');
+                    Cookies.set('summaryButtonText', 'Submit your contribution');
                     // $formToValidated.attr('action', 'saved-contributions');
                 } else {
                     Cookies.remove('loggedInAs');

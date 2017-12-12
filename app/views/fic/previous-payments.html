@@ -12,21 +12,21 @@
         <div class="column-two-thirds">
 
             <div class="heading-group">
-                <p>{{serviceName}}</p>
-                <h1 class="heading-large">Submit a new contribution</h1>
+                <p id="service-name-text">{{serviceName}}</p>
+                <h1 class="heading-large" id="main-heading">Submit a new contribution</h1>
             </div>
 
             {% include "includes/multiple-ea.html" %}
             
-            <p class="lede">
+            <p class="lede" id="previous-payments-text">
                 The February 2017 submission needs to reach us by 16 March 2017.
             </p>
             <div class="form-group">
-                <a class="button" href="make-payment" role="button">Submit contribution</a>
+                <a class="button" href="make-payment" role="button" id="previous-payments-button">Submit contribution</a>
             </div>
         </div>
         <div class="column-full">
-            <h2 class="heading-medium">Previous contributions</h2>
+            <h2 class="heading-medium" id="previous-contributions-table-heading">Previous contributions</h2>
             {% include "includes/previous-contributions-table.html" %}
         </div>
     </div>

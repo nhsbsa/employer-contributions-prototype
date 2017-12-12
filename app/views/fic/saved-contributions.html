@@ -11,15 +11,15 @@
     <div class="grid-row">
         <div class="column-two-thirds">
             <div class="heading-group">
-                <p>{{serviceName}}</p>
-                <h1 class="heading-large">Saved contributions</h1>
+                <p id="service-name-text">{{serviceName}}</p>
+                <h1 class="heading-large" id="main-heading">Saved contributions</h1>
             </div>
         </div>
     </div>
 
     <div class="grid-row">
         <div class="column-full">
-            <p>There are no pending contributions waiting for submission.</p>
+            <p id="no-pending-contributions-text">There are no pending contributions waiting for submission.</p>
             {% include "includes/previous-contributions-table.html" %}
         </div>
     </div>
@@ -27,7 +27,7 @@
     <div class="grid-row">
         <div class="column-two-thirds">
             <div class="form-group">
-                <p><a class="button" href="employer-create" role="button">Create a new user</a></p>
+                <p><a class="button" href="employer-create" role="button" id="create-user-button">Create a new user</a></p>
             </div>
         </div>
     </div>

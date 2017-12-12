@@ -10,13 +10,14 @@
     <div class="grid-row">
         <div class="column-two-thirds">
             <div class="heading-group">
-                <p>{{serviceName}}</p>
-                <h1 class="heading-large">Sorry, you'll have to start again</h1>
+                <p id="service-name-text">{{serviceName}}</p>
+                <h1 class="heading-large" id="main-heading">Sorry, you'll have to start again</h1>
             </div>
             <div class="text">
-                <p>Your session automatically ends if you don't use the service for 30 mins OR you may have logged out of the service on another page.</p>
+                <p id="session-expired-text1">Your session automatically ends if you don't use the service for 30 mins or you may have logged out of the service on another page.</p>
+                <p id="session-expired-text2">We do this for your security. We haven't saved any personal information you entered.</p>
             </div>
-            <a class="button button-get-started" href="start">Start again</a>
+            <a class="button button-get-started" href="start" id="start-button">Start again</a>
         </div>
     </div>
 </main>

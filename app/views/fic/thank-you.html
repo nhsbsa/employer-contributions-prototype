@@ -6,36 +6,36 @@
 <main id="content" role="main" tabindex="-1" class="add-log-out">
 
     {% include "includes/phase_banner.html" %}
+    {% include "includes/back_nav.html" %}
     
     <div class="grid-row">
         <div class="column-two-thirds">
             <div class="nhsuk-box-highlight">
-            <h1 class="bold-large">
-                You have successfully submitted your February 2017 contributions
-            </h1>
-            <p>
-                Next contribution is due on 17 March 2017
-            </p>
+                <h1 class="bold-large" id="main-heading">Thank you</h1>
+                <p id="thank-you-success-text">You have successfully submitted your <span id="contributionMonth">December</span> <span id="contributionYear">2017</span> contribution</p>
             </div>
 
-            <h2 class="heading-medium">Contribution details</h2>
             <table class="content-table stack-table two-column">
+                <caption class="heading-small" id="thank-you-payment-header">Payment details</caption>
                 <tbody>
+                    <th colspan="2" id="contributions-header">
+                        <span id="contributions-for-key">Contributions for</span> <span class="get-cookie" data-cookie-name="payingMonth" id="paying.month">December</span> <span class="get-cookie" data-cookie-name="payingYear" id="paying.year">2017</span>
+                    </th>
                     <tr class="staffgps">
                         <td>Number of scheme members</td>
                         <td class="numeric">8</td>
                     </tr>
                     <tr>
-                        <td>Total pensionable pay</td>
-                        <td class="numeric">£250,000.00</td>
+                        <td id="total-pensionable-key">Total pensionable pay</td>
+                        <td class="numeric" id="contribution.total.pensionable.pay">£250,000.00</td>
                     </tr>
                     <tr class="highlighted">
-                        <td>Employee contributions</td>
-                        <td class="numeric">£23,750.00</td>
+                        <td id="employee-contributions-key">Employee contributions</td>
+                        <td class="numeric" id="contribution.employee.contribution">£23,750.00</td>
                     </tr>
                     <tr class="highlighted">
-                        <td>Employer contributions</td>
-                        <td class="numeric">£35,750.00</td>
+                        <td id="employer-contributions-key">Employer contributions</td>
+                        <td class="numeric" id="contribution.employer.contribution">£35,750.00</td>
                     </tr>
                     <tr>
                         <td>Employee added years</td>
@@ -50,8 +50,8 @@
                         <td class="numeric">-</td>
                     </tr>
                     <tr class="total">
-                        <td class="bold">Total amount to be debited</td>
-                        <td class="numeric"><strong>£59,500.00</strong></td>
+                        <td class="bold" id="contribution-total-key">Total amount to be debited</td>
+                        <td class="numeric" id="contribution.total.debit"><strong>£59,500.00</strong></td>
                     </tr>
                 </tbody>
             </table>
@@ -89,16 +89,16 @@
                 </tbody>
             </table> -->
 
-            <h2 class="heading-medium">Make contribution</h2>
             <table class="content-table stack-table two-column">
+                <caption class="heading-small" id="make-payment-header">Make payment</caption>
                 <tbody>
                     <tr>
-                        <td>What month is this contribution for?</td>
-                        <td>February 2017</td>
+                        <td id="payment-year-key">What month is this payment for?</td>
+                        <td><span id="contribution-month">December</span>&nbsp;<span id="contribution-year">2017</span></td>
                     </tr>
                     <tr>
-                        <td>When do you want to pay?</td>
-                        <td>18 February 2017</td>
+                        <td id="payment-month-key">When do you want to pay?</td>
+                        <td><span id="transfer-day">31</span>&nbsp;<span id="transfer-month">December</span>&nbsp;<span id="transfer-year">2017</span></td>
                     </tr>
                     <tr class="staffgps">
                         <td>Contribution payment</td>
@@ -122,40 +122,40 @@
 
             <!-- <div class="page-break"></div> -->
             
-            <h2 class="heading-medium">Your contact details</h2>
             <table class="content-table stack-table two-column">
+                <caption class="heading-small" id="contact-details-header">Your contact details</caption>
                 <tbody>
                     <tr>
-                        <td>Employing Authority (EA) code</td>
-                        <td>EA9143</td>
+                        <td id="ea-code-field-description">Employing Authority (EA) code</td>
+                        <td id="ea-code-field-value">EA9143</td>
                     </tr>
                     <tr>
-                        <td>Account name</td>
-                        <td>Marie Curie Cancer Care</td>
+                        <td id="account-name-field-description">Account name</td>
+                        <td id="account-name-field-value">Marie Curie Cancer Care</td>
                     </tr>
                     <tr>
-                        <td>Full name</td>
-                        <td>Alison Moore</td>
+                        <td id="full-name-field-description">Full name</td>
+                        <td id="full-name-field-value">Alison Moore</td>
                     </tr>
                     <tr>
-                        <td>Contact number</td>
-                        <td>01237 611 978</td>
+                        <td id="contact-number-field-description">Contact number</td>
+                        <td id="contact-number-field-value">01237 611 978</td>
                     </tr>
                     <tr>
-                        <td>Email address</td>
-                        <td>alison.moore@nhs.net</td>
+                        <td id="email-field-description">Email address</td>
+                        <td id="email-field-value">alison.moore@nhs.net</td>
                     </tr>
                 </tbody>
             </table>
             <br>
-            <a class="button" href="/fic/make-payment" role="button">Submit another contribution</a>
+            <a class="button" href="/fic/make-payment" role="button" id="finish">Submit another contribution</a>
         </div>
 
         <div class="column-one-third">
             <div class="nextoblue">
                 <ul class="list options-list">
                     <li>
-                        <a href="javascript:window.print();" class="print-link">
+                        <a href="javascript:window.print();" class="print-link" id="print-page-link">
                             <i class="icon icon-print"></i> Print this page
                         </a>
                     </li>

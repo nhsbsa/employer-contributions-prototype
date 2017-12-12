@@ -12,14 +12,14 @@
         <div class="column-two-thirds">
             
             <div class="heading-group">
-                <p>{{serviceName}}</p>
-                <h1 class="heading-large">Employing authority contributions</h1>
+                <p id="service-name-text">{{serviceName}}</p>
+                <h1 class="heading-large" id="main-heading">Employing authority contributions</h1>
             </div>
             <div class="form-group">
-                <label class="form-label" for="full-name-f1">Search for an Employing Authority (EA) code</label>
-                <form action="searched-ea" method="get">
-                    <input class="form-control" id="full-name-f1" type="text" />
-                    <button class="button" type="submit">Search</button>
+                <label class="form-label" for="full-name-f1" id="search-ea-label">Search for an Employing Authority (EA) code</label>
+                <form action="searched-ea" method="get" id="search-ea-form">
+                    <input class="form-control" id="full-name-f1" value="EA9143" type="text" />
+                    <button class="button" type="submit" id="search-ea-button">Search</button>
                 </form>    
             </div>
         </div>

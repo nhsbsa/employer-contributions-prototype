@@ -12,67 +12,67 @@
         <div class="column-two-thirds">
             
             <div class="heading-group">
-                <p>{{serviceName}}</p>
-                <h1 class="heading-large">Check your February 2017 contributions before submitting</h1>
+                <p id="service-name-text">{{serviceName}}</p>
+                <h1 class="heading-large" id="main-heading">Check your February 2017 contributions before submitting</h1>
             </div>
 
             {% include "includes/multiple-ea.html" %}
 
             <table class="content-table stack-table three-column">
-                <caption class="heading-small">Contribution details</caption>
+                <caption class="heading-small" id="contributions-header">Contributions for February 2017</caption>
                 <tbody>
                     <tr class="staffgps">
-                        <td>Number of scheme members</td>
-                        <td class="numeric">8</td>
+                        <td id="no-scheme-members-key">Number of scheme members</td>
+                        <td class="numeric" id="contribution.no.scheme.members">8</td>
                         <td class="numeric">
                             <a href="contributions-and-payment#no-of-scheme-members">Change</a>
                         </td>
                     </tr>
                     <tr>
-                        <td>Total pensionable pay</td>
-                        <td class="numeric">£250,000.00</td>
+                        <td id="total-pensionable-key">Total pensionable pay</td>
+                        <td class="numeric" id="contribution.total.pensionable.pay">£250,000.00</td>
                         <td class="numeric">
                             <a href="contributions-and-payment#total-pensionable-pay">Change</a>
                         </td>
                     </tr>
                     <tr>
-                        <td>Employee contributions</td>
-                        <td class="numeric">£23,750.00</td>
+                        <td id="employee-contributions-key">Employee contributions</td>
+                        <td class="numeric" id="contribution.employee.contribution">£23,750.00</td>
                         <td class="numeric">
                             <a href="contributions-and-payment#employee-contributions">Change</a>
                         </td>
                     </tr>
                     <tr>
-                        <td>Employer contributions</td>
-                        <td class="numeric">£35,750.00</td>
+                        <td id="employer-contributions-key">Employer contributions</td>
+                        <td class="numeric" id="contribution.employer.contribution">£35,750.00</td>
                         <td class="numeric">
                             <a href="contributions-and-payment#employer-contributions">Change</a>
                         </td>
                     </tr>
                     <tr>
-                        <td>Employee added years</td>
-                        <td class="numeric">£1,780.00</td>
+                        <td id="employee-added-key">Employee added years</td>
+                        <td class="numeric" id="contribution.additional.years">£1,780.00</td>
                         <td class="numeric">
                             <a href="contributions-and-payment#employee-avcs">Change</a>
                         </td>
                     </tr>
                     <tr>
-                        <td>Additional pension amount</td>
-                        <td class="numeric">£750.00</td>
+                        <td id="additional-pension-key">Additional pension amount</td>
+                        <td class="numeric" id="contribution.additional.pension">£750.00</td>
                         <td class="numeric">
                             <a href="contributions-and-payment#additional-pension">Change</a>
                         </td>
                     </tr>
                     <tr>
-                        <td>Early Retirement Reduction Buy Out (ERRBO)</td>
-                        <td class="numeric">-</td>
+                        <td id="errbo-key">Early Retirement Reduction Buy Out (ERRBO)</td>
+                        <td class="numeric" id="contribution.errbo">-</td>
                         <td class="numeric">
                             <a href="contributions-and-payment#errbo">Change</a>
                         </td>
                     </tr>
                     <tr class="total">
-                        <td class="bold">Total amount to be debited</td>
-                        <td class="numeric"><strong>£59,500.00</strong></td>
+                        <td class="bold" id="contribution-total-key">Total amount to be debited</td>
+                        <td class="numeric" id="contribution.total.debit"><strong>£59,500.00</strong></td>
                         <td class="numeric">
                             <a href="contributions-and-payment#total-amount-debited">Change</a>
                         </td>
@@ -81,25 +81,25 @@
             </table>
 
             <table class="content-table stack-table three-column">
-                <caption class="heading-small">Make contribution</caption>
+                <caption class="heading-small" id="schedule-header">Make contribution</caption>
                 <tbody>
                     <tr>
-                        <td>What month is this contribution for?</td>
-                        <td>February 2017</td>
+                        <td id="contribution-month-title">What month is this contribution for?</td>
+                        <td id="contribution-month-label">February 2017</td>
                         <td class="numeric">
                             <a href="make-payment#contribution-month">Change</a>
                         </td>
                     </tr>
                     <tr>
-                        <td>When do you want to pay?</td>
-                        <td>18 February 2017</td>
+                        <td id="transfer-date-title">When do you want to pay?</td>
+                        <td id="contribution-day-label">18 February 2017</td>
                         <td class="numeric">
                             <a href="make-payment#collection-day">Change</a>
                         </td>
                     </tr>
                     <tr class="staffgps">
-                        <td>Contribution payment</td>
-                        <td>Staff</td>
+                        <td id="payment-type-title">Contribution payment</td>
+                        <td id="payment-type-value">Staff</td>
                         <td class="numeric">
                             <a href="make-payment#example-cont-payment-staff">Change</a>
                         </td>
@@ -108,56 +108,43 @@
             </table>
 
             <table class="content-table stack-table two-column">
-                <caption class="heading-small">Your contact details</caption>
+                <caption class="heading-small" id="contact-details-heading-title">Your contact details</caption>
                 <tbody>
                     <tr>
-                        <td>Employing Authority (EA) code</td>
-                        <td><span class="get-cookie" data-cookie-name="eaCode">&nbsp;</span></td>
+                        <td id="ea-code-field-description">Employing Authority (EA) code</td>
+                        <td id="ea-code-field-value"><span class="get-cookie" data-cookie-name="eaCode">&nbsp;</span></td>
                     </tr>
                     <tr>
-                        <td>Account name</td>
-                        <td>Marie Curie Cancer Care</td>
+                        <td id="account-name-field-description">Account name</td>
+                        <td id="account-name-field-value">Marie Curie Cancer Care</td>
                     </tr>
                     <tr>
-                        <td>Full name</td>
-                        <td>Alison Moore</td>
+                        <td id="full-name-field-description">Full name</td>
+                        <td id="full-name-field-value">Alison Moore</td>
                     </tr>
                     <tr>
-                        <td>Contact number</td>
-                        <td>01237 611 978</td>
+                        <td id="contact-number-field-description">Contact number</td>
+                        <td id="contact-number-field-value">01237 611 978</td>
                     </tr>
                     <tr>
-                        <td>Email address</td>
-                        <td>alison.moore@nhs.net</td>
+                        <td id="email-field-description">Email address</td>
+                        <td id="email-field-value">alison.moore@nhs.net</td>
                     </tr>
                 </tbody>
             </table>
 
-            <div class="demo-csv callout-box text">
-                <h3 class="heading-medium">I understand that:</h3>
-                <p>The amount shown is correct and that deductions have been made from member salaries as per the NHS Pension Scheme Regulations.</p>
+            <div class="callout-box text">
+                <h3 class="heading-medium" id="declaration-heading">I understand that:</h3>
+                <p id="declaration-text">The amount shown is correct and that deductions have been made from member salaries as per the NHS Pension Scheme Regulations.</p>
             </div>
 
             <br>
             <div class="form-group">
-                <a class="button" href="thank-you" role="button"><span class="get-cookie" data-cookie-name="summaryButtonText">Save contribution</a>
+                <a class="button" href="thank-you" role="button" id="submit"><span class="get-cookie" data-cookie-name="summaryButtonText">Save contribution</a>
             </div>
-
-            <!-- <div class="column-one-third">
-                <p>Content</p>
-            </div> -->
 
         </div>
     </div>
-
-    <!-- <div class="pagination-simple">
-        <div class="back-link">
-            <a href="contributions-and-payment" class="link">
-                <span class="prefix">Back:</span>
-                <span class="title">Contributions details</span>
-            </a>
-        </div>
-    </div> -->
 
 </main>
 {% endblock %}

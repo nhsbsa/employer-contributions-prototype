@@ -11,15 +11,15 @@
     <div class="grid-row">
         <div class="column-two-thirds">
             <div class="heading-group">
-                <p>{{serviceName}}</p>
-                <h1 class="heading-large">Employing authority contributions</h1>
+                <p id="service-name-text">{{serviceName}}</p>
+                <h1 class="heading-large" id="main-heading">Employing authority contributions</h1>
             </div>
 
             <div class="form-group">
-                <label class="form-label" for="full-name-f1">Search for an Employing Authority (EA) code</label>
-                <form action="select-ea" method="get">
+                <label class="form-label" for="full-name-f1" id="search-ea-label">Search for an Employing Authority (EA) code</label>
+                <form action="select-ea" method="get" id="search-ea-form">
                     <input class="form-control" id="full-name-f1" value="EA9143" type="text" />
-                    <button class="button" type="submit">Search</button>
+                    <button class="button" type="submit" id="search-ea-button">Search</button>
                 </form>    
             </div>
 
@@ -47,19 +47,6 @@
 
         </div>
 
-    </div>
-
-    <!-- <div class="column-one-third">
-        <p>Content</p>
-    </div> -->
-
-    <div class="pagination-simple">
-        <div>
-            <a href="login" class="link">
-                <span class="prefix">Back:</span>
-                <span class="title">Employer sign in</span>
-            </a>
-        </div>
     </div>
 </main>
 {% endblock %}

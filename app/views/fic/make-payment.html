@@ -11,26 +11,26 @@
     <div class="grid-row">
         <div class="column-two-thirds">
             <form id="make-payment-form" class="form form-to-validate" method="get" action="contributions-and-payment" novalidate="novalidate">
-                <div class="error-summary display-none" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
-                    <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+                <div class="error-summary display-none" id="schedule-error-message" role="group" aria-labelledby="schedule-error-heading" tabindex="-1">
+                    <h1 class="heading-medium error-summary-heading" id="schedule-error-heading">
                         Some questions have not been answered correctly.
                     </h1>
-                    <p>Please see the errors below.</p>
+                    <p id="schedule-error-text">Please see the errors below:</p>
                     <ul class="error-summary-list">
-                        <li><a href="#contribution-month-legend">Month and year is required</a></li>
-                        <li><a href="#submit-contribution-date-legend">Day, Month and year is required</a></li>
-                        <li><a href="#payment-notice-legend">Confirm you understand</a></li>
+                        <li><a id="schedule-error-list1" href="#contribution-month"><br>Month and year is required</a></li>
+                        <li><a id="schedule-error-list2" href="#dob-day">Day, month and year is required</a></li>
+                        <li><a id="schedule-error-list3" href="#understood">Please check the box if you understand</a></li>
                     </ul>
                 </div>
 
                 <div class="heading-group">
-                    <p>{{serviceName}}</p>
-                    <h1 class="heading-large">Submit contribution</h1>
+                    <p id="service-name-text">{{serviceName}}</p>
+                    <h1 class="heading-large" id="main-heading">Submit contribution</h1>
                 </div>
 
                 {% include "includes/multiple-ea.html" %}
 
-                <div class="form-group">
+                <div class="form-group" id="schedule-group">
                     <fieldset>
                         <legend id="contribution-month-legend">
                             <span class="form-label-bold">What month is this contribution for?</span>
@@ -51,7 +51,7 @@
                     </fieldset>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group" id="payment-group">
                     <fieldset>
                         <legend id="submit-contribution-date-legend">
                             <span class="form-label-bold">What date do you want to submit your contributions?</span>
@@ -136,7 +136,7 @@
                 <div class="form-group">
                     <fieldset>
                         <legend class="visually-hidden" id="payment-notice-legend">Payment Notice</legend>
-                        <!-- <p>If you submit this payment after the 16 March you will receive an administration fee of £75 pounds as well as interest for each day the payment is late.</p> -->
+                        <span class="error-message display-none" id="schedule-understood-error-message">Please check the box if you understand</span>
                         <label class="block-label selection-button-checkbox" for="understand">
                             <input class="form-control" id="understand" name="understand" type="checkbox" required="" aria-required="true" checked="" value="yes" />
                             I understand
@@ -150,10 +150,6 @@
                     </div>
                 </div>
             </form>
-
-            <!-- <div class="column-one-third">
-                <p>Content</p>
-            </div> -->
 
         </div>
     </div>
