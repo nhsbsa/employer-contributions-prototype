@@ -283,6 +283,11 @@ module.exports = {
       res.render('fic/new-password', { 'page_name': pageName })
     })
 
+    app.get('/fic/new-password-email', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/new-password-email', { 'page_name': pageName })
+    })
+
     app.get('/fic/not-found', function (req, res) {
       var pageName = 'FIC'
       res.render('fic/not-found', { 'page_name': pageName })
