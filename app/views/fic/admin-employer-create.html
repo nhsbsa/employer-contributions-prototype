@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Create new Admin Employer user - {{ super() }}{% endblock %}
+{% block page_title %}Create Admin Employer Account - {{ super() }} - NHSBSA{% endblock %}
 
 {% block content%}
 <main id="content" role="main" tabindex="-1" class="add-log-out">
@@ -22,10 +22,11 @@
                 </ul>
             </div>
 
-            <div class="heading-group">
-                <p>{{serviceName}}</p>
-                <h1 class="heading-large">Create Admin Employer Account</h1>
-            </div>
+            <h1 class="heading-large">
+                <span class="heading-secondary">{{serviceName}}</span>
+                Create Admin Employer Account
+            </h1>
+
             <form action="admin-employer-created" method="get" class="form form-to-validate" id="create-employer-form" novalidate="novalidate" autocomplete="off">
             <!-- <form id="login-form"> -->
                 <fieldset>
@@ -97,7 +98,7 @@
 
 
                 <div class="form-group">
-                    <button class="button">Add employer</button>
+                    <a class="button" href="thank-you" role="button">Add employer</a>
                 </div>
             </form>
         </div>

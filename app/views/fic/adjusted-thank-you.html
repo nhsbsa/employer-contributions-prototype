@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block page_title %}You have successfully submitted your February 2017 contributions - {{ super() }}{% endblock %}
+{% block page_title %}You have successfully submitted your February 2017 contributions - {{ super() }} - NHSBSA{% endblock %}
 
 {% block content%}
 <main id="content" role="main" tabindex="-1" class="add-log-out">
@@ -162,7 +162,10 @@
             </table>
 
             <br>
-            <a class="button" href="#" role="button">Finish</a>
+            <!-- <a class="button" href="#" role="button">Finish</a> -->
+            <div class="form-group">
+                <input class="button" type="submit" value="Finish" />
+            </div>
         </div>
 
         <div class="column-one-third">

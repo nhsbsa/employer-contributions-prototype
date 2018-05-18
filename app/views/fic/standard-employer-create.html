@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Create new sub account for your organisation - {{ super() }}{% endblock %}
+{% block page_title %}Create sub accounts for your organisation - {{ super() }} - NHSBSA{% endblock %}
 
 {% block content%}
 <main id="content" role="main" tabindex="-1" class="add-log-out">
@@ -22,10 +22,10 @@
                 </ul>
             </div>
 
-            <div class="heading-group">
-                <p>{{serviceName}}</p>
-                <h1 class="heading-large">Create sub accounts for your organisation</h1>
-            </div>
+            <h1 class="heading-large">
+                <span class="heading-secondary">{{serviceName}}</span>
+                Create sub accounts for your organisation
+            </h1>
             <form action="standard-employer-created" method="get" class="form form-to-validate" id="create-employer-form" novalidate="novalidate" autocomplete="off">
             <!-- <form id="login-form"> -->
                 <fieldset>
@@ -47,7 +47,8 @@
                 </fieldset>
 
                 <div class="form-group">
-                    <button class="button">Add user</button>
+                    <!-- <button class="button">Add user</button> -->
+                    <input class="button" type="submit" value="Add user" />
                 </div>
             </form>
         </div>

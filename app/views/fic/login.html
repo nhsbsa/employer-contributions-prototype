@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Employer sign in - {{ super() }}{% endblock %}
+{% block page_title %}Finance login - {{ super() }} - NHSBSA{% endblock %}
 
 {% block content%}
 <main id="content" role="main" tabindex="-1">
@@ -19,13 +19,13 @@
                 </ul>
             </div>
 
-            <div class="heading-group">
-                <p id="service-name-text">{{serviceName}}</p>
-                <h1 class="heading-large" id="main-heading">Finance login</h1>
-            </div>
+            <h1 id="main-heading" class="heading-large">
+                <span class="heading-secondary">{{serviceName}}</span>
+                Finance login
+            </h1>
             <form action="previous-payments" method="get" class="form form-to-validate" id="login-form" novalidate="novalidate" autocomplete="off">
                 <fieldset>
-                    <legend class="visuallyhidden" id="login-details-label">Login details</legend>
+                    <legend class="visuallyhidden" id="login-details-label" tabindex="-1">Login details</legend>
                     <div class="form-group" id="login-username-group">
                         <label class="form-label-bold" for="username" id="login-username-label">
                             <span class="form-label-bold">Username</span>
@@ -42,8 +42,8 @@
                     </div>
                 </fieldset>
 
-                <div class="form-group" id="login-submit-button">
-                    <button class="button" id="login-button">Log in</button>
+                <div id="login-submit-button" class="form-group">
+                    <input id="login-button" class="button" type="submit" value="Log in" />
                 </div>
                 <p class="navigation">
                     <a id="forgotten-password-link" href="forgot-password">Forgotten your password?</a>

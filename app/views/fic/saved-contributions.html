@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Saved contributions - {{ super() }}{% endblock %}
+{% block page_title %}Saved contributions - {{ super() }} - NHSBSA{% endblock %}
 
 {% block content%}
 <main id="content" role="main" tabindex="-1">
@@ -10,10 +10,10 @@
     
     <div class="grid-row">
         <div class="column-two-thirds">
-            <div class="heading-group">
-                <p id="service-name-text">{{serviceName}}</p>
-                <h1 class="heading-large" id="main-heading">Saved contributions</h1>
-            </div>
+            <h1 id="main-heading" class="heading-large">
+                <span class="heading-secondary">{{serviceName}}</span>
+                Saved contributions
+            </h1>
         </div>
     </div>
 
@@ -27,7 +27,7 @@
     <div class="grid-row">
         <div class="column-two-thirds">
             <div class="form-group">
-                <p><a class="button" href="employer-create" role="button" id="create-user-button">Create a new user</a></p>
+                <p><a id="create-user-button" class="button" href="employer-create" role="button">Create a new user</a></p>
             </div>
         </div>
     </div>

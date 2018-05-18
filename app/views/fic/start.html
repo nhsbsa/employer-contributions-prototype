@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Submit your monthly NHS Pension Scheme Contributions - {{ super() }}{% endblock %}
+{% block page_title %}{{ super() }} - NHSBSA{% endblock %}
 
 {% block content%}
 <main id="content" role="main" tabindex="-1">
@@ -9,10 +9,9 @@
 
 	<div class="grid-row">
         <div class="column-two-thirds">
-            <div class="heading-group">
-                <p>{{serviceName}}</p>
-                <h1 class="heading-large">Your monthly NHS Pension Scheme Contributions</h1>
-            </div>
+            <h1 class="heading-large">
+                {{serviceName}}
+            </h1>
             <p id="start-submit-text">Submit your monthly NHS Pension Scheme contributions.</p>
             <p id="start-use-service-text">Use this service to:</p>
             <ul class="list list-bullet">
@@ -21,7 +20,9 @@
                 <li id="start-use-service-list3">submit any adjustments from previous months</li>
                 <li id="start-use-service-list4">view previously submitted contributions</li>
             </ul>
-            <a class="button button-get-started" id="button-start" href="login">Start now</a>
+            <div class="form-group">
+                <a id="button-start" class="button button-start" href="login">Start now</a>
+            </div>
         </div>
         <div class="column-one-third">
             <div class="sidebar">

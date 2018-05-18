@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Submit a new contribution - {{ super() }}{% endblock %}
+{% block page_title %}Submit a new contribution - {{ super() }} - NHSBSA{% endblock %}
 
 {% block content%} 
 <main id="content" role="main" tabindex="-1" class="add-log-out">
@@ -11,10 +11,10 @@
     <div class="grid-row">
         <div class="column-two-thirds">
 
-            <div class="heading-group">
-                <p id="service-name-text">{{serviceName}}</p>
-                <h1 class="heading-large" id="main-heading">Submit a new contribution</h1>
-            </div>
+            <h1 id="main-heading" class="heading-large">
+                <span class="heading-secondary">{{serviceName}}</span>
+                Submit a new contribution
+            </h1>
 
             {% include "includes/multiple-ea.html" %}
             
@@ -22,7 +22,7 @@
                 The February 2017 submission needs to reach us by 16 March 2017.
             </p>
             <div class="form-group">
-                <a class="button" href="make-payment" role="button" id="previous-payments-button">Submit contribution</a>
+                <a id="previous-payments-button" class="button" href="make-payment" role="button">Submit contribution</a>
             </div>
         </div>
         <div class="column-full">

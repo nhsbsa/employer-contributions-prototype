@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Service unavailable - {{ super() }}{% endblock %}
+{% block page_title %}Service unavailable - {{ super() }} - NHSBSA{% endblock %}
 
 {% block content%}
 <main id="content" role="main" tabindex="-1">
@@ -9,16 +9,17 @@
 
     <div class="grid-row">
         <div class="column-two-thirds">
-            <div class="heading-group">
-                <p id="service-name-text">{{serviceName}}</p>
-                <h1 class="heading-large" id="main-heading">Service unavailable</h1>
-            </div>
+            <h1 id="main-heading" class="heading-large">
+                <span class="heading-secondary">{{serviceName}}</span>
+                Service unavailable
+            </h1>
             <div class="text">
                 <p id="info-text">To keep this service secure, any information you've entered hasn't been saved.</p>
                 <p id="start-again-text">You will need to start again.</p>
             </div>
-            
-            <a class="button button-get-started" href="start" id="start-button">Start again</a>
+            <div class="form-group">
+                <a id="start-button" class="button button-start" href="start">Start again</a>
+            </div>
         </div>
     </div>
 </main>

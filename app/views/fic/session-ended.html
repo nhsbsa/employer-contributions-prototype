@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Sorry, you'll have to start again - {{ super() }}{% endblock %}
+{% block page_title %}Sorry, you'll have to start again - {{ super() }} - NHSBSA{% endblock %}
 
 {% block content%}
 <main id="content" role="main" tabindex="-1">
@@ -9,15 +9,17 @@
 
     <div class="grid-row">
         <div class="column-two-thirds">
-            <div class="heading-group">
-                <p id="service-name-text">{{serviceName}}</p>
-                <h1 class="heading-large" id="main-heading">Sorry, you'll have to start again</h1>
-            </div>
+            <h1 id="main-heading" class="heading-large">
+                <span class="heading-secondary">{{serviceName}}</span>
+                Sorry, you'll have to start again
+            </h1>
             <div class="text">
                 <p id="session-expired-text1">Your session automatically ends if you don't use the service for 30 mins or you may have logged out of the service on another page.</p>
                 <p id="session-expired-text2">We do this for your security. We haven't saved any personal information you entered.</p>
             </div>
-            <a class="button button-get-started" href="start" id="start-button">Start again</a>
+            <div class="form-group">
+                <a id="start-button" class="button button-start" href="start">Start again</a>
+            </div>
         </div>
     </div>
 </main>

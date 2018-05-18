@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Check your February 2017 contributions before submitting - {{ super() }}{% endblock %}
+{% block page_title %}Check your February 2017 contributions before submitting - {{ super() }} - NHSBSA{% endblock %}
 
 {% block content%}
 <main id="content" role="main" tabindex="-1" class="add-log-out">
@@ -10,11 +10,10 @@
 
     <div class="grid-row">
         <div class="column-two-thirds">
-
-            <div class="heading-group">
-                <p>{{serviceName}}</p>
-                <h1 class="heading-large">Check your February 2017 contributions before submitting</h1>
-            </div>
+            <h1 class="heading-large">
+                <span class="heading-secondary">{{serviceName}}</span>
+                Check your February 2017 contributions before submitting
+            </h1>
 
             {% include "includes/multiple-ea.html" %}
 
@@ -223,7 +222,9 @@
                 <p>The amount shown is correct and that deductions have been made from member salaries as per the NHS Pension Scheme Regulations.</p>
             </div>
             <br>
-            <a class="button" href="thank-you" role="button">Submit your contribution</a>
+            <div class="form-group">
+                <a class="button" href="thank-you" role="button">Submit your contribution</a>
+            </div>
         </div>
 
         <!-- <div class="column-one-third">

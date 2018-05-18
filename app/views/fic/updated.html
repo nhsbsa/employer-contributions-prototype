@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Your password has been successfully updated - {{ super() }}{% endblock %}
+{% block page_title %}Your password has been successfully updated - {{ super() }} - NHSBSA{% endblock %}
 
 {% block content%}
 <main id="content" role="main" tabindex="-1">
@@ -9,11 +9,13 @@
 
     <div class="grid-row">
         <div class="column-two-thirds">
-            <div class="heading-group">
-                <p id="service-name-text">{{serviceName}}</p>
-                <h1 class="heading-large" id="main-heading">Your password has been successfully updated</h1>
+            <h1 id="main-heading" class="heading-large">
+                <span class="heading-secondary">{{serviceName}}</span>
+                Your password has been successfully updated
+            </h1>
+            <div class="form=-group">
+                <a id="password-updated-continue" class="button" href="login" role="button">Continue</a>
             </div>
-            <a class="button" href="login" role="button" id="password-updated-continue">Continue</a>
         </div>
     </div>
 </main>

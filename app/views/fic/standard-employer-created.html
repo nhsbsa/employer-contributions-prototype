@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Employer account successfully created - {{ super() }}{% endblock %}
+{% block page_title %}Employer account created - {{ super() }} - NHSBSA{% endblock %}
 
 {% block content%}
 <main id="content" role="main" tabindex="-1" class="add-log-out">
@@ -10,14 +10,16 @@
     
     <div class="grid-row">
         <div class="column-two-thirds">
-            <div class="heading-group">
-                <p>{{serviceName}}</p>
-                <h1 class="heading-large">Employer account created</h1>
-            </div>
+            <h1 class="heading-large">
+                <span class="heading-secondary">{{serviceName}}</span>
+                Employer account created
+            </h1>
             <div class="text">
                 <p>The account for sam.jones@email.com was successfully created.</p>
             </div>
-            <a href="standard-employer-create" class="button">Create another</a>
+            <div class="form-group">
+                <a class="button" href="standard-employer-create" role="button">Create another</a>
+            </div>
         </div>
     </div>
 </main>

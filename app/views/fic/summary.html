@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Check your February 2017 contributions before submitting - {{ super() }}{% endblock %}
+{% block page_title %}Check your February 2017 contributions before submitting - {{ super() }} - NHSBSA{% endblock %}
 
 {% block content%}
 <main id="content" role="main" tabindex="-1" class="add-log-out">
@@ -11,10 +11,10 @@
     <div class="grid-row">
         <div class="column-two-thirds">
             
-            <div class="heading-group">
-                <p id="service-name-text">{{serviceName}}</p>
-                <h1 class="heading-large" id="main-heading">Check your February 2017 contributions before submitting</h1>
-            </div>
+            <h1 id="main-heading" class="heading-large">
+                <span class="heading-secondary">{{serviceName}}</span>
+                Check your February 2017 contributions before submitting
+            </h1>
 
             {% include "includes/multiple-ea.html" %}
 
@@ -140,7 +140,7 @@
 
             <br>
             <div class="form-group">
-                <a class="button" href="thank-you" role="button" id="submit"><span class="get-cookie" data-cookie-name="summaryButtonText">Save contribution</a>
+                <a id="submit" class="button" href="thank-you" role="button"><span class="get-cookie" data-cookie-name="summaryButtonText">Save contribution</a>
             </div>
 
         </div>

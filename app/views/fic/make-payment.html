@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Submit contribution - {{ super() }}{% endblock %}
+{% block page_title %}Submit contribution - {{ super() }} - NHSBSA{% endblock %}
 
 {% block content%}
 <main id="content" role="main" tabindex="-1" class="add-log-out">
@@ -23,10 +23,10 @@
                     </ul>
                 </div>
 
-                <div class="heading-group">
-                    <p id="service-name-text">{{serviceName}}</p>
-                    <h1 class="heading-large" id="main-heading">Submit contribution</h1>
-                </div>
+                <h1 id="main-heading" class="heading-large">
+                    <span class="heading-secondary">{{serviceName}}</span>
+                    Submit contribution
+                </h1>
 
                 {% include "includes/multiple-ea.html" %}
 
@@ -55,11 +55,42 @@
                     <fieldset>
                         <legend id="submit-contribution-date-legend">
                             <span class="form-label-bold">What date do you want to submit your contributions?</span>
-                            <span class="form-hint">For example, 16 February 2018</span>
+                            <!-- <span class="form-hint">For example, 16 February 2018</span> -->
                         </legend>
-                        <span class="error-message js-hidden">Day, Month and year is required</span>
-                        <div class="form-date form-date-wide">
-                            <!-- Use .form-group to create spacing when wrapping label and input pairs -->
+                        <!-- <span class="error-message js-hidden">Day, Month and year is required</span> -->
+                        <label class="block-label selection-button-radio" data-target="asap" for="as-soon-as-possible">
+                            <input id="as-soon-as-possible" type="radio" name="radio-contact-group" value="As soon as possible" />
+                            As soon as possible
+                        </label>
+                        <div class="panel panel-border-narrow js-hidden" id="asap">
+                            <p>This will be the 1st April 2018</p>
+                        </div>
+
+                        <label class="block-label selection-button-radio" data-target="specify-date" for="specify-a-date">
+                            <input id="specify-a-date" type="radio" name="radio-contact-group" value="Specify a date" />
+                            Specify a date
+                        </label>
+                        <div class="panel panel-border-narrow js-hidden" id="specify-date">
+                            <span class="form-hint" id="payment-day-month-year-hint1" >
+                                <span class="form-hint">For example, 17 March 2018</span>
+                            </span>
+                            <div class="form-date form-date-wide" id="payment-day-month-year-group">
+                                <div class="form-group-day">
+                                    <label class="form-label" for="dob-day" id="payment-day-label">Day</label>
+                                    <input class="form-control" id="dob-day"> </input>
+                                </div>
+                                <div class="form-group-month">
+                                    <label class="form-label" for="dob-month" id="payment-month-label">Month</label>
+                                    <input class="form-control typeahead" id="dob-month" type="text" maxlength="12"> </input>
+                                </div>
+                                <div class="form-group-year">
+                                    <label class="form-label" for="dob-year" id="payment-year-label">Year</label>
+                                    <input class="form-control" id="dob-year"> </input>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- <div class="form-date form-date-wide">
                             <div class="form-group-day">
                                 <label class="form-label" for="collection-day">
                                     Day
@@ -81,7 +112,7 @@
                                 </label>
                                 <input class="form-control" id="collection-year" name="collection-year" type="number" required="" aria-required="true" min="2001" />
                             </div>
-                        </div>
+                        </div> -->
                     </fieldset>
                 </div>
 

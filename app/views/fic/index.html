@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Journeys &amp; Patterns - {{ super() }}{% endblock %}
+{% block page_title %}Journeys &amp; Patterns - {{ super() }} - NHSBSA{% endblock %}
 
 {% block content%}
 <main id="content" role="main" tabindex="-1">
@@ -9,10 +9,10 @@
 
     <div class="grid-row">
         <div class="column-two-thirds">
-            <div class="heading-group">
-                <p>{{serviceName}}</p>
-                <h1 class="heading-large">Financial Information Collection journeys</h1>
-            </div>
+            <h1 class="heading-large">
+                <span class="heading-secondary">{{serviceName}}</span>
+                Financial Information Collection journeys
+            </h1>
             <ul class="list">
                 <li>For single EA journey type in anything for the email address</li>
                 <li>For multiple EA journey type in '<strong>ea</strong>' for the email address</li>

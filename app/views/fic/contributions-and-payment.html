@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block page_title %}February 2017 contribution details - {{ super() }}{% endblock %}
+{% block page_title %}February 2017 contribution details - {{ super() }} - NHSBSA{% endblock %}
 
 {% block content%}
 <main id="content" role="main" tabindex="-1" class="add-log-out">
@@ -28,10 +28,10 @@
 
             </div>
 
-            <div class="heading-group">
-                <p id="service-name-text">{{serviceName}}</p>
-                <h1 class="heading-large" id="main-heading"><span class="get-cookie" data-cookie-name="payingMonth"></span> 2017 contribution details</h1>
-            </div>
+            <h1 id="main-heading" class="heading-large">
+                <span class="heading-secondary">{{serviceName}}</span>
+                <span class="get-cookie" data-cookie-name="payingMonth">2017 contribution details</span>
+            </h1>
 
             {% include "includes/multiple-ea.html" %}
             
@@ -185,7 +185,7 @@
                 </div>
 
                 <div class="form-group">
-                    <button class="button">Next</button>
+                    <input class="button" type="submit" value="Next" />
                 </div>
             </form>
 

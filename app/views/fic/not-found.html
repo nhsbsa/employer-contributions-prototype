@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block page_title %}This page cannot be found - {{ super() }}{% endblock %}
+{% block page_title %}This page cannot be found - {{ super() }} - NHSBSA{% endblock %}
 
 {% block content%}
 <main id="content" role="main" tabindex="-1">
@@ -10,10 +10,10 @@
     
     <div class="grid-row">
         <div class="column-two-thirds">
-            <div class="heading-group">
-                <p id="service-name-text">{{serviceName}}</p>
-                <h1 class="heading-large" id="main-heading">This page cannot be found</h1>
-            </div>
+            <h1 id="main-heading" class="heading-large">
+                <span class="heading-secondary">{{serviceName}}</span>
+                This page cannot be found
+            </h1>
             <div class="text">
                 <p id="not-found-text">Please check that you have entered the correct web address, or go to NHS Pension <a href="start">Financial Information Collection</a> start page.</p>
             </div>
