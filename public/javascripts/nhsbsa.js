@@ -174,7 +174,7 @@ $(document).ready(function(){
             else if ($formToValidated.attr('id') == 'login-form'){
 
                 // change location based on input
-                var loginEmail = $('#email', $formToValidated).val();
+                var loginEmail = $('#username', $formToValidated).val();
 
                 Cookies.set('payingMonth', 'February');
 
