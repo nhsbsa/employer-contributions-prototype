@@ -277,6 +277,11 @@ module.exports = {
       var pageName = 'FIC'
       res.render('fic/make-payment', { 'page_name': pageName })
     })
+      
+    app.get('/fic/multi-ea', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/multi-ea', { 'page_name': pageName })
+    })
 
     app.get('/fic/new-password', function (req, res) {
       var pageName = 'FIC'

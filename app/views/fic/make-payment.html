@@ -32,10 +32,6 @@
 
                 <div class="form-group" id="schedule-group">
                     <fieldset>
-                        <legend id="contribution-month-legend">
-                            <span class="form-label-bold">What month is this contribution for?</span>
-                            <span class="form-hint">For example, February 2018</span>
-                        </legend>
                         <span class="error-message js-hidden">Month and year is required</span>
                         <div class="form-date form-date-wide">
                             <!-- Use .form-group to create spacing when wrapping label and input pairs -->
@@ -77,18 +73,20 @@
                             <div class="form-date form-date-wide" id="payment-day-month-year-group">
                                 <div class="form-group-day">
                                     <label class="form-label" for="dob-day" id="payment-day-label">Day</label>
-                                    <input class="form-control" id="dob-day"> </input>
+                                    <input class="form-control" id="dob-day" type="number" />
                                 </div>
                                 <div class="form-group-month">
                                     <label class="form-label" for="dob-month" id="payment-month-label">Month</label>
-                                    <input class="form-control typeahead" id="dob-month" type="text" maxlength="12"> </input>
+                                    <input class="form-control typeahead" id="dob-month" type="text" maxlength="12" />
                                 </div>
                                 <div class="form-group-year">
                                     <label class="form-label" for="dob-year" id="payment-year-label">Year</label>
-                                    <input class="form-control" id="dob-year"> </input>
+                                    <input class="form-control" id="dob-year" type="number" />
                                 </div>
                             </div>
                         </div>
+                        
+                        
                         
                         <!-- <div class="form-date form-date-wide">
                             <div class="form-group-day">
@@ -177,7 +175,7 @@
 
                 <div class="form-item-wrapper">
                     <div class="form-group">
-                        <input id="next-button" class="button" type="submit" value="Next" />
+                        <a id="next-button" class="button" href="contributions-and-payment">Next</a>
                     </div>
                 </div>
             </form>

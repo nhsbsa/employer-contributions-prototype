@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Employing authority contributions - {{ super() }} - NHSBSA{% endblock %}
+
+{% block content%}
+<main id="content" role="main" tabindex="-1" class="add-log-out">
+
+    {% include "includes/phase_banner.html" %}
+    {% include "includes/back_nav.html" %}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            
+            <h1 id="main-heading" class="heading-large">
+                <span class="heading-secondary">{{serviceName}}</span>
+                Choose the Employing Authority you want to make a submission for
+            </h1>
+            
+        </div>
+
+        <div class="column-two-thirds">
+
+            <table>
+              <tbody>
+                <tr>
+                  <td><a href="make-payment">EA1000</a></td>
+                    
+                  <td>NHS Fleetwood</td>
+                  <td class="phase-tag"> SUBMITTED</td>
+                </tr>
+                <tr>
+                  <td><a href="#">EA2000</a></td>
+                  <td>NHS Blackpool</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td><a href="#">EA3000</a></td>
+                  <td>NHS Newcastle</td>
+                  <td>&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+
+        </div>
+    </div>
+</main>
+{% endblock %}
