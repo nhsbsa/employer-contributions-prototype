@@ -10,8 +10,7 @@
 
     <div class="grid-row">
         <div class="column-two-thirds">
-
-            <div class="error-summary display-none" role="group" aria-labelledby="error-summary-heading-create-employer-account" tabindex="-1">
+            <div class="error-summary display-none" role="group" aria-labelledby="error-summary-heading-create-employer-account">
                 <h1 class="heading-medium error-summary-heading" id="error-summary-heading-create-employer-account">
                     Some questions have not been answered correctly.
                 </h1>
@@ -28,74 +27,70 @@
             </h1>
 
             <form action="admin-employer-created" method="get" class="form form-to-validate" id="create-employer-form" novalidate="novalidate" autocomplete="off">
-            <!-- <form id="login-form"> -->
                 <fieldset>
-                    <legend class="visuallyhidden">Employer Details</legend>
+                    <legend class="visuallyhidden" tabindex="-1">Employer Details</legend>
                     <div class="form-group">
                         <label for="employer-ea-code" id="employer-ea-code-label">
                             <span class="form-label-bold">EA Code</span>
                             <span class="error-message display-none" id="error-message-employer-ea-code">Please enter a valid EA code</span>
                         </label>
-                        <input type="text" id="employer-ea-code" value="" name="employer-ea-code" class="form-control validate-text-input" required>
+                        <input type="text" id="employer-ea-code" name="employer-ea-code" class="form-control validate-text-input" autocomplete="off" aria-required="true" required />
                     </div>
                     <div class="form-group">
                         <label for="employer-account-name" id="employer-account-name-label">
                             <span class="form-label-bold">Account Name</span>
                             <span class="error-message display-none" id="error-message-employer-account-name">Provide account name</span>
                         </label>
-                        <input type="text" id="employer-account-name" value="" name="employer-account-name" class="form-control validate-text-input" required>
+                        <input type="text" id="employer-account-name" name="employer-account-name" class="form-control validate-text-input" autocomplete="off" aria-required="true" required />
                     </div>
                     <div class="form-group">
                         <label for="employer-full-name" id="employer-full-name-label">
                             <span class="form-label-bold">Full Name</span>
                             <span class="error-message display-none" id="error-message-employer-full-name">Please enter a valid name</span>
                         </label>
-                        <input type="text" id="employer-full-name" value="" name="employer-full-name" class="form-control validate-text-input" required>
+                        <input type="text" id="employer-full-name" name="employer-full-name" class="form-control validate-text-input" autocomplete="off" aria-required="true" required />
                     </div>
                     <div class="form-group">
                         <label for="employer-email" id="employer-email-label">
                             <span class="form-label-bold">Email address</span>
                             <span class="error-message display-none" id="error-message-employer-email">Please enter a valid email address</span>
                         </label>
-                        <input type="email" id="employer-email" value="" name="employer-email" class="form-control validate-text-input" required>
+                        <input type="email" id="employer-email" name="employer-email" class="form-control validate-text-input" autocomplete="off" aria-required="true" required />
                     </div>
                     <div class="form-group">
                         <label for="employer-telephone" id="employer-telephone-label">
                             <span class="form-label-bold">Telephone</span>
                             <span class="error-message display-none" id="error-message-employer-telephone">Please enter a valid phone number</span>
                         </label>
-                        <input type="text" id="employer-telephone" value="" name="employer-telephone" class="form-control validate-text-input" required>
+                        <input type="text" id="employer-telephone" name="employer-telephone" class="form-control validate-text-input" autocomplete="off" aria-required="true" required />
                     </div>
                     <div class="form-group">
                         <label for="employer-password" id="employer-password-label">
                             <span class="form-label-bold">First Password</span>
                             <span class="error-message display-none" id="error-message-password">Please choose a password containing minimum 12 characters, including numbers, upper and lower case letters</span>
                         </label>
-                        <input type="password" id="employer-password" value="" name="employer-password" class="form-control validate-text-input" required>
+                        <input type="password" id="employer-password" name="employer-password" class="form-control validate-text-input" autocomplete="off" aria-required="true" required />
                     </div>
                 </fieldset>
 
                 <div class="form-group">
-                    <legend id="employer-type-label">
-                        <span class="form-label-bold">Employer Type</span>
-                        <span class="error-message display-none" id="error-message-employer-type">Please select an employer type</span>
-                    </legend>
+                    <span class="form-label-bold">Employer Type</span>
+                    <span class="error-message display-none" id="error-message-employer-type">Please select an employer type</span>
                     
                     <div class="form-group">
                         <fieldset class="inline">
-                            <legend class="visually-hidden">Employer Type</legend>
-                            <label class="block-label selection-button-radio" for="employer-type-staff" id="employer-type-staff-label">
+                            <legend class="visually-hidden" tabindex="-1">Employer Type</legend>
+                            <div class="multiple-choice">
                                 <input id="employer-type-staff" type="radio" name="radio-emplyer-type" value="Staff" />
-                                Staff
-                            </label>
-                            <label class="block-label selection-button-radio" for="employer-type-gp">
-                                <input id="employer-type-gp" type="radio" name="radio-emplyer-type" value="GP" required aria-required="true" class="validate-radio-input" />
-                                GP
-                            </label>
+                                <label for="employer-type-staff">Staff</label>
+                            </div>
+                            <div class="multiple-choice">
+                                <input id="employer-type-gp" type="radio" name="radio-emplyer-type" value="GP" />
+                                <label for="employer-type-gp">GP</label>
+                            </div>
                         </fieldset>
                     </div>
                 </div>
-
 
                 <div class="form-group">
                     <a class="button" href="thank-you" role="button">Add employer</a>

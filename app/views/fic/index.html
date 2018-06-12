@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Journeys &amp; Patterns - {{ super() }} - NHSBSA{% endblock %}
+{% block page_title %}Financial Information Collection journeys - {{ super() }} - NHSBSA{% endblock %}
 
 {% block content%}
 <main id="content" role="main" tabindex="-1">
@@ -26,7 +26,7 @@
             </ul>
             <p><a href="/fic/start">Start Page</a></p>
 
-            <h3 class="heading-medium">Hidden Pages</h3>
+            <h2 class="heading-medium">Hidden Pages</h2>
             <p>These are pages that aren't in the journeys above but are needed in the live java application.</p>
             <ul class="list">
                 <li>BSA Admins can <a href="/fic/admin-employer-create">Create Employer Admin Accounts</a></li>
@@ -35,7 +35,7 @@
                 <li>Reset password from email: <a href="/fic/new-password-email">Reset password from email</a></li>
             </ul>
 
-            <h3 class="heading-medium">Error Pages</h3>
+            <h2 class="heading-medium">Error Pages</h2>
             <ul class="list">
                 <li>404: <a href="/fic/not-found">Page not found</a></li>
                 <li>5xx: <a href="/fic/session-ended">Session ended</a></li>
@@ -45,7 +45,7 @@
         </div>
     </div>
     <hr>
-    <h3 class="heading-medium">NHS BSA Elements</h3>
+    <h2 class="heading-medium">NHS BSA Elements</h2>
     <div class="text">
         <p>These prototypes use the NHS BSA Elements below to build the user interface. See the <a href="http://nhsbsa-elements.herokuapp.com">NHS BSA guidelines</a> on Heroku.</p>
     </div>
