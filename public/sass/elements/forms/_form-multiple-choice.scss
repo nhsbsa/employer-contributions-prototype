@@ -10,6 +10,9 @@
 
   padding: 0 0 0 38px;
   margin-bottom: $gutter-one-third;
+  
+  background-color: $grey-3;
+  border: 8px solid $grey-3;
 
   @include media(tablet) {
     float: left;
