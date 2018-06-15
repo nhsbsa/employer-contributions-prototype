@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Employing authority contributions - {{ super() }} - NHSBSA{% endblock %}
+{% block page_title %}Choosing the Employing Authority you want to make a submission for - {{ super() }} - NHSBSA{% endblock %}
 
 {% block content%}
 <main id="content" role="main" tabindex="-1" class="add-log-out">
@@ -10,37 +10,39 @@
 
     <div class="grid-row">
         <div class="column-two-thirds">
-            
             <h1 id="main-heading" class="heading-large">
                 <span class="heading-secondary">{{serviceName}}</span>
                 Choose the Employing Authority you want to make a submission for
             </h1>
-            
         </div>
 
-        <div class="column-two-thirds">
-
-            <table>
-              <tbody>
-                <tr>
-                  <td><a href="make-payment">EA1000</a></td>
-                    
-                  <td>NHS Fleetwood</td>
-                  <td class="phase-tag"> SUBMITTED</td>
-                </tr>
-                <tr>
-                  <td><a href="#">EA2000</a></td>
-                  <td>NHS Blackpool</td>
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <td><a href="#">EA3000</a></td>
-                  <td>NHS Newcastle</td>
-                  <td>&nbsp;</td>
-                </tr>
-              </tbody>
+        <div class="column-full">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="data-table stack-table wide-table hoverable-table">
+                <tbody>
+                    <tr class="hoverable">
+                        <td><a href="make-payment" class="set-cookie" data-cookie-value="EA5955" data-cookie-name="eaCode">EA5955</a></td>
+                        <td>Hesketh House, Fleetwood</td>
+                        <td class="centered-item"><span class="service-status submitted">submitted</span></td>
+                        <td><a href="make-payment" class="set-cookie" data-cookie-value="EA5955" data-cookie-name="eaCode">Submit</a></td>
+                    </tr>
+                    <tr class="hoverable">
+                        <td><a href="make-payment" class="set-cookie" data-cookie-value="EA2331" data-cookie-name="eaCode">EA2331</a></td>
+                        <td>Stella House, Newcastle</td>
+                        <td class="centered-item">
+                            <!-- <span class="service-status submitted">submitted</span> -->
+                        </td>
+                        <td><a href="make-payment" class="set-cookie" data-cookie-value="EA2331" data-cookie-name="eaCode">Edit</a></td>
+                    </tr>
+                    <tr class="hoverable">
+                        <td><a href="make-payment" class="set-cookie" data-cookie-value="EA4411" data-cookie-name="eaCode">EA4411</a></td>
+                        <td>Random House Name, Liverpool</td>
+                        <td class="centered-item">
+                            <!-- <span class="service-status submitted">submitted</span> -->
+                        </td>
+                        <td><a href="make-payment" class="set-cookie" data-cookie-value="EA4411" data-cookie-name="eaCode">Edit</a></td>
+                    </tr>
+                </tbody>
             </table>
-
         </div>
     </div>
 </main>

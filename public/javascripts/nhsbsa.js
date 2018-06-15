@@ -181,7 +181,7 @@ $(document).ready(function(){
 
                 if(loginEmail == 'ea'){
                     Cookies.set('ea', 'show');
-                    location.assign('make-payment');
+                    location.assign('multi-ea');
                     return false;
                 } else {
                     Cookies.remove('ea');
