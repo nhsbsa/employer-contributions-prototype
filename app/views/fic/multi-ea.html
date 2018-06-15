@@ -22,8 +22,7 @@
                     <tr class="hoverable">
                         <td><a href="make-payment" class="set-cookie" data-cookie-value="EA5955" data-cookie-name="eaCode">EA5955</a></td>
                         <td>Hesketh House, Fleetwood</td>
-                        <td class="centered-item"><span class="service-status submitted">submitted</span></td>
-                        <td><a href="make-payment" class="set-cookie" data-cookie-value="EA5955" data-cookie-name="eaCode">Submit</a></td>
+                        <td class="centered-item"><strong class="phase-tag">COMPLETED</strong></td>
                     </tr>
                     <tr class="hoverable">
                         <td><a href="make-payment" class="set-cookie" data-cookie-value="EA2331" data-cookie-name="eaCode">EA2331</a></td>
@@ -31,7 +30,6 @@
                         <td class="centered-item">
                             <!-- <span class="service-status submitted">submitted</span> -->
                         </td>
-                        <td><a href="make-payment" class="set-cookie" data-cookie-value="EA2331" data-cookie-name="eaCode">Edit</a></td>
                     </tr>
                     <tr class="hoverable">
                         <td><a href="make-payment" class="set-cookie" data-cookie-value="EA4411" data-cookie-name="eaCode">EA4411</a></td>
@@ -39,11 +37,36 @@
                         <td class="centered-item">
                             <!-- <span class="service-status submitted">submitted</span> -->
                         </td>
-                        <td><a href="make-payment" class="set-cookie" data-cookie-value="EA4411" data-cookie-name="eaCode">Edit</a></td>
+                        <!-- <td><a href="make-payment" class="set-cookie" data-cookie-value="EA4411" data-cookie-name="eaCode">Edit</a></td> -->
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
+    <style>
+    .phase-tag {
+        /* display: -moz-inline-stack; */
+        display: inline-block;
+        margin: 0 8px 0 0;
+        padding: 2px 5px 0;
+        font-family: Arial, sans-serif;
+        font-weight: 700;
+        /* text-transform: none;
+        font-size: 14px;
+        line-height: 1.1428571429; */
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #005ea5;
+    }
+
+    @media (min-width: 641px) {
+        .phase-tag {
+            font-size: 16px;
+            line-height: 1.25;
+        }
+    }
+    </style>
 </main>
 {% endblock %}
