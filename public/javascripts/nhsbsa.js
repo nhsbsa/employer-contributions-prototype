@@ -530,4 +530,20 @@ $(document).ready(function(){
         Cookies.remove('loggedInAs');
     }
 
+    if (document.location.href.includes("/fic/summary", true)) {
+        $('#submit').click( function(e) {
+            e.preventDefault();
+            var myCookie = getCookie("ea");
+            if (myCookie == null) {
+                // do cookie doesn't exist stuff;
+                window.location.href = "summary";
+            } else {
+                // do cookie exists stuff
+                window.location.href = "multi-ea";
+            }
+            
+            return false;
+        });
+    }
+
 });
