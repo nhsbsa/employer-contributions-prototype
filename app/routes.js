@@ -333,6 +333,11 @@ module.exports = {
       res.render('fic/thank-you', { 'page_name': pageName })
     })
 
+    app.get('/fic/thank-you2', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/thank-you2', { 'page_name': pageName })
+    })
+
     app.get('/fic/unavailable', function (req, res) {
       var pageName = 'FIC'
       res.render('fic/unavailable', { 'page_name': pageName })
