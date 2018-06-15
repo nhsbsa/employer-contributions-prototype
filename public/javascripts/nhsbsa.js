@@ -557,10 +557,10 @@ $(document).ready(function(){
             var myCookie = getCookie("ea");
             if (myCookie == null) {
                 // do cookie doesn't exist stuff;
-                window.location.href = "summary";
+                window.location.href = "thank-you";
             } else {
                 // do cookie exists stuff
-                window.location.href = "multi-ea";
+                window.location.href = "thank-you2";
             }
             
             return false;
