@@ -25,7 +25,7 @@
 
                 <h1 id="main-heading" class="heading-large">
                     <span class="heading-secondary">{{serviceName}}</span>
-                    Submit contribution
+                    Make a payment
                 </h1>
 
                 {% include "includes/multiple-ea.html" %}
@@ -34,7 +34,14 @@
                     <fieldset>
                         <legend class="visuallyhidden" tabindex="-1">Submit contribution</legend>
                         <span class="error-message js-hidden">Month and year is required</span>
-                        <div class="form-date form-date-wide">
+                        <label class="form-label-bold" for="cont">
+                            What contribution month is this payment for?
+                            <span class="form-hint">
+                                For example, May 2018
+                            </span>
+                        </label>
+                        
+                        <div id="cont" class="form-date form-date-wide">
                             <div class="form-group-month">
                                 <label class="form-label" for="contribution-month">Month</label>
                                 <input type="text" id="contribution-month" class="form-control typeahead" name="contribution-month" autocomplete="off" aria-required="true" maxlength="9" required />
