@@ -15,11 +15,16 @@
                 Check your February 2017 contributions before submitting
             </h1>
 
-            {% include "includes/multiple-ea.html" %}
+            <!-- {% include "includes/multiple-ea.html" %} -->
 
             <table class="content-table stack-table three-column">
-                <caption class="heading-small" id="contributions-header">Contributions for February 2017</caption>
+                <caption class="heading-small visually-hidden" id="contributions-header">Contributions for February 2017</caption>
                 <tbody>
+                    <thead>
+                        <tr>
+                            <th colspan="2" id="contributions-header"><span>Contributions for</span> <span class="get-cookie" data-cookie-name="payingMonth" id="paying.month">June</span> <span class="get-cookie" data-cookie-name="payingYear" id="paying.year">2017</span></th>
+                        </tr>
+                    </thead>
                     <tr class="staffgps">
                         <td id="no-scheme-members-key">Number of scheme members</td>
                         <td class="numeric" id="contribution.no.scheme.members">8</td>
@@ -88,8 +93,13 @@
             </table>
 
             <table class="content-table stack-table three-column">
-                <caption class="heading-small" id="schedule-header">Make contribution</caption>
+                <caption class="heading-small visually-hidden" id="schedule-header">Make contribution</caption>
                 <tbody>
+                    <thead>
+                        <tr>
+                            <th colspan="2"><span>Make contribution</span></th>
+                        </tr>
+                    </thead>
                     <tr>
                         <td id="contribution-month-title">What contribution month is this payment for?</td>
                         <td id="contribution-month-label">February 2017</td>
@@ -123,7 +133,12 @@
             </table>
 
             <table class="content-table stack-table two-column">
-                <caption class="heading-small" id="contact-details-heading-title">Your contact details</caption>
+                <caption class="heading-small visually-hidden" id="contact-details-heading-title">Your contact details</caption>
+                <thead>
+                    <tr>
+                        <th colspan="2"><span>Your contact details</span></th>
+                    </tr>
+                </thead>
                 <tbody>
                     <tr>
                         <td id="ea-code-field-description">Employing Authority (EA) code</td>
@@ -152,14 +167,10 @@
                 <h3 class="heading-medium" id="declaration-heading">I understand that:</h3>
                 <p id="declaration-text">The amount shown is correct and that deductions have been made from member salaries as per the NHS Pension Scheme Regulations.</p>
             </div>
-
-            <br>
             <div class="form-group">
                 <a id="submit" class="button" href="thank-you" role="button"><span class="get-cookie" data-cookie-name="summaryButtonText">Submit your contribution</a>
             </div>
-
         </div>
     </div>
-
 </main>
 {% endblock %}

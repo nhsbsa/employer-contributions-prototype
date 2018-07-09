@@ -90,6 +90,7 @@
           <div class="footer-meta-inner">
             {% block footer_support_links %}{% endblock %}
 
+            <!--
             <div class="bsa-footer-links">
                 <ul>
                 <li><a id="footer-lang-en" href="?lang=en">English</a></li>
@@ -105,6 +106,34 @@
                 </p>
               </div>
             </div>
+            -->
+
+            <h2 class="visuallyhidden">Support links</h2>
+            <ul>
+              <li><a href="https://www.nhsbsa.nhs.uk/our-policies/privacy" target="_blank">
+              Privacy policy and cookies</a></li>
+              <li><a href="https://www.nhsbsa.nhs.uk/our-policies/terms-and-conditions" target="_blank">
+              Terms and conditions</a></li>
+            </ul>
+            <p></p>
+            <ul>
+              <li>Built by the
+                <a href="http://www.nhsbsa.nhs.uk" target="_blank">NHS Business Services Authority</a>
+              </li>
+            </ul>
+            <p></p>
+            <div class="open-government-licence">
+              <p class="logo">
+                <a target="_blank" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">
+                  Open Government Licence</a>
+              </p>
+              <p>
+                All content is available under the
+                <a target="_blank" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">
+                  Open Government Licence v3.0</a>, except where otherwise stated
+              </p>
+            </div>
+
           </div>
         </div>
       </div>
@@ -115,7 +144,6 @@
     <script src="{{ asset_path }}javascripts/govuk-template.js"></script>
 
     {% block body_end %}{% endblock %}
-
 
     <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script>
   </body>

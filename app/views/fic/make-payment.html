@@ -22,13 +22,12 @@
                         <li><a id="schedule-error-list3" href="#understood">Please check the box if you understand</a></li>
                     </ul>
                 </div>
-
                 <h1 id="main-heading" class="heading-large">
                     <span class="heading-secondary">{{serviceName}}</span>
                     Make a payment
                 </h1>
 
-                {% include "includes/multiple-ea.html" %}
+                <!-- {% include "includes/multiple-ea.html" %} -->
 
                 <div class="form-group" id="schedule-group">
                     <fieldset>
@@ -40,7 +39,6 @@
                                 For example, May 2018
                             </span>
                         </label>
-                        
                         <div id="cont" class="form-date form-date-wide">
                             <div class="form-group-month">
                                 <label class="form-label" for="contribution-month">Month</label>
@@ -53,27 +51,25 @@
                         </div>
                     </fieldset>
                 </div>
-
                 <div class="form-group" id="payment-group">
                     <fieldset>
                         <legend id="submit-contribution-date-legend" tabindex="-1">
                             <span class="form-label-bold">What date do you want to submit your contributions?</span>
                         </legend>
                         <div class="multiple-choice" data-target="asap">
-                            <input id="as-soon-as-possible" type="radio" name="radio-inline-group" value="As soon as possible" />
+                            <input id="as-soon-as-possible" type="radio" name="radio-inline-group" value="Yes" />
                             <label for="as-soon-as-possible">As soon as possible</label>
                         </div>
                         <div class="panel panel-border-narrow js-hidden" id="asap">
                             <p>This will be the 1st April 2018</p>
                         </div>
-
                         <div class="multiple-choice" data-target="specify-date">
-                            <input id="specify-a-date" type="radio" name="radio-inline-group" value="As soon as possible" />
+                            <input id="specify-a-date" type="radio" name="radio-inline-group" value="No" />
                             <label for="specify-a-date">Specify a date</label>
                         </div>
                         <div class="panel panel-border-narrow js-hidden" id="specify-date">
                             <span class="form-hint" id="payment-day-month-year-hint1" >
-                                <span class="form-hint">For example, 17 March 2018</span>
+                                <span class="form-hint">Choose a date that is a working day.<br> For example, 17 March 2018</span>
                             </span>
                             <div class="form-date form-date-wide" id="payment-day-month-year-group">
                                 <div class="form-group-day">
@@ -92,7 +88,6 @@
                         </div>
                     </fieldset>
                 </div>
-
                 <div class="form-group demo-csv">
                     <fieldset>
                         <legend tabindex="-1">
@@ -108,7 +103,6 @@
                         </div>
                     </fieldset>
                 </div>
-
                 <div class="form-group staffgps">
                     <div class="form-group">
                         <fieldset class="inline">
@@ -124,8 +118,7 @@
                         </fieldset>
                     </div>
                 </div>
-
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <p>Payment will be taken by direct debit within 2 working days.</p>
                     <div class="notice">
                         <i class="icon icon-important">
@@ -136,7 +129,6 @@
                         </strong>
                     </div>
                 </div>
-
                 <div class="form-group">
                     <fieldset>
                         <legend class="visually-hidden" id="payment-notice-legend" tabindex="-1">Payment Notice</legend>
@@ -146,15 +138,13 @@
                             <label for="understand">I understand</label>
                         </div>
                     </fieldset>
-                </div>
-
+                </div> -->
                 <div class="form-item-wrapper">
                     <div class="form-group">
                         <a id="next-button" class="button" href="contributions-and-payment">Next</a>
                     </div>
                 </div>
             </form>
-
         </div>
     </div>
 </main>

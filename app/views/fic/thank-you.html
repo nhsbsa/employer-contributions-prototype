@@ -6,7 +6,7 @@
 <main id="content" role="main" tabindex="-1" class="add-log-out">
 
     {% include "includes/phase_banner.html" %}
-    {% include "includes/back_nav.html" %}
+    <!-- {% include "includes/back_nav.html" %} -->
     
     <div class="grid-row">
         <div class="column-two-thirds">
@@ -16,11 +16,13 @@
             </div>
 
             <table class="content-table stack-table two-column" style="margin-bottom: 20px;">
-                <caption class="heading-small" id="thank-you-payment-header">Payment details</caption>
+                <caption class="heading-small visually-hidden" id="thank-you-payment-header">Payment details</caption>
+                <thead>
+                    <tr>
+                        <th colspan="2"><span>Payment details</span></th>
+                    </tr>
+                </thead>
                 <tbody>
-                    <th colspan="2" id="contributions-header">
-                        <span id="contributions-for-key">Contributions for</span> <span class="get-cookie" data-cookie-name="payingMonth" id="paying.month">December</span> <span class="get-cookie" data-cookie-name="payingYear" id="paying.year">2017</span>
-                    </th>
                     <tr class="staffgps">
                         <td>Number of scheme members</td>
                         <td class="numeric">8</td>
@@ -57,7 +59,12 @@
             </table>
 
             <table class="content-table stack-table two-column"  style="margin-bottom: 20px;">
-                <caption class="heading-small" id="make-payment-header">Make payment</caption>
+                <caption class="heading-small visually-hidden" id="make-payment-header">Make payment</caption>
+                <thead>
+                    <tr>
+                        <th colspan="2"><span>Make payment</span></th>
+                    </tr>
+                </thead>
                 <tbody>
                     <tr>
                         <td id="payment-year-key">What month is this payment for?</td>
@@ -75,7 +82,12 @@
             </table>
             
             <table class="content-table stack-table two-column"  style="margin-bottom: 20px;">
-                <caption class="heading-small" id="contact-details-header">Your contact details</caption>
+                <caption class="heading-small visually-hidden" id="contact-details-header">Your contact details</caption>
+                <thead>
+                    <tr>
+                        <th colspan="2"><span>Your contact details</span></th>
+                    </tr>
+                </thead>
                 <tbody>
                     <tr>
                         <td id="ea-code-field-description">Employing Authority (EA) code</td>
@@ -99,12 +111,10 @@
                     </tr>
                 </tbody>
             </table>
-            <br>
             <div class="form-group">
                 <a id="finish" class="button" href="login" role="button">Finish and log out</a>
             </div>
         </div>
-
         <div class="column-one-third">
             <div class="nextoblue">
                 <ul class="list options-list">

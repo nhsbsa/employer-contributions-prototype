@@ -202,7 +202,7 @@ $(document).ready(function(){
 
                 if(loginEmail == 'ea'){
                     Cookies.set('ea', 'show');
-                    location.assign('multi-ea');
+                    location.assign('make-payment');
                     return false;
                 } else {
                     Cookies.remove('ea');
@@ -232,7 +232,7 @@ $(document).ready(function(){
                 if(loginEmail == 'employer_admin'){
                     Cookies.set('loggedInAs', 'employer_admin');
                     Cookies.set('summaryButtonText', 'Submit your contribution');
-                    // $formToValidated.attr('action', 'saved-contributions');
+                    // $formToValidated.attr('action', 'saved-contributions'); // standard-employer-create //
                 } else {
                     Cookies.remove('loggedInAs');
                 }
