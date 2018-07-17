@@ -373,5 +373,44 @@ module.exports = {
     //   res.render('fic/saved-contributions', { 'page_name': pageName })
     // })
 
+    app.get('/fic/administrate/employer-admin', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/administrate/employer-admin', { 'page_name': pageName })
+    })
+
+    app.get('/fic/administrate/admin-login', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/administrate/admin-login', { 'page_name': pageName })
+    })
+
+    app.get('/fic/administrate/accounts', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/administrate/accounts', { 'page_name': pageName })
+    })
+
+    app.get('/fic/administrate/confirm-delete', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/administrate/confirm-delete', { 'page_name': pageName })
+    })
+
+    app.get('/fic/administrate/delete-done', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/administrate/delete-done', { 'page_name': pageName })
+    })
+
+    app.get('/fic/administrate/change-account', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/administrate/change-account', { 'page_name': pageName })
+    })
+
+    app.get('/fic/administrate/add-account', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/administrate/add-account', { 'page_name': pageName })
+    })
+
+    app.get('/fic/administrate/add-done', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/administrate/add-done', { 'page_name': pageName })
+    })
   }
 }

@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Change account details - {{ super() }} - NHSBSA{% endblock %}
+
+{% block content%}
+<main id="content" role="main" tabindex="-1">
+
+    {% include "includes/phase_banner.html" %}
+    {% include "includes/back_nav.html" %}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <form id="change-account-form" class="form form-to-validate" action="accounts" autocomplete="off" method="get" novalidate="novalidate">
+                <div class="error-summary display-none" id="changeAccountErrorMessage" role="group" aria-labelledby="change-account-message-heading" tabindex="-1">
+                    <h1 class="heading-medium error-summary-heading" id="change-account-message-heading">
+                        Some questions have not been answered correctly:
+                    </h1>
+                    <p id="login-error-text">Please see the errors below.</p>
+                    <ul class="error-summary-list">
+                        <li><a href="#change-account" id="login-error-list1">The name and email combination are not valid</a></li>
+                    </ul>
+                </div>
+                <h1 id="main-heading" class="heading-large">
+                    <span class="heading-secondary">{{serviceName}}</span>
+                    Change account details
+                </h1>
+                <div id="change-account">
+                    <fieldset>
+                        <legend class="visuallyhidden" id="accounts-label" tabindex="-1">Change account details</legend>
+                        <div class="form-group">
+                            <label class="form-label-bold" for="first-name-2">Name:</label>
+                            <input class="form-control validate-text-input" id="first-name-2" name="first-name-2" type="text" value="Bill Smith" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label-bold" for="last-name-2">Email:</label>
+                            <input class="form-control validate-text-input" id="last-name-2" name="last-name-2" type="email" value="bill.smith@email.com" />
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="form-group">
+                    <input id="change-account-button" class="button" type="submit" value="Confirm" />
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+{% endblock %}

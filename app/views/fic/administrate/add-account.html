@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Add a new account - {{ super() }} - NHSBSA{% endblock %}
+
+{% block content%}
+<main id="content" role="main" tabindex="-1">
+
+    {% include "includes/phase_banner.html" %}
+    {% include "includes/back_nav.html" %}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <form id="add-account-form" class="form form-to-validate" action="add-done" autocomplete="off" method="get" novalidate="novalidate">
+                <div class="error-summary display-none" id="addAccountErrorMessage" role="group" aria-labelledby="add-account-message-heading" tabindex="-1">
+                    <h1 class="heading-medium error-summary-heading" id="add-account-message-heading">
+                        Some questions have not been answered correctly:
+                    </h1>
+                    <p id="login-error-text">Please see the errors below.</p>
+                    <ul class="error-summary-list">
+                        <li><a href="#add-account" id="login-error-list1">The name and email combination are not valid</a></li>
+                    </ul>
+                </div>
+                <h1 id="main-heading" class="heading-large">
+                    <span class="heading-secondary">{{serviceName}}</span>
+                    Add a new account
+                </h1>
+                <div id="add-account">
+                    <fieldset>
+                        <legend class="visuallyhidden" id="accounts-label" tabindex="-1">Add a new account</legend>
+                        <div class="form-group">
+                            <label class="form-label-bold" for="first-name-2">Name of user:</label>
+                            <input class="form-control validate-text-input" id="first-name-2" name="first-name-2" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label-bold" for="last-name-2">Email address of user:</label>
+                            <input class="form-control validate-text-input" id="last-name-2" name="last-name-2" type="email" />
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="form-group">
+                    <!-- <a id="button" class="button" href="add-done">Confirm</a> -->
+                    <input id="add-account-button" class="button" type="submit" value="Confirm" />
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+{% endblock %}

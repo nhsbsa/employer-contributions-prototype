@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Manage accounts - {{ super() }} - NHSBSA{% endblock %}
+
+{% block content%}
+<main id="content" role="main" tabindex="-1">
+
+    {% include "includes/phase_banner.html" %}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h1 class="heading-large">
+                <span class="heading-secondary">{{serviceName}}</span>
+                Manage accounts
+            </h1>
+            <div class="form-group">
+                <p>This is a service for NHS Employers to make changes to their accounts.</p>
+                <p>Use this service to:</p>
+                <ul class="list list-bullet">
+                    <li id="manage-accounts-list1">add accounts</li>
+                    <li id="manage-accounts-list2">rename accounts</li>
+                    <li id="manage-accounts-list3">delete accounts</li>
+                </ul>
+                <p>You can also <a href="../start">make payments to employer pensions</a>.</p>
+            </div>
+            <div class="form-group">
+                <a id="button-start" class="button button-start" href="admin-login">Start</a>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

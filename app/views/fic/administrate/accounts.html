@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Accounts - {{ super() }} - NHSBSA{% endblock %}
+
+{% block content%}
+<main id="content" role="main" tabindex="-1">
+
+    {% include "includes/phase_banner.html" %}
+    {% include "includes/back_nav.html" %}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <form id="accounts-form" class="form form-to-validate" action="add-account" autocomplete="off" method="get" novalidate="novalidate">
+                <h1 id="main-heading" class="heading-large">
+                    <span class="heading-secondary">{{serviceName}}</span>
+                    Accounts
+                </h1>
+                <div class="form-group">
+                    <fieldset>
+                        <legend class="visuallyhidden" id="accounts-label" tabindex="-1">Accounts</legend>
+                        <div class="form-group">
+                            <table>
+                                <caption class="visually-hidden">Dates and amounts</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Email address</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td scope="row">Sam Jones</td>
+                                        <td>sam.jones@email.com</td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                        <td scope="row">Bill Smith</td>
+                                        <td>bill.smith@email.com</td>
+                                        <td class="numeric"><a href="change-account">change</a></td>
+                                        <td class="numeric"><a href="confirm-delete">delete</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Sally Smith</td>
+                                        <td>sally.smith@email.com</td>
+                                        <td class="numeric"><a href="change-account">change</a></td>
+                                        <td class="numeric"><a href="confirm-delete">delete</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="form-group">
+                    <a id="button" class="button" href="add-account">Add</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+{% endblock %}

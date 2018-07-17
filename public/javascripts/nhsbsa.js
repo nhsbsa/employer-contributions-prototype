@@ -199,7 +199,6 @@ $(document).ready(function(){
 
                 Cookies.set('payingMonth', 'February');
 
-
                 if(loginEmail == 'ea'){
                     Cookies.set('ea', 'show');
                     location.assign('make-payment');
@@ -244,6 +243,25 @@ $(document).ready(function(){
                 submitFormIfValid();
             }
 
+            else if ($formToValidated.attr('id') == 'confirm-delete-form') {
+                var deleteAccount = document.querySelector('input[name="radio-group"]:checked');
+                var deleteAccountVal;
+
+                if (deleteAccount) {
+                    deleteAccountVal = deleteAccount.value;
+                }
+
+                if (deleteAccountVal == 'Yes') {
+                    location.assign('delete-done');
+                    return false;
+                }
+                if (deleteAccountVal == 'No') {
+                    location.assign('accounts');
+                    return false;
+                }
+
+                submitFormIfValid();
+            }
 
             else if ($formToValidated.attr('id') == 'make-payment-form'){
 

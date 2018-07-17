@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Administrator sign in - {{ super() }} - NHSBSA{% endblock %}
+
+{% block content%}
+<main id="content" role="main" tabindex="-1">
+
+    {% include "includes/phase_banner.html" %}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <form id="admin-login-form" class="form form-to-validate" action="accounts" autocomplete="off" method="get" novalidate="novalidate">
+                <div class="error-summary display-none" id="adminLoginErrorMessage" role="group" aria-labelledby="admin-login-message-heading" tabindex="-1">
+                    <h1 class="heading-medium error-summary-heading" id="admin-login-message-heading">
+                        Some questions have not been answered correctly:
+                    </h1>
+                    <p id="login-error-text">Please see the errors below.</p>
+                    <ul class="error-summary-list">
+                        <li><a href="#username-label" id="login-error-list1">The username and password combination are not valid</a></li>
+                    </ul>
+                </div>
+                <h1 id="main-heading" class="heading-large">
+                    <span class="heading-secondary">{{serviceName}}</span>
+                    Administrator sign in
+                </h1>
+                <div>
+                    <fieldset>
+                        <legend class="visuallyhidden" id="admin-login-label" tabindex="-1">Administrator sign in</legend>
+                        <div class="form-group" id="admin-login-username">
+                            <label class="form-label-bold" for="username" id="admin-login-username-label">
+                                <span class="form-label-bold">Username</span>
+                                <span class="error-message display-none" id="error-message-username">Enter your username</span>
+                            </label>
+                            <input type="text" id="admin-username" class="form-control validate-text-input" name="username" autocomplete="off" aria-required="true" required />
+                        </div>
+                        <div class="form-group" id="admin-login-password">
+                            <label for="password" id="admin-login-password-label">
+                                <span class="form-label-bold">Password</span>
+                                <span class="error-message display-none" id="error-message-password">Enter your password</span>
+                            </label>
+                            <input type="password" id="admin-password" class="form-control validate-text-input" name="password" autocomplete="off" aria-required="true" required />
+                        </div>
+                    </fieldset>
+                </div>
+                <div id="admin-login-submit-button" class="form-group">
+                    <input id="admin-login-button" class="button" type="submit" value="Sign in" />
+                </div>
+                <p class="navigation">
+                    <a id="admin-forgotten-password-link" href="../forgot-password">Forgotten your password?</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</main>
+{% endblock %}

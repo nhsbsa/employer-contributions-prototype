@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Account deleted - {{ super() }} - NHSBSA{% endblock %}
+
+{% block content%}
+
+<style>
+.done-panel {
+    background-color: #005EB8;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    margin: 30px 0;
+}
+
+.done-panel h1 {
+    padding-top: 0;
+    margin: 0;
+}
+</style>
+
+<main id="content" role="main" tabindex="-1">
+
+    {% include "includes/phase_banner.html" %}
+    {% include "includes/back_nav.html" %}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <div class="form-group">
+                <div class="done-panel">
+                    <h1 class="heading-large">
+                        Account deleted
+                    </h1>
+                </div>
+                <h2 class="heading-large">Bill’s account was successfully deleted.</h2>
+                <div class="form-group">
+                    <a id="button" class="button" href="accounts">Continue</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
