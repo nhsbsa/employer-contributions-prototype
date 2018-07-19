@@ -29,8 +29,11 @@ $(document).ready(function(){
         $('.phase-banner').append($('<a href="login" class="log-out-link">Search again</a>'));
     }
 
-    if($('.add-log-out').length > 0){
+    if($('.add-log-out').length > 0 && !document.location.href.includes("administrate")){
         $('.service-header').prepend($('<a href="login" class="log-out-link" id="logout-link">Logout</a>'));
+    }
+    if ($('.add-log-out').length > 0 && document.location.href.includes("administrate")){
+        $('.service-header').prepend($('<a href="admin-login" class="log-out-link" id="logout-link">Logout</a>'));
     }
 
     var $errorLayer = $('.form-group'),
