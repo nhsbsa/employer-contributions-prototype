@@ -195,35 +195,39 @@ $(document).ready(function(){
             //     }
             // }
 
-            else if ($formToValidated.attr('id') == 'login-form'){
+            else if ($formToValidated.attr('id') == 'login-form') {
 
                 // change location based on input
                 var loginEmail = $('#username', $formToValidated).val();
 
                 Cookies.set('payingMonth', 'February');
 
-                if(loginEmail == 'ea'){
+                if (loginEmail == 'ea') {
                     Cookies.set('ea', 'show');
-                    location.assign('make-payment');
+                    location.assign('multi-ea');
                     return false;
                 } else {
                     Cookies.remove('ea');
                 }
 
-                if(loginEmail == 'gp'){
+                if (loginEmail == 'gp') {
                     Cookies.set('staffgps', 'show');
                 } else {
                     Cookies.remove('staffgps');
                 }
 
-                if(loginEmail == 'csv'){
+                if (loginEmail == 'csv') {
                     Cookies.set('csv', 'show');
                 } else {
                     Cookies.remove('csv');
                 }
 
+                if (loginEmail == 'new') {
+                    $formToValidated.attr('action', 'new-password');
+                }
+
                 // BSA Admins can create employers
-                if(loginEmail == 'bsa_admin'){
+                if (loginEmail == 'bsa_admin') {
                     Cookies.set('loggedInAs', 'bsa_admin');
                     $formToValidated.attr('action', 'admin-employer-create');
                 } else {
@@ -231,16 +235,12 @@ $(document).ready(function(){
                 }
 
                 // Employers can create employees
-                if(loginEmail == 'employer_admin'){
+                if (loginEmail == 'employer_admin') {
                     Cookies.set('loggedInAs', 'employer_admin');
                     Cookies.set('summaryButtonText', 'Submit your contribution');
                     // $formToValidated.attr('action', 'saved-contributions'); // standard-employer-create //
                 } else {
                     Cookies.remove('loggedInAs');
-                }
-
-                if(loginEmail == 'new'){
-                    $formToValidated.attr('action', 'new-password');
                 }
 
                 submitFormIfValid();
@@ -582,6 +582,22 @@ $(document).ready(function(){
             } else {
                 // do cookie exists stuff
                 window.location.href = "thank-you2";
+            }
+            
+            return false;
+        });
+    }
+
+    if (document.location.href.includes("/fic/thank-you2", true)) {
+        $('#finish').click( function(e) {
+            e.preventDefault();
+            var myCookie = getCookie("ea");
+            if (myCookie == null) {
+                // do cookie doesn't exist stuff;
+                window.location.href = "login";
+            } else {
+                // do cookie exists stuff
+                window.location.href = "multi-ea";
             }
             
             return false;

@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Choosing the Employing Authority you want to make a submission for - {{ super() }} - NHSBSA{% endblock %}
+{% block page_title %}Choose an EA account to make a payment to - {{ super() }} - NHSBSA{% endblock %}
 
 {% block content%}
 <main id="content" role="main" tabindex="-1" class="add-log-out">
@@ -12,61 +12,32 @@
         <div class="column-two-thirds">
             <h1 id="main-heading" class="heading-large">
                 <span class="heading-secondary">{{serviceName}}</span>
-                Choose the Employing Authority you want to make a submission for
+                Choose an EA account to make a payment to
             </h1>
-        </div>
-
-        <div class="column-full">
-            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="data-table stack-table wide-table hoverable-table">
-                <tbody>
-                    <tr class="hoverable">
-                        <td><a href="make-payment" class="set-cookie" data-cookie-value="EA5955" data-cookie-name="eaCode">EA5955</a></td>
-                        <td>NHS Fleetwood</td>
-                        <td class="centered-item"><strong class="phase-tag">COMPLETED</strong></td>
-                    </tr>
-                    <tr class="hoverable">
-                        <td><a href="make-payment" class="set-cookie" data-cookie-value="EA2331" data-cookie-name="eaCode">EA2331</a></td>
-                        <td>NHS Newcastle</td>
-                        <td class="centered-item">
-                            <!-- <span class="service-status submitted">submitted</span> -->
-                        </td>
-                    </tr>
-                    <tr class="hoverable">
-                        <td><a href="make-payment" class="set-cookie" data-cookie-value="EA4411" data-cookie-name="eaCode">EA4411</a></td>
-                        <td>NHS Blackpool</td>
-                        <td class="centered-item">
-                            <!-- <span class="service-status submitted">submitted</span> -->
-                        </td>
-                        <!-- <td><a href="make-payment" class="set-cookie" data-cookie-value="EA4411" data-cookie-name="eaCode">Edit</a></td> -->
-                    </tr>
-                </tbody>
-            </table>
+            <div class="form-group">
+                <fieldset>
+                    <legend class="visuallyhidden" id="pick-ea-label" tabindex="-1">Choose an EA account to make a payment to</legend>
+                    <div class="form-group">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><a href="make-payment" class="set-cookie" data-cookie-value="EA1000" data-cookie-name="eaCode">EA1000 - NHS Blackpool</a></td>
+                                    <td class="numeric"><strong class="phase-tag">SUBMITTED</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="make-payment" class="set-cookie" data-cookie-value="EA2000" data-cookie-name="eaCode">EA2000 - NHS Fleetwood</a></td>
+                                    <td>&nbsp;</td>                                      
+                                </tr>
+                                <tr>
+                                    <td><a href="make-payment" class="set-cookie" data-cookie-value="EA3000" data-cookie-name="eaCode">EA3000 - NHS Newcastle</a></td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </fieldset>
+            </div>
         </div>
     </div>
-    <style>
-    .phase-tag {
-        /* display: -moz-inline-stack; */
-        display: inline-block;
-        margin: 0 8px 0 0;
-        padding: 2px 5px 0;
-        font-family: Arial, sans-serif;
-        font-weight: 700;
-        /* text-transform: none;
-        font-size: 14px;
-        line-height: 1.1428571429; */
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        text-decoration: none;
-        color: #fff;
-        background-color: #005ea5;
-    }
-
-    @media (min-width: 641px) {
-        .phase-tag {
-            font-size: 16px;
-            line-height: 1.25;
-        }
-    }
-    </style>
 </main>
 {% endblock %}
