@@ -204,6 +204,7 @@ $(document).ready(function(){
 
                 if (loginEmail == 'ea') {
                     Cookies.set('ea', 'show');
+                    Cookies.set('for', 'for ');
                     location.assign('multi-ea');
                     return false;
                 } else {
@@ -583,7 +584,7 @@ $(document).ready(function(){
                 // do cookie exists stuff
                 window.location.href = "thank-you2";
             }
-            
+
             return false;
         });
     }
@@ -592,14 +593,15 @@ $(document).ready(function(){
         $('#finish').click( function(e) {
             e.preventDefault();
             var myCookie = getCookie("ea");
-            if (myCookie == null) {
+
+            if (myCookie != null) {
+                Cookies.remove('eaCode');
+                Cookies.remove('for');
+    
                 // do cookie doesn't exist stuff;
                 window.location.href = "login";
-            } else {
-                // do cookie exists stuff
-                window.location.href = "multi-ea";
             }
-            
+
             return false;
         });
     }
