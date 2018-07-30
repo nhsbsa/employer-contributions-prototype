@@ -303,6 +303,11 @@ module.exports = {
       res.render('fic/password-saved', { 'page_name': pageName })
     })
 
+    app.get('/fic/permission', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/permission', { 'page_name': pageName })
+    })
+
     app.get('/fic/previous-payments', function (req, res) {
       var pageName = 'FIC'
       res.render('fic/previous-payments', { 'page_name': pageName })

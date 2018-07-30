@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block page_title %}You don't have permission to view this page - {{ super() }} - NHSBSA{% endblock %}
+
+{% block content%}
+<main id="content" role="main" tabindex="-1">
+    
+    {% include "includes/phase_banner.html" %}
+    {% include "includes/back_nav.html" %}
+    
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h1 id="main-heading" class="heading-large">
+                <span class="heading-secondary">{{serviceName}}</span>
+                You don't have permission to view this page
+            </h1>
+            <div class="text">
+                <p id="not-found-text">You can't view this page. If you think you should be able to, contact the administrator to request permission.</p>
+            </div>
+        </div>
+    </div>
+
+</main>
+{% endblock %}
