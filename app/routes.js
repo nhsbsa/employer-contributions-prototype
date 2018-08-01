@@ -417,5 +417,15 @@ module.exports = {
       var pageName = 'FIC'
       res.render('fic/administrate/add-done', { 'page_name': pageName })
     })
+    
+    app.get('/fic/google-form/pension-enquiry-service', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/google-form/pension-enquiry-service', { 'page_name': pageName })
+    })
+    
+    app.get('/fic/google-form/pension-enquiry-service1', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/google-form/pension-enquiry-service1', { 'page_name': pageName })
+    })
   }
 }
