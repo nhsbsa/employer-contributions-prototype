@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Pensions Enquiry Service - NHSBSA</title>
+    <title>Claim your NHS Pension - NHSBSA</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -28,7 +28,6 @@
     <link href="/public/stylesheets/vendor/prism.css" media="screen" rel="stylesheet">
     <!--[if gt IE 8]><!--><script src="/public/javascripts/vendor/prism.js"></script><!--<![endif]-->
 </head>
-
 <body class="nhs-bsa">
     <!-- header -->
     <div id="skiplink-container">
@@ -48,7 +47,6 @@
             </div>
         </div>
     </header>
-
     <main id="content">
         <!-- phase_banner -->
         <!-- <div class="phase-banner">
@@ -57,38 +55,126 @@
                 <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
             </p>
         </div> -->
+        <div class="grid-row">
+            <div class="column-full">
+                <div class="service-header">
+                    <nav class="back-nav" role="navigation" aria-label="Back to previous page">
+                        <a class="link-back" href="javascript:history.go(-1)" id="back-link">Back</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
 
         <div class="grid-row">
             <div class="column-two-thirds">
-                <form>
-                    <h1 class="heading-large">
-                        Pensions Enquiry Service
-                    </h1>
-                    <div class="form-group">
-                        <p>Use this service to:</p>
-                        <ul class="list list-bullet">
-                            <li>find information regarding NHS pensions</li>
-                            <li>submit a enquiry form to NHS pensions </li>
-                        </ul>
-                        <h2 class="heading-small">Before you start</h2>
-                        <p>You can not use this service if you are not a NHS member</p>
-                        <p>This service only covers enquires on the following areas:</p>
-                        <ul class="list list-bullet">
-                            <li>retirement pensions</li>
-                            <li>estimates of pensions</li>
-                            <li>transfers of pensions</li>
-                            <li>pensions on divorce and dissolution</li>
-                            <li>annual allowance</li>
-                            <li>refund of pension benefits</li>
-                            <li>bereavement</li>
-                            <li>additional benefit</li>
-                            <li>nominations, allocations and beneficiaries</li>
-                        </ul>
-                    </div>
-                    <div class="form-group">
-                        <a class="button button-start" href="pension-enquiry-service1" role="button">Continue</a>
-                    </div>
-                </form>
+                <h1 class="heading-large">
+                    Pensions Enquiry Service
+                </h1>
+
+                <div class="container">
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSeE369ZzffobBRkfE8ctGFgOXj2dyJFR32n56hm28OriRaNyw/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
+                        <!-- q1 -->
+                        <div class="form-group">
+                            <h2 class="heading-small">How can we help you?</h2>
+                            <label class="form-label" for="select-box" aria-label="(Required field)">Choose the area your enquiry relates to</label>
+                            <select name="entry.1157748641" id="entry_1157748641" class="form-control" aria-label="Choose the area your enquiry relates to   " aria-required="true" required="" style="width: auto;" >
+                                <option disabled selected hidden></option>
+                                <option name="entry.1157748641" value="val-1">Retirement pension/benefits</option>
+                                <option name="entry.1157748641" value="val-2">Estimate of pension benefits</option>
+                                <option name="entry.1157748641" value="val-3">Transfer of pensions benefits into NHS pensions</option>
+                                <option name="entry.1157748641" value="val-4">Transfer of pensions benefits out of NHS pensions</option>
+                                <option name="entry.1157748641" value="val-5">Pensions on divorce or dissolution</option>
+                                <option name="entry.1157748641" value="val-6">Annual allowance</option>
+                                <option name="entry.1157748641" value="val-7">Refund of pension benefits</option>
+                                <option name="entry.1157748641" value="val-8">Bereavement</option>
+                                <option name="entry.1157748641" value="val-9">Additional benefit</option>
+                                <option name="entry.1157748641" value="val-10">Nominations and beneficiaries</option>
+                            </select>
+                        </div>
+                        <!-- end of q1 -->
+
+                        <!-- q2 -->
+                        <div id="ask-us" class="form-group visually-hidden">
+                            <h2 class="heading-small">Have you already looked on Ask Us?</h2>
+                            <span class="form-hint"></span>
+                            <div class="multiple-choice">
+                                <input id="asked-us" name="entry.1817139127" type="checkbox" value="Yes" />
+                                <label for="asked-us">Yes, I have already looked on Ask Us and still need help</label>
+                            </div>
+                        </div>
+                        <!-- end of q2 -->
+
+                        <!-- q3 -->
+                        <div id="make-enquiry" class="form-group visually-hidden">
+                            <h2 class="heading-small">Make Your Enquiry</h2>
+                            <div class="form-group">
+                                <label class="form-label" for="full-name" aria-label="(Required field)">
+                                    Full Name
+                                    <span class="form-hint">
+                                        As shown on your birth certificate or passport
+                                    </span>
+                                </label>
+                                <input class="form-control" id="full-name" name="entry.1951834264" type="text" aria-label="Full Name As shown on your birth certificate or passport " aria-required="true" />
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="ni-number" aria-label="(Required field)">
+                                    National Insurance Number
+                                    <span class="form-hint">
+                                        It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’
+                                    </span>
+                                </label>
+                                <input class="form-control" id="ni-number" name="entry.1549295603" type="text" aria-label=" National Insurance Number It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’. Your National Insurance Number must be 9 characters" aria-required="true" />
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="sd-number">
+                                    SD Number (optional)
+                                    <span class="form-hint">
+                                        Your SD number can be found on your NHS Total Reward Statement, or any personal correspondence we have issued to you
+                                    </span>
+                                </label>
+                                <input class="form-control" id="sd-number" name="entry.1822495167" type="text" aria-label="SD Number (optional) Your SD number can be found on your NHS Total Reward Statement, or any personal correspondence we have issued to you " />
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email-address" aria-label="(Required field)">
+                                    Email Address
+                                    <span class="form-hint">
+                                        We’ll only use this to send you a receipt and enquiry response
+                                    </span>
+                                </label>
+                                <input class="form-control" id="email-address" name="entry.1659107240" type="text" aria-label="Email Address We’ll only use this to send you a receipt and enquiry response  Must be a valid email address" aria-required="true" />
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="choose" aria-label="(Required field)">
+                                    Choose the area your enquiry relates to
+                                </label>
+                                <select name="entry.1657236108" class="form-control" id="choose" aria-label="Choose the area your enquiry relates to   " aria-required="true" style="width: auto;">
+                                    <option disabled selected hidden></option>
+                                    <option name="entry.1657236108" value="val-1">Retirement pension/benefits</option>
+                                    <option name="entry.1657236108" value="val-2">Estimate of pension benefits</option>
+                                    <option name="entry.1657236108" value="val-3">Transfer of pensions benefits into NHS pensions</option>
+                                    <option name="entry.1657236108" value="val-4">Transfer of pensions benefits out of NHS pensions</option>
+                                    <option name="entry.1657236108" value="val-5">Pensions on divorce or dissolution</option>
+                                    <option name="entry.1657236108" value="val-6">Annual allowance</option>
+                                    <option name="entry.1657236108" value="val-7">Refund of pension benefits</option>
+                                    <option name="entry.1657236108" value="val-8">Bereavement</option>
+                                    <option name="entry.1657236108" value="val-9">Additional benefit</option>
+                                    <option name="entry.1657236108" value="val-10">Nominations and beneficiaries</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="explain" aria-label="(Required field)">
+                                    Please explain your enquiry
+                                </label>
+                                <textarea class="form-control" id="explain" name="entry.29068935" cols="0" rows="8" aria-label="Please explain your enquiry   " aria-required="true"></textarea>
+                            </div>
+                        </div>
+                        <!-- end of q3 -->
+
+                        <div class="form-group">
+                            <input class="button" type="submit" value="Submit" disabled="disabled" />
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </main>
@@ -141,5 +227,71 @@
     <script src="/public/javascripts/govuk/details.polyfill.js"></script>
     <script src="/public/javascripts/application.js"></script>
 
+    <script>
+        var select = document.getElementById("entry_1157748641");
+        var askUs = $("#ask-us");
+        var isChecked = document.getElementById("asked-us");
+        var makeEnq = $("#make-enquiry");
+        var submitButton = $(".button");
+
+        select.addEventListener('change', function() {
+            var selectedVal = select.options[select.selectedIndex].value;
+            var formHint = document.querySelector("#ask-us .form-hint");
+
+            // check if an option of the select tag is selected //
+            if (selectedVal !== "") {
+                // display link for selected option //
+                if (selectedVal === "val-1") {
+                    formHint.innerHTML = 'For all general enquires relating to your retirement pension and benefit please visit our Ask Us service which should be able to quickly answer your query: ' +
+                                         '<a href="https://www.google.com/url?q=https://bit.ly/2JLzsgX&amp;sa=D&amp;ust=1533025864334000&amp;usg=AFQjCNE2enIOZx41gzfE1KDvoMULvCCe0g">https://bit.ly/2JLzsgX</a>';
+                } else if (selectedVal === "val-2") {
+                    formHint.innerHTML = 'For information regarding estimation of your NHS Pension benefits;' + `<br><br>` + `Please visit the dedicated Ask Us page: ` +
+                                         '<a href="https://www.google.com/url?q=https://bit.ly/2NEnbgx&amp;sa=D&amp;ust=1533025889071000&amp;usg=AFQjCNFT8HKBg6OnppleWIHaWC3qHIm7Hw">https://bit.ly/2NEnbgx</a>';
+                } else if (selectedVal === "val-3") {
+                    formHint.innerHTML = `To get information regarding transferring your pension benefits into NHS Pensions;` + `<br><br>` + `Please visit the dedicated Ask Us page: ` +
+                                         '<a href="https://www.google.com/url?q=https://bit.ly/2AbCyvh&amp;sa=D&amp;ust=1533025906903000&amp;usg=AFQjCNFAXV4DipRm6EX7Rb3Gl9tzHh0UNA">https://bit.ly/2AbCyvh</a>';
+                } else if (selectedVal === "val-4") {
+                    formHint.innerHTML = `For information regarding transferring your pension benefits out of NHS Pensions;` + `<br><br>` + `Please visit the dedicated Ask Us page: ` +
+                                         '<a href="https://www.google.com/url?q=https://bit.ly/2JIGSl3&amp;sa=D&amp;ust=1533025921690000&amp;usg=AFQjCNEo9j9zezIYGAHxw6YMQ-_kg53JDg">https://bit.ly/2JIGSl3</a>';
+                } else if (selectedVal === "val-5") {
+                    formHint.innerHTML = `For information regarding your NHS pension in relation to divorce or dissolution;` + `<br><br>` + `Please visit the dedicated Ask Us page: ` +
+                                         '<a href="https://www.google.com/url?q=https://bit.ly/2uWZ7hk&amp;sa=D&amp;ust=1533025938549000&amp;usg=AFQjCNGL2acI2BBbC2O1B17MybjLkkey6w">https://bit.ly/2uWZ7hk</a>';
+                } else if (selectedVal === "val-6") {
+                    formHint.innerHTML = `For information regarding annual allowance;` + `<br><br>` + `Please visit the dedicated Ask Us page: ` +
+                                         '<a href="https://www.google.com/url?q=https://bit.ly/2Lq4AYj&amp;sa=D&amp;ust=1533025953412000&amp;usg=AFQjCNG6FrfUog0bxbzo3vw-IGAqVOSgFw">https://bit.ly/2Lq4AYj</a>';
+                } else if (selectedVal === "val-7") {
+                    formHint.innerHTML = `For information regarding refunds of NHS pension benefits;` + `<br><br>` + `Please visit the dedicated Ask Us page: ` +
+                                         '<a href="https://www.google.com/url?q=https://bit.ly/2A2wqoQ&amp;sa=D&amp;ust=1533025968462000&amp;usg=AFQjCNHUfMS32MShvJ0mu18UrezireJPXg">https://bit.ly/2A2wqoQ</a>';
+                } else if (selectedVal === "val-8") {
+                    formHint.innerHTML = `For information regarding a bereaved scheme member;` + `<br><br>` + `Please visit the dedicated Ask Us page: ` +
+                                         '<a href="https://www.google.com/url?q=https://bit.ly/2Lgp85X&amp;sa=D&amp;ust=1533025986509000&amp;usg=AFQjCNHcYPJiv5Wbji1FLzdeQNGx4T9d8A">https://bit.ly/2Lgp85X</a>';
+                } else if (selectedVal === "val-9") {
+                    formHint.innerHTML = `To apply for additional pension:` + `<br><br>` + `Please visit: ` +
+                                         '<a href="https://www.google.com/url?q=https://bit.ly/2NySeKL&amp;sa=D&amp;ust=1533027642129000&amp;usg=AFQjCNFXyoVcdPAosj4Rtc6ngWsuUR8iow">https://bit.ly/2NySeKL</a>' +
+                                         `<br><br>` + `Other enquires in relation to additional pension;` + `<br><br>` + `Please visit the dedicated Ask Us page: ` +
+                                         '<a href="https://www.google.com/url?q=https://bit.ly/2uVt3Kx&amp;sa=D&amp;ust=1533027642129000&amp;usg=AFQjCNFkblfbQEzGq3oE3REp4ifevW-sVQ">https://bit.ly/2uVt3Kx</a>';
+                } else if (selectedVal === "val-10") {
+                    formHint.innerHTML = `For information regarding nomination/allocations and beneficiaries;` + `<br><br>` + `Please visit Ask Us: ` +
+                                         '<a href="https://www.google.com/url?q=https://bit.ly/2A2IHJP&amp;sa=D&amp;ust=1533027815459000&amp;usg=AFQjCNFKdkJPSXarSs5MVl4e9IGniogDFw">https://bit.ly/2A2IHJP</a>';
+                }
+
+                askUs.removeClass("visually-hidden");
+                isChecked.checked = false;
+                makeEnq.addClass("visually-hidden");
+                submitButton.attr("disabled", "disabled");
+            } else {
+                return;
+            }
+        });
+
+        isChecked.addEventListener('change', function() {
+            if (isChecked.checked == true) {
+                makeEnq.removeClass("visually-hidden");
+            } else {
+                makeEnq.addClass("visually-hidden");
+            }
+            submitButton.removeAttr("disabled");
+        });
+    </script>
 </body>
 </html>
