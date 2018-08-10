@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Accounts - {{ super() }} - NHSBSA{% endblock %}
+{% block page_title %}Current users - {{ super() }} - NHSBSA{% endblock %}
 
 {% block content%}
 <main id="content" role="main" tabindex="-1" class="add-log-out">
@@ -13,11 +13,11 @@
             <form id="accounts-form" class="form form-to-validate" action="add-account" autocomplete="off" method="get" novalidate="novalidate">
                 <h1 id="main-heading" class="heading-large">
                     <span class="heading-secondary">{{serviceName}}</span>
-                    Accounts
+                    Current users
                 </h1>
                 <div class="form-group">
                     <fieldset>
-                        <legend class="visuallyhidden" id="accounts-label" tabindex="-1">Accounts</legend>
+                        <legend class="visuallyhidden" id="accounts-label" tabindex="-1">Current users</legend>
                         <div class="form-group">
                             <table>
                                 <caption class="visually-hidden">Dates and amounts</caption>
