@@ -427,5 +427,10 @@ module.exports = {
       var pageName = 'FIC'
       res.render('fic/google-form/pension-enquiry-service', { 'page_name': pageName })
     })
+
+    app.get('/fic/500-server-error', function (req, res) {
+      var pageName = 'FIC'
+      res.render('fic/500-server-error', { 'page_name': pageName })
+    })
   }
 }
