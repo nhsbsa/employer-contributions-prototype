@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Submit contribution - {{ super() }} - NHSBSA{% endblock %}
+
+{% block content%}
+<main id="content" role="main" tabindex="-1">
+    
+    {% include "includes/phase_banner.html" %}
+    {% include "includes/back_nav.html" %}
+
+    <div class="grid-row">
+        <div class="column-full">
+            <div class="heading-group">
+                <h1 class="heading-large">Submit a new contribution</h1>
+            </div>
+            <div class="form-group">
+                <p>The February 2017 submission needs to reach us by 16 March 2017.</p>
+                <a href="make-payment" class="button set-cookie" data-cookie-value="February" data-cookie-name="payingMonth">Submit contribution</a>
+            </div>
+            <h2 class="heading-large">Previous contributions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Submitted by</th>
+                        <th>Amount contributed<br>(excluding any adjustments made)</th>
+                        <th>Date submitted</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="already-paid" class="set-cookie" data-cookie-value="January" data-cookie-name="payingMonth">January 2017</a></td>
+                        <td>Alison Moore</td>
+                        <td>£30,262.56</td>
+                        <td>15 February 2016</td>
+                    </tr>
+                    <tr>
+                        <td><a href="already-paid" class="set-cookie" data-cookie-value="December" data-cookie-name="payingMonth">December 2016</a></td>
+                        <td>Mathew Brown</td>
+                        <td>£62,188.41</td>
+                        <td>21 January 2016</td>
+                    </tr>
+                    <tr>
+                        <td><a href="already-paid" class="set-cookie" data-cookie-value="November" data-cookie-name="payingMonth">November 2016</a></td>
+                        <td>Alison Moore</td>
+                        <td>£48,882.60</td>
+                        <td>17 December 2016</td>
+                    </tr>
+                    <tr>
+                        <td><a href="already-paid" class="set-cookie" data-cookie-value="October" data-cookie-name="payingMonth">October 2016</a></td>
+                        <td>Alison Moore</td>
+                        <td>£53,201.01</td>
+                        <td>14 November 2016</td>
+                    </tr>
+                    <tr>
+                        <td><a href="already-paid" class="set-cookie" data-cookie-value="September" data-cookie-name="payingMonth">September 2016</a></td>
+                        <td>Alison Moore</td>
+                        <td>£64,011.56</td>
+                        <td>17 October 2016</td>
+                    </tr>
+                    <tr>
+                        <td><a href="already-paid" class="set-cookie" data-cookie-value="August" data-cookie-name="payingMonth">August 2016</a></td>
+                        <td>Alison Moore</td>
+                        <td>£94,011.07</td>
+                        <td>16 September 2016</td>
+                    </tr>
+                    <tr>
+                        <td><a href="already-paid" class="set-cookie" data-cookie-value="July" data-cookie-name="payingMonth">July 2016</a></td>
+                        <td>Alison Moore</td>
+                        <td>£94,011.07</td>
+                        <td>16 August 2016</td>
+                    </tr>
+                    <tr>
+                        <td><a href="already-paid" class="set-cookie" data-cookie-value="June" data-cookie-name="payingMonth">June 2016</a></td>
+                        <td>Alison Moore</td>
+                        <td>£94,011.07</td>
+                        <td>16 July 2016</td>
+                    </tr>
+                    <tr>
+                        <td><a href="already-paid" class="set-cookie" data-cookie-value="May" data-cookie-name="payingMonth">May 2016</a></td>
+                        <td>Alison Moore</td>
+                        <td>£48,882.60</td>
+                        <td>16 June 2016</td>
+                    </tr>
+                    <tr>
+                        <td><a href="already-paid" class="set-cookie" data-cookie-value="April" data-cookie-name="payingMonth">April 2016</a></td>
+                        <td>Alison Moore</td>
+                        <td>£7,201.31</td>
+                        <td>11 May 2016</td>
+                    </tr>
+                    <tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+{% endblock %}
