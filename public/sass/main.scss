@@ -190,7 +190,6 @@ table.content-table.stack-table.three-column {
 	}
 	tr {
 		border-bottom: 1px solid #bfc1c3;
-
 		&:last-of-type {
 			border-bottom: none;
 		}
@@ -209,9 +208,6 @@ table.content-table.stack-table.three-column {
 	#previous-payments {
 		thead {
 			display: table-header-group;
-		}
-		tr {
-			border-bottom: 1px solid #bfc1c3;
 		}
 		td {
 			display: table-cell;
