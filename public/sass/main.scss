@@ -189,7 +189,11 @@ table.content-table.stack-table.three-column {
 		display: none;
 	}
 	tr {
-		border-bottom: 1px solid #bfc1c3; 
+		border-bottom: 1px solid #bfc1c3;
+
+		&:last-of-type {
+			border-bottom: none;
+		}
 	}
 	td {
 		display: block;
