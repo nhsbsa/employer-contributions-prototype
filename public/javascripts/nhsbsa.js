@@ -218,7 +218,7 @@ $(document).ready(function(){
                 }
 
                 if (loginEmail == 'csv') {
-                    Cookies.set('csv', 'show');
+                    Cookies.set('csv', 'show'); 
                 } else {
                     Cookies.remove('csv');
                 }
@@ -411,9 +411,17 @@ $(document).ready(function(){
                 submitFormIfValid();
             }
 
+            
+
         });
     }
 
+    if(document.URL.indexOf("make-payment") >= 0){ 
+        var csvCookie = getCookie('csv');
+        if (csvCookie == 'show') {
+            $('#make-payment-form').attr('action', 'summary')
+        }
+    }
 
     // hide or show staff/gps elements on page load
     var staffgps = Cookies.get('staffgps');
