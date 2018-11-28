@@ -13,11 +13,11 @@
             <div class="done-panel">
                 <h1 class="heading-large">
                     <span id="done-tick"> </span>
-                    Done
+                    Payment submitted
                 </h1>
                 <p class="lede">
                     <span id="contributionMonth">February</span> <span id="contributionYear">2017</span>
-                    contribution successfully submitted
+                    payment successfully submitted
                 </p>
             </div>
 
@@ -29,12 +29,12 @@
                 </div>
                 <div class="column-half">
                     <div class="print-page">
-                        <a class="icon print-icon" href="javascript:window.print();"> Print this page</a>
+                        <a class="icon print-icon" href="javascript:window.print();"> Print payment details</a>
                     </div>
                 </div>
             </div>
 
-            <div class="form-group">
+            {# <div class="form-group">
                 <table class="content-table stack-table two-column" style="margin-bottom: 20px;">
                     <caption class="heading-small visually-hidden" id="thank-you-payment-header">Contribution details</caption>
                     <thead>
@@ -81,9 +81,9 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
+            </div> #}
 
-            <div class="form-group">
+            {# <div class="form-group">
                 <table class="content-table stack-table two-column"  style="margin-bottom: 20px;">
                     <caption class="heading-small visually-hidden" id="make-payment-header">Make a payment</caption>
                     <thead>
@@ -110,9 +110,9 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
+            </div> #}
 
-            <div class="form-group">
+            {# <div class="form-group">
                 <table class="content-table stack-table two-column"  style="margin-bottom: 20px;">
                     <caption class="heading-small visually-hidden" id="contact-details-header">Your contact details</caption>
                     <thead>
@@ -143,9 +143,12 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
+            </div> #}
             <div class="form-group">
                 <a id="finish" class="button" href="login" role="button">Finish and log out</a>
+            </div>
+            <div class="form-group">
+                <a href="make-payment">Make a new payment</a>
             </div>
         </div>
     </div>

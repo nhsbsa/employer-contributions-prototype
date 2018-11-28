@@ -7,6 +7,6 @@ module.exports = {
   // Cookie warning
   cookieText: 'GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies" title="Find out more about cookies">Find out more about cookies</a>',
 
-  serviceName: 'Make payments to the NHS Pension Scheme'
+  serviceName: 'Make pension contribution payments'
 
 }
