@@ -19,7 +19,11 @@ function getCookie(name) {
     return decodeURI(dc.substring(begin + prefix.length, end));
 }
 
+
+
 $(document).ready(function(){
+
+    
 
     // GOVUK.toggle.init();
 
@@ -614,4 +618,40 @@ $(document).ready(function(){
         });
     }
 
+    dynamicData();
+
 });
+
+function dynamicData() {
+    var paymentMonth = sessionStorage.getItem('paymentMonth');
+    var paymentYear = sessionStorage.getItem('paymentYear'); 
+    var fullDate = paymentMonth + ' ' + paymentYear;
+    var payment = document.getElementsByClassName("paymentDate");
+    if(window.location.href.indexOf("make-payment") > -1) {
+        document.getElementById('make-payment-form').addEventListener('submit', function(){
+            sessionStorage.paymentMonth = document.getElementById('contribution-month').value;
+            sessionStorage.paymentYear= document.getElementById('contribution-year').value;
+        })
+    }
+    for(var i = 0; i < payment.length; i++)
+    {
+        console.log('payment');
+        payment.item(i).innerHTML = fullDate;
+    }
+
+    if(window.location.href.indexOf("contributions-and-payment") > -1) {
+        document.getElementById('contributions-and-payment').addEventListener('change', function(){
+            sessionStorage.pensionablePay = document.getElementById('total-pensionable-pay').value;
+            sessionStorage.employeePayments = document.getElementById('employee-contributions').value;
+            sessionStorage.employerPayments = document.getElementById('employer-contributions').value;
+            sessionStorage.employeeAddedYears = document.getElementById('employee-avcs').value;
+            sessionStorage.additionalPension = document.getElementById('additional-pension').value;
+            sessionStorage.errbo = document.getElementById('errbo').value;
+            sessionStorage.amountDebited = document.getElementById('total-amount-debited').value;
+        })
+    }
+
+    
+
+
+}
