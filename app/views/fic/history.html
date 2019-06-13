@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Submit contribution - {{ super() }} - NHSBSA{% endblock %}
+
+{% block content%}
+<main id="content" role="main" tabindex="-1">
+    
+    {% include "includes/phase_banner.html" %}
+
+    {% include "includes/account-details.html" %}
+
+    {% include "includes/back_nav.html" %}
+
+    <div class="heading-group">
+        <p>{{ serviceName }}</p>
+        <h1 class="heading-large">Pension contribution payment history</h1>
+        <p>EA1000 - NHS Blackpool</p>
+    </div>
+    
+    <table id="previous-payments">
+        <caption class="visually-hidden">Previous payments made by you.</caption>
+        <thead>
+            <tr>
+                <th scope="col">Month</th>
+                <th scope="col">Amount paid</th>
+                <th scope="col">Submitted by</th>
+                <th scope="col">Date submitted</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">November 2018</td>
+                <td>£48,882.60</td>
+                <td>Alison Moore</td>
+                <td><a href="already-paid" class="set-cookie" data-cookie-value="December" data-cookie-name="payingMonth">05 December 2018</a></td>
+            </tr>
+            <tr>
+                <td scope="row">October 2018</td>
+                <td>£26,873.38</td>
+                <td>Mathew Brown</td>
+                <td><a href="already-paid" class="set-cookie" data-cookie-value="November" data-cookie-name="payingMonth">15 November 2018</a></td>
+            </tr>
+            <tr>
+                <td scope="row">October 2018</td>
+                <td>£53,201.01</td>
+                <td>Alison Moore</td>
+                <td><a href="already-paid" class="set-cookie" data-cookie-value="November" data-cookie-name="payingMonth">07 November 2018</a></td>
+            </tr>
+            <tr>
+                <td scope="row">September 2018</td>
+                <td>£64,011.56</td>
+                <td>Alison Moore</td>
+                <td><a href="already-paid" class="set-cookie" data-cookie-value="October" data-cookie-name="payingMonth">16 October 2018</a></td>
+            </tr>
+            <tr>
+                <td scope="row">August 2018</td>
+                <td>£94,011.07</td>
+                <td>Alison Moore</td>
+                <td><a href="already-paid" class="set-cookie" data-cookie-value="September" data-cookie-name="payingMonth">16 September 2018</a></td>
+            </tr>
+            <tr>
+                <td scope="row">July 2018</td>
+                <td>£94,011.07</td>
+                <td>Alison Moore</td>
+                <td><a href="already-paid" class="set-cookie" data-cookie-value="August" data-cookie-name="payingMonth">16 August 2018</a></td>
+            </tr>
+            <tr>
+                <td scope="row">June 2018</td>
+                <td>£94,011.07</td>
+                <td>Alison Moore</td>
+                <td><a href="already-paid" class="set-cookie" data-cookie-value="July" data-cookie-name="payingMonth">16 July 2018</a></td>
+            </tr>
+            <tr>
+                <td scope="row">May 2018</td>
+                <td>£8,562.93</td>
+                <td>Mathew Brown</td>
+                <td><a href="already-paid" class="set-cookie" data-cookie-value="June" data-cookie-name="payingMonth">04 June 2018</a></td>
+            </tr>
+            <tr>
+                <td scope="row">May 2018</td>
+                <td>£48,882.60</td>
+                <td>Alison Moore</td>
+                <td><a href="already-paid" class="set-cookie" data-cookie-value="June" data-cookie-name="payingMonth">16 June 2018</a></td>
+            </tr>
+            <tr>
+                <td scope="row">April 2018</td>
+                <td>£7,201.31</td>
+                <td>Alison Moore</td>
+                <td><a href="already-paid" class="set-cookie" data-cookie-value="May" data-cookie-name="payingMonth">11 May 2018</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+    {% include "includes/pagination.html" %}
+
+    <hr>
+    {% include "includes/back-ea.html" %}
+
+</main>
+{% endblock %}

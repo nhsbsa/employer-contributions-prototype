@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Submit contribution - {{ super() }} - NHSBSA{% endblock %}
+
+{% block content%}
+<main id="content" role="main" tabindex="-1">
+    
+    {% include "includes/phase_banner.html" %}
+
+    {% include "includes/account-details.html" %}
+
+    <div class="heading-group">
+        <p>{{ serviceName }}</p>
+        <h1 class="heading-large">EA1234 - NHS Blackpool</h1>
+    </div>
+
+    <hr>
+    
+    <section>
+
+        <ul class="grid-row grid-grid">
+            <li>
+                
+                <div class="bsa-card">
+                    <div class="bsa-card__content">
+                        <h3 class="heading-medium bsa-card__heading"><a href="make-payment">Make a payment</a></h3>
+                        <p>Submit a new pension contribution payment.</p>
+                        <p class="bold">You will need to know:</p>
+                        <ul class="list list-bullet">
+                            <li>when the payment should be taken</li>
+                            <li>the amount of employee and employer payments</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+
+                <div class="bsa-card">
+                    <div class="bsa-card__content">
+                        <h3 class="heading-medium bsa-card__heading"><a href="history">View contribution payment history</a></h3>
+                        <p>View amounts and dates of previous pension contribution payments.</p>
+                        <p>You can print these for your records.</p>
+                    </div>
+                </div>
+
+            </li>
+
+        </ul>
+
+    </section>
+
+    <hr>
+
+    {% include "includes/back-org.html" %}
+
+</main>
+{% endblock %}

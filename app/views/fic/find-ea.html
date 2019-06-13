@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Choose an EA Account to make a payment to - {{ super() }} - NHSBSA{% endblock %}
+
+{% block content%}
+<main id="content" role="main" tabindex="-1" class="add-log-out">
+
+    {% include "includes/phase_banner.html" %}
+
+    {% include "includes/account-details.html" %}
+
+    <div class="heading-group">
+        <p>{{ serviceName }}</p>
+        <h1 class="heading-large">Find an employing authority</h1>
+    </div>
+
+    {% include "includes/search-ea.html" %}
+    
+</main>
+{% endblock %}

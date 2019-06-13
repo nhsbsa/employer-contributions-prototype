@@ -3,3 +3,26 @@
     @import 'footer';
     @import 'header';
 }
+
+@import 'components/account-details-bar';
+@import 'components/card';
+@import 'components/pagination';
+@import 'components/tag';
+
+@import 'patterns/grid-grid';
+
+
+// Despace for screen reader
+// We want to read EA1234 as E A 1 2 3 4
+// Instead of One thousand two hundred and thirty four
+// One, two, three, four
+.sr-despace {
+    white-space: nowrap;
+    letter-spacing: -0.13em;
+    margin-right: 0.13em;
+}
+
+.print-page {
+    float: none !important;
+    margin: 30px 0 !important;
+}

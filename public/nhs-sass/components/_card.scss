@@ -1,0 +1,82 @@
+$card-spacing: 16px;
+$card-border-radius: 0;
+$card-bg-color: $grey-4;
+$card-border-color: $grey-2;
+$card-actions-bg-color: $white;
+
+.bsa-card {
+    display: block;
+    height: 100%;
+    align-content: flex-start;
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: relative;
+    border-radius: $card-border-radius;
+    border: 1px solid $card-border-color;
+    box-sizing: border-box;
+    background-color: $card-bg-color;
+    
+    a:focus {
+        color: $black;
+        border-bottom: 2px solid $black;
+        text-decoration: none;
+    }
+
+    &__heading {
+        margin-top: 0;
+    }
+
+    &__header,
+    &__content,
+    &__actions {
+        padding: $card-spacing;
+    }
+
+    &__header {
+        background-color: $card-bg-color;
+        border-top-left-radius: $card-border-radius;
+        border-top-right-radius: $card-border-radius;
+        padding-bottom: 0;
+    }
+
+    &__content {
+        background-color: $card-bg-color;
+        margin-bottom: auto;
+        > :first-child {
+            margin-top: 0;
+        }
+        > :last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__actions {
+        flex-grow: 1;
+        margin-top: auto;
+        border-top: 1px solid $card-border-color;
+        background-color: $card-actions-bg-color;
+        border-bottom-left-radius: $card-border-radius;
+        border-bottom-right-radius: $card-border-radius;
+    }
+
+    &__actions-list {
+        li {
+            margin-bottom: $card-spacing * 1.2;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__actions-break {
+        padding-top: 10px;
+        border-top: 1px solid $card-border-color;
+    }
+
+    .data {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}

@@ -3,9 +3,12 @@
 {% block page_title %}February 2017 contribution details - {{ super() }} - NHSBSA{% endblock %}
 
 {% block content%}
-<main id="content" role="main" tabindex="-1" class="add-log-out">
+<main id="content" role="main" tabindex="-1">
     
     {% include "includes/phase_banner.html" %}
+
+    {% include "includes/account-details.html" %}
+
     {% include "includes/back_nav.html" %}
 
     <div class="grid-row">
@@ -25,16 +28,16 @@
                     <li><a id="contributions-error-list15" href="#total-amount-debited">Total amount is required</a></li>
                 </ul>
             </div>
-            <h1 id="main-heading" class="heading-large">
-                <span class="heading-secondary">{{serviceName}}</span>
-                <span class="paymentDate">December 2018</span> payment details
-                {# <span class="get-cookie" data-cookie-name="for">&nbsp;</span>
-                <span class="get-cookie" data-cookie-name="eaCode">&nbsp;</span> #}
-            </h1>
+
+            <div class="heading-group">
+                <p>{{ serviceName }}</p>
+                <h1 class="heading-large">Enter June 2019 payment details</h1>
+                <p><span class="sr-despace">E A 1 2 3 4</span> - NHS Blackpool</p>
+            </div>
 
             <!-- {% include "includes/multiple-ea.html" %} -->
             
-            <form action="summary" method="get" class="form form-to-validate" id="contributions-and-payment" novalidate="novalidate">
+            <form action="summary" method="get" class="form" id="contributions-and-payment" novalidate="novalidate">
                 <div class="form-group staffgps">
                     <label class="form-label" for="no-of-scheme-members">
                         <span class="error-message display-none" id="error-message-no-of-scheme-members">Amount you have entered is incorrect</span>

@@ -6,21 +6,22 @@
 <main id="content" role="main" tabindex="-1">
 
     {% include "includes/phase_banner.html" %}
+    {% include "includes/account-details.html" %}
+
 
     <div class="grid-row">
         <div class="column-two-thirds">
-            <div class="form-group">
-                <div class="done-panel">
-                    <h1 class="heading-large">
-                        Account deleted
-                    </h1>
-                </div>
-                <h2 class="heading-large">Bill’s account was successfully deleted.</h2>
-                <div class="form-group">
-                    <a id="button" class="button" href="accounts">Continue</a>
-                </div>
+
+            <div class="done-panel">
+                <h1 class="heading-large">User deleted</h1>
+                <p>Bill’s account for Brighton & Hove Integrated Care Services Ltd. was successfully deleted.</p>
             </div>
+            <a id="button" class="button" href="accounts">View users</a>
+            <hr>
+            {% include "includes/back-org.html" %}
+            
         </div>
     </div>
+
 </main>
 {% endblock %}

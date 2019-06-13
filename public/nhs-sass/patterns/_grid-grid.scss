@@ -1,0 +1,54 @@
+$grid-spacing: 30px;
+
+.grid-grid {
+    margin: 0 !important;
+    > * {
+        padding-bottom: $grid-spacing;
+    }
+
+    @include media(desktop) {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+
+        > * {
+            display: inline-block;
+            width: 32%;
+            vertical-align: top;
+            
+
+            &:nth-child(3n+3) {
+                margin-left: 2%;
+            }
+            &:nth-child(3n+1) {
+                margin-right: 2%;
+            }
+        }
+
+        @supports (display: grid) {
+            display: grid;
+            grid-gap: $grid-spacing;
+            grid-template-columns: repeat(3, 1fr);
+            padding-bottom: 0;
+        }
+
+        @supports (display: grid) {
+            > * {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+
+                &:nth-child(3n+3) {
+                    margin-left: 0;
+                }
+                &:nth-child(3n+1) {
+                    margin-right: 0;
+                }
+            }
+        }
+
+    }
+
+
+}

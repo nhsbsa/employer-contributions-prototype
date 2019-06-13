@@ -3,9 +3,10 @@
 {% block page_title %}Are you sure you want to delete Bill's account? - {{ super() }} - NHSBSA{% endblock %}
 
 {% block content%}
-<main id="content" role="main" tabindex="-1" class="add-log-out">
+<main id="content" role="main" tabindex="-1">
 
     {% include "includes/phase_banner.html" %}
+    {% include "includes/account-details.html" %}
     {% include "includes/back_nav.html" %}
 
     <div class="grid-row">
@@ -20,10 +21,12 @@
                         <li><a href="#confirm-delete" id="login-error-list1">Select if you want to delete the account</a></li>
                     </ul>
                 </div>
-                <h1 id="main-heading" class="heading-large">
-                    <span class="heading-secondary">{{serviceName}}</span>
-                    Are you sure you want to delete Bill's account?
-                </h1>
+
+                <div class="heading-group">
+                    <p>{{ serviceName }}</p>
+                    <h1 class="heading-large">Are you sure you want to delete Bill&rsquo;s account?</h1>
+                </div>
+
                 <div id="confirm-delete">
                     <fieldset>
                         <legend class="visuallyhidden" id="confirm-delete-label" tabindex="-1">Are you sure you want to delete Bill's account?</legend>

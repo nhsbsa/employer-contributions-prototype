@@ -437,5 +437,31 @@ module.exports = {
       var pageName = 'FIC'
       res.render('fic/500-server-error', { 'page_name': pageName })
     })
+
+    app.get('/fic/ea', function (req, res) {
+      var pageName = 'Blackpool emplying authority EA1000'
+      res.render('fic/ea', { 'page_name': pageName })
+    })
+
+    app.get('/fic/find-ea', function (req, res) {
+      var pageName = 'Find an EA'
+      res.render('fic/find-ea', { 'page_name': pageName })
+    })
+
+    app.get('/fic/history', function (req, res) {
+      var pageName = 'Pension contribution payment history'
+      res.render('fic/history', { 'page_name': pageName })
+    })
+
+    app.get('/fic/change-password', function (req, res) {
+      var pageName = 'Change your password'
+      res.render('fic/change-password', { 'page_name': pageName })
+    })
+
+    app.post('/fic/password-changed', function (req, res) {
+      var pageName = 'Password successfully changed'
+      res.render('fic/password-changed', { 'page_name': pageName })
+    })
+
   }
 }

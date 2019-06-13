@@ -6,44 +6,122 @@
 <main id="content" role="main" tabindex="-1" class="add-log-out">
 
     {% include "includes/phase_banner.html" %}
-    {% include "includes/back_nav.html" %}
 
-    <div class="grid-row">
-        <div class="column-two-thirds">
-            <h1 id="main-heading" class="heading-large">
-                <span class="heading-secondary">{{serviceName}}</span>
-                Choose an EA Account to make a payment to
-            </h1>
-            <div class="form-group">
-                <fieldset>
-                    <legend class="visuallyhidden" id="pick-ea-label" tabindex="-1">Choose an EA Account to make a payment to</legend>
-                    <div class="form-group">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th scope="col">EA Account</th>
-                                    <th scope="col" class="numeric">Last Payment Date</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><a href="make-payment" class="set-cookie" data-cookie-value="EA1000" data-cookie-name="eaCode">EA1000 - NHS Blackpool</a></td>
-                                    <td class="numeric">01/01/2018</td>
-                                </tr>
-                                <tr>
-                                    <td><a href="make-payment" class="set-cookie" data-cookie-value="EA2000" data-cookie-name="eaCode">EA2000 - NHS Fleetwood</a></td>
-                                    <td class="numeric">-</td>                                      
-                                </tr>
-                                <tr>
-                                    <td><a href="make-payment" class="set-cookie" data-cookie-value="EA3000" data-cookie-name="eaCode">EA3000 - NHS Newcastle</a></td>
-                                    <td class="numeric">-</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </fieldset>
+    {% include "includes/account-details-large.html" %}
+
+    <section>
+        
+        <div class="grid-row">
+            <div class="column-full">
+                <h2 class="heading-medium">Your employing authorities (EA)</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">EA Account</th>
+                            <th scope="col" class="numeric">Late payments</th>
+                            <th scope="col" class="numeric">Next payment due</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="ea" class="set-cookie" data-cookie-value="EA1234" data-cookie-name="eaCode">EA1234 - NHS Blackpool</a></td>
+                            <td class="numeric">
+                                <span class="app-c-tag app-c-tag--danger">4</span>
+                            </td>
+                            <td class="numeric">15th July 2019</td>
+                        </tr>
+                        <tr>
+                            <td><a href="ea" class="set-cookie" data-cookie-value="EA2000" data-cookie-name="eaCode">EA2000 - NHS Fleetwood</a></td>
+                            <td class="numeric">
+                                <span aria-hidden="true">none</span>
+                                <span class="visually-hidden">No late payments</span>    
+                            </td> 
+                            <td class="numeric">15th July 2019</td>                                     
+                        </tr>
+                        <tr>
+                            <td><a href="ea" class="set-cookie" data-cookie-value="EA3000" data-cookie-name="eaCode">EA3000 - NHS Newcastle</a></td>
+                            <td class="numeric"><span class="app-c-tag app-c-tag--danger">1</span></td>
+                            <td class="numeric">15th July 2019</td>
+                        </tr>
+                        <tr>
+                            <td><a href="ea" class="set-cookie" data-cookie-value="EA4000" data-cookie-name="eaCode">EA4000 - NHS Bolton</a></td>
+                            <td class="numeric"><span class="app-c-tag app-c-tag--danger">1</span></td>
+                            <td class="numeric">15th July 2019</td>
+                        </tr>
+
+                        <tr>
+                            <td><a href="ea" class="set-cookie" data-cookie-value="EA5000" data-cookie-name="eaCode">EA5000 - NHS Manchester</a></td>
+                            <td class="numeric">
+                                <span aria-hidden="true">none</span>
+                                <span class="visually-hidden">No late payments</span>    
+                            </td> 
+                            <td class="numeric">15th July 2019</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br>
+                {% include "includes/pagination.html" %}
+
             </div>
         </div>
-    </div>
+<hr>
+        <ul class="grid-row grid-grid">
+
+            <li>
+                
+                <div class="bsa-card">
+                    <div class="bsa-card__content">
+                        <h3 class="heading-medium bsa-card__heading"><a href="find-ea">Find an employing authority</a></h3>
+                        <p>Search for an employing authority by their EA code.</p>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </section>
+
+    <hr>
+
+    <section>
+
+        <h2 class="heading-medium">Your account</h2>
+        <ul class="grid-row grid-grid">
+
+            <li>
+                
+                <div class="bsa-card">
+                    <div class="bsa-card__content">
+                        <h3 class="heading-medium bsa-card__heading"><a href="change-password">Change password</a></h3>
+                        <p>Change your account password.</p>
+                        <p class="bold">You will need to:</p>
+                        <ul class="list list-bullet">
+                            <li>know your current password to change it</li>
+                            <li>create and confirm a new password</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+
+                <div class="bsa-card">
+                    <div class="bsa-card__content">
+                        <h3 class="heading-medium bsa-card__heading"><a href="administrate/accounts">Manage users</a></h3>
+                        <p>Add edit and remove users for your organisation.</p>
+                        <p class="bold">You will need to:</p>
+                        <ul class="list list-bullet">
+                            <li>know the new users first and last name</li>
+                            <li>know the new users email address</li>
+                            <li>create a new password</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </li>
+        </ul>
+
+    </section>
 </main>
 {% endblock %}

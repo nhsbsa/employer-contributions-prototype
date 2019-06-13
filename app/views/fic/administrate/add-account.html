@@ -3,14 +3,15 @@
 {% block page_title %}Add a new account - {{ super() }} - NHSBSA{% endblock %}
 
 {% block content%}
-<main id="content" role="main" tabindex="-1" class="add-log-out">
+<main id="content" role="main" tabindex="-1">
 
     {% include "includes/phase_banner.html" %}
+    {% include "includes/account-details.html" %}
     {% include "includes/back_nav.html" %}
 
     <div class="grid-row">
         <div class="column-two-thirds">
-            <form id="add-account-form" class="form form-to-validate" action="add-done" autocomplete="off" method="get" novalidate="novalidate">
+            <form id="add-account-form" class="form" action="add-done" autocomplete="off" method="get" novalidate="novalidate">
                 <div class="error-summary display-none" id="addAccountErrorMessage" role="group" aria-labelledby="add-account-message-heading" tabindex="-1">
                     <h1 class="heading-medium error-summary-heading" id="add-account-message-heading">
                         Some questions have not been answered correctly:
@@ -20,10 +21,12 @@
                         <li><a href="#add-account" id="login-error-list1">The name and email combination are not valid</a></li>
                     </ul>
                 </div>
-                <h1 id="main-heading" class="heading-large">
-                    <span class="heading-secondary">{{serviceName}}</span>
-                    Add a new account
-                </h1>
+
+                <div class="heading-group">
+                    <p>{{ serviceName }}</p>
+                    <h1 class="heading-large">Add new user</h1>
+                </div>
+
                 <div id="add-account">
                     <fieldset>
                         <legend class="visuallyhidden" id="add-account-label" tabindex="-1">Add a new account</legend>

@@ -3,9 +3,12 @@
 {% block page_title %}Submit contribution - {{ super() }} - NHSBSA{% endblock %}
 
 {% block content%}
-<main id="content" role="main" tabindex="-1" class="add-log-out">
+<main id="content" role="main" tabindex="-1">
     
     {% include "includes/phase_banner.html" %}
+
+    {% include "includes/account-details.html" %}
+
     {% include "includes/back_nav.html" %}
 
     <div class="grid-row">
@@ -22,47 +25,27 @@
                         <li><a id="schedule-error-list3" href="#understood">Please check the box if you understand</a></li>
                     </ul>
                 </div>
-                <h1 id="main-heading" class="heading-large">
-                    <span class="heading-secondary">Make pension contribution payments</span>
-                    Which month do you want to make a payment for?
-                    {# <span class="get-cookie" data-cookie-name="for">&nbsp;</span>
-                    <span class="get-cookie" data-cookie-name="eaCode">&nbsp;</span> #}
-                </h1>
+
+                <div class="heading-group">
+                    <p>{{ serviceName }}</p>
+                    <h1 class="heading-large">June 2019 payment</h1>
+                    <p><span class="sr-despace">E A 1 2 3 4</span> - NHS Blackpool</p>
+                </div>
 
                 <!-- {% include "includes/multiple-ea.html" %} -->
 
-                <div class="form-group" id="schedule-group">
-                    <fieldset>
-                        <legend class="visuallyhidden" tabindex="-1">Submit contribution</legend>
-                        <span class="error-message js-hidden">Month and year is required</span>
-                        <label class="form-label-bold" for="cont">
-                            <span class="form-hint">
-                                For example, December 2018
-                            </span>
-                        </label>
-                        <div id="cont" class="form-date form-date-wide">
-                            <div class="form-group-month">
-                                <label class="form-label" for="contribution-month">Month</label>
-                                <input type="text" id="contribution-month" class="form-control typeahead" name="contribution-month" autocomplete="off" aria-required="true" maxlength="9" required />
-                            </div>
-                            <div class="form-group-year">
-                                <label class="form-label" for="contribution-year">Year</label>
-                                <input type="number" id="contribution-year" class="form-control" name="contribution-year" autocomplete="off" aria-required="true" min="2001" required />
-                            </div>
-                        </div>
-                    </fieldset>
-                </div>
                 <div class="form-group" id="payment-group">
                     <fieldset>
                         <legend id="submit-contribution-date-legend" tabindex="-1">
-                            <span class="form-label-bold">When do you want payment to be taken from your account?</span>
+                            <span class="heading-medium">When do you want the payment <br>to be taken from your account?</span>
                         </legend>
+                        <br>
                         <div class="multiple-choice" data-target="asap">
                             <input id="as-soon-as-possible" type="radio" name="radio-inline-group" value="Yes" />
                             <label for="as-soon-as-possible">As soon as possible</label>
                         </div>
                         <div class="panel panel-border-narrow js-hidden" id="asap">
-                            <p>This will be on the 16 December 2018</p>
+                            <p>This will be on the 16 June 2019</p>
                         </div>
                         <div class="multiple-choice" data-target="specify-date">
                             <input id="specify-a-date" type="radio" name="radio-inline-group" value="No" />
@@ -70,7 +53,7 @@
                         </div>
                         <div class="panel panel-border-narrow js-hidden" id="specify-date">
                             <span class="form-hint" id="payment-day-month-year-hint1" >
-                                <span class="form-hint">Choose a date that is a working day.<br> For example, 20 June 2018</span>
+                                <span class="form-hint">For example, 20 June 2018</span>
                             </span>
                             <div class="form-date form-date-wide" id="payment-day-month-year-group">
                                 <div class="form-group-day">
@@ -89,7 +72,7 @@
                         </div>
                     </fieldset>
                 </div>
-                <div class="form-group demo-csv">
+                {# <div class="form-group demo-csv">
                     <fieldset>
                         <legend tabindex="-1">
                             <span class="form-label-bold">Use this to upload your pension payments file</span>
@@ -103,8 +86,8 @@
                             <input type="file" id="file-input" />
                         </div>
                     </fieldset>
-                </div>
-                <div class="form-group staffgps">
+                </div> #}
+                {# <div class="form-group staffgps">
                     <fieldset class="inline">
                         <legend class="visually-hidden" tabindex="-1">Contribution payment</legend>
                         <div class="multiple-choice">
@@ -116,7 +99,7 @@
                         <label class="single-line" for="example-cont-payment-gp">GP</label>
                         </div>
                     </fieldset>
-                </div>
+                </div> #}
                 <!-- <div class="form-group">
                     <p>Payment will be taken by direct debit within 2 working days.</p>
                     <div class="notice">
@@ -138,7 +121,7 @@
                         </div>
                     </fieldset>
                 </div> -->
-                <p>Payment will be taken by direct debit within 2 working days</p>
+                {# <p>Payment will be taken by direct debit within 2 working days</p>
                 <div class="notice form-group">
                     <i class="icon icon-important">
                         <span class="visually-hidden">Warning</span>
@@ -153,23 +136,13 @@
                         <input id="checkbox-confirm" name="confirmation" type="checkbox" value="true">
                         <label for="checkbox-confirm">I understand</label>
                     </div>
-                </div>
+                </div> #}
                 <div class="form-item-wrapper">
                     <div class="form-group">
                         <button id="next-button" class="button" type="submit">Continue</button>
                     </div>
                 </div>
             </form>
-        </div>
-        <div class="column-one-third">
-            <div class="sidebar">
-                <div class="sidebar-box">
-                    <h2 class="heading-medium">Admin features</h2>
-                    <ul class="list list-bullet">
-                        <li><a href="/fic/administrate/accounts">Current users</a></li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </div>
 </main>

@@ -1,0 +1,88 @@
+.bsa-account-details-bar::after {
+    clear: both;
+    content: ' ';
+    display: block;
+}
+
+.bsa-account-details-bar {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    border-bottom: 1px solid $grey-2;
+    padding-top: 20px;
+    padding-bottom: 15px;
+
+    .log-out-link {
+        display: inline-block;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        float: none;
+    }
+
+    @include media(desktop) {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        
+        .bsa-account-details-bar__action {
+            float: right;
+            flex-shrink: 0;
+            margin-left: auto;
+        }
+
+        .bsa-account-details-bar__contents {
+          flex-shrink: 1;
+          margin-right: 10px;
+        }
+    }
+    
+    .bsa-account-details-bar__header {
+
+      margin-top: 0;
+      margin-bottom: 0;
+      
+        &::after {
+            clear: both;
+            content: ' ';
+            display: block;
+        }
+    }
+
+    dd,
+    dt {
+      margin: 0 5px 0 0;
+      padding: 0;
+      float: left;
+    }
+
+    dd {
+      margin-right: 20px;
+    }
+
+
+    .bsa-account-details-bar__id {
+      clear: left;
+    }
+
+    .bsa-account-details-bar__name {
+        margin-right: 10px;
+    }
+}
+
+.bsa-account-details-bar--slim {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  dd {
+    margin-right: 10px;
+  }
+
+  @include media(desktop) {
+    .log-out-link {
+      margin: 0;
+    }
+  }
+
+  .bsa-account-details-bar__id {
+    clear: none;
+  }
+}
