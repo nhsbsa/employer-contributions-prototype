@@ -463,5 +463,10 @@ module.exports = {
       res.render('fic/password-changed', { 'page_name': pageName })
     })
 
+    app.get('/fic/locked-out', function (req, res) {
+      var pageName = 'Locked out'
+      res.render('fic/locked-out', { 'page_name': pageName })
+    })
+
   }
 }
