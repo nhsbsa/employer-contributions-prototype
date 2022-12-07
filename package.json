@@ -16,7 +16,7 @@
     "nunjucks": "^3.0.1",
     "body-parser": "^1.14.1",
     "consolidate": "^0.14.5",
-    "express": "4.15.3",
+    "express": "4.17.3",
     "express-nunjucks": "^2.2.3",
     "express-writer": "0.0.4",
     "govuk_template_jinja": "^0.22.2",
